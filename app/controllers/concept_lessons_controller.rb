@@ -5,6 +5,6 @@ class ConceptLessonsController < ApplicationController
   end
 
   def view
-	  render params[:template] and return
+	  @template = "concept_lessons/#{params[:template].gsub('-','_')}"
   end
 end
