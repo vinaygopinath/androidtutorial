@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require "syndicate/jquery-1.8.3.min" 
+//= require "syndicate/jquery-1.10.2.min" 
 //= require "syndicate/bootstrap.min" 
 //= require "syndicate/jquery.isotope.min" 
 //= require "syndicate/jquery.touchSwipe" 

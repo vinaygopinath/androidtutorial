@@ -298,13 +298,16 @@
   .nav-collapse {
     display:block;
   }
-
+  .navbar .nav {
+    margin:20px 0;
+  }
   .navbar-inner {
     padding:0 0 10px 0px!important;
   }
 
   .btn.btn-navbar {
     margin-top:20px;
+    background:#222!important;
   }
   .navbar .nav-collapse .nav li a {
     display:block;

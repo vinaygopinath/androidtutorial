@@ -5,13 +5,6 @@ jQuery('html').removeClass('no-js').addClass('js');
 if ( navigator.appVersion.indexOf("Mac")!=-1 ) 
 	jQuery('html').addClass('osx');
 
-/* Opera fix: */
-if ($.browser.opera) {
-	$('.fade').removeClass('fade');
-	$('.slide').removeClass('slide');
-}
-
-
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
@@ -154,17 +147,17 @@ jQuery(document).ready(function($) {
 
 			$(window).scroll(function() {
 
-				if($(this).scrollTop() != 0) {
-					$('#back-to-top').fadeIn();	
+				if( $(this).scrollTop() > $(window).height()/4) {
+					$("#back-to-top:not(.shown)").addClass('shown');
 				} else {
-					$('#back-to-top').fadeOut();
+					$('#back-to-top').removeClass('shown');
 				}
 
 			});
-			
+
 			$('#back-to-top').click(function() {
 				$('body,html').animate({scrollTop:0},600);
-			});	
+			});
 
 	})();
 

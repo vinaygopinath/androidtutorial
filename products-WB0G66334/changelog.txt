@@ -1,4 +1,12 @@
-v1.1:
+v3.0 (July 2013)
+
+- jQuery updated to latest version 1.10.2
+- Twitter bootstrap updated to latest version 2.3.2
+- Font Awesome updated to latest version 3.2.1
+- jQuery touchSwipe updated to latest version 1.6.3
+- jQuery isotype updated to latest version 1.5.25
+
+v2.0:
 
 - Theme is now responsive
 - New section: Blog
