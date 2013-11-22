@@ -1,4 +1,6 @@
 class ConceptLessonsController < ApplicationController
+  layout "syndicate"
+
   def index
   end
 
