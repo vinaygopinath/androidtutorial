@@ -1,4 +1,5 @@
 NewCodelearn::Application.routes.draw do
+  
   get "android-tutorial" => "concept_lessons#index", as: "android_tutorial"
   get "android-tutorial/:template" => "concept_lessons#view", as: "android_tutorial_lesson"
   # The priority is based upon order of creation: first created -> highest priority.
