@@ -1,8 +1,8 @@
 # How To 
 
-Clone the git repo from heroku first. Ping Pocha for credentials. To add a concept lesson, follow the steps
+Clone the git repo from heroku first `git clone git@heroku.com:androidconceptlessons.git`. To add a concept lesson, follow the steps
 
-> Want to do it the hacker way, check this file (app/views/concept\_lessons/\_how\_to.html.md) & you would know it :)
+> Want to do it the hacker way, check this file (app/views/concept\_lessons/\_how\_to.html.md) in the git repo & you would know it :)
 
 1. Create/Convert lesson in markdown format. Its relatively simple & straight forward to create markdown content. Refer [this link](http://www.darkcoding.net/software/markdown-quick-reference/) to get started with markdown.
 
