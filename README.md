@@ -10,6 +10,8 @@ Clone the git repo from heroku first. Ping Pocha for credentials. To add a conce
 
 3. All the **h1** tags are created as sections. The sections are also created as catalogue on the left sidebar. Choose h1 title with care.
 
-4. Save the lesson file inside *app/views/concept_lessons* directory with prefix **\_** & suffix **.html.md**. Eg. *_this_is_lesson_one.html.md* . After adding the lesson, commit & push to heroku to view the lesson at `http://this_domain/android-tutorial/this-is-lesson-one` . The '-' in url gets converted to '\_' to get the file. 
+4. Save the lesson file inside *app/views/concept_lessons* directory with prefix **\_** & suffix **.html.md**. Eg. *_this_is_lesson_one.html.md* .
 
 5. Create the link of the lesson in *app/views/concept_lessons/index.html.erb* file. index.html.erb is a html file & not markdown. Copy paste the `<li>...</li>` content under **Android Concept Lessons** & put appropriate link & description inside `<p>...</p>`
+
+6. Add the new file to git `git add app/views/concept_lessons/_name_of_your_file.html.md`, commit the new files `git commit app/views/concept_lessons/index.html.erb app/views/commit/concept_lessons/_name_of_your_file.html.md` & push it to heroku `git push heroku master`. The lesson is at `http://this_domain/android-tutorial/name-of-your-file` . The '-' in url gets converted to '\_' to get the file.
