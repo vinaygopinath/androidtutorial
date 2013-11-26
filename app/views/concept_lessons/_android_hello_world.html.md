@@ -172,7 +172,8 @@ Ignore all other files
 
 Lets see some other tools which are available in ADT 
 
-### Console: console gives your all the information about events happening in ADT, when you launch an application , generates apk, create new application, resources etc all information is printed in the console. 
+### Console
+console gives your all the information about events happening in ADT, when you launch an application , generates apk, create new application, resources etc all information is printed in the console. 
 
 <br/>
 ![Console](/assets/hello-android/console.png "Console")
@@ -209,3 +210,5 @@ DDMS also comes with a nice tool of emulator control, this options lets you cont
 
 
 So lets wrap up this chapter, in this chapter we have learnt how to create a hello world application, create a virtual device, launch this application and test it in emulator, then we saw how the android project folder structure looks like and in the end we have seen what are the different tools available with us and how they help us in developing faster. 
+
+
