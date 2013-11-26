@@ -16,8 +16,9 @@ Services, Content Provider and Broadcast are some of the advance features which 
 
 Lets go 1 by 1 into each of these components and get more details about them.
 
-# Activity: This is the most basic block of any android app, every android application will have at least 1 activity
+# Activity
 
+This is the most basic block of any android app, every android application will have at least 1 activity
 *	Activity is what You See on Screen, it every screen in any android application is an Activity
 *	Activity will always have User Interface, it is not possible to have an activity without a UI
 *	Any android application will have 1 or more Activity, out of this 1 activity will act as entry point (from where always the application starts). 
@@ -32,13 +33,13 @@ So now you know what an activity is, and each activity will have user interface 
 
 As you know every activity has user interface they are nothing but Views in Android, Views are basic ui elements available with you do design any android application, you can extend this views to create your own custom view. 
 
-## Views: 
+### Views
 *	Views are reusable UI components available for creating android apps
 *	Views are arranged in tree like structure and always be associated with a Layout/ViewGroup
 *	Views are created using drag and drop editor,  views are represented by XML in android
 *	Example: TextView, ImageView, Button, ListView etc
 
-## ViewGroup/Layouts
+### ViewGroup/Layouts
 *	A viewgroup is a simple way of arranging views
 *	Viewgroups are often reffered as layouts in Android
 *	This layouts will be used to form a UI structure for any application
@@ -47,7 +48,6 @@ As you know every activity has user interface they are nothing but Views in Andr
 > Watch out Facts:  Layouts can be nested into each other. Typically any android application will have complex UI with many layouts and views tied and nested together to form a great looking interface.  
 
 Now we have activities, and activities has User interface but every application you use perform some actions and move from 1 screen to other, lets see how we can move from one screen to another. 
-
 
 # Intents
 
@@ -120,6 +120,7 @@ So far we have seen all the concepts which is required to make a application whi
 Broadcast receiver is simple way to listen to system wide events happening in your phone or tablets. Using broadcast receivers we can create some great applications like Call Number finder, SMS blocker etc,  which works when some events happen in your phone. 
 
 Many system wide events broadcast their information for example 
+
 *	When SMS / Call is received 
 *	Battery low
 *	Network state Changed
@@ -138,13 +139,14 @@ Lets see this twitter application:
 
 <br/>
 ![Twitter Android](/assets/android-introduction/twitter_android.png "Twitter Android")
-
+<br/>
 
 You can see various component and how it is used in twitter Application. Lets see what happens when you use Twitter. 
 
-**Starting up **
+###Starting up###
 <br/>
 ![Android Home Screen](/assets/android-introduction/startingup.png "Android Home Screen") 
+<br/>
 
 You clicked on the twitter blue icon to launch the twitter app, this icon is called as Launcher icon, as name suggest it is use to launch and application. 
 
@@ -153,9 +155,10 @@ Once the application is started, it checks if you are logged in or not, if not y
 The login screen is the Main Activity defined in manifest. 
 
 
-**Login Screen**
+###Login Screen###
 <br/>
  ![Twitter Login](/assets/android-introduction/login.png "Twitter Login")
+<br/>
 
 Once you are at login screen, you are presented to key in your user name and password, after entering the user name password you click on login.  
 
@@ -164,9 +167,10 @@ Once the login is clicked twitter app do a network call to verify this user name
 After the user name and password is verified you are moved to your twitter stream, this is done using Intent that helps you to move from one activity to another. 
 
 
-**Twitter Stream Home Screen**
+###Twitter Stream Home Screen###
 <br/>
  ![Twitter Home](/assets/android-introduction/twitter_home.png "Twitter Home")
+<br/>
 
 This is your home screen for twitter, on the top what you see is Action Bar, action bar is a new UI pattern for android apps. 
 
@@ -175,15 +179,16 @@ The list of tweets that you see on this screen is ListView, list view helps you 
 Each item of the list view is list item, as you can see this item has different layout elements and made of different composite layouts. 
 At the top of this screen you see different image buttons, clicking on this buttons will take you to different screen via again Intents. 
 
-**Services in home screen**
+###Services in home screen###
 <br/>
  ![Twitter Pull to Refresh](/assets/android-introduction/twitter_services.png "Twitter Pull to Refresh")
+<br/>
 
 Just pull the list view to down and you can see pull to refresh, pulling screen to down will invoke Service which runs in background to update the activity with new tweets. 
 
 Though services don’t have user interface it can be tied with broadcast receivers to update the screen. 
 
-**Offline behavior**
+###Offline behavior###
 
 You might notice this behavior of twitter application, even if you are not connected with Internet, once the tweets are loaded you can access them even if you are offline. 
 
@@ -191,9 +196,10 @@ This offline behavior is achieved via storing this data in SQLLITE, sqllite is l
 
 Typically you never access database directly, instead twitter app might be using Content Provider, content provider helps to provide abstraction over how data is store and accessed in application. 
 
-**Notifications**
+###Notifications###
 <br/>
  ![Twitter Android App](/assets/android-introduction/notifications.png "Twitter Android")
+<br/>
 
 Come out out of twitter application and a service runs in background, this service occasionally checks for updates in your twitter account, and displays a notification if there is any new mention or other events on your twitter account. 
 
