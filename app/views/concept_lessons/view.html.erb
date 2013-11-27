@@ -1,6 +1,12 @@
 <%= stylesheet_link_tag "docs" %>
 <link href="http://getbootstrap.com/docs-assets/css/pygments-manni.css" rel="stylesheet">
 
+<style>
+	.page-header h2 {
+		margin-left: 10px;
+	}
+</style>
+
 <div class="container bs-docs-container">
 	<div class="row">
 		<div class="span3">
@@ -30,15 +36,32 @@
 
 <script>
 	$("h1").each(function(){
-		id = $(this).html().replace(/\W+/g,"-")
-		$(this).replaceWith('<div class="page-header"><h1 id="' + id + '">' + $(this).html() + '</h1></div>')
-	}) 
+		create_proper_header(this,"h1")
+	})
+	$("h2").each(function() {
+		console.log($(this).html())
+		add_item_in_nav("ul.nav.bs-sidenav", this)
+		$(this).nextUntil("h2","h3").each(function(){
+			console.log($(this).html())
+			add_item_in_nav("ul.nav.bs-sidenav li:last ul", this)
+			create_proper_header(this,"h3")
+		})
+		create_proper_header(this, "h2")
+	})
 
-	$("h2").each(function(){
-		id = $(this).html().replace(/\W+/g,"-")
-		$("ul.nav.bs-sidenav").append('<li><a href="#' + id + '">' + $(this).html() + '</a></li>')
-		$(this).replaceWith('<div class="page-header"><h2 id="' + id + '">' + $(this).html() + '</h2></div>')
-	}) 
+	function create_proper_header(element,header_type) {
+		id = $(element).html().replace(/\W+/g,"-")
+		if (header_type == "h2" || header_type == "h1") 
+			$(element).replaceWith('<div class="page-header"><' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '></div>')
+		else
+			$(element).replaceWith('<' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '>')
+			
+	}
+
+	function add_item_in_nav(_parent,element) {
+		id = $(element).html().replace(/\W+/g,"-")
+		$(_parent).append('<li><a href="#' + id + '">' + $(element).html() + '</a><ul class="nav"></ul></li>')
+	}
 
 	$("blockquote").each(function(){
 		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
