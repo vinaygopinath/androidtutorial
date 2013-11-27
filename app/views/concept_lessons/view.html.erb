@@ -30,7 +30,8 @@
 
 <script>
 	$("h1").each(function(){
-		$("ul.nav.bs-sidenav").append('<li><a href="#' + $(this).html() + '">' + $(this).html() + '</a></li>')
-		$(this).replaceWith('<div class="page-header"><h1 id="' + $(this).html() + '">' + $(this).html() + '</h1></div>')
+		id = $(this).html().replace(/\W+/g,"-")
+		$("ul.nav.bs-sidenav").append('<li><a href="#' + id + '">' + $(this).html() + '</a></li>')
+		$(this).replaceWith('<div class="page-header"><h1 id="' + id + '">' + $(this).html() + '</h1></div>')
 	}) 
 </script>
