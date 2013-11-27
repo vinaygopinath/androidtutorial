@@ -1,13 +1,13 @@
-#Hello World
+# Getting Started with Android App
 In this tutorial we will go through various steps of creating a android app with wizard, once our application is ready, we will launch the application and see it working in emulator. We will then go through the folder structure and see various tools available with us in ADT. 
 
-#Creating Project From Wizard 
+## Creating Project From Wizard 
 
 The Android Developer Tool (ADT) or eclipse provides us a great way to create android applications using a wizard, unlike other languages where you need to write code to do a basic hello world. In Android you just need to follow some simple steps and with few clicks we get our first hello world project up and running. 
 
 This tutorial will help you in understanding this process and various options in the wizard. 
 
-> Watchout: If you have’t installed the ADT or eclipse plugin, please go to tutorial 2 and complete your setup. 
+> If you have’t installed the ADT or eclipse plugin, please go to tutorial 2 and complete your setup. 
 
 Lets Start 
 
@@ -15,7 +15,7 @@ IF ADT is not running, double click on ADT  to start the development environment
 
 *	Click on File - > New and choose Android Application Project, you will see the first Screen 
 
-###Screen 1
+### Screen 1
 
 <br/>
 ![New Application](/assets/hello-android/screen1.png "New Application")
@@ -34,7 +34,7 @@ This is the first Screen for creating a new android project, lets go at each row
 
 Click on Next: 
 
-###Screen 2
+### Screen 2
 
 <br/>
 ![New Application project config](/assets/hello-android/screen2.png "New Application project config")
@@ -48,7 +48,7 @@ This screen is use to configure various project settings, lets go 1 by 1 to see 
 *	Add Project to working sets : working set is nothing but grouping, when your number of projects in ADT stars increasing you can group them together into working sets to avoid clutter 
 Click Next
 
-###Screen 3
+### Screen 3
 
 <br/>
 ![New Application Launcher icon](/assets/hello-android/screen3.png "New Application Launcher icon")
@@ -63,7 +63,7 @@ You can experiment with different options like background color shape etc and fi
 Click on Next
 
 
-###Screen 4
+### Screen 4
 
 <br/>
 ![New Application Activity Template](/assets/hello-android/screen4.png "New Application Activity Template")
@@ -76,7 +76,7 @@ Screen 4 is a activity template screen, ADT comes pre bundle with some activity 
 
 Select Blank activity and Click Next
 
-###Screen 5
+### Screen 5
 
 <br/>
 ![New Application Activity Config](/assets/hello-android/screen5.png "New Application Activity Config")
@@ -90,7 +90,7 @@ Click Finish
 
 Once you click Finish ADT will create your new project and will open Java code and Layout code for you. 
 
-#Running your Application
+## Running your Application
 
 Once we have our application create via ADT, lets go ahead and deploy our application. Follow this process 
 
@@ -109,7 +109,7 @@ Here is how it will look
 ![Emulator](/assets/hello-android/emulator.png "Emulator")
 
 
-#Creating Android Virtual Device(AVD)
+## Creating Android Virtual Device(AVD)
 
 Android gives you an option to test your application against any version of android,  without depending on phone, this is done via AVD. AVD is nothing but a emulator which emulates the actual device on your machine. 
 
@@ -142,7 +142,7 @@ Click on OK to create the AVD
 Once the AVD is created, you will see your newly created AVD in the AVD manager. Now you can go and launch your application to run in your new AVD
 
 
-# Android Folder Structure
+## Android Folder Structure
 
 Till not we have seen how to create a hello world application and create a new emulator and test our application there, now lets see how android folder structure looks like
 
@@ -168,7 +168,7 @@ Ignore all other files
 
 > Watchout: Lot of time during your project work you might get R.java error, the best way to resolve that is to do a clean build and make sure correct R is imported in your activity
 
-#Other Tools: 
+## Other Tools: 
 
 Lets see some other tools which are available in ADT 
 
@@ -180,7 +180,7 @@ console gives your all the information about events happening in ADT, when you l
 
 Console helps in knowing what is happening in your development environment 
 
-###LogCAT
+### LogCAT
 <br/>
 ![LogCat](/assets/hello-android/logcat.png "LogCat")
 
@@ -190,7 +190,7 @@ LogCat displays filterable messages that shows you what is happening in your and
 
 Logcat is the place where all your errors in application will be printed, when ever you launch your application you can refer logcat to see what is happening, in case of any error or force close all your error message will be printed on logcat.  
 
-###DDMS
+### DDMS
 <br/>
 ![DDMS](/assets/hello-android/ddms.png "DDMS")
 

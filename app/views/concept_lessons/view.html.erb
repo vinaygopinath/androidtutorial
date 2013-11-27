@@ -31,7 +31,16 @@
 <script>
 	$("h1").each(function(){
 		id = $(this).html().replace(/\W+/g,"-")
-		$("ul.nav.bs-sidenav").append('<li><a href="#' + id + '">' + $(this).html() + '</a></li>')
 		$(this).replaceWith('<div class="page-header"><h1 id="' + id + '">' + $(this).html() + '</h1></div>')
 	}) 
+
+	$("h2").each(function(){
+		id = $(this).html().replace(/\W+/g,"-")
+		$("ul.nav.bs-sidenav").append('<li><a href="#' + id + '">' + $(this).html() + '</a></li>')
+		$(this).replaceWith('<div class="page-header"><h2 id="' + id + '">' + $(this).html() + '</h2></div>')
+	}) 
+
+	$("blockquote").each(function(){
+		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
+	})
 </script>

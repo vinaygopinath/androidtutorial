@@ -16,7 +16,7 @@ Services, Content Provider and Broadcast are some of the advance features which 
 
 Lets go 1 by 1 into each of these components and get more details about them.
 
-# Activity
+## Activity
 
 This is the most basic block of any android app, every android application will have at least 1 activity
 *	Activity is what You See on Screen, it every screen in any android application is an Activity
@@ -29,7 +29,7 @@ This is the most basic block of any android app, every android application will 
 
 So now you know what an activity is, and each activity will have user interface let’s go to our next essential building block. 
 
-# User Interface / Views
+## User Interface / Views
 
 As you know every activity has user interface they are nothing but Views in Android, Views are basic ui elements available with you do design any android application, you can extend this views to create your own custom view. 
 
@@ -49,7 +49,7 @@ As you know every activity has user interface they are nothing but Views in Andr
 
 Now we have activities, and activities has User interface but every application you use perform some actions and move from 1 screen to other, lets see how we can move from one screen to another. 
 
-# Intents
+## Intents
 
 Intents are most simple and robust concept of android, intent serves variety of purpose in any android application, lets look into what intent can do for us. 
 
@@ -63,7 +63,7 @@ With this 3 concepts of Activity, Views and Intent, you can create basic android
 
 Let’s look into some more concepts which android has. 
 
-# Services
+## Services
 
 Have you ever listened to Music on your phone ?? Have you observed what happens when you come out of music app ?? the music still runs in the background right ?
 
@@ -79,13 +79,13 @@ This is achieved using Services. Services are basically use to run anything into
 
 Lot of time it so happens that you want to store some data into your application, if you have done web/desktop programming you must be aware of database which can be use to store data. Android also provides simple relational database for every application. Lets look into our next concept 
 
-# SQLLite 
+## SQLLite 
 
 *	Android comes with a Simple RDBMS database called as SQLLite
 
 *	Every android application gets its own private SQLLite DB which it can use to store data for offline reference 
 
-# Content Providers
+## Content Providers
 
 *	Content providers manages access to a structured set of data
 
@@ -102,7 +102,7 @@ Now we have the application with activities and ui, we know how to go from 1 act
 We know that services don’t have any user interface, then how do we know what state a service is or weather the long running task is over ??
 
 
-# Notifications
+## Notifications
 
 Notifications are simple messages, which are shown to user accessed by sliding down from top. 
 
@@ -115,7 +115,7 @@ Notifications are most widely use functionality in android, from SMS to Miss Cal
 
 So far we have seen all the concepts which is required to make a application which can go from simple to complex, let’s end our lesson with understanding 1 more concept of android. 
 
-# Broadcast Receivers
+## Broadcast Receivers
 
 Broadcast receiver is simple way to listen to system wide events happening in your phone or tablets. Using broadcast receivers we can create some great applications like Call Number finder, SMS blocker etc,  which works when some events happen in your phone. 
 
@@ -134,7 +134,7 @@ We can also generate custom broadcast from inside our application. Whenever you 
 So we have seen how different components are available with us to create any application in android, now lets look into an application like twitter and see all this components in action. 
 
 
-Lets see this twitter application: 
+## Android Concepts in Twitter App 
 
 
 <br/>
