@@ -53,10 +53,10 @@
 				</ul>
 			</div>
 			<div class="ac">
-				<button class="btn btn-large btn-success btn-block">
+				<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-success btn-block" do %>
 					<h4>Learn Android by building a twitter client<br/>
 						<small style="color:inherit; font-size:85%;">First 2 hours of content free</small></h4>
-				</button>
+				<% end %>
 				<button class="btn btn-large btn-block" disabled="disabled">
 					<h4>Learn to build an Instagram Android app<br/>
 						<small style="color:inherit; font-size:85%;">Coming soon</small></h4>

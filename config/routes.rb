@@ -3,7 +3,9 @@ NewCodelearn::Application.routes.draw do
   devise_for :users
   get "android-tutorial" => "concept_lessons#index", as: "android_tutorial"
   get "android-tutorial/:template" => "concept_lessons#view", as: "android_tutorial_lesson"
-  get "android-app-tutorial/:app_name/:token" => "app_lessons#lesson", as: "app_tutorial_lesson"
+  
+  get "android-app-tutorial/:app_name" => "app_lessons#lesson_without_token", as: "app_tutorial_lesson_without_token"
+  get "android-app-tutorial/:app_name/:token(/:done)" => "app_lessons#lesson_with_token", as: "app_tutorial_lesson_with_token"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

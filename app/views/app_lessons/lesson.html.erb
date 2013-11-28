@@ -8,50 +8,56 @@
 					<li class="sidebar-brand"><a href="#">Lesson List</a></li>
 					<% @lessons.each do |t| %>
 						<li>
-						<% if t.status %>
-							<%= link_to t.title, app_tutorial_lesson_path(@app_name,t.token) %>
+						<% if t.progresses.where(user_id: current_user.id).length == 1 %>
+							<%= link_to t.title, app_tutorial_lesson_with_token_path(@app_name,t.token) %>
 						<% else %>
-							t.title
+							<%= t.title %>
 						<% end %>
 						</li>
 					<% end %>
 
 				</ul>
 			</div>
-			<%=  render :partial => "twitter-client/#{@current_lesson.file}" %>
+			<%=  render :partial => "twitter-client-tutorial/#{@current_lesson.file}" %>
 
-			<!-- Button to trigger modal -->
-			<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+			<!-- Button to trigger modal
+			<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a> -->
 
 			<!-- Modal -->
 			<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="myModalLabel" class="ac">Congrats, this lesson is done &nbsp; &nbsp;<button class="btn btn-success">Next Lesson ></button></h3>
+					<h3 id="myModalLabel" class="ac">Congrats, this lesson is done &nbsp; &nbsp;<%= link_to ">> Next Lesson", app_tutorial_lesson_with_token_path(@app_name, @next_lesson.token), :class => "btn btn-success" %></h3>
 				</div>
 				<div class="modal-body">
 					<h4>Lessons List</h4>
-					<ol>
-						<% @lessons.each do |t| %>
-							<li>
-							<% if t.status %>
-								<% link_to app_tutorial_lesson_path(@app_name,t.token) do %>
-									t.title <i data-toggle="tooltip" title="Lesson Completed" class="btn-success" style="margin-top:5px;" class="icon-minus-sign icon-large pull-right"></i>
+					<table class="table table-striped">
+						<% @lessons.to_enum.with_index(1).each do |t,i| %>
+							<tr>
+							<td><%= i %></td>
+							<% if t.progresses.where(user_id: current_user.id).length == 1 %>
+								<%= link_to app_tutorial_lesson_with_token_path(@app_name,t.token) do %>
+									<td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Completed" style="margin-top:5px; color: #5EB95E" class="icon-ok icon-large pull-right"></i></td>
 								<% end %>	
 							<% else %>
-								t.title <i data-toggle="tooltip" title="Lesson Pending" class="btn-warning" style="margin-top:5px;" class="icon-minus-sign icon-large pull-right"></i>
+								<td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Pending" style="margin-top:5px; color: #FAA732" class="icon-minus-sign icon-large pull-right"></i></td>
 							<% end %>
-							</li>
+							</tr>
 						<% end %>
-					</ol>
+					</table>
 				</div>
 				<div class="modal-footer">
 					<h4 class="ac">Your Progress</h4><br/>
 					<div class="progress">
-						<div class="bar bar-success" style="width: <%= @progress_percent %>%;"></div>
+						<div class="bar bar-success" style="width: <%= @progress_percent < 5 ? 5 : @progress_percent %>%;"><%= @progress_percent %> %</div>
 					</div>
 				</div>
 			</div>
+			<% if @done %>
+				<script>
+					$("#myModal").modal()
+				</script>
+			<% end %>
 		</div>
 	</div>
 </div>

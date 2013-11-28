@@ -2,7 +2,7 @@ class CreateAppLessons < ActiveRecord::Migration
   def change
     create_table :app_lessons do |t|
       t.integer :number
-      t.integer :file
+      t.string :file
       t.string :title
       t.string :token
 
