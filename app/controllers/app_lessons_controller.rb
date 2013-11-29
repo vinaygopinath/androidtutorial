@@ -20,7 +20,7 @@ class AppLessonsController < ApplicationController
 		 @done = false
 	 end
 
-	 @progress_percent = Progress.where( user_id: current_user.id).length / AppLesson.all.length * 100
+	 @progress_percent = Progress.where( user_id: current_user.id).length * 100 / AppLesson.all.length
 		
 	 render :lesson and return
   end
