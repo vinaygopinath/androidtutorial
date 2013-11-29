@@ -3,9 +3,17 @@
 		<div role="main" class="span12">
 			<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-bookmark icon-white"></i></a>
 			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
+				<div class="row-fluid">
 					<a id="menu-close" href="#" class="pull-right toggle" style="margin-right:20px;"><i class="icon-white icon-remove" style="color: white; margin-top:5px;"></i></a>
-					<li class="sidebar-brand"><a href="#">Lesson List</a></li>
+				</div>
+				<br/>
+				<div class="row-fluid" style="text-align:center">
+					<div class="span3"><a href="#">&lt; Prev</a></div>
+					<div class="span6 sidebar-brand" style="line-height:18px">Lesson List</div>
+					<div class="span3"><a href="#">Next &gt;</a></div>
+				</div>
+
+				<ol class="sidebar-nav">
 					<% @lessons.each do |t| %>
 						<li>
 						<% if t.progresses.where(user_id: current_user.id).length == 1 %>
@@ -15,8 +23,7 @@
 						<% end %>
 						</li>
 					<% end %>
-
-				</ul>
+				</ol>
 			</div>
 			<h3 class="pull-right" style="margin-right:50px; margin-top:30px;">{ Lesson <%= @current_lesson.number %> }</h3>
 			<%=  render :partial => "twitter-client-tutorial/#{@current_lesson.file}" %>
@@ -81,11 +88,7 @@
 	}
 
 	.sidebar-nav {
-		position: absolute;
-		top: 0;
 		width: 250px;
-		list-style: none;
-		margin: 0;
 		padding: 0;
 	}
 
@@ -110,20 +113,15 @@
 		text-decoration: none;
 	}
 
-	.sidebar-nav > .sidebar-brand {
+	.sidebar-brand {
 		height: 55px;
 		line-height: 55px;
 		font-size: 18px;
-	}
-
-	.sidebar-nav > .sidebar-brand a {
 		color: #999999;
-	}
-
-	.sidebar-nav > .sidebar-brand a:hover {
 		color: #fff;
 		background: none;
 	}
+
 
 	#menu-toggle {
 		top: 0;
