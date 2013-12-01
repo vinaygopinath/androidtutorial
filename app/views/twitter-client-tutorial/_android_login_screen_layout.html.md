@@ -29,3 +29,72 @@ Our login screen is something that is quite simple, and thus, you'll see that we
 
 ![Login screen Layout overview](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.42.12.png "Login screen Layout overview")
 
+The XML code for the layout file is as follows &mdash;
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+        
+        <TextView android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hdr_title" 
+         />
+        
+        <LinearLayout android:id="@+id/uname_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:orientation="horizontal">
+
+
+            <TextView android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_username"
+             />
+            
+            <EditText
+                android:id="@+id/fld_username"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_enter_username"
+            />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:id="@+id/pwd_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uname_block"
+            android:orientation="horizontal">
+        
+            <TextView android:id="@+id/pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_pwd"
+             />
+            
+            <EditText
+                android:id="@+id/fld_pwd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_enter_pwd"
+             />
+            
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwd_block"
+            android:text="@string/lbl_login"
+         />
+
+    </RelativeLayout>
+
+
+

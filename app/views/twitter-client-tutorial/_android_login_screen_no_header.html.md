@@ -11,7 +11,7 @@ will be removing that annoying and not-so-good-looking default header, that appe
 To do this, open your `AndroidManifest.xml` file, and add the following to the `activity` 
 tag corresponding to your `MainActivty` &mdash; `android:theme="@android:style/Theme.NoTitleBar"`. 
 
->Styling*/*Theming* your app can be done in many ways. One of the ways is to apply pre-defined styles in the Manifest file, like we
+>*Styling*/*Theming* your app can be done in many ways. One of the ways is to apply pre-defined styles in the Manifest file, like we
 just did. Other ways to accomplish it is to add style declarations in the `styles.xml` file placed in the `/res/values` folder. Of 
 course, you can also achieve styling in a programmatic manner, but from performance and separation-of-concerns perspective, that is
 generally frowned upon.
