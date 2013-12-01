@@ -2,6 +2,11 @@ We will create a basic login screen. Our purpose for now will be to familiarise 
 some basics of UI handling, and how to tie together the interaction between UI elements and
 the `Activity` class.
 
+It is going to look something like this&mdash;
+
+<img src="https://dl.dropboxusercontent.com/u/1166125/codelearn/Screen%20Shot%202013-10-21%20at%206.50.47%20PM.png" 
+    style="box-shadow: 1px 1px 1px #c2c2c2" alt="Android console">
+
 To start with, let's remove that not-so-good-looking default header that is appearing at the top of
 your screen. To do this, open your `AndroidManifest.xml` file, and add the following to the `activity` 
 tag corresponding to your `MainActivty` &mdash; `android:theme="@android:style/Theme.NoTitleBar"`. 
@@ -21,8 +26,7 @@ idea for you to go brush up your knowledge about [Layouts](http://codelearn.org)
 
 The basic screen layout that we will be creating would look something like this &mdash;
 
-<img src="https://dl.dropboxusercontent.com/u/1166125/codelearn/Screen%20Shot%202013-10-21%20at%206.50.47%20PM.png" 
-    style="box-shadow: 1px 1px 1px #c2c2c2" alt="Android console">
+
 
 As an Android developer, you should keep in mind that there are usually more than one way of creating the same UI. A bit like
 the way it is with HTML. However, amongst the multiple ways, the *better* way is usually the one which is *less verbose* and is 
