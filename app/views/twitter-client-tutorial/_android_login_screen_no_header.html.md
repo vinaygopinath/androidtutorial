@@ -4,8 +4,7 @@ the `Activity` class.
 
 It is going to look something like this&mdash;
 
-<img src="https://dl.dropboxusercontent.com/u/1166125/codelearn/Screen%20Shot%202013-10-21%20at%206.50.47%20PM.png" 
-    style="box-shadow: 1px 1px 1px #c2c2c2" alt="Android console">
+![Login Screen Final](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screen%20Shot%202013-10-21%20at%206.50.47%20PM.png "Login Screen Final")
 
 But before we get to it, let's do a small styling change which will make the app look a lot better. We
 will be removing that annoying and not-so-good-looking default header, that appears on the screen.

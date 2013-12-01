@@ -19,8 +19,7 @@ This allows you to have a more flexible design layout approach.
 
 The following figure should give you an understanding when to choose between either of them &nbsp;
 
-<img src="https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.55.47.png" 
-    style="box-shadow: 1px 1px 1px #c2c2c2" alt="Relative and Linear Layout Difference">
+![Relative and Linear Layout Difference](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.55.47.png "Relative and Linear Layout Difference")
 
 One important point to note is that in almost every circumstance, `RelativeLayout` and `LinearLayout` can be used to replace the other. However, in
 general, it is usually much more verbose to do it. In some cases, if the layout is fairly simple, it really doesn't matter which one you choose.
@@ -28,6 +27,5 @@ general, it is usually much more verbose to do it. In some cases, if the layout 
 Our login screen is something that is quite simple, and thus, you'll see that we're making use of `RelativeLayout` even when we could have used a 
 `LinearLayout`. The basic screen layout that we will be creating would look something like this &mdash;
 
-<img src="https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.42.12.png" 
-    style="box-shadow: 1px 1px 1px #c2c2c2" alt="Layout overview">
+![Login screen Layout overview](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.42.12.png "Login screen Layout overview")
 
