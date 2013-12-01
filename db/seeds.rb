@@ -11,7 +11,8 @@ AppLesson.create( number: 2, title: "About Layouts", token: "bcdefg", file: "and
 AppLesson.create( number: 3, title: "this is lesson 3 title", token: "cdefgh", file: "test.html.md")
 AppLesson.create( number: 4, title: "Login — Basic Styling", token: "tw_app01", file: "android_login_screen_no_header.html.md")
 AppLesson.create( number: 5, title: "Login — Layout", token: "tw_app02", file: "android_login_screen_layout.html.md")
-AppLesson.create( number: 6, title: "Dummy", token: "tw_appXX", file: "dummy.md")
+AppLesson.create( number: 6, title: "Login — Layout Styling", token: "tw_app03", file: "android_login_screen_styling.html.md")
+AppLesson.create( number: 100, title: "Dummy", token: "tw_appXX", file: "dummy.md")
 
 CurrentUserLesson.delete_all
 CurrentUserLesson.create( user_id: 1, lesson_number: 1, completed: true)
