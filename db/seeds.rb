@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 AppLesson.delete_all
-AppLesson.create( number: 1, title: "this is lesson 1 title", token: "abcdef", file: "android_hello_world.html.md")
-AppLesson.create( number: 2, title: "this is lesson 2 title", token: "bcdefg", file: "android_layouts.html.md")
+AppLesson.create( number: 1, title: "Oh yeah, Hello World!", token: "abcdef", file: "android_hello_world.html.md")
+AppLesson.create( number: 2, title: "About Layouts", token: "bcdefg", file: "android_layouts.html.md")
 AppLesson.create( number: 3, title: "this is lesson 3 title", token: "cdefgh", file: "test.html.md")
 
 CurrentUserLesson.delete_all
