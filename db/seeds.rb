@@ -9,7 +9,7 @@ AppLesson.delete_all
 AppLesson.create( number: 1, title: "Oh yeah, Hello World!", token: "abcdef", file: "android_hello_world.html.md")
 AppLesson.create( number: 2, title: "About Layouts", token: "bcdefg", file: "android_layouts.html.md")
 AppLesson.create( number: 3, title: "this is lesson 3 title", token: "cdefgh", file: "test.html.md")
-AppLesson.create( number: 4, title: "Login Screen", token: "tw_app01", file: "android_login_screen.html.md")
+AppLesson.create( number: 4, title: "Basic Styling", token: "tw_app01", file: "android_login_screen_no_header.html.md")
 
 CurrentUserLesson.delete_all
 CurrentUserLesson.create( user_id: 1, lesson_number: 1, completed: true)
