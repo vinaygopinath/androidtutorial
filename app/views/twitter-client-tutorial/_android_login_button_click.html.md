@@ -18,7 +18,7 @@ reference is as follows &mdash;
 
     Button _loginBtn = ( Button ) findViewById(R.id.btn_login);
 
-Here the `Button` class is provided by the framework &ndash; android.widget.Button &ndash; and you can use it to invoke a bunch of 
+Here the `Button` class is provided by the framework &ndash; `android.widget.Button` &ndash; and you can use it to invoke a bunch of 
 methods that can modify the behaviour or state of the button. The `findViewById` method is like a lookup function that looks into your
 layout file, and retrieves the `View` instance associated with the ID you pass. You need to cast &ndash; `( Button )` &ndash; into a `Button` 
 reference. Here the `R.id.btn_login` is an auto-generated encapsulation that the Android framework provides for all view IDs at a code level. 
