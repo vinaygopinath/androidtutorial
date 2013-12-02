@@ -29,10 +29,15 @@ We make use of the `sp` unit for declaring text sizes. `sp` stands for *Scale (i
 but also takes into consideration the user's default font settings.   
 `dp` on the other hand stands for *Density (independent) Pixels* and used to define the dimensions, padding and margins of views.
 
+---
+
 You can also use `px` to denote the absolute pixel measurements, but it is *strongly* advised that you don't. This is because Android
 devices can have a whole variety of resolutions. A pixel on one device can be very different on another. To protect your screens
 getting all distorted when viewed on different devices, it is best to allow the Android framework to do its bit of magic in scaling
 the dimensions you provide as per the device. And to do so, you should use the `dp` or `sp` units for your dimensions.
+
+---
+
 
 After the layout file, go ahead and create a new `Activty` class, and name it &mdash; `TweetList.java`. Remember to extend the 
 `android.app.Activity` class and also add the following entry to your `AndroidManifest.xml` file &mdash;

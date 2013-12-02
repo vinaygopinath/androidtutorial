@@ -14,7 +14,8 @@ AppLesson.create( number: 5, title: "Login — Layout", token: "tw_app02", file:
 AppLesson.create( number: 6, title: "Login — Layout Styling", token: "tw_app03", file: "android_login_screen_styling.html.md")
 AppLesson.create( number: 7, title: "Login — Button click", token: "tw_app04", file: "android_login_button_click.html.md")
 AppLesson.create( number: 8, title: "Showing Next Screen", token: "tw_app05", file: "android_new_activity_with_intent.html.md")
-AppLesson.create( number: 9, title: "Dummy", token: "tw_appXX", file: "dummy.md")
+AppLesson.create( number: 9, title: "List View Intro", token: "tw_app06", file: "android_list_view_intro.html.md")
+AppLesson.create( number: 10, title: "Dummy", token: "tw_appXX", file: "dummy.md")
 
 CurrentUserLesson.delete_all
 CurrentUserLesson.create( user_id: 1, lesson_number: 1, completed: true)
