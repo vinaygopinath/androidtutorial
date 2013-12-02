@@ -22,4 +22,12 @@ CurrentUserLesson.create( user_id: 1, lesson_number: 1, completed: true)
 
 Progress.delete_all
 Progress.create( user_id: 1, lesson_number: 1)
-
+Progress.create( user_id: 1, lesson_number: 2)
+Progress.create( user_id: 1, lesson_number: 3)
+Progress.create( user_id: 1, lesson_number: 4)
+Progress.create( user_id: 1, lesson_number: 5)
+Progress.create( user_id: 1, lesson_number: 6)
+Progress.create( user_id: 1, lesson_number: 7)
+Progress.create( user_id: 1, lesson_number: 8)
+Progress.create( user_id: 1, lesson_number: 9)
+Progress.create( user_id: 1, lesson_number: 10)
