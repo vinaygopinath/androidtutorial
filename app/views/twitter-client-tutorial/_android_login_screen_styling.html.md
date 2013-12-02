@@ -47,16 +47,12 @@ Alright, so coming back to the layout file for the login screen&mdash;we should 
 Use the following snippet to style your bare-bones layout file, and admire the difference.  
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        ...
         android:background="@android:color/white">
         
         <TextView android:id="@+id/header"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            ...
             android:padding="10dp"
-            android:text="@string/hdr_title" 
             android:textSize="20sp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -64,8 +60,7 @@ Use the following snippet to style your bare-bones layout file, and admire the d
          />
         
         <LinearLayout android:id="@+id/uname_block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            ...
             android:layout_centerHorizontal="true"
             android:layout_below="@id/header"
             android:layout_marginTop="25dp"        
@@ -73,18 +68,14 @@ Use the following snippet to style your bare-bones layout file, and admire the d
 
 
             <TextView android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lbl_username"
+                ...
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:layout_gravity="center_vertical"
              />
             
             <EditText
-                android:id="@+id/fld_username"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                ...
                 android:hint="@string/lbl_enter_username"
                 android:layout_marginLeft="8dp"
                 android:inputType="textEmailAddress"
@@ -95,16 +86,14 @@ Use the following snippet to style your bare-bones layout file, and admire the d
         </LinearLayout>
         
         <LinearLayout android:id="@+id/pwd_block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            ...
             android:layout_below="@id/uname_block"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"        
             android:orientation="horizontal">
         
             <TextView android:id="@+id/pwd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                ...
                 android:text="@string/lbl_pwd"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
@@ -113,8 +102,7 @@ Use the following snippet to style your bare-bones layout file, and admire the d
             
             <EditText
                 android:id="@+id/fld_pwd"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                ...
                 android:hint="@string/lbl_enter_pwd"
                 android:layout_marginLeft="8dp"
                 android:inputType="textPassword"
@@ -126,8 +114,8 @@ Use the following snippet to style your bare-bones layout file, and admire the d
         
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
+            ...
+            ...
             android:layout_below="@id/pwd_block"
             android:layout_centerHorizontal="true"
             android:gravity="center"
