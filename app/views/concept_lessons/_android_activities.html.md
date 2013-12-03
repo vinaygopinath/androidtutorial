@@ -23,7 +23,8 @@ Let’s See this in more details.
 This is typically how your activity behaves at different points. Let see each lifecycle state one by one and why they are required. 
 
 
-**On Create:** On create is called when your activity is getting created for the first time. On Create is called only 1 time in entire lifecycle of activity. Usually this is the place where you will set the layout using (setContentView) to set the layout/UI to the activity.
+###On Create
+On create is called when your activity is getting created for the first time. On Create is called only 1 time in entire lifecycle of activity. Usually this is the place where you will set the layout using (setContentView) to set the layout/UI to the activity.
 
 Also you can use onCreate to initialize your variables.  In Any android application when ever you create any activity, the minimum method which you need to override is onCreate. If you don’t override on create method you will not able to set any UI to your activity and you will get an error when your app will run. 
 
@@ -31,13 +32,16 @@ Also you can use onCreate to initialize your variables.  In Any android applicat
 
 Why is this necessary, imagine you have a form and user field some of the information. Suddenly user rotates there phone, using this bundle android retains the values of this fields and re populate data after rotation automatically.  This bundle will always be null at 1st call. 
 
-**OnStart:** OnStart is your immediate method, which gets called after activity is Created, onStart is called just before the activity becomes visible to the user, If you notice OnStart is called from 2 places, after onRestart and After OnCreate, onStart is always followed by OnResume or OnStop.  You can use OnStart to reset data which you use when the application is running, reinitialize variables etc. 
+###OnStart:
+OnStart is your immediate method, which gets called after activity is Created, onStart is called just before the activity becomes visible to the user, If you notice OnStart is called from 2 places, after onRestart and After OnCreate, onStart is always followed by OnResume or OnStop.  You can use OnStart to reset data which you use when the application is running, reinitialize variables etc. 
 
-**OnResume:** OnResume is the place at which your activity comes into foreground, onResume is called when activity becomes visible to the user. At this point the activity is at top of activity stack and user can start interacting with the activity. On Resume is typically use to register listener, bind to service etc. 
+###OnResume:
+OnResume is the place at which your activity comes into foreground, onResume is called when activity becomes visible to the user. At this point the activity is at top of activity stack and user can start interacting with the activity. On Resume is typically use to register listener, bind to service etc. 
 
 OnResume is a good place to refresh your UI with any New Changes which might have occurred during period in which acitivity was not visible. For Example, if you are polling a service in background (like tweets), onResume is good place to update your screen with new results. 
 
-**OnPause:** OnPause is Called just when System Starts to Resume Other Activity or when another activity comes on the top of your activity.  Typically  anything that steals your user away from your activity will result in onPause.
+###OnPause:
+OnPause is Called just when System Starts to Resume Other Activity or when another activity comes on the top of your activity.  Typically  anything that steals your user away from your activity will result in onPause.
 
 In OnPause we release the resources, or Save the application data, stopping background threads etc. 
 
@@ -46,17 +50,21 @@ There is always guaranteed that whenever your activity is becoming invisible or 
 > Watchout: In our Example, OnPause will be method at which you can save the state of your game. 
 OnStop: OnStop is called when your activity is no longer visible to the user, it is similar to onPause but here you will not see your activity entirely.  You can use this method as well to store the state of your application and shut down time intensive or CPU intensive operations. This method is guaranteed to be called as of API level 11.
 
+<br/>
+
 > Watchout: So What is the difference between onPause and OnStop ? If a activity comes into foreground and fills the screen such that your current activity is not at all visible, your current activity will be called with both onPause  and onStop . If, however an activity that comes to foreground does not fill the screen and your current activity is partially visible, your current activity will be called with only onPause. 
 
 Typically whenever you see a dialog box which requires your attention like battery low, network connection your current activity becomes partially visible and popup box comes on the top, this is the point where only onPause will be called. 
 
-**OnRestart:** Similar to onCreate but on restart gets called only after onStop, this is the method which you can use to know if your application is starting Fresh or getting restarted. 
+###OnRestart:
+Similar to onCreate but on restart gets called only after onStop, this is the method which you can use to know if your application is starting Fresh or getting restarted. 
 
 In OnRestart you will get your application save state back and reinitialize all the variables followed then by onStart
 
 > Watchout: in our game example, this is the method in which you will write code to restore the game state back to 50 %
 
-**OnDestroy:** this is the method which will be called when your activity is getting killed. This is the final call the activity will receive in its lifecycle.
+###OnDestroy:
+This is the method which will be called when your activity is getting killed. This is the final call the activity will receive in its lifecycle.
 
 When user press back button on any activity the foreground activity will be destroyed and control will return to the previous activity in the user’s navigation flow. 
 
@@ -109,3 +117,4 @@ Now once you saw onRestart, just press the back button, this will exit your appl
 
 Summarizing the chapter, now you understand why an activity lifecycle exist, what is its importance and what are the different lifecycle states which an activity goes through 
 
+<br/>

@@ -145,3 +145,5 @@ In case user have multiple applications which can be used for this action, andro
 Similar to opening webpage we have shareData method in which you can see how we use ACTION_SEND to share data over email or any social network. 
 
 With this chapter, we have seen how we can use intents to communicate between different activities or pass data. Also we have seen how intents can be use to open other applications
+
+<br/>
