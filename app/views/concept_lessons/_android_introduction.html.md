@@ -19,6 +19,7 @@ Lets go 1 by 1 into each of these components and get more details about them.
 ## Activity
 
 This is the most basic block of any android app, every android application will have at least 1 activity
+
 *	Activity is what You See on Screen, it every screen in any android application is an Activity
 *	Activity will always have User Interface, it is not possible to have an activity without a UI
 *	Any android application will have 1 or more Activity, out of this 1 activity will act as entry point (from where always the application starts). 
