@@ -28,6 +28,14 @@ On create is called when your activity is getting created for the first time. On
 
 Also you can use onCreate to initialize your variables.  In Any android application when ever you create any activity, the minimum method which you need to override is onCreate. If you don’t override on create method you will not able to set any UI to your activity and you will get an error when your app will run. 
 
+    class MainActivity extends Activity
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_main);
+		}
+	end
+
 > Watchout: If you notice, OnCreate pass you something called as Bundle, this bundle is typically use to store the state of your activity, take example of rotating your phone, if you rotate your phone, your activity gets killed and OnCreate is called again, here Android frameworks helps your in determining using Bundle weather the same activity is killed and created again or it’s a new activity.
 
 Why is this necessary, imagine you have a form and user field some of the information. Suddenly user rotates there phone, using this bundle android retains the values of this fields and re populate data after rotation automatically.  This bundle will always be null at 1st call. 
