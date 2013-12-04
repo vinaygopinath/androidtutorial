@@ -8,3 +8,4 @@ Go to layout folder of the project and create a new xml file. ( By default there
 
 ![Create A Layout](/assets/android-layout/create-a-layout.png)
 
+
