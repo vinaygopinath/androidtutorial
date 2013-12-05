@@ -1,5 +1,3 @@
-<br/>
-![Building Blocks of Android](/assets/android-introduction/picture-1.png "Building Blocks of Android")
 #Android Widgets / View Elements
 
 Any android app is made up of lot of activities and all the activities have User interface. Android provides us lot of prebuilt user interface elements, we can use this UI compontents to create a nice looking UI for our app
