@@ -1,10 +1,15 @@
 # Android Layouts
 
-Android layouts manages & arranges the way its children appear on the screen.A layout defines the visual structure for a user interface, such as the UI for an activity or app widget. The ViewGroup subclass is the base class for layouts, which are invisible containers that hold other Views (or other ViewGroups) and define their layout properties. In this tutorial we will see learn below layouts -
+Layout is the View element container in Android. It is also known as **Viewgroup**. All view elements like textbox, label, buttons etc need to be contained inside the layout. 
+
+The Layout is in-turn contained in a layout file location inside **res/layout** directory of the Android app. An Android Activity uses the Layout & shows output on the screen. 
+
+The three most important kind of Layout elements are
 
 * LinearLayout
 * RelativeLayout
 * GridLayout
+
 
 ## LinearLayout
 
@@ -17,11 +22,16 @@ So, the available orientation for LinearLayout are :
 
 **Note : By default orientation is always Horizontal.**
 
-### Create Linear Layout
 
-Go to layout folder of the project and create a new xml file. ( By default there will be activity_mail.xml). You can use this xml as well.
+[Download this sample project](https://github.com/codelearn-org/android-linear-layout-example) , import in Eclipse & navigate to activity_main.xml file as shown in the screenshot below.
+<br/>
+![Linear Layout XML file](/assets/android-layouts/linear-layout-file-location.png "Linear Layout XML file")
+<p class="ac"><b>Linear Layout XML file</b></p>
+<br/>
 
-### Declaring Linear Layout
+ Double click the file to view its content.
+
+`activity_main.xml`
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
        xmlns:tools="http://schemas.android.com/tools"
@@ -32,14 +42,15 @@ Go to layout folder of the project and create a new xml file. ( By default there
     
     </LinearLayout>
 
-For any view/viewgroup we need to specify its width & height. If not specified, it will cause error. In the above declaration we have made both width and height attribute to “match_parent” (Also same as “fill_parent”. You can use any one). This means, we are telling the android system that this layout’s width and height is same as that of its parent. As this layout is the root view of our activity, it will take entire screen as its area.
+**LinearLayout** is the XML element name for this layout. **xmlns:android** initializes the namespace 'android'. The attributes layout_width & layout_height are part of android namespace. If you are new to XML & namespace, you do not have to worry much about it.
 
+For any view/viewgroup we need to specify its width & height. If not specified, it will cause error. In the above declaration we have made both width and height attribute to “match_parent” (Also same as “fill_parent”. You can use any one of them). This means, we are telling the android system that this layout’s width and height is same as that of its parent. As this layout is the root view of our activity, it will take entire screen as its area.
 
-### Orientation
+LinearLayout can be used in vertical or horizontal fashion. We can set the orientation of the layout by setting the “android:orientation” attribute.
 
-As discussed, LinearLayout can be used in vertical or horizontal fashion. We can set the orientation of the layout by setting the “android:orientation” attribute.
+### Horizontal Orientation
 
-#### Horizontal:
+`Horizontal`
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
        xmlns:tools="http://schemas.android.com/tools"
@@ -60,76 +71,87 @@ As discussed, LinearLayout can be used in vertical or horizontal fashion. We can
            android:text="Button 3" />
     </LinearLayout>
 
-[Insert Image]
+<br/>
+![Linear Layout horizontal alignment Screenshot](/assets/android-layouts/linear-layout-horizontal-screenshot.png "Linear Layout horizontal alignment Screenshot")
+<p class="ac"><b>Linear Layout horizontal alignment screenshot</b></p>
+<br/>
 
 Note : By default orientation is Horizontal.
 
-#### Vertical:
+### Vertical Orientation
 
-In the vertical “orientation” all the children are put one below the other.
+In the vertical “orientation” all the children are put one below the other. Edit activity_main.xml. Change android_orientation field from horizontal to vertical.
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+`activity_main.xml`
+
+<pre>
+    &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		.
 		.
-       android:orientation="vertical" >
+       android:orientation="<strike>horizontal</strike>vertical" &gt;
     	.
 		.
-	</LinearLayout>
+	&lt;/LinearLayout&gt;
+</pre>
 
-[Insert Image]
+Save the file & deploy your Android app. You will see the screenshot as shown below. 
+
+<br/>
+![Linear Layout vertical alignment Screenshot](/assets/android-layouts/linear-layout-vertical-screenshot.png "Linear Layout vertical alignment Screenshot")
+<p class="ac"><b>Linear Layout vertical alignment screenshot</b></p>
+<br/>
+
 
 ## Relative Layout
 
 Relative layout is also one of the basic layout available to design UI. It arranges its views with reference to the view siblings or with parent. That is, using Relative layout you can mention a view to be **onLeft, onRight, onBottom or toTop** of its siblings. You can also mention/position a view with respect to its parent.
 
-### Create Layout
 
-Go to layout folder of the project and create a new xml file. ( By default there will be activity_mail.xml). You can use this xml as well. In the below screenshot, I have renamed it.
-
-[Insert Image]
-
-### Declaring Layout
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:tools="http://schemas.android.com/tools"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent" >
-    
-      <!-- child views -->
-    
-    </RelativeLayout>
-
-#### Positioning child views in layout 
 
 In this layout, you can specify the child layouts w.r.t its sibling or parent. To specify the same, one of the below mentioned attribute is assigned. 
 
-##### Relative to container/parent 
+### Position relative to container/parent 
 
-[Insert Image]
+<br/>
+![Relative Layout position options](/assets/android-layouts/relative-layout-position-options.png "Relative Layout position options")
+![Relative Layout position options](/assets/android-layouts/relative-layout-position-options-2.png "Relative Layout position options")
+<p class="ac"><b>Relative Layout position options</b></p>
+<br/>
 
-**layout_alignParentxxx** - This attribute is used to **absolutely** position the child element relative to the parent. It can have four possible values - `layout_alignParentLeft`, `layout_alignParentRight`, `layout_alignParentTop` and `layout_alignParentBottom`. 
+**layout_alignParentxxx** - This attribute is used to **absolutely** position the child element relative to the parent. It can have four possible values - **layout_alignParentLeft, layout_alignParentRight, layout_alignParentTop and layout_alignParentBottom**. 
 
 For eg. putting attribute `android:layoutalignParentLeft="true"` to a button element will align the button left edge of the button to that of parent layout.
 
 Apart from above four variations, there are two more variations present - **layout_alignParentStart & layout_alignParentEnd**. layout_alignParentStart is equivalent to setting layout_alignParentTop & layout_alignParentLeft true for the element. You can guess what layout_alignParentEnd would do.
 
-To position element at the horizontal center, `layout_centerHorizontal` is used. To set vertical position, you can either use absolute position attribute like layout_alignParentTop or layout_alignParentBottom or use the positioning relative to the sibling (mostly previous) element. This part is introduced later.
+To position element at the horizontal center, **layout_centerHorizontal** is used. To set vertical position, you can either use absolute position attribute like layout_alignParentTop or layout_alignParentBottom or use the positioning relative to the sibling element. This part is introduced later.
 
-Similarly, `layout_centerVertical` positions the element vertically at the center. `layout_centerInParent` is layout_centerVertical & layout_centerHorizontal combined.
+Similarly, **layout_centerVertical** positions the element vertically at the center. **layout_centerInParent** is layout_centerVertical & layout_centerHorizontal combined.
 
-##### Relative to Sibling element
+### Position relative to sibling
 
-You can position an element relative to another element in the layout. Every element has an `android:id` attribute. The attribute can be used to reference the child element against which the positioning needs to be done. More about ids are discussed in the later part of this article. 
+You can position an element relative to another element in the layout. Every element has an **android:id** attribute. The attribute can be used to reference the child element against which the positioning needs to be done. More about ids are discussed in the later part of this article. 
 
-Most common attribute are the kind of **layout_toXXXOf**. XXX can take Left, Right, Start & End. Eg. `android:layout_toLeftOf=@+id/some_element` will position the element to the left of an element whose `android:id` is `@+id/some_element`.
+Most common attribute are the kind of **layout_toXXXOf**. XXX can take Left, Right, Start & End. Eg. `android:layout_toLeftOf=@+id/some_element` will position the element to the left of an element with `android:id="@+id/some_element"`.
 
-Apart from it, there is `layout_above` & `layout_below`. The names are self explainatory. 
+Apart from it, there is **layout_above & layout_below**. The names are self explainatory. 
 
-#### Relative Layout Example 
+### Relative Layout Example 
 
-Download the [Relative Layout Android Project](), import it in Eclipse & run it. You should see the screenshot below. 
+[Download this sample project](https://github.com/codelearn-org/android-relative-layout-example) , import in Eclipse & navigate to [activity_relative_layout.xml](https://github.com/codelearn-org/android-relative-layout-example/tree/master/res/layout) file as shown in the screenshot below.
 
-[Insert Image]
+<br/>
+![Relative Layout XML file](/assets/android-layouts/relative-layout-file-location.png "Relative Layout XML file")
+<p class="ac"><b>Relative Layout XML file</b></p>
+<br/>
+
+Run the project & you will see screenshot as below.
+
+<br/>
+![Relative Layout Screenshot](/assets/android-layouts/relative-layout-screenshot.png "Relative Layout Screenshot")
+<p class="ac"><b>Relative Layout Screenshot</b></p>
+<br/>
+
 
 In the above example, we have put many views. An image, left to that are two textviews and also a date text view. Let us examine how this view can be put together using RelativeLayout. Consider below layout -  ( Replace the existing code in activity_relative_layout.xml )
 
@@ -174,15 +196,16 @@ The date field '26 Nov 2013' is again a TextView element aligned to the right of
 
 A layout that places its children in a rectangular grid.GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
 
-### Create Layout
 
-[Download the project], import it in Eclipse & navigate to grid_layout.xml file inside layout directory as shown in the image
+[Download the sample project](https://github.com/pocha/android-grid-layout-example), import it in Eclipse & navigate to [grid_layout.xml](https://github.com/pocha/android-grid-layout-example/blob/master/res/layout/grid_layout.xml) file inside layout directory as shown in the image
 
-[INSERT Image]
+<br/>
+![Grid Layout XML file](/assets/android-layouts/grid-layout-file-location.png "Grid Layout XML file")
+<p class="ac"><b>Grid Layout XML file</b></p>
+<br/>
 
-### Declaring Layout
 
-`GridLayout` has fields `android:columnCount` & `android:rowCount` which specify the columns & rows in the layout specifically. Each child element can then be positioned to occupy one of the blocks. 
+**GridLayout** has fields **android:columnCount** & **android:rowCount** which specify the columns & rows in the layout specifically. Each child element can then be positioned to occupy one of the blocks. 
 
     <?xml version="1.0" encoding="utf-8"?>
 
@@ -230,11 +253,17 @@ Above is example of 4x4 grid layout with horizontal orientation. The orientation
 
 In the above layout, we have put Textviews in the form of a grid. As the orientation is horizontal, it starts filling the 4X4 grid horizontally and populates all the views. If we change the orientation to vertical, the layout will be traced in a vertical fashion. Below are the screenshots for both orientations.
 
-[Insert Image]
+<br/>
+![Grid Layout Screenshot](/assets/android-layouts/grid-layout-screenshot.png "Grid Layout Screenshot")
+<p class="ac"><b>Grid Layout Screenshot</b></p>
+<br/>
 
-In Grid layout, the size of each cell is dependent on layout_gravity of its siblings. So if we change, some of the data in above views, only those views will get the width corresponding to new text.
 
-layout_gravity specifies how a component should be placed in its group of cells. The default value set to layout_gravity is LEFT | BASELINE.
+In Grid layout, the size of each cell depends on the text content of every other sibling element in its row & column. So if the text changes in one of the element, the column or row will stretch to keep the alignment intact.
+
+layout_gravity specifies how a component should be placed in its own cell. The default value set to layout_gravity is LEFT | BASELINE. Consider it to be positioning of the actual text in the cell if the cell is *too wide* for the text. This could be due to the fact that any of the sibling element in the row or column has a lot bigger text.
+
+This behavior is similar to how HTML table behaves. 
 
     <?xml version="1.0" encoding="utf-8"?>
 
@@ -264,7 +293,11 @@ layout_gravity specifies how a component should be placed in its group of cells.
     
     </GridLayout>
 
-[Insert Image]
+<br/>
+![Grid Layout Table Like Behavior](/assets/android-layouts/grid-layout-table-like-behavior.png "Grid Layout Table Like Behavior")
+<p class="ac"><b>Grid Layout Table Like Behavior</b></p>
+<br/>
+
 
 ## Invoking Layout from Activity
 
@@ -272,9 +305,9 @@ In each demo we have created a layout and now let us see how this can be used in
 
 ### setContentView
 
-Open the MainActivity.java/RelativeLayoutActivity.java/GridLayout.java file in src folder and below is the code that you will see. By default Android creates this code snippet for you.
+Open the MainActivity.java/RelativeLayoutActivity.java/GridLayout.java file in src folder of any of the above projects and below is the code that you will see. By default Android creates this code snippet for you.
 
-   @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // for LinearLayout
@@ -284,7 +317,7 @@ Open the MainActivity.java/RelativeLayoutActivity.java/GridLayout.java file in s
 
 Now `setContentView(..)` method tells the Activity which layout it has to use for its UI. As we have created a layout resource, we can easily refer to this as R.layout.{name_of_xml_file}. Android automatically creates this constant for you.
 
-### android:id
+## android:id
 
 Any View object may have an integer ID associated with it, to uniquely identify the View within the tree. When the application is compiled, this ID is referenced as an integer, but the ID is typically assigned in the layout XML file as a string, in the id attribute. The syntax for an ID, inside an XML tag is:
 
@@ -302,7 +335,7 @@ An ID need not be unique throughout the entire tree, but it should be unique wit
 
 So whenever an Activity( a screen in android) is about to be shown to the user, its onCreate() method is called. And exactly here we are telling which UI (layout) to use before becoming visible to user. This is how we create a layout (UI) and use(bind) it to the corresponding Activity 
 
-## Other Layout XML attributes
+## layout_height layout_width & other attributes
 
 XML layout attributes named layout_{something} define layout parameters for the View that are appropriate for the ViewGroup in which it resides. All view groups include a width and height (`layout_width` and `layout_height`), and each view is required to define them. Many LayoutParams also include optional margins and borders.
 
