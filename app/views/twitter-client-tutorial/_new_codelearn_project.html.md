@@ -1,17 +1,29 @@
-# Creating New Project
+# Creating A New Project
 
-In the previous lesson, we installed Codelearn Eclipse Plugin. Instead of following the regular process of creating a New Android project, the plugin comes with a 'Codelearn Twitter App' project pre-bundled. When you create a new Android project, it asks for quite a few parameters which are confusing for a newbie. We have condensed all those steps by providing default values. 
+In the previous lesson, we installed Codelearn Eclipse Plugin. Instead of following the regular process of creating a New Android project, the plugin comes with a 'Codelearn Twitter App' project pre-bundled. When you create a new Android project, it asks for quite a few parameters which is confusing for a newbie. We have condensed all those steps by providing default values. 
 
-Lets create the new Codelearn Twitter App.
+## Installation Steps
 
-1. You should have Eclipse open. Hit on File -> New -> Other. You will see a window popup as shown below. It is a 'New Project wizard' of Eclipse. 
+Follow steps below to create the new Codelearn Twitter App.
 
-[Insert Image]
+* You should have Eclipse open. Hit on File -> New -> Other
 
-2. Under 'Codelearn Android Project', select 'Twitter App'. You should see an app with name 'CodelearnTwitterApp' in the package Explorer Window (the project navigation window on the left). Screenshot below. 
+!["Create new Project"](/assets/twitter-client/plugin-newproject-menu.png "Create new Project")
 
-[Insert Image]
+* You will see a window popup as shown below. It is a 'New Project wizard' of Eclipse. Under 'Codelearn Android Project', select 'Twitter App'. Hit Finish. 
 
-3. Before watching the content of the app, lets get it running first. Hit the **Run button** at the top (the green play button). A selection window shows up. This is 'Run Configuration Selector' window of Eclipse. A project can have multiple **run configurations**. The default run configuration for an Android app is 'Android Application' but in our case, you should select 'Android App Codelearn'. This configuration does the default Android App deployment & also test your application to show you logical errors & possible remedies. It also lets us keep track of your tutorial completion progress.
+!["New Project Wizard"](/assets/twitter-client/plugin-newproject-wizard.png "New Project Wizard")
 
-[Insert Image]
+You should see an app with name 'CodelearnTwitterApp' in the package Explorer Window (the project navigation window on the left). Screenshot below. 
+
+!["Package Explorer Screenshot"](/assets/twitter-client/project-package-explorer.png "Package Explorer Screenshot")
+
+* Before checking the content of the app, lets get it running first. Before you run your app, we suggest you to keep your Android phone jacked into the PC through a USB cable. The Android app will get deployed to your phone & this is how most of the Android app developers do it too. If you do not have an Android phone, you will get a popup which says that no Android device is found & it will suggest you to create AVD (Android Virtual Device). Follow steps [here](/android-tutorial/android-hello-world#Creating-Android-Virtual-Device-AVD-) to configure AVD for your SDK. 
+
+* Hit the **Run button** at the top (the green play button). A selection window shows up. This is 'Run Configuration Selector' window of Eclipse. A project can have multiple **Run Configurations**. The default Run Configuration for an Android app is 'Android Application' but in our case, you should select 'Android App Codelearn'. This configuration does the default Android App deployment & also test your application to show you logical errors & possible remedies. It also lets us keep track of your tutorial completion progress.
+
+!["Codelearn Run Configuration"](/assets/twitter-client/plugin-newproject-run-menu.png "Codelearn Run Configuration")
+
+* This is how the App Output on your phone or AVD should look like 
+
+!["Codelearn Hello World"](/assets/twitter-client/hello-world.png "Codelearn Hello World")

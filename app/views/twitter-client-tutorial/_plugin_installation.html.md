@@ -9,7 +9,7 @@ As a mobile app developer, it should not matter to you. But if discover this fac
 
 If you belong to one of these categories, you are the kind of audience we looking for.
 
-* Hacker kind of people
+* Hacker kind of people. Those who are impatient & do not care 
 * People who have prior java knowledge
 * People having no/little knowledge of Android (including the guys who have never made an Android app earlier)
 
@@ -25,6 +25,8 @@ Follow the steps below to get started
 
 !["Dropins with all the jars copied"](/assets/twitter-client/dropins-location.png "Dropins with all the jars copied")
 
-* Open your Eclipse by double clicking the Eclipse executable in your Android SDK. You should see a welcome popup. Great, you are all set now.
+* Open your Eclipse by double clicking the Eclipse executable in your Android SDK. If you had Eclipse running already, you need to restart it. There is a workspace selection popup first. Specify a workspace directory (if it is your first time with Eclipse). Hit ok. You should see a welcome popup. Great, you are all set now.
+
+!["Workspace selection popup"](/assets/twitter-client/plugin-installation-workspace.png "Workspace selection popup")
 
 !["Welcome screen after plugin installation"](/assets/twitter-client/plugin-installation-welcome-popup.png "Welcome screen after plugin installation")
