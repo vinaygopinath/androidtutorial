@@ -1,100 +1,58 @@
-Now let's open the **layout XML** file for our activity class. If you chose the default setting to create your app, you'll find
-the file `activity_main.xml` located in the `/res/layout` folder. The name of your layout file might be different depending on
-what you chose to name it initially, but it will always be located within this folder.
+# Login Screen Layout
 
-By default, you'll find a `RelativeLayout` (explained in a bit) element, with a `TextView` element contained in it. 
+In this lesson, we will start with designing the Login screen layout. We already have a hello world application. In the earlier lesson, we have seen how the control starts from the `onCreate` function of the MainActivity.java file. It in-turn renders activity_main.xml . 
 
-Every screen in the app will invariably have one or more `Layout` elements. The most prevalent amongst them are `LinearLayout`, `RelativeLayout`
-and the `GridLayout`. The purpose of these layout elements is to provide a container within which other elements corresponding to text labels, 
-text boxes, buttons, etc, can be contained. In our app, we will primarily be making use of the `LinearLayout` and `RelativeLayout` elements. 
+A good way to start is to start editing the XML file. The onCreate function will still render the same XML & hence we do not need to change any logic/code inside the java file. 
 
->At this point, it might be a good idea for you to go brush up your knowledge about [Layouts](http://codelearn.org) and the [basic views](http://codelearn.org), like &ndash; text, edit, image and button.
+Navigate to res -> layout -> activity_main.xml . Clicking on the element will show the file in the *main Eclipse area*. There are two tabs - **Graphical Layout** & **activity_main.xml**. You can drag & drop elements in Graphical Layout tab while you need to write the code manually in the activity_main.xml tab. Head over to the xml tab. 
 
-An important consideration when dealing with layout elements is when is it good to use which layout element. The `LinearLayout` is optimized for
-situations where child elements need to be rendered one after the other from top to bottom, or left to right. That is why the `LinearLayout` has
-an attribute called `orientation`, which instructs the platform to render the child elements either in `horizontal` or `vertical` fashion. 
+[Insert Image]
 
-A `RelativeLayout` on the other hand, allows for a more random arrangement of child elements. Child elements can be arranged *relative* to each other.
-This allows you to have a more flexible design layout approach. 
+By default, you see a **RelativeLayout** element with **TextView** element inside it as shown below.
+ 
+    <RelativeLayout ...
+	    .
+		.>
 
-The following figure should give you an understanding when to choose between either of them &nbsp;
-
-![Relative and Linear Layout Difference](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.55.47.png "Relative and Linear Layout Difference")
-
-One important point to note is that in almost every circumstance, `RelativeLayout` and `LinearLayout` can be used to replace the other. However, in
-general, it is usually much more verbose to do it. In some cases, if the layout is fairly simple, it really doesn't matter which one you choose.
-
-Our login screen is something that is quite simple, and thus, you'll see that we're making use of `RelativeLayout` even when we could have used a 
-`LinearLayout`. The basic screen layout that we will be creating would look something like this &mdash;
-
-![Login screen Layout overview](https://dl.dropboxusercontent.com/u/1166125/codelearn/Screenshot%202013-12-01%2018.42.12.png "Login screen Layout overview")
-
-The XML code for the layout file is as follows &mdash;
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white">
-        
-        <TextView android:id="@+id/header"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hdr_title" 
-         />
-        
-        <LinearLayout android:id="@+id/uname_block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/header"
-            android:orientation="horizontal">
-
-
-            <TextView android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lbl_username"
-             />
-            
-            <EditText
-                android:id="@+id/fld_username"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/lbl_enter_username"
-            />
-            
-        </LinearLayout>
-        
-        <LinearLayout android:id="@+id/pwd_block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/uname_block"
-            android:orientation="horizontal">
-        
-            <TextView android:id="@+id/pwd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lbl_pwd"
-             />
-            
-            <EditText
-                android:id="@+id/fld_pwd"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/lbl_enter_pwd"
-             />
-            
-        </LinearLayout>
-        
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/pwd_block"
-            android:text="@string/lbl_login"
-         />
+		<TextView ..
+		 .
+		 .>
 
     </RelativeLayout>
 
 
+The Layout element is the container for the UI element while TextView is the UI element. The elements are placed relative to the parent or sibling element in Relative Layout. To read about Layouts in detail, head over to [this lesson]().
 
+We are going to modify activity_main.xml . The final screenshot & the pictorial representation of the layout is below.
+
+![Login screen Layout overview](/assets/twitter-client/login-screenshot.png "Login screen Layout overview")
+![Login screen Layout overview](/assets/twitter-client/login-screen-pictorial.png "Login screen Layout overview")
+
+We will keep the top RelativeLayout & modify the 'Hello World' TextView element into the 'Hello Twitter' header. We will do two changes for it. First, we will make 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml
+
+`res/layout/activity_main.xml`
+
+<pre>
+&lt;RelativeLayout ...
+  .
+  .
+
+  &lt;TextView
+        android:layout_width="<strike>wrap_content</strike>fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" /&gt;
+  .
+&lt;/RelativeLayout&gt;
+</pre>
+
+`res/values/strings.xml`
+
+<pre>
+    &lt;string name="hello_world"&gt;Hello <strike>world!</strike>Twitter&lt;/string&gt;
+</pre>
+
+What we have done is a little sub-optimal. We still have the string field name as 'hello_world' but its value is now 'Hello Twitter'. Ideally, we should have changed the string field name to 'hello_twitter' too. You can go ahead & do the change if you like to. 
+
+After doing the changes, save both the files by hitting 'Control S'. Run the app & the app should look like as below.
+
+[Insert Image]

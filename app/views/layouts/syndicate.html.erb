@@ -107,6 +107,18 @@
 		</footer>
 
 		<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
-<script src="http://getbootstrap.com/docs-assets/js/application.js"></script>
+		<script src="http://getbootstrap.com/docs-assets/js/application.js"></script>
+		<script>
+	$("blockquote").each(function(){
+		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
+	})
+
+	$("code").each(function(){
+		if ( $(this).parent().text() == $(this).text() && $(this).parent()[0].tagName == "P" ) {
+			$(this).unwrap()
+		}
+	})
+</script>
+
 	</body>
 </html>

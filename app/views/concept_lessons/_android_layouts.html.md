@@ -192,6 +192,22 @@ The date field '26 Nov 2013' is again a TextView element aligned to the right of
            . 
     	   />
 
+## Choosing between Linear & Relative Layout
+
+An important consideration when dealing with layout elements is when is it good to use which layout element. The **LinearLayout** is optimized for
+situations where child elements need to be rendered one after the other from top to bottom, or left to right. That is why the LinearLayout has
+an attribute called **orientation**, which instructs the platform to render the child elements either in **horizontal** or **vertical** fashion. 
+
+A **RelativeLayout** on the other hand, allows for a more random arrangement of child elements. Child elements can be arranged *relative* to each other or the parent layout itself. This allows you to have a more flexible design layout approach. 
+
+The following figure should give you an understanding when to choose between either of them &nbsp;
+
+![Relative and Linear Layout Difference](/assets/android-layouts/linear-vs-relative.png "Relative and Linear Layout Difference")
+
+One important point to note is that in almost every circumstance, `RelativeLayout` and `LinearLayout` can be used to replace the other. However, in
+general, it is usually much more verbose to do it. In some cases, if the layout is fairly simple, it really doesn't matter which one you choose.
+
+
 ## Grid Layout
 
 A layout that places its children in a rectangular grid.GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
