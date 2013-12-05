@@ -66,4 +66,10 @@
 	$("blockquote").each(function(){
 		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
 	})
+
+	$("code").each(function(){
+		if ( $(this).parent().text() == $(this).text() && $(this).parent()[0].tagName == "P" ) {
+			$(this).unwrap()
+		}
+	})
 </script>
