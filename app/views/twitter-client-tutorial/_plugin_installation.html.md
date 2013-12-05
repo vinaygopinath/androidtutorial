@@ -7,8 +7,11 @@ As a mobile app developer, it should not matter to you. But if discover this fac
 
 ## Target Audience
 
+If you belong to one of these categories, you are the kind of audience we looking for.
+
 * Hacker kind of people
 * People who have prior java knowledge
+* People having no/little knowledge of Android (including the guys who have never made an Android app earlier)
 
 ## Getting Started
 
@@ -16,7 +19,10 @@ To assist you better during the development cycle, we have created an Eclipse pl
 
 Follow the steps below to get started
 
-* Install Android SDK (ignore if you already have it installed). It is a zip file that you need to download & unzip. 
-* Download the [plugin zip]()
-* Copy the zip inside dropins directory in your Eclipse Home directory. The location of Eclipse home folder is inside the Android SDK you downloaded in step 1. The directory is created for you to manually 'drop' any external plugin that you would like to install.
+* Install Android SDK (ignore if you already have it installed) from [Official Android page](http://developer.android.com/sdk/index.html#download). It is a zip file that you need to download & unzip. 
+* Download the [plugin zip](). Unzip it. You will see a bunch of jar files & a zip file. 
+* Copy all the extracted files in [Eclipse Home Folder] -> dropins directory. The location of Eclipse home folder is inside the Android SDK you downloaded in step 1. **dropins** directory exists for you to manually 'drop' an Eclipse plugin there.
+
+!["Dropins with all the jars copied"](/assets/twitter-client/dropins-location.png "Dropins with all the jars copied")
+
 * Open your Eclipse by double clicking the Eclipse icon in your Android SDK. You should see a welcome popup. Great, you are all set now.
