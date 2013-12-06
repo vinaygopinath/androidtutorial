@@ -9,7 +9,7 @@ Before proceeding to next chapters, it is essential to prepare our development e
 
 ##Prerequisite 
 
-Android development does't require any special hardware, the development enviorment is based on Eclipse and works on any platform. Here are prerequiste which can help you to decide which version to install
+Android development does not require any special hardware, the development enviorment is based on Eclipse and works on any platform. Here are prerequiste which can help you to decide which version to install
 
 * OS: Android IDE works on windows xp, 7, 8, Linux and MAC OSX
 * Minimum requirement is Java (JDK 6)
@@ -17,8 +17,8 @@ Android development does't require any special hardware, the development enviorm
 
 ##Download Links
 
-* For Java http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
-* For ADT (Android Developer Tool) http://developer.android.com/sdk/index.html Click on Right side Download the SDK button
+* For Java - [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+* For ADT (Android Developer Tool) [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html). Click on Right side Download the SDK button
 
 > Watchout: Android required Java Development Toolkit JDK and will not work with JRE
 
@@ -39,7 +39,7 @@ Lets go step by step and see how to setup, we will be following video
 > You can check if you already have JDK install on your machine or not. Go to Command line and type javac -version if you get a version code which is 1.6 or above then you can skip this step.
 
 
-Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html and select Java SE Development Kit based on your Operating System and wether it is 32 bit or 64 bit. For 32 bit file name will have X86 
+Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and select Java SE Development Kit based on your Operating System and wether it is 32 bit or 64 bit. For 32 bit file name will have X86 
 
 Once the file is downloaded double click on it to start the installation, let the default options selected and follow the wizard to complete the installations. 
 
@@ -50,9 +50,9 @@ Once the file is downloaded double click on it to start the installation, let th
 
 The ADT package which you downloads from developer.android.com is compressed, you need to have a uncompression software to extract the setup. If you are on linux or you are on MAc you can skip this section, if you are on windows machine and already have a zip utility like WinZIP WINRAR etc you can skip this section
 
-If you don't have a unzip software and your are running a windows machine, follow this steps
+If you do not have a unzip software and your are running a windows machine, follow this steps
 
-* Go to http://www.7-zip.org/download.html and download .msi file for your windows machine
+* Go to [http://www.7-zip.org/download.html](http://www.7-zip.org/download.html) and download .msi file for your windows machine
 * Double click on the msi and install 7zip software
 * when asked for associating known extension let the default option selected and finish the installation
 
@@ -60,11 +60,11 @@ If you don't have a unzip software and your are running a windows machine, follo
 
 Now we have JDK and Unzip utility installed, lets go and install the ADT
 
-*Go to the file which gets downloaded from developer.android.com. The file name will start from adt-bundle-
+*Go to the file which gets downloaded from developer.android.com. The file name will start from **adt-bundle-**
 *Right click and unzip the zip packaged. In linux or MAC you can use unzip command on teminal
-*You will get a new folder with name adt-bundle- created
+*You will get a new folder with name adt-bundle-xxxx created. The exact name will depend on your OS, PC configuration (32/64 bit) etc. 
 
-> Watchout: In the above video you see the presenter doing a cut paste after the above step, you can skip that part if you don't want to change the location of your ADT installation. If you want to move your setup to a different location you can do cut and paste.
+> Watchout: In the above video you see the presenter doing a cut paste after the above step, you can skip that part if you do not want to change the location of your ADT installation. If you want to move your setup to a different location you can do cut and paste.
 
 The ADT is installed and ready, you will notice that the installation is slef contained that means you just need to have the ADT folder to run the development enviorment
 
