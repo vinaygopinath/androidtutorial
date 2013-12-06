@@ -23,7 +23,7 @@ In the previous lesson, we added Username label & input field. To add password, 
 
 			&lt;EditText
 				android:id="@+id/fld_username"
-				android:layout_width="200dp"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:hint="@string/lbl_enter_username"
 			/&gt;
@@ -44,7 +44,7 @@ In the previous lesson, we added Username label & input field. To add password, 
 
         &lt;EditText
             android:id="@+id/fld_pwd"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/lbl_enter_pwd"
          /&gt;
@@ -98,7 +98,7 @@ Lets add the Login button as well
  
  <span class="highlight">&lt;Button
         android:id="@+id/btn_login"
-        android:layout_width="290dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/pwd_block"
         android:text="@string/lbl_login"

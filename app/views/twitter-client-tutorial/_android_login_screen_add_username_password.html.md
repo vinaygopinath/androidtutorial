@@ -32,7 +32,7 @@ Lets get to work.
 &lt;/RelativeLayout&gt;
 </pre>
 
-The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' header represented by id 'header' through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. 
+The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' header represented by id 'header' through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. **layout_width** & **layout_height** are given default values 'wrap_content'.
 
 ## Add Username label & text field
 
@@ -57,7 +57,7 @@ The LinearLayout is given id **uname_block** & it is positioned below the 'Hello
 
 			&lt;EditText
 				android:id="@+id/fld_username"
-				android:layout_width="200dp"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:hint="@string/lbl_enter_username"
 			/&gt;</span>
@@ -70,7 +70,6 @@ The LinearLayout is given id **uname_block** & it is positioned below the 'Hello
 
 The Username has id 'username' & the text is rendered from the string 'lbl_username'. The input field has id 'fld_username' & the hint is rendered from string 'lbl_enter_username'. We need to add the strings entry too. 
 
-Since EditText has no value to start with, the width of the element need to be specified through **layout_width**. The value in 'dp' signifies 'density pixel'. 
 
 `res/values/strings.xml`
 
@@ -86,3 +85,5 @@ Since EditText has no value to start with, the width of the element need to be s
 Once done, run the app. It should look like below.
 
 [Insert Image]
+
+Ideally, we like the 'Username' label & input field to be *positioned/styled* better but let us first complete the basic structure first & then we will worry about positioning it to look nice.
