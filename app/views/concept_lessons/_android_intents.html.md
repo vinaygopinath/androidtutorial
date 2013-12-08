@@ -47,7 +47,7 @@ Now we have seen what intent is lets see couple of example on how this Intent wo
 
 ##Intent Example
 
-**Please download the example code from here**
+**Please download the example code from ** https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnHelloIntents and import it in your Workspace. 
 
 ###Open Another Activity
 

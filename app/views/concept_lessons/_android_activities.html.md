@@ -101,7 +101,7 @@ Activities that are completely obscured by another activity are considered stopp
 
 Now we have seen various states of an activity and seen all the lifecycle methods, lets walkthrough a code example and see this lifecycle methods in action
 
-**Download the CodeLearnActivityLifecycle Project from here**
+**Download the CodeLearnActivityLifecycle Project from** https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnActivityLifeCycle
 
 *	Import the project into workspace, follow this tutorial if you don’t know how to import a existing android project
 *	Once Imported run the application and start observing 

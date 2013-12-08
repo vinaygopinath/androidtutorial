@@ -91,7 +91,7 @@ In some advance chapters we might look into how to use this tools, as of not jus
 
 Now you have your Android IDE up and running, follow the video to understand other parts of IDE and how to use it. 
 
-> You can skip the video after 8 minute
+> You can skip the above video after 8 minute. 
 
 
 Proceed to next chapter to start creating your first hello world application
