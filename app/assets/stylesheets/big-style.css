@@ -77,9 +77,14 @@ h4 a, h5 a, h6 a {
 }
 
 
-p, ul, ol {
+p {
     margin: 1.6em 0;
 }
+
+ul, ol {
+    margin: 1.6em 1.6em;
+}
+
 
 #content .container li {
 	line-height: inherit;
