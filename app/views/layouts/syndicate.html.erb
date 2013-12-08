@@ -50,9 +50,10 @@
 				</div><!-- end .container -->
 			</div><!-- end .navbar-inner -->
 		</div><!-- end .navbar -->
-	</header>
-
-		<%= yield %>
+	 </header>
+	 <div id="content">
+		 <%= yield %>
+	 </div>
 
 		<footer>
 		<div class="container">
@@ -118,6 +119,12 @@
 			$(this).unwrap()
 		}
 	})
+	$("#content img").each(function(){
+		console.log("here")
+		$(this).addClass("img-polaroid")
+		$(this).parent().addClass("ac")
+	})
+
 </script>
 
 	</body>
