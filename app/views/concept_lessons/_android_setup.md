@@ -68,6 +68,15 @@ Now we have JDK and Unzip utility installed, lets go and install the ADT
 
 The ADT is installed and ready, you will notice that the installation is slef contained that means you just need to have the ADT folder to run the development enviorment
 
+###USB Debugging
+
+If you are planning to deploy the Android app to your phone(if AVD,Ignore this section), it is essential to turn on USB Debugging in your Android phone.
+
+*On most devices running Android 3.2 or older, you can find the option under **Settings > Applications > Development**.
+*On Android 4.0 and newer, it's in **Settings > Developer options**.
+
+> Watchout: On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to Settings > About phone and tap Build number seven times. Return to the previous screen to find Developer options.
+
 ##Understading ADT Folders
 Now we have unzipped the ADT from the file we downloaded, double click on the new folder to go inside, lets see what the 2 folders inside ADT are
 
