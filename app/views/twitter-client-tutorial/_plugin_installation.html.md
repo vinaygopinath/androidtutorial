@@ -21,7 +21,7 @@ Follow the steps below to get started
 
 * Install Android SDK (ignore if you already have it installed) from [Official Android page](http://developer.android.com/sdk/index.html#download). It is a zip file that you need to download & unzip. 
 * Download the [plugin zip](). Unzip it. You will see a bunch of jar files, twit.zip file & a config.properties file. 
-* Copy all the extracted files in **[Unzipped SDK Directory] -> [Eclipse Home Folder] -> dropins** directory. dropins directory exists for you to manually 'drop' an Eclipse plugin there. In the example below, the SDK Directory is 'adt-bundle-mac-x86_64-20131030', inside it there is 'eclipse' directory with 'Eclipse' executable & 'dropins' directory. All the extracted files are already copied inside the dropins directory.
+* Copy all the extracted files from the plugin.zip in **[Unzipped SDK Directory] -> [Eclipse Home Folder] -> dropins** directory. dropins directory exists for you to manually 'drop' an Eclipse plugin there. In the example below, the SDK Directory is 'adt-bundle-mac-x86_64-20131030', inside it there is 'eclipse' directory with 'Eclipse' executable & 'dropins' directory. All the extracted files are already copied inside the dropins directory.
 
 !["Dropins with all the jars copied"](/assets/twitter-client/dropins-location.png "Dropins with all the jars copied")
 
