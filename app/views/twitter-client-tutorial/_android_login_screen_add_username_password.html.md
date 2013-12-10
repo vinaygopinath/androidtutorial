@@ -2,13 +2,11 @@
 
 In previous lesson, we got the header in place. This lesson we will put the input fields namely username & password. 
 
-As per plan, we will be using horizontally aligned LinearLayout to hold the label 'Username' & the input field together & next to each other. Label is **TextView** element while input field is **TextEdit** in Android. 
+As per plan, we will be using horizontally aligned LinearLayout to hold the label 'Username' & the input field together & next to each other. Label is **TextView** element while input field is **EditText** in Android. 
 
 Lets get to work. 
 
-## Add the LinearLayout after 'Hello Twitter'. 
-
-> See if adding through Graphical Layout is easier
+## Add the LinearLayout after 'Hello Twitter' 
 
 `res/layout/activity_main.xml`
 
@@ -17,10 +15,11 @@ Lets get to work.
   .
   .
 
-  &lt;TextView
+  &lt;TextView <span class="highlight">
+	android:id="@+id/header" </span>
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" /&gt;
+        android:text="@string/hello_twitter" /&gt;
 
   <span class="highlight">&lt;LinearLayout android:id="@+id/uname_block"
         android:layout_width="wrap_content"
@@ -32,9 +31,9 @@ Lets get to work.
 &lt;/RelativeLayout&gt;
 </pre>
 
-The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' header represented by id 'header' through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. **layout_width** & **layout_height** are given default values 'wrap_content'.
+Add the 'id' attribute to the existing 'Hello Twitter' TextView and set its value as **header** . The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' TextView through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. **layout_width** & **layout_height** are given default values 'wrap_content'.
 
-## Add Username label & text field
+## Add Username label & the input text field
 
 `res/layout/activity_main.xml`
 
@@ -77,13 +76,13 @@ The Username has id 'username' & the text is rendered from the string 'lbl_usern
 &lt;resource&gt;
  .
  .
- <span class="highlight">&lt;string name="username"&gt;Username&lt;/string&gt;
+ <span class="highlight">&lt;string name="lbl_username"&gt;Username&lt;/string&gt;
  &lt;string name="lbl_enter_username"&gt;Enter your username&lt;/string&gt;</span>
 &lt;/resource&gt;
 </pre>
 
 Once done, run the app. It should look like below.
 
-[Insert Image]
+![Login screen Layout overview](/assets/twitter-client/twitter-username.png)
 
 Ideally, we like the 'Username' label & input field to be *positioned/styled* better but let us first complete the basic structure first & then we will worry about positioning it to look nice.
