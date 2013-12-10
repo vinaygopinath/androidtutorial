@@ -49,4 +49,4 @@ What we have done is a little sub-optimal. We still have the string field name a
 
 After doing the changes, save both the files by hitting 'Control S' on Windows or 'Command S' on Mac. Run the app & the app should look like as below.
 
-[Insert Image]
+![Login screen Layout overview](/assets/twitter-client/hello-twitter.png)
