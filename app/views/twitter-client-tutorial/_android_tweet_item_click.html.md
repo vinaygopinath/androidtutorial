@@ -14,7 +14,7 @@ Lets go ahead & make the changes
 
 `TweetListActivity.java`
 <pre>
-public TweetListActivity extends <strike>Activity</strike><span class="highlight">ListActivity</span
+public TweetListActivity extends <strike>Activity</strike><span class="highlight">ListActivity</span>
 
 </pre>
 
@@ -29,13 +29,12 @@ public TweetListActivity extends <strike>Activity</strike><span class="highlight
     &lt;/ListView&gt;
 </pre>
 
-* Change `setAdapter(..)` to `setListAdapter(..)`. Also we do not need tweetListView & stringArray variables and code assocaited with it anymore. So we can remove it. 
+* Change `setAdapter(..)` to `setListAdapter(..)`. Also we do not need tweetListView variable and code assocaited with it anymore. So we can remove it. 
 
 `TweetListActivity.java`
 <pre>
 public class TweetActivity extends Activity {
     <strike>private ListView tweetListView;</strike>
-    private String[] stringArray ;
     private ArrayAdapter tweetItemArrayAdapter;
 
     @Override
@@ -43,13 +42,60 @@ public class TweetActivity extends Activity {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_tweet);
 
-       stringArray = new String[10];
-        for(int i=0; i < stringArray.length; i++){
-            stringArray[i] = "String " + i;
-        }
-      tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);
-      tweetListView = (ListView) findViewById(R.id.tweetList);
-      tweetListView.setAdapter(tweetItemArrayAdapter);
+      tweetItemArrayAdapter = new TweetAdapter(this, new String[10]);
+      <strike>tweetListView = (ListView) findViewById(R.id.tweetList);
+      tweetListView.setAdapter</strike><span class="highlight">setListAdapter</span>(tweetItemArrayAdapter);
     }
 }
 </pre>
+
+* We need to bring up the new TweetDetailActivity (yet to be created) on click of the tweet. As for now, lets update the clicked tweet title to 'Tweet Clicked'. For that, lets provide a meaningful id to the header TextView in row_tweet.xml
+
+`row_tweet.xml`
+<pre>
+&lt;LinearLayout ..&gt;
+
+  &lt;ImageView ../&gt;
+
+  &lt;LinearLayout&gt;
+
+     &lt;TextView id="<strike>@+id/textView1</strike><span class='highlight'>@+id/tweetTitle</span>"
+	 ./&gt;
+	 &lt;TextView ../&gt;
+	 &lt;TextView ../&gt;
+
+  &lt;/LinearLayout&gt;
+
+&lt;/LinearLayout&gt;
+</pre>
+
+* Add & override `onListItemClick(..)` function to TweetListActivity class. We will get the `tweetTitle` field of the tweet & change the text to 'Tweet Clicked' from 'Header Text'
+
+`TweetListActivity.java`
+<pre>
+public class TweetListActivity extends ListActivity {
+ .
+ .
+ public void onCreate() {
+  .
+  .
+ }
+
+ private class TweetAdapter ... {
+  .
+  .
+ }
+
+ <span class="highlight">@Override
+ protected void onListItemClick(ListView l, View v, int position, long id) {
+     TextView t = (TextView) v.findViewById(R.id.rowTitle);
+	 t.setText("Tweet Clicked");
+ }</span>
+}
+</pre>
+
+The function onListItemClick gets parent ListView (l), child View which is clicked (v), position of the child View in the parent View (position) & id (not sure what that represents). The new function we introduced is `setText(..)`. The function sets the text of a TextView class object.  
+
+* Run your app. Navigate past the login screen to view the Tweet List screen. Tapping on a tweet item will update the tweet header to 'Tweet Clicked'. 
+
+[Insert Image]
