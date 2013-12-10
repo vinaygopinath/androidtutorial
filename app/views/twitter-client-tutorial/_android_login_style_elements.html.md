@@ -2,11 +2,11 @@
 
 So far we just worried about positioning the elements but ignored the width & height of the elements. We will address those issues in this lesson.
 
-## Styling header
+## Styling the header
 
 We are going to add a few attributes to the various UI elements in Layout XML to style the content. 
 
-Since it is header (TextView with id "@+id/header"), we need a bigger font-size which we will set using **textSize**. **textColor** sets the font color. We need bold font which is set using **textStyle**. Just for fun, lets give a purple background color (wait, dont judge our color taste). It can be done though **background**. To make sure the text does not *stick* to the sides, we put a **padding** attribute.
+Since it is header (TextView with id "@+id/header"), we need a bigger font-size which we will set using **textSize**. **textColor** sets the font color. We need bold font which is set using **textStyle**. Just for fun, lets give a black background color (wait, dont judge our color taste). It can be done through **background**. To make sure the text does not *stick* to the sides, we put a **padding** attribute.
 
 `activity_main.xml`
 <pre>
@@ -18,7 +18,7 @@ Since it is header (TextView with id "@+id/header"), we need a bigger font-size 
         android:textSize="20sp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:background="@android:color/holo_purple"</span>
+        android:background="@android:color/black"</span>
      /&gt;
 </pre>
 
@@ -26,11 +26,11 @@ Since it is header (TextView with id "@+id/header"), we need a bigger font-size 
 
 Once done, save the file & deploy your app. It should look as below. 
 
-[Insert Image]
+![Login screen Layout overview](/assets/twitter-client/twitter-header-font.png)
 
-## Styling LinearLayout container
+## Styling the LinearLayout container
 
-The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are sticking to each. Its good to separate them out a bit. We will use **layout_marginTop** attribute for it.
+The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are very close to each other. Its good to separate them out for spacious arrangement. We will use **layout_marginTop** attribute for it.
 
 `activity_main.xml`
 <pre>
@@ -57,7 +57,7 @@ The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are 
 		.
 </pre>
 
-## Styling label TextViews
+## Styling the label TextViews
 
 We will set textSize, textColor & center the label vertically using **layout_gravity**. layout_gravity positions the element relative to the parent element. We do not need to do anything to center the content as layout_centerHorizontal is set for the parent LinearLayout element.
 
@@ -86,7 +86,7 @@ We will set textSize, textColor & center the label vertically using **layout_gra
 .
 </pre>
 
-## Styling input fields
+## Styling the input fields
 
 The input fields are empty by default. So layout_width should be set for them . To make them not stick to their label, **layout_marginLeft** should be set. Setting **layout_paddingLeft** field ensures that the text we entering in the input box does not stick to the left edge. Rest of the fields we would add are already explained earlier in this chapter.
 
@@ -119,9 +119,9 @@ Input fields have a special attribute **inputType**. The values are self explana
 .
 </pre>
 
-## Styling Login Button
+## Styling the Login Button
 
-Lastly, we will style the login button. Since there is no LinearLayout container element for the button unlike the username & password fields, to center it, we need to use **layout_centerHorizontal** attribute. 
+Lastly, we will style the login button. Since there is no LinearLayout container element for the button,unlike the username & password fields, hence to center it we need to use **layout_centerHorizontal** attribute. 
 
 To center the text 'Login' inside the button, we use **gravity**. Unlike **layout_gravity** which positions an element relative to its parent, gravity applies to the children of the element. Other elements are already explained.
 
@@ -141,4 +141,4 @@ To center the text 'Login' inside the button, we use **gravity**. Unlike **layou
 
 Ok, that was quite a few styling changes but fret not, your effort will definitely 'show up good'. Save the file & run the app. The shiny new Activity with nicely styled element should show as below.
 
-[Insert Image]
+![Login screen Layout overview](/assets/twitter-client/Twitter-front-font.png)
