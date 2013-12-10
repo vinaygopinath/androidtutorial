@@ -1,14 +1,8 @@
 # Login Screen Layout
 
-In this lesson, we will start with designing the Login screen layout. We already have a hello world application. In the earlier lesson, we have seen how the control starts from the `onCreate` function of the MainActivity.java file. It in-turn renders activity_main.xml . 
+So far, we already have a hello world application. In the earlier lesson, we have seen how the control starts from the `onCreate` function of the **MainActivity.java** file and how it renders the layout defined in **activity_main.xml** . 
 
-A good way to start is to start editing the XML file. The onCreate function will still render the same XML & hence we do not need to change any logic/code inside the java file. 
-
-Navigate to res -> layout -> activity_main.xml . Clicking on the element will show the file in the *main Eclipse area*. There are two tabs - **Graphical Layout** & **activity_main.xml**. You can drag & drop elements in Graphical Layout tab while you need to write the code manually in the activity_main.xml tab. Head over to the xml tab. 
-
-[Insert Image]
-
-By default, you see a **RelativeLayout** element with **TextView** element inside it as shown below.
+In this lesson, we will start with designing the Login screen layout. A good way to start is by editing the **activity_main.xml** file. The onCreate function will still render the same XML file and hence we do not need to change any logic/code inside the **MainActivity.java** file. In the XML file, by default you see a **RelativeLayout** element with **TextView** element inside it as shown below.
  
     <RelativeLayout ...
 	    .
@@ -21,14 +15,14 @@ By default, you see a **RelativeLayout** element with **TextView** element insid
     </RelativeLayout>
 
 
-The Layout element is the container for the UI element while TextView is the UI element. The elements are placed relative to the parent or sibling element in Relative Layout. To read about Layouts in detail, head over to [this lesson]().
+The RelativeLayout element is the container for the UI element, where as TextView is a UI element. The TextView elements are placed relative to the parent or sibling element in Relative Layout. To read about Layouts in detail, head over to [this lesson]().
 
-We are going to modify activity_main.xml . The final screenshot & the pictorial representation of the layout is below.
+Now,we are going to modify the same **activity_main.xml** file . The final screenshot & the pictorial representation of the Graphical Layout is shown below.
 
 ![Login screen Layout overview](/assets/twitter-client/login-screenshot.png "Login screen Layout overview")
 ![Login screen Layout overview](/assets/twitter-client/login-screen-pictorial.png "Login screen Layout overview")
 
-We will keep the top RelativeLayout & modify the 'Hello World' TextView element into the 'Hello Twitter' header. We will do two changes for it. First, we will make 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml
+For this, we need to make two changes. First, lets make the text 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml
 
 `res/layout/activity_main.xml`
 
@@ -53,6 +47,6 @@ We will keep the top RelativeLayout & modify the 'Hello World' TextView element 
 
 What we have done is a little sub-optimal. We still have the string field name as 'hello_world' but its value is now 'Hello Twitter'. Ideally, we should have changed the string field name to 'hello_twitter' too. You can go ahead & do the change if you like to. 
 
-After doing the changes, save both the files by hitting 'Control S'. Run the app & the app should look like as below.
+After doing the changes, save both the files by hitting 'Control S' on Windows or 'Command S' on Mac. Run the app & the app should look like as below.
 
 [Insert Image]
