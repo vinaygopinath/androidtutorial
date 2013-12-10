@@ -22,7 +22,7 @@ Now,we are going to modify the same **activity_main.xml** file . The final scree
 ![Login screen Layout overview](/assets/twitter-client/login-screenshot.png "Login screen Layout overview")
 ![Login screen Layout overview](/assets/twitter-client/login-screen-pictorial.png "Login screen Layout overview")
 
-For this, we need to make two changes. First, lets make the text 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml
+For this, we need to make two changes. First, lets make the text 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml by creating a new entry.
 
 `res/layout/activity_main.xml`
 
@@ -42,10 +42,22 @@ For this, we need to make two changes. First, lets make the text 'Hello World' s
 `res/values/strings.xml`
 
 <pre>
-    &lt;string name="hello_world"&gt;Hello <strike>world!</strike>Twitter&lt;/string&gt;
+<span class="highlight">&lt;string name="hello_twitter"&gt;Hello Twitter&lt;/string&gt;
 </pre>
 
-What we have done is a little sub-optimal. We still have the string field name as 'hello_world' but its value is now 'Hello Twitter'. Ideally, we should have changed the string field name to 'hello_twitter' too. You can go ahead & do the change if you like to. 
+Now, go back and change this reference in the XML as shown below.
+
+<pre>
+&lt;RelativeLayout ...
+  .
+  .
+
+  &lt;TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/<strike>hello_world</strike>hello_twitter" /&gt;
+  .
+&lt;/Rela
 
 After doing the changes, save both the files by hitting 'Control S' on Windows or 'Command S' on Mac. Run the app & the app should look like as below.
 
