@@ -6,7 +6,7 @@ In the previous chapter you have seen how we have different layouts which can be
 
 In Android All layouts are XML based, even though you get a nice graphical editor, ultimately the elements are nothing but XML code, lets take a brief look about both
 
-##Graphical Drag and Drop Designer
+##Graphical Layout
 If you open any Layout XML in ADT you will see 2 tabs like the 1 in this image 
 <br/>
 ![Layout Tabs](/assets/android_widgets/tabs.png "Layout Tabs")
@@ -67,28 +67,37 @@ Always use match_parent even though both means same. This value again used in wi
 ###dp 
 Dp is density independent pixle, as you know android device comes with different density of screen, this value can be used instead of PX (pixle), if you use dp android will automatically claculate px for you based on screen of the android device. 
 
-For Example: On some device 1dp might be = to 1 px but on some device 1dp = 5px
+For Example: On some device 1dp might be equal to 1 px but on some device 1dp = 5px
 
-> Note: you might wonder whay all the propertry is starting with android ?? If you notice the first line of any XML file there is a namespace define xmlns:android="http://schemas.android.com/apk/res/android". Notice the attribute android here it is reffering to Android Schema with android. This Schema has all reference to values like id, text other attirbutes. You can read more about XML Schema from this link http://en.wikipedia.org/wiki/XML_schema 
+###'android:' namespace
+
+You might wonder whay all the propertry is starting with `android:`. If you notice the first line of any XML file there is a namespace definition 
+
+      xmlns:android="http://schemas.android.com/apk/res/android"
+   
+Notice the attribute android here it is reffering to Android Schema with android. This Schema has all reference to values like id, text other attirbutes. You can read more about XML Schema from this link [http://en.wikipedia.org/wiki/XML_schema](http://en.wikipedia.org/wiki/XML_schema)
 
 ##TextView
 
-###What
-Textview is most simple ui element, it is use to display STATIC Text which can not be changed by user. 
+Textview is most simple ui element, it is use to display static text which can not be changed by user. 
 
 In HTML world TextView is nothing but a Label. 
 
-###Properties
 Lets see some of the useful properties of textview
 
-**android:text** : this property defines the text which will come inside the TextView
+###android:text 
+This property defines the text which will come inside the TextView
 
-**android:textColor**: this propery defines the color of text, this take HexaDecimal text color for example #ffff00 
+###android:textColor
 
-**android:textSize**: this property defines the size of text, it takes value in sp, for example "15sp"
+This propery defines the color of text, this take HexaDecimal text color for example #ffff00 
+
+###android:textSize
+
+This property defines the size of text, it takes value in sp, for example "15sp"
 
 
-###Code
+###Example 
 This is how a simple textview looks in code. 
 
 		<TextView
@@ -101,12 +110,10 @@ This is how a simple textview looks in code.
 
 ##EditText
 
-###What
-EditText is another most use UI elements in android, whenever you want to take some input from user you use edittext. 
+EditText is another most used UI elements in android, whenever you want to take some input from user you use EditText. 
 
 In HTML world EditText is nothing but a input tag. 
 
-###Properties
 Lets see some of the useful properties of EditText
 
 **android:text** : this property defines the text which will come inside the EditText, or the text which user will enter. Typically in Javacode once you have the reference of edittext object, this is the property which you call to get the value which user might have key in

@@ -19,11 +19,17 @@ To hook a Custom Layout, we need to extend ArrayAdapter class & provide a `getVi
 .
 public TweetListActivity extends Activity {
   .
+  <strike>private String[] stringArray;</strike>
   .
    protected void onCreate(..){
      .
+     <strike>stringArray = new String[10];
+     for(int i=0; i < songsArray.length; i++){
+        songsArray[i] = "Song " + i;
+     }</strike>
+     .
      <strike>tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);</strike>
-     <span class="highlight">tweetItemAdapter = new TweetAdapter(this,stringArray);</span>
+     <span class="highlight">tweetItemAdapter = new TweetAdapter(this, new String[10]);</span>
      .
    }
 
@@ -52,7 +58,9 @@ We have done quite a few things in that code snippet
 
 * The `public TweetAdapter(..)` initialization function is called when `new TweetAdapter(..)` code gets executed. The `super(..)` code executes the initialization function of the parent class ArrayAdapter. `inflater` is an object of type `LayoutInflater`. It is initialized in this function.
 
-* When `tweetListView.setAdapter(tweetItemArrayAdapter)` code is executed, a call to TweetAdapter's getView(..) function is done to populate each ListView row. `inflater.inflate(...)` function inflates our custom layout (row_tweet.xml) as a View class & returns it. This is the important step which inserts our custom layout into the ListView parent. There are three parameters that get passed to getView - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). Right now, we do not have any data to populate in our custom layout, but in subsequent lessons we will modify the function to populate the custom layout with individual tweet data. 
+* When `tweetListView.setAdapter(tweetItemArrayAdapter)` code is executed, a call to TweetAdapter's getView(..) function is done to populate each ListView row. `inflater.inflate(...)` function inflates our custom layout (row_tweet.xml) as a View class & returns it. This is the important step which inserts our custom layout into the ListView parent. There are three parameters that get passed to getView - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). Right now, we do not have any data to populate in our custom layout, but in subsequent lessons we will modify the function to populate the custom layout with individual tweet data.
+
+* The stringArray variable is not needed anymore. Hence its declaration & initialization is removed. Instead we are now passing `new String[10]` to `new TweetAdapter(..)` call. The empty array will be used by ArrayAdapter class to decide how many child items need to create. In this case, it will create 10 tweet items. The content of the string array is not used.
 
 * Done with above steps ? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
 
