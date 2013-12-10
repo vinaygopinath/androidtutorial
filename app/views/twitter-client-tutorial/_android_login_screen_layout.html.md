@@ -57,7 +57,8 @@ Now, go back and change this reference in the XML as shown below.
         android:layout_height="wrap_content"
         android:text="@string/<strike>hello_world</strike>hello_twitter" /&gt;
   .
-&lt;/Rela
+&lt;/RelativeLayout
+</pre>
 
 After doing the changes, save both the files by hitting 'Control S' on Windows or 'Command S' on Mac. Run the app & the app should look like as below.
 
