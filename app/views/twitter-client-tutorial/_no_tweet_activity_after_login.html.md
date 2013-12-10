@@ -55,3 +55,5 @@ loginBtn.setOnClickListener(new View.OnClickListener() {
 Great. You are all set now. Run the app. You should see the Login screen. Hit on the Login button & you should see 'No Tweet Found' screen. 
 
 You just learnt to use Intents in Android. Take a break & celebrate. 
+
+[Insert Image]
