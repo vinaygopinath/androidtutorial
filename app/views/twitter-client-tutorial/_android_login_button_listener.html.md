@@ -24,10 +24,9 @@ Follow the steps below to implement the ClickListener for the login button
   protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_main);<span class="highlight">
-        _loginBtnButton _loginBtn = ( Button ) findViewById(R.id.btn_login);
-    	</span>
-	...
-	...
+        _loginBtn = ( Button ) findViewById(R.id.btn_login);</span>
+	.
+	.
 	}
    }	
 </pre>

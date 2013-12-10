@@ -19,7 +19,7 @@ The RelativeLayout element is the container for the UI element, where as TextVie
 
 Now,we are going to modify the same **activity_main.xml** file . The final screenshot & the pictorial representation of the Graphical Layout is shown below.
 
-![Login screen Layout overview](/assets/twitter-client/login-screenshot.png "Login screen Layout overview")
+![Login screen Layout overview](/assets/twitter-client/Twitter-front-font.png "Login screen Layout overview")
 ![Login screen Layout overview](/assets/twitter-client/login-screen-pictorial.png "Login screen Layout overview")
 
 For this, we need to make two changes. First, lets make the text 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml by creating a new entry.
