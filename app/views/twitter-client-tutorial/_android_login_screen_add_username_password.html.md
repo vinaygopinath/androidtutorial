@@ -6,8 +6,15 @@ As per plan, we will be using horizontally aligned LinearLayout to hold the labe
 
 Lets get to work. 
 
+<<<<<<< HEAD
 ## Add the LinearLayout after 'Hello Twitter' 
 
+=======
+## Add the LinearLayout after 'Hello Twitter' text. 
+
+To do this, simply drag and drop 'LinearLayout(Horizontal)' from the Palette to Graphical Layout of the twitter app.
+Now, switch over to the XML to do two task. First, add the 'id' attribute to the existing TextView and set its value as **header** . Second, add the 'orientation' and 'id' attributes to the LinearLayout . The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' header represented by id 'header' through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. **layout_width** & **layout_height** are given default values 'wrap_content'. After making all these changes, ensure that your XML looks as shown below.
+>>>>>>> 7f237bb616c8c32f74c291ca905c71cf59a44f51
 
 `res/layout/activity_main.xml`
 
@@ -16,7 +23,8 @@ Lets get to work.
   .
   .
 
-  &lt;TextView
+  &lt;TextView <span class="highlight">
+	android:id="@+id/header" </span>
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_twitter" /&gt;
@@ -31,9 +39,14 @@ Lets get to work.
 &lt;/RelativeLayout&gt;
 </pre>
 
+<<<<<<< HEAD
 Add the 'id' attribute to the existing 'Hello Twitter' TextView and set its value as **header** . The LinearLayout is given id **uname_block** & it is positioned below the 'Hello Twitter' TextView through the **layout_below** attribute. The **orientation** is kept horizontal as the child elements label & input field need to be arranged next to each other. **layout_width** & **layout_height** are given default values 'wrap_content'.
 
 ## Add Username label & the input text field
+=======
+
+## Add Username label & its input text field
+>>>>>>> 7f237bb616c8c32f74c291ca905c71cf59a44f51
 
 `res/layout/activity_main.xml`
 
