@@ -1,10 +1,10 @@
 #Android Widgets / View Elements
 
-Any android app is made up of lot of activities and all the activities have User interface. Android provides us lot of prebuilt user interface elements, we can use this UI compontents to create a nice looking UI for our app
+Any android app is made up of lot of activities and all the activities have User interface. Android provides us lot of prebuilt user interface elements, we can use this UI component to create a nice looking UI for our app
 
-In the previous chapter you have seen how we have different layouts which can be use to give structure to your app user interface. This layouts are just empty placeholder for Android views, lets see some of the most user Android Layout widgets and some of there most use propery. 
+In the previous chapter you have seen how we have different layouts which can be used to give structure to your app user interface. This layout is just an empty placeholder for Android views, lets see some of the most user Android Layout widgets and some of there most use properties. 
 
-In Android All layouts are XML based, even though you get a nice graphical editor, ultimately the elements are nothing but XML code, lets take a brief look about both
+In Android All layouts are XML based, even though you get a nice graphical editor, ultimately the elements are nothing but XML code, let's take a brief look about both
 
 ##Graphical Layout
 If you open any Layout XML in ADT you will see 2 tabs like the 1 in this image 
@@ -17,24 +17,24 @@ This is how the Graphical Layout Editor looks like
 <br/>
 ![Layout Editor](/assets/android_widgets/layout_editor.png "Layout Editor")
 
-Lets see what are this sections 
+Lets see what are this section 
 
 ###Palette
 Palette section will have all your basic UI elements available to you categorized into different sections, like Form Widgets, TextFields, Layouts etc. You can just choose any Elements and Drag and Drop it to the right on the Screen. That UI element will be added to your Layout. 
 
 ###Control Bar 
-The top bar which you see with options like Nexus one, App Theme etc is control bar, it has different options to test the UI against different conditions. You can control the size of screen, orientation theme etc from this bar. You can also change Zoom level check lint warnings etc from this bar. 
+The top bar which you see with options like Nexus one, App Theme etc. is control bar, it has different options to test the UI against different conditions. You can control the size of screen, orientation theme etc from this bar. You can also change Zoom level check lint warnings etc. from this bar. 
 
 ###Design Area
-the remaining Right part of palette is where your UI is coming, you can drag and drop elements to this part, rearrange already put elements, reorder them change there properties by right clicking. 
+The remaining Right part of the palette is where your UI is coming, you can drag and drop elements to this part, rearrange already put elements, reorder them change their properties by right clicking. 
 
 
 ##Common Attributes and Properties
 
-All UI are of type View and have some common properties which might be useful to understand. All the UI Elemets which we will see in next section will have this propeties
+All UI are of type View and have some common properties which might be useful to understand. All the UI Elements which we will see in the next section will have this property
 
 ###android:id 
-Id is use to uniquely identify this View in Java Code. When you assign an ID to a View it makes that view uniquely identifiable in that Layout. In later chpaters we will see the use of ID in more details. 
+It is used to uniquely identify this View in Java Code. When you assign an ID to a View it makes that view uniquely identifiable in that Layout. In later chapters we will see the use of ID in more details. 
 
 Here is how it will look like in code
 		android:id="@+id/textView1"
@@ -45,7 +45,7 @@ layout_width property of view defines the width of that view, you should define 
 ###android:layout_height
 layout_height property of view defines the height of that view, you should define height in px or dp.
 
-Whenever you drag and drop a UI element from Designer view, it automatically generates atleas this 3 property for that view
+Whenever you drag and drop a UI element from Designer view, it automatically generates atleast this 3 property for that view
 
 Here is how Height and Width will look into code
 
@@ -57,15 +57,15 @@ Since all UI elements are inherited from view, all have a onClick property, we w
 Here are some common attributes or terminology which will be good to understand before seeing ui elements in action
 
 ###wrap_content
-This is the value which you will be using in width or height, this tells android to make the UI element width or height just equal to the size of conent which the ui has.
+This is the value which you will be using in width or height, this tells android to make the UI element width or height just equal to the size of content which the ui has.
 
-For example: a text view with text "HELLO" with width as wrap_content will only be 5 character wide. 
+For example: a text view with the text "HELLO" with width as wrap_content will only be 5 characters wide. 
 
 ###match_parent or fill_parent 
-Always use match_parent even though both means same. This value again used in width or height, this tell android to make the view height or width matching to its parent height or width. If parent is taking full size in screen, setting this value on any UI element will also make its height or width equal to the screen size
+Always use match_parent even though both means same. This value again used in width or height, this tells android to make the view height or width matching to its parent height or width. If the parent is taking full size on screen, setting this value on any UI element will also make its height or width equal to the screen size
 
 ###dp 
-Dp is density independent pixle, as you know android device comes with different density of screen, this value can be used instead of PX (pixle), if you use dp android will automatically claculate px for you based on screen of the android device. 
+Dp is density independent pixels, as you know android device comes with different density of the screen, this value can be used instead of PX (pixle), if you use dp android will automatically calculate px for you based on the screen of the android device. 
 
 For Example: On some device 1dp might be equal to 1 px but on some device 1dp = 5px
 
@@ -88,11 +88,11 @@ For Individual Sides
 		android:paddingBottom="8dp
 
 ###Margin
-Margins are the spaces outside the border, between the border and the other elements next to this view, ie margin is outside view, it is space between 2 views, whenever you want to give space between 2 views you can use Margine. 
+Margins are the spaces outside the border, between the border and the other elements next to this view, IE margin is the outside view, it is a space between 2 views, whenever you want to give space between 2 views you can use Margin. 
 
 For Example: If you set Margin in EditText, the EditText will move from it's parent view by that value.
 
-Here is how Margin will Look in code: 
+Here is how Margin will Look at the code: 
 
 For all sides 
 
@@ -111,16 +111,16 @@ You might wonder what is the difference between margin and padding. Let's See an
 <br/>
 ![Padding and Margin](/assets/android_widgets/padding_Margin.jpg "Padding and Margin")
 
-In the image, the margin is the grey area outside the entire object. Border is point where your view is ending. 
+In the image, the margin is the gray area outside the entire object. The border is the point where your view is ending. 
 
-Margin and Padding is same concept as in CSS
+Margin and Padding are the same concept as in CSS
 
 ###Gravity
-When ever you want to allign content inside the view use gravity, android:gravity sets the gravity of the content of the View its used on. Android Gravity when applied on a view specify the direction it's content should be alligned. 
+Whenever you want to align content inside the view use gravity, android:gravity sets the gravity of the content of the View its used on. Android Gravity when applied on a view specify the direction it's content should be alligned. 
 
-For Example: In A Linear Layout when you set Gravity To Center, all its View will come in Center.
+For Example: In A Linear Layout when you set Gravity To Center, all its View will come in the Center.
 
-This is how you set gravity of layout 
+This is how you set the gravity of layout 
 		android:gravity="center"
 
 ###Layout Gravity
@@ -135,20 +135,17 @@ android:layout_gravity = float in CSS
 
 android:gravity = text-align in CSS
 
-
-> Note: you might wonder whay all the propertry is starting with android ?? If you notice the first line of any XML file there is a namespace define xmlns:android="http://schemas.android.com/apk/res/android". Notice the attribute android here it is reffering to Android Schema with android. This Schema has all reference to values like id, text other attirbutes. You can read more about XML Schema from this link http://en.wikipedia.org/wiki/XML_schema 
-
 ###'android:' namespace
 
-You might wonder whay all the propertry is starting with `android:`. If you notice the first line of any XML file there is a namespace definition 
+You might wonder why all the property is starting with android:`. If you notice the first line of any XML file there is a namespace definition 
 
       xmlns:android="http://schemas.android.com/apk/res/android"
    
-Notice the attribute android here it is reffering to Android Schema with android. This Schema has all reference to values like id, text other attirbutes. You can read more about XML Schema from this link [http://en.wikipedia.org/wiki/XML_schema](http://en.wikipedia.org/wiki/XML_schema)
+Notice the attribute android here it is referring to Android Schema with android. This Schema has all references to values like id, text other attributes. You can read more about XML Schema from this link [http://en.wikipedia.org/wiki/XML_schema](http://en.wikipedia.org/wiki/XML_schema)
 
 ##TextView
 
-Textview is most simple ui element, it is use to display static text which can not be changed by user. 
+Textview is most simple ui element, it is used to display static text which cannot be changed by the user. 
 
 In HTML world TextView is nothing but a Label. 
 
@@ -163,7 +160,7 @@ This propery defines the color of text, this take HexaDecimal text color for exa
 
 ###android:textSize
 
-This property defines the size of text, it takes value in sp, for example "15sp"
+This property defines the size of text, it takes values in Sp, for example "15sp"
 
 
 ###Example 
@@ -201,20 +198,20 @@ In HTML world EditText is nothing but a input tag.
 
 Lets see some of the useful properties of EditText
 
-**android:text** : this property defines the text which will come inside the EditText, or the text which user will enter. Typically in Javacode once you have the reference of edittext object, this is the property which you call to get the value which user might have key in
+**android:text** : this property defines the text which will come inside the EditText, or the text which user will enter. Typically in Java code once you have the reference of edittext object, this is the property which you call to get the value which user might have key in
 
-**android:hint**: this propery defines the hint which you want to give to user, this hint appear inside the edittext but gets disappear once user start typing anything inside the edit text
+**android:hint**: this property defines the hint which you want to give to user, this hint appear inside the edittext but gets disappear once user start typing anything inside the edit text
 
-**android:ems**: this propery defines how many character long the edit text should be, since there is no text inside the edit text, making it wrap_content will not help, this property helps you in defining the exact width for edit text. 
+**android:ems**: this property defines how many characters long the edit text should be, since there is no text inside the edit text, making it wrap_content will not help, this property helps you in defining the exact width for edit text. 
 
 **android:background**: this property defines the background of the edit text, you can either choose a color or set a image as background of the edit text
 
-**android:inputType**: this property defines what kind of content the edit text will contain, like in html you can define type this propery helps you in defining type of content for edit text. 
+**android:inputType**: this property defines what kind of content the edit text will contain, like in html you can define type this propery helps you in defining the type of content for edit text. 
 
-For Example: textPassword will make the text automatically converted into * as user start typing, number will change the keyoboard layout to numeric helping user to type 
+For Example: textPassword will make the text automatically converted into * as user start typing, number will change the keyboard layout to numeric helping user to type 
 number faster.
 
-This is very powerful property of Edit text and if you know what kind of content your edit text need, make sure to define that using inputType. 
+This is a very powerful property of Edit text and if you know what kind of content your edit text need, make sure to define that using inputType. 
 
 
 ###Code
@@ -230,9 +227,9 @@ This is how a simple editText will look like
 		        android:background="#ff0000"
 		        android:inputType="text">
 
-Most of the time you want to get the value of EditText or preppulate edit text value dynamically, let's see how we can do this in code.
+Most of the time you want to get the value of EditText or prepopulate edit text value dynamically, let's see how we can do this in code.
 
-Firs't let get the reference of the EditText 
+First let get the reference of the EditText 
 
 		EditText edtText = (EditText)findViewById(R.id.editText1);
 
@@ -249,21 +246,21 @@ To set the text of the edit text similar to textview you can call
 ##Button
 
 ###What
-Button is the most used UI elements in Android, for every action you want to do, you want user to click on a button. 
+Button is the most used UI elements in Android, for every action you want to do, you want the user to click on a button. 
 
 ###Properties
-Lets see some of the useful properties of Button
+Lets see some of the useful properties of a Button
 
-**android:text** : this property defines the text which will come on the top of button, you can change the text dynamically through code
+**android:text** : this property defines the text which will come on the top of a button, you can change the text dynamically through code
 
-**android:textColor**: this propery defines the color of text on the button, this take HexaDecimal text color for example #ffff00 
+**android:textColor**: this property defines the color of text on the button, this take HexaDecimal text color for example #ffff00 
 
 **android:background**: this property defines the background of the button, you can either choose a color or set a image as background of the button
 
 **android:clickable** : this property makes the button enable or disable, this takes boolean, for example false
 
 ###Click Listner
-Button is made to be clicked, lets see how we can add a click listner to button. Even though you can dierectly define method which should be called when click in UI through android:onClick property, the best way to do it is using code.
+Button is made to be clicked, lets see how we can add a click listener to the button. Even though you can directly define a method which should be called when click in UI through android:onClick property, the best way to do it is using code.
 
 Get the object of button in code. 
 
@@ -271,9 +268,9 @@ Get the object of button in code.
 
 if you notice the above code, you create a button object and then call findViewByID method passing the android:id of the button. 
 
-Since all the UI elements are view, findViewbyId returns a view object which we need to typecase into correct subview. 
+Since all the UI elements are view, findViewbyId returns a view object which we need to typecast into correct subview. 
 
-Add listner
+Add listener
 
 		b.setOnClickListener(new OnClickListener() {
 			
@@ -283,7 +280,7 @@ Add listner
 				// Do what you want after button click here
 			}
 		});
-In above code you add a click listner to the button, whenever button is click ,the onclick method of button will be called. 
+In the above code you add a click listener to the button, whenever the button is clicked , the onclick method of button will be called. 
 
 ###Code
 This is how a button will look in XML code
@@ -314,7 +311,7 @@ Lets see some of the useful properties of Image View
 
 Here "@drawable" refers to your drawable folder which is present inside res folder. After that you put the image name without the extension. 
 
-**android:contentDescription** : This is not a required property but it is recommended to set the content Description. Content Description is text description of the image which you have set as src. This property helps in accessibility, if this propery is set users with diffuclty in seeing the image can use Screen Reader which will read out the text from content description. 
+**android:contentDescription** : This is not a required property but it is recommended to set the content Description. Content Description is text description of the image which you have set as src. This property helps with accessibility, if this property is set users with difficulty in seeing the image can use a Screen Reader which will read out the text from content description. 
 
 ###Code
 This is how a image view will look in XML code
@@ -346,7 +343,7 @@ In HTML the input type="radio" is radio button.
 ###Properties
 Let's see what are the properties of radio button
 
-**RadioGroup** : Radio button don't resides on there own, a radio button will always be inside a Radio Group, Radio Group can have multiple radiobutton. All the radio buttons inside the radio group will have 1 Click event which will be invoked when user selects the radio button. 
+**RadioGroup** : Radio button doesn't reside on their own, a radio button will always be inside a Radio Group, Radio Group can have multiple radiobutton. All the radio buttons inside the radio group will have 1 Click event which will be invoked when user selects the radio button. 
 
 For example : 
 
@@ -355,16 +352,16 @@ For example :
 		    android:layout_height="wrap_content"
 		    android:orientation="vertical">
 
-the orientation propery of radio group helps you in alligning radio button in vertical or horizontal format. 
+The orientation property of radio group helps you in aligning radio button in vertical or horizontal format. 
 
-**android:text** : Android text property of radio button is use for putting text in radio button. 
+**android:text** : Android text property of a radio button is used for putting text in radio button. 
 
-**android:checked** : Checked property of radio button let you define preselected/default selected option in a radio group. For example: if you have 3 radio button you can use this propery in any 1 to make it default selected.
+**android:checked** : Checked property of radio button lets you define preselected/default selected option in a radio group. For example: if you have 3 radio buttons you can use this property in any 1 to make it default selected.
 
 		android:checked="true"
 
-###Click Listner
-Radio buttons are created to be clicked, in a radio group, all the radio button will have 1 click listner. This click Listner will be invoked when the user will click on any of the radio button from that radio group. There are multiple way to add a click listner, but simple way is to do in code using android:onClick property of radio button. 
+###Click listener
+Radio buttons are created to be clicked, in a radio group, all the radio button will have 1 click listener. This click listener will be invoked when the user will click on any of the radio button from that radio group. There are multiple way to add a click listener, but simple way is to do in code using android:onClick property of radio button. 
 
 Lets see an example 
 
@@ -384,7 +381,7 @@ Lets see an example
 		            android:checked="true"
 		            />
 
-In the above example notice the propery onClick, since this 2 radio buttons resides in same radio group, both has same click listners. 
+In the above example notice the property onClick, since this 2 radio buttons reside in the same radio group, both have a same click listener. 
 
 Here is how the click method looks
 
@@ -405,12 +402,12 @@ Here is how the click method looks
 		    }
 		}
 
-you can create a method in your code which you define in onClick of radio button. In this meethod, you can get the id of the radio via  **view.getId()** once you have the id, you can use a switch case statement to determine which radio button was clicked by checking **view.isChecked()** 
+You can create a method in your code which you define in onClick of radio button. In this method, you can get the id of the radio via  **view.getId()** once you have the id, you can use a switch case statement to determine which radio button was clicked by checking **view.isChecked()** 
 
-With this smple code you can know which radio button selection was made
+With this simple code you can know which radio button selection was made
 
 ### Code
-Here is how the complete Radio button delcaration will look inside the XML
+Here is how the complete Radio button declaration will look inside the XML
 
 		 <RadioGroup
 		        android:layout_width="fill_parent"
@@ -445,16 +442,16 @@ In HTML the input type="checkbox" is checkbox.
 ###Properties
 Let's see what are the properties of checkbox. Mostly the checkbox and radio button properties are similar
 
-**android:text** : Android text property of checkbox is use for putting text in radio button. 
+**android:text** : Android text property of checkbox is used for putting text in radio button. 
 
-**android:checked** : Checked property of checbox let you have the checkbox checked by default. 
+**android:checked** : Checked property of checbox lets you have the checkbox checked by default. 
 
 		android:checked="true"
 
-###Click Listner
-All the checkbox will have click listner. You can have a common click listner or different click listners. This click Listner will be invoked when the user will select or unselect any checkbox. There are multiple way to add a click listner, but simple way is to do in code using android:onClick property of checkbox. 
+###Click listener
+All the checkbox will have click listener. You can have a common click listener or different click listener. This click listener will be invoked when the user will select or unselect any checkbox. There are multiple way to add a click listener, but simple way is to do in code using android:onClick property of checkbox. 
 
-Lets see an example 
+Let's see an example 
 
 		<CheckBox android:id="@+id/feedback"
 		        android:layout_width="wrap_content"
@@ -468,7 +465,7 @@ Lets see an example
 		        android:text="Collect Data"
 		        android:onClick="onCheckboxClicked"/>
 
-In the above example notice the propery onClick, you can either have 1 common click listner for all the checkbox or can have there individual clicklistenr. 
+In the above example notice the property onClick, you can either have 1 common click listener for all the checkbox or can have their individual clicklistenr. 
 
 Here is how a common click method looks
 
@@ -495,23 +492,23 @@ Here is how a common click method looks
 
 you can create a method in your code which you define in onClick of Checkbox. Similar to radio button in this meethod, you can get the id of the checbox via  **view.getId()**once you have the id, you can use a switch case statement to determine which checbox was clicked and is that check on uncheck by checking **view.isChecked()** 
 
-With this smple code you can know check box selection and it's state
+With this simple code you can know check box selection and it's state
 
 
 ##ListView
 
 ###What
-Whene ever you have a data which is repeating and comes as a collection or list, list view is best User Interface element to use. ListView helps you in displaying repeating data in form of a scrollable list, users can then select any list item by clicking on it. 
+Whenever you have a date which is repeated and comes as a collection or list, the list view is best User Interface element to use. ListView helps you in displaying repeating data in form of a scrollable list, users can then select any list item by clicking on it. 
 
-ListView is widely used in android applications, a most simple example of list view is your contact book, where you have list of you contacts displayed in a listview. 
+The ListView is widely used in android applications, a simpler example of list view is your contact book, where you have a list of your contacts displayed in a list view. 
 
-> Listview is a complex UI pattern and we have a seprate section about listview. You can read more about list view in ListView Section
+> Listview is a complex UI pattern and we have a separate section about listview. You can read more about list view in ListView Section
 
 
 ##GridView
 
 ###What
-Similar to list view when you have data which you want to display as gird of row and columns you use gridview. GridView displays item in 2 dimensional scrollable grid. 
+Similar to list view when you have data which you want to display as a grid of row and columns you use gridview. GridView displays item in 2 dimensional scrollable grid. 
 
 The most simple example of gridview is your Picture Gallery, In Picture Gallery all the picture are arranged in a grid like format.
 
@@ -620,5 +617,4 @@ This is how our complete scroll view will look
 		</ScrollView>
 
 Android has lot of ui elements which are designed for specific purposes, in this chapter we tried to cover some of the most used UI elements. If you want to read more about other ui controls you can go to this link http://developer.android.com/guide/topics/ui/index.html
-
 
