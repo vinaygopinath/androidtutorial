@@ -10,15 +10,15 @@ We used the Android in-built layout `android.R.layout.simple_list_item_1` to get
 * Right click on `CodelearnTwitterApp` project in Eclipse package Explorer. Select New -> Other. In the popup window, select 'Android XML Layout File'. In the next window, you need to specify the name. Lets give it the name 'row_tweet.xml'. By default, 'LinearLayout' will be picked which is fine as the Outer layout is LinearLayout as per our plan. But this layout is Vertically oriented by default. We need to change the layout to be Horizontally aligned. Hit 'Finish'. Go to res -> layout -> row_tweet.xml. Make the changes as below.
 
 `row_tweet.xml`
-
-      <?xml version="1.0" encoding="utf-8"?>
-      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="</strike>vertical<strike><span class='highlight'>horizontal</span>" >
-        
+<pre>
+i&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="<strike>vertical</strike><span class="highlight">horizontal</span>" &gt;
     
       </LinearLayout>
+</pre>
 
 * The LinearLayout element is what is 'Outer LinearLayout' in our planned view. It has its children aligned horizontally. Lets update the value. Also, it has two children - ImageView and LinearLayout. LinearLayout in-turn has three TextView as children.
 
