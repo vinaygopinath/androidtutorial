@@ -69,6 +69,75 @@ Dp is density independent pixle, as you know android device comes with different
 
 For Example: On some device 1dp might be equal to 1 px but on some device 1dp = 5px
 
+###Padding 
+Padding is the space inside the border, between the border and the actual view's content. Padding is always inside the view and goes completely around content. You can set padding on all 4 sides or on individual side. 
+
+For Example: If you set padding in EditText, the cursor inside the edit text will move. 
+
+Here is how Padding looks in code: 
+
+For all sides 
+
+		android:padding="2dp"
+
+For Individual Sides
+
+		android:paddingLeft="2dp"
+		android:paddingRight="3dp"
+		android:paddingTop="5dp"
+		android:paddingBottom="8dp
+
+###Margin
+Margins are the spaces outside the border, between the border and the other elements next to this view, ie margin is outside view, it is space between 2 views, whenever you want to give space between 2 views you can use Margine. 
+
+For Example: If you set Margin in EditText, the EditText will move from it's parent view by that value.
+
+Here is how Margin will Look in code: 
+
+For all sides 
+
+		android:layout_margin="2dp"
+
+For Individual Sides
+
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="3dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="8dp
+
+
+You might wonder what is the difference between margin and padding. Let's See an Image to Understand better. 
+
+<br/>
+![Padding and Margin](/assets/android_widgets/padding_Margin.jpg "Padding and Margin")
+
+In the image, the margin is the grey area outside the entire object. Border is point where your view is ending. 
+
+Margin and Padding is same concept as in CSS
+
+###Gravity
+When ever you want to allign content inside the view use gravity, android:gravity sets the gravity of the content of the View its used on. Android Gravity when applied on a view specify the direction it's content should be alligned. 
+
+For Example: In A Linear Layout when you set Gravity To Center, all its View will come in Center.
+
+This is how you set gravity of layout 
+		android:gravity="center"
+
+###Layout Gravity
+Layout Gravity is the Outside gravity of the View. That means, layout gravity sets the gravity of the View or Layout in its parent.
+
+Here is how you set layout gravity
+		android:layout_gravity="right"
+
+HTML/CSS Equivalents:
+
+android:layout_gravity = float in CSS
+
+android:gravity = text-align in CSS
+
+
+> Note: you might wonder whay all the propertry is starting with android ?? If you notice the first line of any XML file there is a namespace define xmlns:android="http://schemas.android.com/apk/res/android". Notice the attribute android here it is reffering to Android Schema with android. This Schema has all reference to values like id, text other attirbutes. You can read more about XML Schema from this link http://en.wikipedia.org/wiki/XML_schema 
+
 ###'android:' namespace
 
 You might wonder whay all the propertry is starting with `android:`. If you notice the first line of any XML file there is a namespace definition 
@@ -108,6 +177,22 @@ This is how a simple textview looks in code.
 		        android:textColor="#ffff00"
 		        android:textSize="15sp"/>
 
+Lot of time you require to set the text of TextView Dynamically via code, let's see how we can change the text of text view via code.
+
+First Step is to get reference of TextView or any other view in code. 
+
+		TextView txtView = (TextView)findViewById(R.id.textView1);
+
+Notice the above code, you create a button object and then call findViewByID method passing the android:id of the TextView. 
+
+Since all the UI elements are view, findViewbyId returns a view object which we need to typecase into correct subview, in this case TextView 
+
+Now to change the text just call settext method on the txtView object 
+		
+		txtView.setText("Set your Text Here"); 
+
+With this simple 2 lines of code you can change the text of textview dynamically
+
 ##EditText
 
 EditText is another most used UI elements in android, whenever you want to take some input from user you use EditText. 
@@ -144,6 +229,22 @@ This is how a simple editText will look like
 		        android:hint="Enter User Name"
 		        android:background="#ff0000"
 		        android:inputType="text">
+
+Most of the time you want to get the value of EditText or preppulate edit text value dynamically, let's see how we can do this in code.
+
+Firs't let get the reference of the EditText 
+
+		EditText edtText = (EditText)findViewById(R.id.editText1);
+
+As discussed earlier, we just call findViewById to get reference of view in code.
+
+Now to get the content of the edit text, just call getText method, like this 
+
+		edtText.getText()
+
+To set the text of the edit text similar to textview you can call 
+
+		edtText.setText("Set your value")
 
 ##Button
 
@@ -195,6 +296,8 @@ This is how a button will look in XML code
 		android:clickable="false"
 		android:text="Button" />
 
+Similar to editText and textView you can call **setText** method on button object to change the text on button dynamically
+
 ##ImageView
 
 ###What
@@ -222,6 +325,16 @@ This is how a image view will look in XML code
 		        android:layout_height="wrap_content"
 		        android:contentDescription="Image Description"
 		        android:src="@drawable/ic_launcher" />
+
+Lot of time you want to change the image of ImageView dynamically from code, Let's see how we can do that from code.
+
+Let's get the reference of image view 
+		ImageView imView = (ImageView)findViewById(R.id.imageView1);
+
+Once we have the image view object we can call setImageResource method to change the image, you can pass the drawable which you want to set to the imageview .
+
+		imView.setImageResource(R.drawable.new_image);
+
 
 ##RadioButton
 
