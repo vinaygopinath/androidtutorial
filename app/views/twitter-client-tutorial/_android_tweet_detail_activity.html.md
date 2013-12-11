@@ -24,11 +24,10 @@ Lets get started
            
            <ImageView
                android:id					="@+id/tweetImage"
-               android:layout_width		="90dp"
-               android:layout_height		="90dp"
+               android:layout_width		="100dp"
+               android:layout_height		="100dp"
                android:background			="@drawable/user_profile"
-               android:layout_gravity		="center_horizontal"
-               android:contentDescription	="@string/alt_profile_img" />
+               android:layout_gravity		="center_horizontal" />
            
        	<LinearLayout 
        	    android:layout_width="fill_parent"
@@ -90,7 +89,7 @@ Lets get started
 .
 @Override
  protected void onListItemClick(ListView l, View v, int position, long id) {
-     <strike>TextView t = (TextView) v.findViewById(R.id.rowTitle);
+     <strike>TextView t = (TextView) v.findViewById(R.id.tweetTitle);
      t.setText("Tweet Clicked");</strike>
 	 <span class="highlight">Intent intent = new Intent(this, TweetDetailActivity.class);
 	 startActivity(intent);</span>
