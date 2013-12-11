@@ -26,7 +26,7 @@ public TweetListActivity extends <strike>Activity</strike><span class="highlight
 `activity_tweet_list.xml`
 <pre>
 &lt;ListView
-        android:id="<strike>@+id/songsListView</strike><span class='highlight'>@android:id/list</span>"
+        android:id="<strike>@+id/listView</strike><span class='highlight'>@android:id/list</span>"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"&gt;
     &lt;/ListView&gt;
