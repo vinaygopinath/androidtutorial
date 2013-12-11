@@ -21,7 +21,7 @@ public TweetListActivity extends Activity {
      .
      .
      <strike>tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);</strike>
-     <span class="highlight">tweetItemAdapter = new TweetAdapter(this, stringArray);</span>
+     <span class="highlight">tweetItemArrayAdapter = new TweetAdapter(this, stringArray);</span>
      .
    }
 
@@ -51,7 +51,7 @@ public TweetListActivity extends Activity {
    protected void onCreate(..){
      .
      .
-	 tweetItemAdapter = new TweetAdapter(this, stringArray);
+	 tweetItemArrayAdapter = new TweetAdapter(this, stringArray);
      .
    }
 
@@ -95,7 +95,7 @@ public TweetListActivity extends Activity {
         songsArray[i] = "Song " + i;
      }</strike>
      .
-     tweetItemAdapter = new TweetAdapter(this, <strike>stringArray</strike><span class="highlight">new String[10]</span>);
+     tweetItemArrayAdapter = new TweetAdapter(this, <strike>stringArray</strike><span class="highlight">new String[10]</span>);
      .
    }
 
@@ -103,4 +103,4 @@ public TweetListActivity extends Activity {
 
 * Done with above steps ? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
 
-[Insert Screenshot]
+![Login screen Layout overview](/assets/twitter-client/final_tweet_list.png)
