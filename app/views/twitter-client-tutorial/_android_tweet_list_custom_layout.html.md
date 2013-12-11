@@ -49,8 +49,8 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 
     &lt;ImageView
         android:id="@+id/imageView1"
-        android:layout_width="<strike>wrap_content</strike><span class='highlight'>70dp</span>"
-        android:layout_height="<strike>wrap_content</strike><span class='highlight'>70dp</span>"
+        android:layout_width="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
+        android:layout_height="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
         android:src="@drawable/user_profile"
 		<span class="highlight">android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"</span>

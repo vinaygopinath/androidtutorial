@@ -1,10 +1,8 @@
 # Hooking Custom Layout to Tweet List View
 
-In last lesson we got the custom Layout done but our Tweet List still show up as the basic List with one entries per line
+In last lesson we got the custom Layout done but our Tweet List still show up as the basic List with one entries per line.
 
-[Insert Screenshot]
-
-In our java code, we provided ArrayAdapter with the build-in Android Layout - android.R.layout_simple_list_item_1 . I was first compelled to replace the layout value with layout.R.row_tweet & thought it would be done. But things are not that straight forward. 
+In our java code, we provided ArrayAdapter with the build-in Android Layout - android.R.layout_simple_list_item_1 . You would be compelled to replace the layout value with layout.R.row_tweet & thought it would be done. But things are not that straight forward. 
 
 > If you are not convinced, go ahead & try the above change. Deploy your app & see it crash on your phone. 
 
