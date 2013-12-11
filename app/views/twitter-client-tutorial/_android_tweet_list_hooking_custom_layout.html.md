@@ -103,4 +103,4 @@ public TweetListActivity extends Activity {
 
 * Done with above steps ? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
 
-[Insert Screenshot]
+![Login screen Layout overview](/assets/twitter-client/final_tweet_list.png)
