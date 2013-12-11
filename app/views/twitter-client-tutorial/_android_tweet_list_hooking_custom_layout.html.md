@@ -74,7 +74,7 @@ public TweetListActivity extends Activity {
 .
 </pre>
 
-* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemAdapter = new TweetAdapter(..)` inside onCreate(). The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
+* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate(). The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
 
 * `inflater.inflate(..)` is responsible for inflating our layout R.layout.row_tweet, creating a View class & returning it to be appended to the parent ListView. 
 
