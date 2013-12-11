@@ -14,6 +14,9 @@ Lets go ahead & make the changes
 
 `TweetListActivity.java`
 <pre>
+</strike><span class="highlight">
+import android.app.ListActivity;</span>
+
 public TweetListActivity extends <strike>Activity</strike><span class="highlight">ListActivity</span>
 
 </pre>
@@ -88,7 +91,7 @@ public class TweetListActivity extends ListActivity {
 
  <span class="highlight">@Override
  protected void onListItemClick(ListView l, View v, int position, long id) {
-     TextView t = (TextView) v.findViewById(R.id.rowTitle);
+     TextView t = (TextView) v.findViewById(R.id.tweetTitle);
 	 t.setText("Tweet Clicked");
  }</span>
 }
@@ -98,4 +101,4 @@ The function onListItemClick gets parent ListView (l), child View which is click
 
 * Run your app. Navigate past the login screen to view the Tweet List screen. Tapping on a tweet item will update the tweet header to 'Tweet Clicked'. 
 
-[Insert Image]
+![Login screen Layout overview](/assets/twitter-client/tweet_clicked.png)

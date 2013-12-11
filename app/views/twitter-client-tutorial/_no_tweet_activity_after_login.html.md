@@ -20,25 +20,7 @@ We created a login button listener which simply updated the button label to 'I a
 
 Now that we are done creating new Activity, we need to show the activity on the click of Login button. We need to use **Intent** for this. Intent is a way of navigating app flow from one Activity to another. Read more about Intents [here]()
 
-* If not already present , we need to add the new Activity entry in AndroidManifest.xml file present in CodelearnTwitterApp . Adding an `<activity>` entry in this file  makes the Android app registers the new Activity.
-
-`AndroidManifest.xml`
-<pre>
- &lt;application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" &gt;
-        &lt;activity
-          .
-		  .
-		&lt;/activity&gt;
-        
-        <span class="highlight">&lt;activity android:name=".TweetListActivity"&gt;&lt;/activity&gt;</span>
-  &lt;/application&gt;
-</pre>
-
-* We now need to hook up the TweetActivity to show up after MainActivity once the Login button is clicked. We do so using Intent. We need to change a bit of code here.
+* We need to hook up the TweetActivity to show up after MainActivity once the Login button is clicked. We do so using Intent. We need to change a bit of code here.
 
 `MainActivity.java`
 <pre>
