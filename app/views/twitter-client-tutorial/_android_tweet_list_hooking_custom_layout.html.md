@@ -8,10 +8,79 @@ In our java code, we provided ArrayAdapter with the build-in Android Layout - an
 
 ## Steps to hook up Custom Layout
 
-To hook a Custom Layout, we need to extend ArrayAdapter class & provide a `getView()` function which gets called when a ListView row is rendered. We will declare a private TweetAdapter class as the class will not be going to be used anywhere else.
+To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets call the class `TweetAdapter`. We will declare a private TweetAdapter class as the class will not be going to be used anywhere else.
 
 `TweetListActivity.java`
+<pre>
+.
+.
+public TweetListActivity extends Activity {
+  .
+  .
+   protected void onCreate(..){
+     .
+     .
+     <strike>tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);</strike>
+     <span class="highlight">tweetItemAdapter = new TweetAdapter(this, stringArray);</span>
+     .
+   }
 
+   <span class="highlight">private class TweetAdapter extends ArrayAdapter<String>{
+				
+		public TweetAdapter(Activity activity, String[] items){
+		}
+		
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent){
+		}
+
+   }</span>
+}
+.
+.
+</pre>
+
+* The function getView() gets called everytime a row is added to the ListView element. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() function to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`. Lets add it to the TweetAdapter class.
+
+<pre>
+.
+.
+public TweetListActivity extends Activity {
+  .
+  .
+   protected void onCreate(..){
+     .
+     .
+	 tweetItemAdapter = new TweetAdapter(this, stringArray);
+     .
+   }
+
+   private class TweetAdapter extends ArrayAdapter<String>{
+	    <span class="highlight">private LayoutInflater inflater;</span>
+
+		public TweetAdapter(Activity activity, String[] items){
+		   <span class="highlight">super(activity, R.layout.row_tweet, items);
+		   inflater = activity.getWindow().getLayoutInflater();</span>
+		}
+		
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent){
+		  <span class="highlight">return inflater.inflate(R.layout.row_tweet, parent, false);</span>
+		}
+
+   }
+}
+.
+.
+</pre>
+
+* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemAdapter = new TweetAdapter(..)` inside onCreate(). The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
+
+* `inflater.inflate(..)` is responsible for inflating our layout R.layout.row_tweet, creating a View class & returning it to be appended to the parent ListView. 
+
+* We are not using the stringArray content anymore. The array length is used to decide on the number of rows. So we can simply remove the variable & simply use new String[10] while passing parameter to TweetAdapter class initialization.
+
+`TweetListActivity.java`
 <pre>
 .
 .
@@ -26,39 +95,11 @@ public TweetListActivity extends Activity {
         songsArray[i] = "Song " + i;
      }</strike>
      .
-     <strike>tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);</strike>
-     <span class="highlight">tweetItemAdapter = new TweetAdapter(this, new String[10]);</span>
+     tweetItemAdapter = new TweetAdapter(this, <strike>stringArray</strike><span class="highlight">new String[10]</span>);
      .
    }
 
-   <span class="highlight">private class TweetAdapter extends ArrayAdapter<String>{
-       private LayoutInflater inflater;
-				
-		public TweetAdapter(Activity activity, String[] items){
-			super(activity, R.layout.row_tweet, items);
-			inflater = activity.getWindow().getLayoutInflater();
-		}
-		
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent){
-			return inflater.inflate(R.layout.row_tweet, parent, false);
-		}
-
-   }</span>
-}
-.
-.
 </pre>
-
-We have done quite a few things in that code snippet
-
-* A new class `TweetAdapter` is defined extending ArrayAdapter. The call to ArrayAdapter has been removed & instead a new object of TweetAdapter class is instantiated.
-
-* The `public TweetAdapter(..)` initialization function is called when `new TweetAdapter(..)` code gets executed. The `super(..)` code executes the initialization function of the parent class ArrayAdapter. `inflater` is an object of type `LayoutInflater`. It is initialized in this function.
-
-* When `tweetListView.setAdapter(tweetItemArrayAdapter)` code is executed, a call to TweetAdapter's getView(..) function is done to populate each ListView row. `inflater.inflate(...)` function inflates our custom layout (row_tweet.xml) as a View class & returns it. This is the important step which inserts our custom layout into the ListView parent. There are three parameters that get passed to getView - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). Right now, we do not have any data to populate in our custom layout, but in subsequent lessons we will modify the function to populate the custom layout with individual tweet data.
-
-* The stringArray variable is not needed anymore. Hence its declaration & initialization is removed. Instead we are now passing `new String[10]` to `new TweetAdapter(..)` call. The empty array will be used by ArrayAdapter class to decide how many child items need to create. In this case, it will create 10 tweet items. The content of the string array is not used.
 
 * Done with above steps ? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
 
