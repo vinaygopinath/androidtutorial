@@ -11,13 +11,13 @@ We used the Android in-built layout `android.R.layout.simple_list_item_1` to get
 
 `row_tweet.xml`
 <pre>
-i&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="<strike>vertical</strike><span class="highlight">horizontal</span>" &gt;
     
-      </LinearLayout>
+&lt;/LinearLayout&gt;
 </pre>
 
 * The LinearLayout element is what is 'Outer LinearLayout' in our planned view. It has its children aligned horizontally. Lets update the value. Also, it has two children - ImageView and LinearLayout. LinearLayout in-turn has three TextView as children.

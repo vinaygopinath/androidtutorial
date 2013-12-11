@@ -31,6 +31,10 @@ The arrayAdapter is now ready & need to be passed on the ListView that we create
       stringListView = (ListView) findViewById(R.id.listViewId);
       stringListView.setAdapter(arrayAdapter);
 	  
+The gist of the above content is illustrated in the following graphic.
+
+![Login screen Layout overview](/assets/twitter-client/list-view-flow.png)
+
 That was a quick overview. Lets implement the above steps to get the basic ListView working for us. We will then go ahead & refine the View to look like the actual tweet list.
 
 ## Follow the steps to build the basic Tweet List
