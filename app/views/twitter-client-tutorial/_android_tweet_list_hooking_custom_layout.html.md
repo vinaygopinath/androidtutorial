@@ -23,7 +23,6 @@ In our java code, we provided ArrayAdapter with the build-in Android Layout - an
 		}
 
    }</span>
-}
 </pre>
 
 * We also need to use our custom TweetAdapter instead of the earlier used ArrayAdapter.
