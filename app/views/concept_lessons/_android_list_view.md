@@ -35,6 +35,7 @@ A listview is made from group of list items, list items are individual rows in l
 List items are just layouts in a separate layout file. Let's see the example below: 
 
 See this Image: 
+
 ![Twitter tweet](/assets/list_view/twitter_tweet.png "Twitter tweet")
 
 In the above image, we see the lisitem for the twitter application, this list Item is a Relative layout with images and multiple text view arranged one after another. This is how we design a list view.
@@ -88,8 +89,7 @@ Open ListViewWithSimpleAdapter Class
 
 For Array Adapter to work you need to have an array of data, let's create a Array of Code Learn Tutorial Chapter: 
 
-		String[] codeLearnChapters = new String[] { "Android Introduction","Android Setup/Installation","Android Hello World",
-		    		"Android Layouts/Viewgroups","Android Activity & Lifecycle","Intents in Android"};
+		String[] codeLearnChapters = new String[] { "Android Introduction","Android Setup/Installation","Android Hello World","Android Layouts/Viewgroups","Android Activity & Lifecycle","Intents in Android"};
 
 Now we have the data let's Create a new Object of Array Adapter. 
 
@@ -119,11 +119,11 @@ We have seen the Array Adapter, but most of the time you need more than 1 data i
 
 If you notice in the above example we have used Android. R. Layout item these are inbuilt layout resources which android provides you to make your development faster. Here are some more examples of Listview items which android provides :
 
-*simple_list_item_1 : A list Item with single TextView
-*simple_list_item_2 : A List Item  with 2 texviews in 2 different line
-*simple_expandable_list_item_1 : A List Item with Expandable View. List Items in list view can be of 2 types, 1 which just displays all content this is the simple list view item.Second is expandable list item which contains few of the data hidden. This hidden data can be viewed if user clicks on expand/collapse button. 
-*simple_list_item_single_choice : A List Item with a radio button after textView, you can use this when you want to get a choice from user.
-*simple_list_item_multiple_choice: A List Item with a Check Box after textview, you can use this when you want to get multuple choices from user. 
+* simple_list_item_1 : A list Item with single TextView
+* simple_list_item_2 : A List Item  with 2 texviews in 2 different line
+* simple_expandable_list_item_1 : A List Item with Expandable View. List Items in list view can be of 2 types, 1 which just displays all content this is the simple list view item.Second is expandable list item which contains few of the data hidden. This hidden data can be viewed if user clicks on expand/collapse button. 
+* simple_list_item_single_choice : A List Item with a radio button after textView, you can use this when you want to get a choice from user.
+* simple_list_item_multiple_choice: A List Item with a Check Box after textview, you can use this when you want to get multuple choices from user. 
 
 
 ##Complex List View with Base Adapter
@@ -185,10 +185,10 @@ This is how your Custom Adapter will look like
 
 Let's Go 1 by 1 and understand each method of custom adapter. 
 
-*getCount() : This method tells the list view the number of row it will require. The count can come from your data source. It can be size of your Data Source. If you have your data source as List of object, this value will be size of list. 
-*Object getItem(int arg0): We have 2 methods with getItem, this method returns an object, this method helps listview to get data for each row. The parameter passed is the row number stating from 0. in our List of Object this method will return the object at the passed index
-*long getItemId(int arg0) : You can ignore this method, just return the same value as passed. This is in general helps listview to map its rows to the data set elements. 
-*getView : This is the most important method, this method will be called to get the View for each row. This is the method where we can use our complex list item and bind it with the data. The fist argument pass to getview is the list view item position ie row number. The second parameter is recycled view reference, as we know list view recycles view you can check through this parameter. Third parameter is the parent to which this view will get attached to.
+* getCount() : This method tells the list view the number of row it will require. The count can come from your data source. It can be size of your Data Source. If you have your data source as List of object, this value will be size of list. 
+* Object getItem(int arg0): We have 2 methods with getItem, this method returns an object, this method helps listview to get data for each row. The parameter passed is the row number stating from 0. in our List of Object this method will return the object at the passed index
+* long getItemId(int arg0) : You can ignore this method, just return the same value as passed. This is in general helps listview to map its rows to the data set elements. 
+* getView : This is the most important method, this method will be called to get the View for each row. This is the method where we can use our complex list item and bind it with the data. The fist argument pass to getview is the list view item position ie row number. The second parameter is recycled view reference, as we know list view recycles view you can check through this parameter. Third parameter is the parent to which this view will get attached to.
 
 Now we understand all the methods of a custom adapter. Let's create our own Complex List View 
 
