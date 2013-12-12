@@ -8,7 +8,26 @@ In our java code, we provided ArrayAdapter with the build-in Android Layout - an
 
 ## Steps to hook up Custom Layout
 
-To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets call the class `TweetAdapter`. We will declare a private TweetAdapter class as the class will not be going to be used anywhere else.
+To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets create a new Java class for this purpose. Right click on **org.codelearn.twitter** and then navigate to **New** -> **Class**. Specify the name as **TweetAdapter** and click on Finish.
+
+`TweetAdapter.java`
+<pre>
+
+<span class="highlight">public class TweetAdapter extends ArrayAdapter<String>{
+				
+		public TweetAdapter(Activity activity, String[] items){
+		}
+		
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent){
+		}
+
+   }</span>
+}
+.
+.
+</pre>
+
 
 `TweetListActivity.java`
 <pre>
@@ -24,38 +43,15 @@ public TweetListActivity extends Activity {
      <span class="highlight">tweetItemArrayAdapter = new TweetAdapter(this, stringArray);</span>
      .
    }
-
-   <span class="highlight">private class TweetAdapter extends ArrayAdapter<String>{
-				
-		public TweetAdapter(Activity activity, String[] items){
-		}
-		
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent){
-		}
-
-   }</span>
-}
-.
-.
+  .
+  . 
 </pre>
-
 * The function getView() gets called everytime a row is added to the ListView element. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() function to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`. Lets add it to the TweetAdapter class.
 
+`TweetAdapter.java`
 <pre>
-.
-.
-public TweetListActivity extends Activity {
-  .
-  .
-   protected void onCreate(..){
-     .
-     .
-	 tweetItemArrayAdapter = new TweetAdapter(this, stringArray);
-     .
-   }
 
-   private class TweetAdapter extends ArrayAdapter<String>{
+   public class TweetAdapter extends ArrayAdapter<String>{
 	    <span class="highlight">private LayoutInflater inflater;</span>
 
 		public TweetAdapter(Activity activity, String[] items){
@@ -74,7 +70,7 @@ public TweetListActivity extends Activity {
 .
 </pre>
 
-* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate(). The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
+* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate() method of TweetListActivity.java. The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
 
 * `inflater.inflate(..)` is responsible for inflating our layout R.layout.row_tweet, creating a View class & returning it to be appended to the parent ListView. 
 

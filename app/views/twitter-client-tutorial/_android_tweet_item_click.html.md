@@ -84,11 +84,6 @@ public class TweetListActivity extends ListActivity {
   .
  }
 
- private class TweetAdapter ... {
-  .
-  .
- }
-
  <span class="highlight">@Override
  protected void onListItemClick(ListView l, View v, int position, long id) {
      TextView t = (TextView) v.findViewById(R.id.tweetTitle);
