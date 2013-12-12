@@ -8,7 +8,7 @@ In our java code, we provided ArrayAdapter with the build-in Android Layout - an
 
 ## Steps to hook up Custom Layout
 
-To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets create a new Java class for this purpose. Right click on **org.codelearn.twitter** and then navigate to **New** -> **Class**. Specify the name as **TweetAdapter** and click on Finish.
+* To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets create a new Java class for this purpose. Right click on **org.codelearn.twitter** and then navigate to **New** -> **Class**. Specify the name as **TweetAdapter** and click on Finish.
 
 `TweetAdapter.java`
 <pre>
@@ -24,10 +24,9 @@ To hook a Custom Layout, we need to extend ArrayAdapter class. The extended clas
 
    }</span>
 }
-.
-.
 </pre>
 
+* We also need to use our custom TweetAdapter instead of the earlier used ArrayAdapter.
 
 `TweetListActivity.java`
 <pre>
@@ -46,7 +45,7 @@ public TweetListActivity extends Activity {
   .
   . 
 </pre>
-* The function getView() gets called everytime a row is added to the ListView element. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() function to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`. Lets add it to the TweetAdapter class.
+* Earlier we just defined the skeleton of our custom TweetAdapter class. Let us fill it with some logic. The function getView() gets called everytime a row is added to the ListView element. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() function to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`.
 
 `TweetAdapter.java`
 <pre>
@@ -65,12 +64,9 @@ public TweetListActivity extends Activity {
 		}
 
    }
-}
-.
-.
 </pre>
 
-* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function . The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate() method of TweetListActivity.java. The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
+* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function (This function is called Constructor in Java). The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate() method of TweetListActivity.java. The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
 
 * `inflater.inflate(..)` is responsible for inflating our layout R.layout.row_tweet, creating a View class & returning it to be appended to the parent ListView. 
 
