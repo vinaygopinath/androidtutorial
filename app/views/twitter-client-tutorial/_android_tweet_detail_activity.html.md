@@ -24,28 +24,21 @@ Lets get started
            
            <ImageView
                android:id					="@+id/tweetImage"
-               android:layout_width		="90dp"
-               android:layout_height		="90dp"
+               android:layout_width		="100dp"
+               android:layout_height		="100dp"
                android:background			="@drawable/user_profile"
-               android:layout_gravity		="center_horizontal"
-               android:contentDescription	="@string/alt_profile_img" />
+               android:layout_gravity		="center_horizontal" />
            
        	<LinearLayout 
        	    android:layout_width="fill_parent"
        	    android:layout_height="wrap_content"
-       	    android:orientation="horizontal"
+       	    android:orientation="vertical"
        	    android:layout_marginLeft="5dp"
        	    android:layout_marginRight="5dp"
        	    android:layout_marginTop="10dp"
        	    android:background="#fff"
        	    android:padding="10dp" >
-       	
-       	    <LinearLayout
-       	        android:layout_width		="wrap_content"
-       	        android:layout_height		="wrap_content"
-       	        android:layout_marginLeft	="10dp"
-       	        android:gravity				="left"
-       	        android:orientation			="vertical" >
+
        	        <TextView
        	            android:id				="@+id/tweetTitle"
        	            android:layout_width	="fill_parent"
@@ -72,12 +65,11 @@ Lets get started
        	            android:text			="21st November, 2013"
        	            android:textColor		="#615f5f"
        	            android:textSize		="12sp" />
-       	    </LinearLayout>
-       
-       	</LinearLayout>
+       	  </LinearLayout>
+   
            
        
-      </LinearLayout>
+     </LinearLayout>
 
 
 
@@ -90,7 +82,7 @@ Lets get started
 .
 @Override
  protected void onListItemClick(ListView l, View v, int position, long id) {
-     <strike>TextView t = (TextView) v.findViewById(R.id.rowTitle);
+     <strike>TextView t = (TextView) v.findViewById(R.id.tweetTitle);
      t.setText("Tweet Clicked");</strike>
 	 <span class="highlight">Intent intent = new Intent(this, TweetDetailActivity.class);
 	 startActivity(intent);</span>

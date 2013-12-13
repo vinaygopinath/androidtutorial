@@ -43,26 +43,26 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="<strike>vertical</strike><span class="highlight">horizontal</span>" &gt;
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="<strike>vertical</strike><span class="highlight">horizontal</span>" &gt;
 
-    &lt;ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
-        android:layout_height="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
-        android:src="@drawable/user_profile"
-		<span class="highlight">android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"</span>
-		/&gt;
+        &lt;ImageView
+           android:id="@+id/imageView1"
+           android:layout_width="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
+           android:layout_height="<strike>wrap_content</strike><span class='highlight'>100dp</span>"
+           android:src="@drawable/user_profile"
+		   <span class="highlight">android:layout_marginLeft="5dp"
+           android:layout_marginTop="5dp"</span> /&gt;
+		
 
-	 &lt;LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical" 
-		<span class="highlight">android:layout_marginLeft="10dp"
-		android:gravity="left"</span>
-		&gt;
+	&lt;LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:orientation="vertical" 
+           <span class="highlight">android:layout_marginLeft="10dp"
+		   android:gravity="left"</span> &gt;
+		
 
         &lt;TextView
             android:id="@+id/textView1"
@@ -72,8 +72,8 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
             <strike>android:textAppearance="?android:attr/textAppearanceLarge"</strike>
 			<span class="highlight">android:textSize="19sp"
             android:textColor="#222222"
-            android:textStyle="bold"</span>
-	/&gt;
+            android:textStyle="bold"</span> /&gt;
+	
 
         &lt;TextView
             android:id="@+id/textView2"
@@ -85,8 +85,8 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
             android:ellipsize="end"
             android:lines="3"
 			android:textColor="#666666"                                                
-            android:textSize="14sp"</span>
-	/&gt;
+            android:textSize="14sp"</span> /&gt;
+	
 
         &lt;TextView
             android:id="@+id/textView3"
@@ -96,10 +96,10 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
             <strike>android:textAppearance="?android:attr/textAppearanceSmall"</strike>
 			<span class="highlight">android:layout_marginTop="5dp"
             android:textColor="#999999"
-            android:textSize="12sp"</span>
-	/&gt;
+            android:textSize="12sp"</span> /&gt;
+	
 
-      &lt;/LinearLayout&gt;
+  &lt;/LinearLayout&gt;
 
 
 &lt;/LinearLayout&gt;
