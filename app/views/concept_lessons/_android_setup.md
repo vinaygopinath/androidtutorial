@@ -1,76 +1,75 @@
 #Android Setup and Installation
 
-In the first chapter we have seen different concepts of an android app, from activities to services and broadcast receivers. This concept is important building blocks and essential to learn if you want to make good android apps. 
+In the first chapter, we have seen fundamentals of an android app, from activities to services and broadcast receivers. This is an important building block and essential to learn if you want to make good android apps.
 
-In next few chapters we will be looking into each concept in details and will be doing hands on coding. 
+In next few chapters, we will look into each concept in detail while   doing some exciting hands on coding.
 
-Before proceeding to the next chapters, it is essential to prepare our development environment where we will be trying out the sample applications and concept lessons. Let's Start
+Before diving deep into the upcoming chapters, we must prepare our development environment to try out sample applications and concept lessons. Let's get started.
 
 
 ##Prerequisite 
 
-Android development does not require any special hardware, the development environment is based on Eclipse and works on any platform. Here is a prerequisite which can help you to decide which version to install
+Android development does not require any specially built hardware. The development environment is based on Eclipse IDE and works on any platform. Here are some prerequisites to help you decide the version to be installed :
 
-* OS: Android IDE works on windows xp, 7, 8, Linux and MAC OSX
+* OS: Android IDE works on Windows XP, 7, 8, Linux, and MAC OSX.
 The Minimum requirement is Java (JDK 6)
 
 
 ##Download Links
 
 * For Java - [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-* For ADT (Android Developer Tool) [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html). Click on Right side Download the SDK button
+* For ADT (Android Developer Tool) [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html). Click on 'Download the SDK' button
 
-> Watchout: Android required Java Development Toolkit JDK and will not work with JRE
+> Watchout: Android requires complete Java Development kit(JDK) and will not work with Java Runtime Environment(JRE) alone.
 
 ##Setup Guide
 
-Lets see the video for Windows 7 installation. Even though this is for windows 7 the steps are more or less same for all other platforms. 
+The following video will guide you through the download and installation process of JDK and ADT . Even though this video is for windows 7, the steps are mostly same for all other platforms. 
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/SFGF3_r9YIA?list=UUbL5gei-5kK8hHf5q3andnw" frameborder="0" allowfullscreen></iframe>
 
 <br/>
 
-The above video helps you in downloading the JDK, installing it and ADT downloads and installation
 
-Lets go step by step and see how to setup, we will be following video
+Lets learn to setup step by step by following the video.
+
 
 ### JDK Setup
 
-> You can check if you already have JDK install on your machine or not. Go to Command line and type javac -version if you get a version code which is 1.6 or above then you can skip this step.
+> You can check if you have JDK already installed on your computer. Go to Command line and type 'javac -version'. If you get a version which is 1.6 or above, then you can skip this JDK Setup step.
 
+Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). Select appropriate Java SE Development Kit based on your Operating System and its version - 32 bit (X86) or 64 bit (X64).
 
-Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and select Java SE Development Kit based on your Operating System and wether it is 32 bit or 64 bit. For 32 bit file name will have X86 
+Once the file is downloaded, double click on it to start the installation. Let the default options be selected, and follow the wizard to complete the installation process.
 
-Once the file is downloaded double click on it to start the installation, let the default options selected and follow the wizard to complete the installations. 
-
-> Watchout: lot of times oracle bundle ASK toolbar with the java JDK installation, make sure you notice the wizard and uncheck the installation of ASK toolbar to save your self from Boltwares. 
-
+> Watchout: A lot of times Oracle JDK installation wizard is bundled with ASK toolbar. Make sure you notice the wizard and uncheck the installation of ASK toolbar to save yourself from Boltwares. 
 
 ### ZIP utility
 
-The ADT package which you downloads from developer.android.com is compressed, you need to have a uncompression software to extract the setup. If you are on Linux or you are on MAC you can skip this section, if you are on a windows machine and already have a zip utility like WinZIP WINRAR etc you can skip this section
+The ADT package which you downloaded from developer.android.com is compressed, you need to extract the package in order to access the setup files. Linux or MAC users can skip this section. For windows users, if you have used zip utilities such as WinZIP, WINRAR etc. , you can skip this section too.
 
-If you do not have an unzip software and you are running a windows machine, follow these steps
+If you do not have an unzip software and are using windows, follow these steps :
 
-* Go to [http://www.7-zip.org/download.html](http://www.7-zip.org/download.html) and download .msi file for your windows machine
-* Double click on the msi and install 7zip software
-* when asked for associating known extension let the default option selected and finish the installation
+* Go to [http://www.7-zip.org/download.html](http://www.7-zip.org/download.html) and download .msi file for your windows machine.
+* Double click on the msi file and install the 7zip software.
+* When asked for associating known extensions, let the default option be selected and finish the installation. 
+
 
 ###ADT (Android Development Toolkit)
 
-Now we have the JDK and Unzip utility installed, let's go and install the ADT
+Now that we have the JDK and Unzip utility installed, let's go and install the ADT.
 
 *Go to the file which gets downloaded from developer.android.com. The file name will start from **adt-bundle-**
 *Right click and unzip the zip packaged. In Linux or MAC you can use the unzip command on the terminal
-*You will get a new folder with name adt-bundle-xxxx created. The exact name will depend on your OS, PC configuration (32/64 bit) etc. 
+*You will get a new folder with name adt-bundle-xxxx created. The exact name will depend on your OS and its version (32/64 bit). 
 
-> Watchout: In the above video you see the presenter doing a cut paste after the above step, you can skip that part if you do not want to change the location of your ADT installation. If you want to move your setup to a different location you can do cut and paste.
+> Watchout: In the above video you see the presenter doing a cut paste after the above step, you can skip that part if you do not want to change the location of your ADT installation. If you want to move your setup to a different location, you can do cut and paste.
 
-The ADT is installed and ready, you will notice that the installation is self contained that means you just need to have the ADT folder to run the development environment
+When ADT is installed you will notice that the installation is self contained. This means you just need to have the ADT folder to run the development environment.
 
 ###USB Debugging
 
->If you are planning to deploy the Android app to your phone, it is essential to turn on USB Debugging in your Android phone. If AVD, you can ignore this section.
+>If you are planning to deploy the Android app to your phone, it is essential to turn on USB Debugging in your Android phone. But if you are working on AVD, you can ignore this section.
 
 * On most devices running Android 3.2 or older, you can find the option under **Settings > Applications > Development**.
 * On Android 4.0 and newer, it's in **Settings > Developer options**.
@@ -78,32 +77,32 @@ The ADT is installed and ready, you will notice that the installation is self co
 > Watchout: On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to "Settings > About phone" and tap Build number seven times. Return to the previous screen to find Developer options.
 
 ##Understading ADT Folders
-Now we have unzipped the ADT from the file we downloaded, double click on the new folder to go inside, lets see what the 2 folders inside ADT are
+
+Now that we have unzipped the ADT installation, lets go inside the ADT folder to see its contents.
 
 ###Eclipse Folder
-As discussed earlier ADT is nothing but eclipse with the Android plugin installed and configured for you, this folder contains the executable which we will use to run the program
 
-If you double click on eclipse folder you will see various other folders, these are eclipse folders require to run it properly
+As discussed earlier, ADT is nothing but Eclipse IDE with Android plugin already installed and configured for you. Eclipse folder contains the executable to launch our development environment.
 
-Double click on Eclipse.exe or eclipse to start the ADT
+If you double click on eclipse folder, you will see various other folders. These folders are required to run the executable properly
+
+Double click on Eclipse.exe or Eclipse Application file to launch the development environment.
+
 
 ###SDK Folder
-SDK folder will contain all your android related installations, this is the folder which has your Android SDK, tools and different Virtual device images. 
 
-You will not be using this folder and it is internally referred by eclipse to find the android SDK path. 
+SDK folder will contain all your android related installations. This is the folder which has your Android SDK, tools, and different Virtual device images. 
+
+You will not be accessing this folder explicitly. But it is internally referred by eclipse to find the android SDK path. 
 
 ###SDK Tools 
-If you notice there is a tool folder inside SDK, Android SDK comes prebundle with some sets of useful tools which you can use to perform a variety of things like log analysis, systrace, layout viewing etc. 
 
-In some advance chapters we might look into how to use these tools, as of not just remember this folder. 
+There is a Tool folder inside SDK, which comes pre-bundled with a set of useful tools to perform a variety of interesting operations like log analysis, systrace, layout viewing etc. While covering some advanced concepts later, we will learn to use these tools.  
 
-
-Now you have your Android IDE up and running, follow the video to understand other parts of IDE and how to use it. 
+Now that you have your Android IDE up and running, follow the video to understand various features of IDE and try to learn things you find interesting. 
 
 > You can skip the above video after 8 minutes. 
 
+Great then ! You can proceed to the next chapter for creating your first hello world application !
 
-Proceed to the next chapter to start creating your first hello world application
-
-
-> Caution practically the installation instruction doesn't change for Windows 8, but sometimes you might encounter some problem in correctly running the ADT, this is mostly due to incorrect installation of the JDK, make sure you install the correct version of JDK and choose the correct version from 32-bit or 64 bit
+> Caution :  For Windows 8 , the installation instruction doesn't change much, but sometimes you might encounter some problem in correctly running the ADT. This is mostly due to incorrect installation of the JDK, make sure you install the correct version of JDK by choose the correct version (32-bit or 64 bit).
