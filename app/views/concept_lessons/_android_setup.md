@@ -99,7 +99,7 @@ You will not be accessing this folder explicitly. But it is internally referred 
 
 There is a Tool folder inside SDK, which comes pre-bundled with a set of useful tools to perform a variety of interesting operations like log analysis, systrace, layout viewing etc. While covering some advanced concepts later, we will learn to use these tools.  
 
-Now that you have your Android IDE up and running, follow the video to understand various features of IDE and try to learn things you find interesting. 
+Now that you have your Android IDE up and running, follow the video integrated at the top of this lesson to understand various features of IDE and try to learn things you find interesting. 
 
 > You can skip the above video after 8 minutes. 
 
