@@ -451,7 +451,7 @@ ListActivity is 1 such example of specialized activity which android offers, Lis
 
 Let's See how we can use ListActivity in our CustomAdapter Example. To do this we will create a new Activity which will extend a listActivity. 
 
-* XML * 
+**XML**
 
 The first thing that will be changed if we use the listactivity is the list view id in layout. ListActivity always expect the layout which you bind it with to have a list view with id *@android:id/list*. 
 
@@ -460,11 +460,11 @@ Why is this required ? if you recall we stated above that listactivity automatic
 Go to list_view_list_activity.xml in our example project to see the list view with a new id. 
 
 
-*Extends* 
+**Extends**
 
 To use listactiviy just extends it in your class instead of activity. This will make the most of the boilerplate code available for you to use. 
 
-*Binding Data *
+**Binding Data**
 
 In Case of listactivity you have the advantage of binding the adapter directly by calling *setListAdapter* method. This helps you to write faster code. 
 
@@ -478,7 +478,7 @@ In case of ListActivity you just need to call setListAdapter passing the adapter
 		setListAdapter(chapterListAdapter);
 
 
-*Click Listener* 
+**Click Listener**
 
 ListActivity provides you a default method onListItemClick which will be invoked every time someone clicks on a list view row. With this method you don't need to set an explicit listener on your listview. 
 
