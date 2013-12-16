@@ -1,49 +1,50 @@
 #Intents 
 
-Now we have seen how the activities work in android and activity Lifecycle, lets see another component which is very useful when you start creating android apps. 
+Now that we have seen how Activities work in Android and Activity Lifecycle, let us see another component which is very useful while creating Android apps.
 
-In our previous tutorial we have seen how every application is made up of multiple activities and we define our main activity in mainifest, now you might wonder how we communicate from one activity to another and how we share data between different activities. 
+In our previous tutorial, we saw that every application is made up of multiple activities and that we define our main activity in manifest XML. Now you might wonder as to how communication and data transfer happens between different activities. 
 
-Lets see intents in action
+Thankfully, we have Intents to solve this problem !
 
 
 Intents can be defined as simple message objects which are used to communicate from 1 activity to another. 
 
-Intents definite intention to of what an application wants and can be used to pass data between activities. 
+Intents define intention of an Application . They are also used to transfer data between activities.
 
-Intents can be used to perform following 3 tasks 
+Intents can be used to perform following 3 tasks : 
 
-1.	Open One Activity from another or open Service from activity etc
-2.	Intents are also used to pass data between activities and services
-3.	Intents can also be used to open another application from our application to delegate responsibility, for example you can use intent to open the browser to display a URL
+1.    Open another Activity or Service from the current Activity
+2.    Pass data between Activities and Services
+3.    Delegate responsibility to another application. For example, you can use Intents to open the browser application to display a URL.
 
-Broadly Intents are classified into 2 categories. There are no keywords for this category and just a broad classification of how intents are used. 
+Intents are broadly classified into 2 categories. There are no keywords for this category and just a broad classification of how intents are used. 
 
 ##Explicit Intents
 
-Explicit Intents are Intents in which you explicitly define the component that needs to be called by Android System, for example using the java class name as the identifier 
+Explicit Intents are the Intents in which you explicitly define the component that needs to be called by Android System. 
 
-When you open 1 activity from another activity in same android app you will be using Explicit Intents. Let’s see an example 
+When you open an activity from another activity in the same Android app, you use Explicit Intents. Let us understand through an example :
 
-		Intent CodeLearnFirstIntent = new Intent (getApplicationContext(), SecondActivity.class)
+        Intent CodeLearnFirstIntent = new Intent (getApplicationContext(), SecondActivity.class);
 
 If you notice here, you are passing the SecondActivity class name as an identifier for this intent. 
 
 ##Implicit Intents
 
-Implicit Intents are intents where instead of defining exact components you define the action, which you want to perform, and leave the decision to handle this action to the operating system and let it decide which component is best to run for that intent. 
+Implicit Intents are intents where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
 
-Whenever you use Intent to Open other application from 1 application to delegate responsibility you will be using Implicit Intent. 
+Whenever you delegate responsibility to another application from your application, you use Implicit Intents. 
 
-Let's see an example
+Let us see an example:
 
-		Intent sendIntent = new Intent();
-		sendIntent.setAction(Intent.ACTION_SEND);
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
 
-This is a simple Example of Share Intent, this is typically used when you want to share the data from 1 application to another, for example, you want to share data over email or sms or Facebook. 
+This is a simple example of a share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. 
 
 
-Now we have seen what the intent is let see couple of examples on how this Intent works, how you pass data and how you use Implicit intent to delegate responsibilities to other apps. 
+Let us now observe a couple of examples to see how Intent works, how you pass data and how you use Implicit Intents to delegate responsibilities to other apps. 
+
 
 ##Intent Example
 
@@ -51,99 +52,97 @@ Now we have seen what the intent is let see couple of examples on how this Inten
 
 ###Open Another Activity
 
-If you see the openActivity method in the above example you can see how we use intent to open another activity, lets see this code sample and then understand it
+If you observe openActivity method in the above example code, you can see how we use intent to open another activity.
 
-		Intent openNewActivity = new Intent(getApplicationContext(), Activity2.class);
-		startActivity(openNewActivity);
+        Intent openNewActivity = new Intent(getApplicationContext(), Activity2.class);
+        startActivity(openNewActivity);
 
-With this 2 lines of code, you can open 1 activity from another in your app. 
+With these 2 lines of code, you can open an activity from another in your app. 
 
-If you see the Intent object require just 2 parameters
+Let us understand the parameters being passed to create an Intent object :
 
-**Application Context**: we need to pass in what content this intent is use, this can be done in multiple way, you can use getapplicationContent method, or use this qualifier. 
+**Application Context**: we need to pass the context to be used by the Intent. You can either use **getapplicationContext()** method, or use **this** qualifier. 
 
-**Activity Class**: The second parameter which his required for an Intent is the activity class which you want to open using this intent. This is followed by .class extension 
+**Activity Class**: This is the class which you want to open using Intent. 
 
-Once we have the intent object ready we can do lot of things with it, we will see in the next section how we can pass data using this intent object. 
-
-Once you have the intent object you can use startActivity method to start an activity whenever you want. 
-
-In our example we are doing at the button click.  
+Once we have the Intent object ready, we can do a lot of things with it. We will see in the next section how we can pass data using this Intent object.
+You can also use Intent's startActivity method to start an activity whenever you want. In our example,we are doing this at a button click event.  
 
 ###Pass Data
 
-Again see the same method openActivity and notice the next line after the intent object is created.  
+Have a look at the same openActivity method. Notice the next line after the Intent object is created.  
 
-There are multiple way to store data in intent, you can use a explicit bundle and set bundle using putExtra, or you can directly use putExtra. 
+There are multiple ways to store data in an Intent. You can use an explicit bundle and set bundle using **putExtra**, or you can directly use **putExtra**. 
 
-**putExtra** is the method which is used to store data in intent object. You can store a variety of data  be it string, char, Boolean, Bundle etc. This data is set as key value pair which you can retrieve in the called activity. 
+**putExtra** is the method which is used to store data in an Intent object. This data can be of different types : string, char, Boolean, Bundle etc. This data gets set as key value pair which you can retrieve in the called activity. 
 
 Let's see this example: 
 
-		openNewActivity.putExtra("UserName", "Pranay");
-		openNewActivity.putExtra("isRegistered", true);
+        openNewActivity.putExtra("UserName", "Pranay");
+        openNewActivity.putExtra("isRegistered", true);
 
-After we have create the intent object, we just call the putExtra method on the object. In the first line we are setting String data with key “UserName” and in second line we are setting Boolean data. We will see in next section on how we can retrieve this data which we put in intent object. 
+After creating the intent object, we just invoked the putExtra method. In the first line, we are setting String data with key “UserName” and in the second line we are setting the Boolean data. We will learn to retrieve this data in our next section. 
 
 ###Alternate Method to put data
 
-In above steps we were setting data directly into the intent object, one alternate people that lot of developers take is to set the data in Bundle and then put this data into intent object. 
+In the previous method, we were setting the data directly into the Intent object. A lot of developers do this alternatively. They set the data in a Bundle and then associate the created bundle with an Intent. 
 
-Bundle in android is a parcable object which is use to pass data between activities. Android internally use bundle even when you use putExtra directly to intent. 
+Bundle object is used to pass data between activities. You can still use putExtra method to associate a bundle with an Intent. 
 
 Lets see the example code
 
-		Bundle dataBundle = new Bundle();
-		dataBundle.putString("BundleUserName", "Pranay");
-		openNewActivity.putExtra("data",dataBundle);
+        Bundle dataBundle = new Bundle();
+        dataBundle.putString("BundleUserName", "Pranay");
+        openNewActivity.putExtra("data",dataBundle);
 
 Here we create the bundle object and put our data using various methods like putString, putBoolean etc. 
 
-Once we have the bundle object we can then set it to the intent object using setExtra method. 
 
 
 ###Retrieving Data
 
-In the above example we have seen how we pass data from 1 activity to another, but once data is passed it also needs to be collected back into other activity. 
+In the above example, we have seen how we pass data from one activity to another, but once data is passed it also needs to be collected back into other activity. 
 
-Open Activity2 from the sample. 
+Open Activity2 class from the example code. 
 
-You can see in this activity how we are getting back the data from the intent. Lets see the sample code
+The code below describes as to how we collect data into the Intent object.
 
-		Intent intentObject = getIntent();
-		String userName = intentObject.getStringExtra("UserName");
-		boolean isRegistered = intentObject.getBooleanExtra("isRegistered", true);
+        Intent intentObject = getIntent();
+        String userName = intentObject.getStringExtra("UserName");
+        boolean isRegistered = intentObject.getBooleanExtra("isRegistered", true);
 
 
-The first step to get data from intent is to get the intent object, which is used to open the Activity. The getIntent() method gives you the intent object reference which is used to open this activity. 
+The first step to extract the data is to get the Intent object using getIntent() method. 
 
-Once you get hold of this intent object you can call different methods to get the data back for example getStringExtra to get the string data. In case there is no Data you will get null or the default value which you set for example in case of getBooleanExtra, the second parameter is the default value which will be given if there is no value with that key. 
+Once you get hold of this Intent object, you can call different methods to get the data back. For example, getStringExtra retrieves the string data. In case if there is no data, you will get null or the default value which is already set. With getBooleanExtra, the second parameter is the default value which will be returned if there is no value with that key. 
 
-> Watchout in case you put string extra and try to get it as int you will get a class cast exception, so please make sure your keys are correct for the correct type.
+> Watchout : If you get class cast exception, it means that you are trying to fetch a different variable type than expected. Like trying to fetch Int using getStringExtra method.
 
 
 ###Opening Other App
 
-Now we have seen how to open 1 activity from another and how we can pass and consume data.  Let's see an example on how to open other apps from 1 app.
+So far we have seen how to open one activity from another and how to pass and consume data.  Let us now see an example as how to open other apps from our app.
 
-See the Activity1 code. 
+See the Activity1 code for reference. 
 
 **Opening Webpage**
 
-If you see openWebPage method in activity 1 you can see the code that is use to open webpage. Lets see the example code
+If you see openWebPage method in Activity1 class, you can see the following code :
 
-		Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.codelearn.org"));
-		startActivity(webIntent);
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.codelearn.org"));
+        startActivity(webIntent);
 
-In the first line we create a new intent object, but this time instead of creating intent object with activity class we use action. The intent Action_View says to android operating system that we want to display data to user, based on the content pass android automatically decide which application to use. 
+In the first line, we create a new Intent object. But this time we use Action instead of Activity class. The intent ACTION_VIEW requests the Android operating system to display data to the user. Based on the context passed, Android automatically decides which application to use. 
 
-In case user have multiple applications which can be used for this action, android will display a list of all and ask the user to choose the one that they want 
+If user has multiple applications which can be used for this action, android will display a list of all applications and ask the user to choose the one they want. 
 
 
 **Sharing Data**
 
 Similar to opening webpage we have shareData method in which you can see how we use ACTION_SEND to share data over email or any social network. 
 
-In this chapter, we have seen how we can use intents to communicate between different activities or pass data. Also we have seen how intents can be used to open other applications
+
+
+In this chapter, we have seen how we can use intents to communicate between different activities or to pass data. Also, we now know how to use Intents for opening other applications from our app.
 
 <br/>
