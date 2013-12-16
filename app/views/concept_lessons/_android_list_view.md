@@ -436,4 +436,54 @@ This is how our click listner looks
 				}
 			});
 
-Now you get a fair understanding of how listview works in Android. Go Ahead and Download the sample app from https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample
+Now you get a fair understanding of how listview works in Android. Let's See Some more tricks which can help you
+
+
+##ListActivity 
+
+In our both examples, we have extended the activity class and bind the list view, though this is simple way in which you do most of your work in android, android also comes with specialize activities which can help you do reduce the overall code. This specialize activities gives you lot of shortcut method which can make your development easier and faster. 
+
+ListActivity is 1 such example of specialized activity which android offers, ListActivity is a subclass of activity which makes creating, binding and using listview simple. Before going deep into ListActivity here are some of the advantages of using listActivity. 
+
+* List Activity Binds with a list view by default, no need to explicitly get the ListView object
+* ListActvity holds a List View object which can be bind just by calling setAdapter anywhere in the code. 
+* Since it holds the reference of the list view, you can directly add the click listener. 
+
+Let's See how we can use ListActivity in our CustomAdapter Example. To do this we will create a new Activity which will extend a listActivity. 
+
+* XML * 
+
+The first thing that will be changed if we use the listactivity is the list view id in layout. ListActivity always expect the layout which you bind it with to have a list view with id *@android:id/list*. 
+
+Why is this required ? if you recall we stated above that listactivity automatically holds the reference of a listview. This is achieved via a common naming convention of the listview whose object is instantiated in list activity automatically.
+
+Go to list_view_list_activity.xml in our example project to see the list view with a new id. 
+
+
+*Extends* 
+
+To use listactiviy just extends it in your class instead of activity. This will make the most of the boilerplate code available for you to use. 
+
+*Binding Data *
+
+In Case of listactivity you have the advantage of binding the adapter directly by calling *setListAdapter* method. This helps you to write faster code. 
+
+Here is how you bind data in normal case, where you get the list view object and then call setAdapter on it.  
+
+		ListView codeLearnLessons = (ListView)findViewById(R.id.listView1);
+		codeLearnLessons.setAdapter(chapterListAdapter);
+
+In case of ListActivity you just need to call setListAdapter passing the adapter: 
+		
+		setListAdapter(chapterListAdapter);
+
+
+*Click Listener* 
+
+ListActivity provides you a default method onListItemClick which will be invoked every time someone clicks on a list view row. With this method you don't need to set an explicit listener on your listview. 
+
+You can view the listactivity example in action in the sample project that you downloaded. Refer to ListViewWithListActivity.java
+
+>Watchout: ListActivity works well if you have only single listview, in case you have more than 1 list view you need to put extra code for the other listview to work. 
+
+You Download the sample app from https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample
