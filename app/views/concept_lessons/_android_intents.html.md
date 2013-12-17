@@ -48,11 +48,11 @@ Let us now observe a couple of examples to see how Intent works, how you pass da
 
 ##Intent Example
 
-**Please download the example code from ** https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnHelloIntents and import it in your Workspace. 
+You should import [**CodelearnHelloIntents**](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnHelloIntents) project from [Codelearn Example apps on github](https://github.com/pranayairan/Code-Learn-Android-Example). If you are new to github, [download the zip](https://github.com/pranayairan/Code-Learn-Android-Example/archive/master.zip), unzip & import CodelearnHelloIntents project in Eclipse.
 
 ###Open Another Activity
 
-If you observe openActivity method in the above example code, you can see how we use intent to open another activity.
+If you observe openActivity method in [Activity1.java](https://github.com/pranayairan/Code-Learn-Android-Example/blob/master/CodeLearnHelloIntents/src/org/codelearn/codelearnhellointents/Activity1.java), you can see how we use intent to open another activity.
 
         Intent openNewActivity = new Intent(getApplicationContext(), Activity2.class);
         startActivity(openNewActivity);
