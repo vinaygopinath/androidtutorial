@@ -1,6 +1,6 @@
 #Android ListView
 
-![Twitter Home](/assets/list_view/twitter_home.png "Twitter Home")
+![Twitter Home](assets/list_view/twitter_home.png "Twitter Home")
 
 
 
@@ -36,7 +36,7 @@ A listview is made from a group of list items. List items are individual rows in
 List items are just layouts in a separate layout file. Let us understand the following example. 
  
 
-![Twitter tweet](/assets/list_view/twitter_tweet.png "Twitter tweet")
+![Twitter tweet](assets/list_view/twitter_tweet.png "Twitter tweet")
 
 Here we can see a listitem for the twitter application. This list Item is arranged in a Relative layout with images and multiple text views aligned to each other. This is how a list view is designed.
 
@@ -51,7 +51,7 @@ Adapter is a bridge between the View (e.g. ListView) and the underlying data for
 We bind the adapter with list view via *setAdapter* method. 
 Now, Let us see how adapter works with the help of the following image.
 
-![Adapters](/assets/list_view/Adapter.png "Adapters") 
+![Adapters](assets/list_view/Adapter.png "Adapters") 
 
 As stated earlier, Adapters act as a bridge to the views. To interact with the view, adapters call the getView() method which returns a view for each item within the adapter view. This is a list item which we have seen earlier. The layout format and the corresponding data for an item within the adapter view are set in the getView() method.  
 
@@ -111,7 +111,7 @@ Once you have a reference of listview, you can just call *setAdapter* method by 
 
 With these simple 4 lines of code, you created your first listview. If you run the application downloaded from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample) and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
 
-![Array Adapters](/assets/list_view/Array_adapter.png "Array Adapters")
+![Array Adapters](assets/list_view/Array_adapter.png "Array Adapters")
 
 We have seen a simple Array Adapter, but most of the times you need more than 1 data in the list item. Let's look how we can leverage base adapter class to achieve what we want. 
 
@@ -128,7 +128,7 @@ If you notice in the above example, we have used Android.R.Layout item. This is 
 
 We have seen above what we can do with ArrayAdapter. But for most use cases you will have a complex layout for list items as below : 
 <br/>
-![List Item](/assets/list_view/list_item.png "List Item")
+![List Item](assets/list_view/list_item.png "List Item")
 
 This kind of complex list items can be bound with Base Adapter. With base Adapter you can practically build any layout which you want in your list view. 
 
@@ -194,7 +194,7 @@ Now we understand all the methods of custom adapter. Let's create our own Comple
 
 First Step to have a complex ListView is to have a complex list item. Let's create a complex list item like this 
 <br/>
-![List Item](/assets/list_view/list_item.png "List Item")
+![List Item](assets/list_view/list_item.png "List Item")
 
 This is similar to the one used in the twitter app.
 
@@ -396,7 +396,7 @@ Now Let us bind the Adapter with ListView by calling setAdapter Method.
 
 This is how the ListView will look when you run it: 
 
-![Custom Adapter](/assets/list_view/Custom_Base_adapter.png "Custom Adapter")
+![Custom Adapter](assets/list_view/Custom_Base_adapter.png "Custom Adapter")
 
 
 ##List View Click Listener

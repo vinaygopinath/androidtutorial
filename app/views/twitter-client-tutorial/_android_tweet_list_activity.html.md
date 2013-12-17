@@ -2,8 +2,8 @@
 
 In last lesson, we learnt how to show up a ListView with dummy data. We need the tweet list to look like as below 
 
-![Tweet List Mockup](/assets/twitter-client/row-tweet-screenshot.png "Tweet List Mockup")
-![Tweet List Layout Breakdown](/assets/twitter-client/row-tweet-layout-breakdown.png "Tweet List Layout Breakdown")
+![Tweet List Mockup](assets/twitter-client/row-tweet-screenshot.png "Tweet List Mockup")
+![Tweet List Layout Breakdown](assets/twitter-client/row-tweet-layout-breakdown.png "Tweet List Layout Breakdown")
 
 We used the Android in-built layout `android.R.layout.simple_list_item_1` to get the view in the last lesson. This time, we will build our own layout & pass it to the ArrayAdapter to get the desired view. 
 

@@ -83,6 +83,6 @@ The Username has id 'username' & the text is rendered from the string 'lbl_usern
 
 Once done, run the app. It should look like below.
 
-![Login screen Layout overview](/assets/twitter-client/twitter-username.png)
+![Login screen Layout overview](assets/twitter-client/twitter-username.png)
 
 Ideally, we like the 'Username' label & input field to be *positioned/styled* better but let us first complete the basic structure first & then we will worry about positioning it to look nice.

@@ -96,4 +96,4 @@ The function onListItemClick gets parent ListView (l), child View which is click
 
 * Run your app. Navigate past the login screen to view the Tweet List screen. Tapping on a tweet item will update the tweet header to 'Tweet Clicked'. 
 
-![Login screen Layout overview](/assets/twitter-client/tweet_clicked.png)
+![Login screen Layout overview](assets/twitter-client/tweet_clicked.png)

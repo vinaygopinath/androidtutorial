@@ -2,8 +2,8 @@
 
 In last lesson, we learnt how to show up a basic ListView with one line data. We need the tweet list to look like as below 
 
-![Tweet List Mockup](/assets/twitter-client/row-tweet-screenshot.png "Tweet List Mockup")
-![Tweet List Layout Breakdown](/assets/twitter-client/row-tweet-layout-breakdown.png "Tweet List Layout Breakdown")
+![Tweet List Mockup](assets/twitter-client/row-tweet-screenshot.png "Tweet List Mockup")
+![Tweet List Layout Breakdown](assets/twitter-client/row-tweet-layout-breakdown.png "Tweet List Layout Breakdown")
 
 We used the Android in-built layout `android.R.layout.simple_list_item_1` to get the individual tweet row in the last lesson. This time, we will build our own layout for each tweet. In next lesson, we will hook it up with ListView to get the final output.
 
@@ -22,20 +22,20 @@ We used the Android in-built layout `android.R.layout.simple_list_item_1` to get
 
 * The LinearLayout element is what is 'Outer LinearLayout' in our planned view. It has its children aligned horizontally. Lets update the value. Also, it has two children - ImageView and LinearLayout. LinearLayout in-turn has three TextView as children.
 
-We are adding ImageView first time here. We are going to use Graphical Layout this time. Get [user_profile.png](/assets/user_profile.png) image, right click & save it inside res -> drawable-ldpi folder. We need to provide the path to image when we add the ImageView.
+We are adding ImageView first time here. We are going to use Graphical Layout this time. Get [user_profile.png](assets/user_profile.png) image, right click & save it inside res -> drawable-ldpi folder. We need to provide the path to image when we add the ImageView.
 
 Click on row_tweet.xml. Navigate to 'Graphical Layout' tab. Inside 'Palette' on the left hand side, go to 'Image & Media'. Drag 'ImageView' to the layout window. Choose 'user_profile' in the list of items & hit 'Ok'.
 
-![Login screen Layout overview](/assets/twitter-client/image_selection.png)
+![Login screen Layout overview](assets/twitter-client/image_selection.png)
 
 You should see the image added in the layout. 
 
-![Login screen Layout overview](/assets/twitter-client/image_view.png)
+![Login screen Layout overview](assets/twitter-client/image_view.png)
 
 For adding LinearLayout, go to 'Layouts' tab, drag LinearLayout(Vertical) next to the image we added in the previous step. 
 Now, go to 'Form Widgets', drag 'Large Text' for heading inside the LinearLayout, drag 'Medium Text' for body & 'Small Text' for date. Each of the element will be placed one below another. 
 
-![Login screen Layout overview](/assets/twitter-client/vertical_text_align.png)
+![Login screen Layout overview](assets/twitter-client/vertical_text_align.png)
 
 If you are not able to get it structure it properly, dont worry ! Just go to the other tab which says 'row_tweet.xml'. You will see the XML code. Instead of modifying/refining XML attributes in the Graphical Layout, we will be doing so directly in XML. Modify it as shown below 
 
@@ -108,6 +108,6 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 What we have done is to style the elements to look nice. We have provided the values but you can always fiddle with them to see how it looks. Going back to 'Graphical Layout' tab will show you the final view for the Layout. 
 
 
-![Login screen Layout overview](/assets/twitter-client/twitter_tweet.png)
+![Login screen Layout overview](assets/twitter-client/twitter_tweet.png)
 
 > We have not yet hooked the new layout with ListView. But you still need to run the app for our server to know that you have done this lesson right. Sorry for the inconvenience :)

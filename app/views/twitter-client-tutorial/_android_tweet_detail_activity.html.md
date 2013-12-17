@@ -8,7 +8,7 @@ Lets get started
 
 * The layout of the Tweet Detail screen should be as below
 
-![Tweet Detail Layout Breakdown](/assets/twitter-client/tweet-detail-layout-breakdown.png "Tweet Detail Layout Breakdown")
+![Tweet Detail Layout Breakdown](assets/twitter-client/tweet-detail-layout-breakdown.png "Tweet Detail Layout Breakdown")
 
 * We had created similar layout in row_tweet.xml . So this time, you can simply copy paste the below xml in activity_tweet_detail.xml. Remove all the other existing XML from the file before you add the below XML. 
 

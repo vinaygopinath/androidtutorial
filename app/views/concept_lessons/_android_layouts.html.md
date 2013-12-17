@@ -25,7 +25,7 @@ So, the available orientation for LinearLayout are :
 
 [Download this sample project](https://github.com/codelearn-org/android-linear-layout-example) , import in Eclipse & navigate to activity_main.xml file as shown in the screenshot below.
 <br/>
-![Linear Layout XML file](/assets/android-layouts/linear-layout-file-location.png "Linear Layout XML file")
+![Linear Layout XML file](assets/android-layouts/linear-layout-file-location.png "Linear Layout XML file")
 <p class="ac"><b>Linear Layout XML file</b></p>
 <br/>
 
@@ -72,7 +72,7 @@ LinearLayout can be used in vertical or horizontal fashion. We can set the orien
     </LinearLayout>
 
 <br/>
-![Linear Layout horizontal alignment Screenshot](/assets/android-layouts/linear-layout-horizontal-screenshot.png "Linear Layout horizontal alignment Screenshot")
+![Linear Layout horizontal alignment Screenshot](assets/android-layouts/linear-layout-horizontal-screenshot.png "Linear Layout horizontal alignment Screenshot")
 <p class="ac"><b>Linear Layout horizontal alignment screenshot</b></p>
 <br/>
 
@@ -97,7 +97,7 @@ In the vertical “orientation” all the children are put one below the other. 
 Save the file & deploy your Android app. You will see the screenshot as shown below. 
 
 <br/>
-![Linear Layout vertical alignment Screenshot](/assets/android-layouts/linear-layout-vertical-screenshot.png "Linear Layout vertical alignment Screenshot")
+![Linear Layout vertical alignment Screenshot](assets/android-layouts/linear-layout-vertical-screenshot.png "Linear Layout vertical alignment Screenshot")
 <p class="ac"><b>Linear Layout vertical alignment screenshot</b></p>
 <br/>
 
@@ -113,8 +113,8 @@ In this layout, you can specify the child layouts w.r.t its sibling or parent. T
 ### Position relative to container/parent 
 
 <br/>
-![Relative Layout position options](/assets/android-layouts/relative-layout-position-options.png "Relative Layout position options")
-![Relative Layout position options](/assets/android-layouts/relative-layout-position-options-2.png "Relative Layout position options")
+![Relative Layout position options](assets/android-layouts/relative-layout-position-options.png "Relative Layout position options")
+![Relative Layout position options](assets/android-layouts/relative-layout-position-options-2.png "Relative Layout position options")
 <p class="ac"><b>Relative Layout position options</b></p>
 <br/>
 
@@ -141,14 +141,14 @@ Apart from it, there is **layout_above & layout_below**. The names are self expl
 [Download this sample project](https://github.com/codelearn-org/android-relative-layout-example) , import in Eclipse & navigate to [activity_relative_layout.xml](https://github.com/codelearn-org/android-relative-layout-example/tree/master/res/layout) file as shown in the screenshot below.
 
 <br/>
-![Relative Layout XML file](/assets/android-layouts/relative-layout-file-location.png "Relative Layout XML file")
+![Relative Layout XML file](assets/android-layouts/relative-layout-file-location.png "Relative Layout XML file")
 <p class="ac"><b>Relative Layout XML file</b></p>
 <br/>
 
 Run the project & you will see screenshot as below.
 
 <br/>
-![Relative Layout Screenshot](/assets/android-layouts/relative-layout-screenshot.png "Relative Layout Screenshot")
+![Relative Layout Screenshot](assets/android-layouts/relative-layout-screenshot.png "Relative Layout Screenshot")
 <p class="ac"><b>Relative Layout Screenshot</b></p>
 <br/>
 
@@ -202,7 +202,7 @@ A **RelativeLayout** on the other hand, allows for a more random arrangement of 
 
 The following figure should give you an understanding when to choose between either of them &nbsp;
 
-![Relative and Linear Layout Difference](/assets/android-layouts/linear-vs-relative.png "Relative and Linear Layout Difference")
+![Relative and Linear Layout Difference](assets/android-layouts/linear-vs-relative.png "Relative and Linear Layout Difference")
 
 One important point to note is that in almost every circumstance, `RelativeLayout` and `LinearLayout` can be used to replace the other. However, in
 general, it is usually much more verbose to do it. In some cases, if the layout is fairly simple, it really doesn't matter which one you choose.
@@ -216,7 +216,7 @@ A layout that places its children in a rectangular grid.GridLayout uses a grid o
 [Download the sample project](https://github.com/pocha/android-grid-layout-example), import it in Eclipse & navigate to [grid_layout.xml](https://github.com/pocha/android-grid-layout-example/blob/master/res/layout/grid_layout.xml) file inside layout directory as shown in the image
 
 <br/>
-![Grid Layout XML file](/assets/android-layouts/grid-layout-file-location.png "Grid Layout XML file")
+![Grid Layout XML file](assets/android-layouts/grid-layout-file-location.png "Grid Layout XML file")
 <p class="ac"><b>Grid Layout XML file</b></p>
 <br/>
 
@@ -270,7 +270,7 @@ Above is example of 4x4 grid layout with horizontal orientation. The orientation
 In the above layout, we have put Textviews in the form of a grid. As the orientation is horizontal, it starts filling the 4X4 grid horizontally and populates all the views. If we change the orientation to vertical, the layout will be traced in a vertical fashion. Below are the screenshots for both orientations.
 
 <br/>
-![Grid Layout Screenshot](/assets/android-layouts/grid-layout-screenshot.png "Grid Layout Screenshot")
+![Grid Layout Screenshot](assets/android-layouts/grid-layout-screenshot.png "Grid Layout Screenshot")
 <p class="ac"><b>Grid Layout Screenshot</b></p>
 <br/>
 
@@ -310,7 +310,7 @@ This behavior is similar to how HTML table behaves.
     </GridLayout>
 
 <br/>
-![Grid Layout Table Like Behavior](/assets/android-layouts/grid-layout-table-like-behavior.png "Grid Layout Table Like Behavior")
+![Grid Layout Table Like Behavior](assets/android-layouts/grid-layout-table-like-behavior.png "Grid Layout Table Like Behavior")
 <p class="ac"><b>Grid Layout Table Like Behavior</b></p>
 <br/>
 

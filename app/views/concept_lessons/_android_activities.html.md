@@ -11,7 +11,7 @@ Now assume you are a game developer. For you, there should be a way to save the 
 ##Activity Lifecycle
 
 <br/>
-!["Activity Lifecycle"](/assets/activity_lifecycle/activity_lifecycle.png "Activity Lifecycle")
+!["Activity Lifecycle"](assets/activity_lifecycle/activity_lifecycle.png "Activity Lifecycle")
 
 The above image shows various functions like 'onCreate()', 'onStart()' which gets called at various points of an Activity Lifecycle. Let's look at each of the methods/functions in detail.
 
