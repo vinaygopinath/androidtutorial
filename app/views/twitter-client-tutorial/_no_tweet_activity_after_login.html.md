@@ -14,7 +14,7 @@ We created a login button listener which simply updated the button label to 'I a
 
 * Now the new string field need to be added in the activity_tweet_list.xml . Go to res -> layout -> activity_tweet_list.xml . It is by default showing 'Hello World' through `@string/hello_world`. Change it to @string/no_tweet_found . Save file & click on 'Graphical Layout' tab. You should see 'No Tweet Found' in the output preview.
 
-![Login screen Layout overview](assets/twitter-client/no_tweet_found.png)
+<%= image_tag "twitter-client/no_tweet_found.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
 ## Hooking new Activity to Login
 

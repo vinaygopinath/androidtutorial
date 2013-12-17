@@ -72,7 +72,7 @@ In the previous lesson, we added Username label & input field. To add password, 
 
 Note that since **id** needs to be unique, the second LinearLayout, TextView & EditText field have different ids. After this point, the app will look as below
 
-![Login screen Layout overview](assets/twitter-client/twitter-password.png)
+<%= image_tag "twitter-client/twitter-password.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
 Lets add the Login button as well
 
@@ -118,4 +118,4 @@ Lets add the Login button as well
 
 The login button is placed 'below' the password LinearLayout. With this step, the login screen design is complete. Run the app & the output should look as below.
 
-![Login screen Layout overview](assets/twitter-client/twitter-login.png)
+<%= image_tag "twitter-client/twitter-login.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

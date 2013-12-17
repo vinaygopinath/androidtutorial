@@ -63,4 +63,4 @@ A View object represents a rectangular area on the screen and is responsible for
 
 Once done, clicking on the Login button should update the text inside the button to 'I am Clicked' as shown below. In steady state, clicking on the button would have authenticated the user & either showed error message or took him to the next screen. Assuming that the user is authenticated, we are suppose to take him to the next screen. But before we take him to the next screen, we need to build it first. Next lesson deals with it.
 
-![Login screen Layout overview](assets/twitter-client/click-change.png)
+<%= image_tag "twitter-client/click-change.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

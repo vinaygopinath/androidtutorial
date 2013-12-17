@@ -9,13 +9,13 @@ In Android, all layouts are XML based. Even though you get a nice graphical edit
 ##Graphical Layout
 If you open any Layout in ADT, you will see 2 tabs like the one in this image 
 <br/>
-![Layout Tabs](assets/android_widgets/tabs.png "Layout Tabs")
+<%= image_tag "android_widgets/tabs.png", alt: "Layout Tabs", title: "Layout Tabs" %>
 
 To open Graphical Layout for dragging and dropping UI elements, just click on the Graphical Layout tab.
 
 This is how the Graphical Layout Editor looks like :
 <br/>
-![Layout Editor](assets/android_widgets/layout_editor.png "Layout Editor")
+<%= image_tag "android_widgets/layout_editor.png", alt: "Layout Editor", title: "Layout Editor" %>
 
 Let us see what are its sub components
 
@@ -108,7 +108,7 @@ For Individual Sides
 You might wonder what is the difference between margin and padding. Let's see an Image to Understand better. 
 
 <br/>
-![Padding and Margin](assets/android_widgets/padding_Margin.jpg "Padding and Margin")
+<%= image_tag "android_widgets/padding_Margin.jpg", alt: "Padding and Margin", title: "Padding and Margin" %>
 
 In the image, margin is the gray area outside the entire object. The border is the point where your view ends. 
 
