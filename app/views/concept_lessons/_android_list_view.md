@@ -109,7 +109,7 @@ Once you have a reference of listview, you can just call *setAdapter* method by 
 
         codeLearnLessons.setAdapter(codeLearnArrayAdapter);
 
-With these simple 4 lines of code, you created your first listview. If you run the application downloaded from https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
+With these simple 4 lines of code, you created your first listview. If you run the application downloaded from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample) and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
 
 ![Array Adapters](/assets/list_view/Array_adapter.png "Array Adapters")
 
