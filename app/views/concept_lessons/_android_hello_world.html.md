@@ -19,7 +19,7 @@ If ADT is not running, double click on ADT  to start the development environment
 ### Screen 1
 
 <br/>
-![New Application](/assets/hello-android/screen1.png "New Application")
+<%= image_tag "hello-android/screen1.png", alt: "New Application", title: "New Application" %>
 
 This is the first Screen for creating a new android project. Let's cover each field shown above individually and try to understand their importance. 
 
@@ -39,7 +39,7 @@ Now, Click on Next:
 ### Screen 2
 
 <br/>
-![New Application project config](/assets/hello-android/screen2.png "New Application project config")
+<%= image_tag "hello-android/screen2.png", alt: "New Application project config", title: "New Application project config" %>
 
 This screen is use to configure various project settings, lets go 1 by 1 to see all these options 
 
@@ -54,7 +54,7 @@ Click Next
 ### Screen 3
 
 <br/>
-![New Application Launcher icon](/assets/hello-android/screen3.png "New Application Launcher icon")
+<%= image_tag "hello-android/screen3.png", alt: "New Application Launcher icon", title: "New Application Launcher icon" %>
 
 If you have checked the create custom launcher check box, screen 3 will be for the creation of launcher icon.
 
@@ -69,7 +69,7 @@ Click on Next
 ### Screen 4
 
 <br/>
-![New Application Activity Template](/assets/hello-android/screen4.png "New Application Activity Template")
+<%= image_tag "hello-android/screen4.png", alt: "New Application Activity Template", title: "New Application Activity Template" %>
 
 Screen 4 is an activity template screen. ADT comes pre bundled with some activity templates for you. These templates have predefined structures and they automatically generate required code for you.
 
@@ -82,7 +82,7 @@ Select Blank activity and Click Next
 ### Screen 5
 
 <br/>
-![New Application Activity Config](/assets/hello-android/screen5.png "New Application Activity Config")
+<%= image_tag "hello-android/screen5.png", alt: "New Application Activity Config", title: "New Application Activity Config" %>
 
 This screen is an Activity configuration screen. Since you asked ADT to create an activity for you, this screen helps you in configuring relevant options.
 
@@ -94,7 +94,7 @@ Click Finish
 Once you click Finish ADT will create your new project and will open Java code and Layout code for you. 
 
 <br/>
-![New Project](/assets/hello-android/screen_new_project.png "New Project")
+<%= image_tag "hello-android/screen_new_project.png", alt: "New Project", title: "New Project" %>
 
 ## Running your Application
 
@@ -107,13 +107,13 @@ Right click on your project name in ADT and choose Run As => Android Application
 Here is how it will look 
 
 <br/>
-![Emulator](/assets/hello-android/emulator.png "Emulator")
+<%= image_tag "hello-android/emulator.png", alt: "Emulator", title: "Emulator" %>
 
 > Watchout: Most of the developers, once they are a little comfortable with developing apps, directly use their phone to test the application. In Linux/Mac you can directly plug in your phone with the USB Debugging option enabled to start running apps. In Windows, you need to install the drivers and once done you can test your apps on your phone. 
 
 If you see this screen when you right click and run the application, this means that you don't have an AVD installed. Click yes and follow the steps from the next section to create a new AVD and repeat the above process again. 
 <br/>
-![NO_AVD](/assets/hello-android/noavd.png "No_AVD")
+<%= image_tag "hello-android/noavd.png", alt: "No_AVD", title: "No_AVD" %>
 
 ## Creating Android Virtual Device(AVD)
 
@@ -126,12 +126,12 @@ Let's see how we can create an emulator.
 AVD manager dialog will open, in recent versions of ADT you get 1 avd pre bundled. But in case of old ADT, you might not have any AVD. 
 
 <br/>
-![AVD Manager](/assets/hello-android/avd_manager.png "AVD Manager")
+<%= image_tag "hello-android/avd_manager.png", alt: "AVD Manager", title: "AVD Manager" %>
 
 Lets create a new AVD of our own. Click on New in AVD Manager to see AVD Creation dialog. 
 
 <br/>
-![Create AVD](/assets/hello-android/create_avd.png "Create AVD")
+<%= image_tag "hello-android/create_avd.png", alt: "Create AVD", title: "Create AVD" %>
 
 Let’s go through the elements of this dialog 
 
@@ -151,7 +151,7 @@ Once the AVD is created, you will see your newly created AVD in the AVD manager.
 
 Till now we have seen how to create a hello world application and test it in new emulator. Now, lets see how android folder structure looks like. Before getting deep into the folder structure, just click on the down arrow present at the left of your project to expand it to see all your folders in the project. 
 <br/>
-![Android App Folder Structure](/assets/hello-android/folder_structure.png "Android App Folder Structure")
+<%= image_tag "hello-android/folder_structure.png", alt: "Android App Folder Structure", title: "Android App Folder Structure" %>
 
 Lets go via each folder and see what each one is use for 
 
@@ -183,13 +183,13 @@ The console gives you all the information about events happening in ADT. Whether
 To open the console if it is not visible you can open it from Windows-> Show View -> Others -> General -> Console
 
 <br/>
-![Console](/assets/hello-android/console.png "Console")
+<%= image_tag "hello-android/console.png", alt: "Console", title: "Console" %>
 
 Console helps in knowing what is happening in your development environment 
 
 ### LogCAT
 <br/>
-![LogCat](/assets/hello-android/logcat.png "LogCat")
+<%= image_tag "hello-android/logcat.png", alt: "LogCat", title: "LogCat" %>
 
 An excellent tool which comes with ADT is logcat. It gives you all information about what is happening in your Android Emulator or Phone if you are using a android phone for testing your applications
 
@@ -201,7 +201,7 @@ To open the LogCat if it is not visible you can open it from Windows-> Show View
 
 ### DDMS
 <br/>
-![DDMS](/assets/hello-android/ddms.png "DDMS")
+<%= image_tag "hello-android/ddms.png", alt: "DDMS", title: "DDMS" %>
 
 DDMS is a very powerful perspective which comes with ADT, it lets you control and access different information from a device or emulator. To open DDMS, go to Windows -> Open Prespective -> DDMS
 

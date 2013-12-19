@@ -26,7 +26,7 @@ Since it is header (TextView with id "@+id/header"), we need a bigger font-size 
 
 Once done, save the file & deploy your app. It should look as below. 
 
-![Login screen Layout overview](/assets/twitter-client/twitter-header-font.png)
+<%= image_tag "twitter-client/twitter-header-font.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
 ## Styling the LinearLayout container
 
@@ -141,4 +141,4 @@ To center the text 'Login' inside the button, we use **gravity**. Unlike **layou
 
 Ok, that was quite a few styling changes but fret not, your effort will definitely 'show up good'. Save the file & run the app. The shiny new Activity with nicely styled element should show as below.
 
-![Login screen Layout overview](/assets/twitter-client/Twitter-front-font.png)
+<%= image_tag "twitter-client/Twitter-front-font.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

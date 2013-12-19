@@ -6,19 +6,19 @@ A good way to start is by building the app skeleton (just the user interface).
 
 * The first time you open a Twitter app, it shows the login screen. So we will build the interface for it first.
 <br/>
-!["Login Screenshot"](/assets/twitter-client/login-screenshot.png "Login Screenshot")
+<%= image_tag "twitter-client/login-screenshot.png", alt: "Login Screenshot", title: "Login Screenshot" %>
 <p class="ac">Login Interface Screenshot</p>
 <br/>
 
 * Once logged in, we see the list of tweets of the users we follow, so we will build it next. There are multiple tabs like 'mentions', 'direct messages', 'profile' etc. but lets not worry about them in our first iteration.
 <br/>
-!["Twitter List Screenshot"](/assets/twitter-client/twitter-list-screenshot.png "Twitter List Screenshot")
+<%= image_tag "twitter-client/twitter-list-screenshot.png", alt: "Twitter List Screenshot", title: "Twitter List Screenshot" %>
 <p class="ac">Twitter List Screenshot</p>
 <br/>
 
 * Clicking on a tweet shows up the details of that particular tweet. So we will build this feature after building the tweet list view described above.
 <br/>
-!["Twitter Detail Screenshot"](/assets/twitter-client/twitter-details-screenshot.png "Twitter Detail Screenshot")
+<%= image_tag "twitter-client/twitter-details-screenshot.png", alt: "Twitter Detail Screenshot", title: "Twitter Detail Screenshot" %>
 <p class="ac">Twitter Detail Screenshot</p>
 <br/>
 

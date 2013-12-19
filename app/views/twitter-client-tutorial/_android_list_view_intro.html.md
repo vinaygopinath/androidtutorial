@@ -33,7 +33,7 @@ The arrayAdapter is now ready & need to be passed on the ListView that we create
 	  
 The gist of the above content is illustrated in the following graphic.
 
-![Login screen Layout overview](/assets/twitter-client/list-view-flow.png)
+<%= image_tag "twitter-client/list-view-flow.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
 That was a quick overview. Lets implement the above steps to get the basic ListView working for us. We will then go ahead & refine the View to look like the actual tweet list.
 
@@ -102,4 +102,4 @@ public class TweetActivity extends Activity {
 
 Run the app. After login screen, you will see the ListView as shown below.
 
-![Login screen Layout overview](/assets/twitter-client/twitter_list_view.png)
+<%= image_tag "twitter-client/twitter_list_view.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

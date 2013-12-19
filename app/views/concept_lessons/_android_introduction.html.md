@@ -7,7 +7,7 @@ Though a lot has changed since the launch of Android what have not changed is th
 An Android Application is coded in Java and gets compiled into a single distribution package called as APK. APK is the executable file which gets installed on your phone as Android app.  Let's walk through various building blocks of the an Android application.
 
 <br/>
-![Building Blocks of Android](/assets/android-introduction/picture-1.png "Building Blocks of Android")
+<%= image_tag "android-introduction/picture-1.png", alt: "Building Blocks of Android", title: "Building Blocks of Android" %>
 
 <p class="ac"><b>Building Blocks of Android</b></p>
 <br/>
@@ -133,7 +133,7 @@ So we have seen how different components are available with us to create any app
 We are going to demonstrate all the above components in a Twitter app. Below is the screenshot of the app screens with relevant components highlighted.
 
 <br/>
-![Twitter Android](/assets/android-introduction/twitter_android.png "Twitter Android")
+<%= image_tag "android-introduction/twitter_android.png", alt: "Twitter Android", title: "Twitter Android" %>
 <br/>
 
 You can see various component and how it is used in Twitter app. Lets take one component at a time. 
@@ -148,7 +148,7 @@ You can see various component and how it is used in Twitter app. Lets take one c
   </div>
  </div>
  <div class="span4">
-	<img src="/assets/android-introduction/startingup.png" />
+	<%= image_tag "android-introduction/startingup.png" %>
  </div>
 </div>
 
@@ -164,7 +164,7 @@ You can see various component and how it is used in Twitter app. Lets take one c
   </div>
  </div>
  <div class="span4">
-	<img src="/assets/android-introduction/login.png" />
+	<%= image_tag "android-introduction/login.png" %>
  </div>
 </div>
 
@@ -180,7 +180,7 @@ You can see various component and how it is used in Twitter app. Lets take one c
   </div>
  </div>
  <div class="span4">
-	<img src="/assets/android-introduction/twitter_home.png" />
+	<%= image_tag "android-introduction/twitter_home.png" %>
  </div>
 </div>
 
@@ -196,7 +196,7 @@ You can see various component and how it is used in Twitter app. Lets take one c
    </div>
  </div>
  <div class="span4">
-	<img src="/assets/android-introduction/twitter_services.png" />
+	<%= image_tag "android-introduction/twitter_services.png" %>
  </div>
 </div>
 
@@ -217,10 +217,6 @@ Typically you never access database directly. Instead Twitter app might be using
    </div>
  </div>
  <div class="span4">
-	<img src="/assets/android-introduction/notifications.png" />
+	<%= image_tag "android-introduction/notifications.png" %>
  </div>
 </div>
-
-
-
-
