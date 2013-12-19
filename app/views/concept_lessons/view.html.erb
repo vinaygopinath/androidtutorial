@@ -43,19 +43,19 @@
 
 	$("h2").each(function() {
 		console.log($(this).html())
-		add_item_in_nav("ul.nav.bs-sidenav", this, null)
+		add_item_in_nav("ul.nav.bs-sidenav", this, "")
 		parent_id = $(this).html().replace(/\W+/g,"-")
 		
 		$(this).nextUntil("h2","h3").each(function(){
 			console.log($(this).html())
-			add_item_in_nav("ul.nav.bs-sidenav li:last ul", this, parent_id)
-			create_proper_header(this,"h3", parent_id)
+			add_item_in_nav("ul.nav.bs-sidenav li:last ul", this, parent_id + "-")
+			create_proper_header(this,"h3", parent_id + "-")
 		})
-		create_proper_header(this, "h2", null)
+		create_proper_header(this, "h2", "")
 	})
 
 	function create_proper_header(element,header_type, parent_id) {
-		id = parent_id + "-" + $(element).html().replace(/\W+/g,"-")
+		id = parent_id + $(element).html().replace(/\W+/g,"-")
 		if (header_type == "h2" || header_type == "h1") 
 			$(element).replaceWith('<div class="page-header"><' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '></div>')
 		else
@@ -64,7 +64,7 @@
 	}
 
 	function add_item_in_nav(_parent,element, parent_id) {
-		id = parent_id + "-" + $(element).html().replace(/\W+/g,"-")
+		id = parent_id + $(element).html().replace(/\W+/g,"-")
 		$(_parent).append('<li><a href="#' + id + '">' + $(element).html() + '</a><ul class="nav"></ul></li>')
 	}
 

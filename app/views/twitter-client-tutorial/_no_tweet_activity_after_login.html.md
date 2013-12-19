@@ -18,7 +18,7 @@ We created a login button listener which simply updated the button label to 'I a
 
 ## Hooking new Activity to Login
 
-Now that we are done creating new Activity, we need to show the activity on the click of Login button. We need to use **Intent** for this. Intent is a way of navigating app flow from one Activity to another. Read more about Intents [here]()
+Now that we are done creating new Activity, we need to show the activity on the click of Login button. We need to use **Intent** for this. Intent is a way of navigating app flow from one Activity to another. Read more about Intents <%= link_to "here", android_concept_lesson_path("android-intents") %>
 
 * We need to hook up the TweetActivity to show up after MainActivity once the Login button is clicked. We do so using Intent. We need to change a bit of code here.
 
