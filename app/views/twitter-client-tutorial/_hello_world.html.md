@@ -4,4 +4,7 @@ Now that we have the Android Hello World app running in the previous lesson, let
 
 <strong>If the video appears blurred to you, please change the quality of the video and try again.</strong>
 
-<iframe width="1280" height="720" src="//www.youtube.com/embed/Fj-Miy5mvEU" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/Fj-Miy5mvEU" frameborder="0" allowfullscreen></iframe>
+
+
