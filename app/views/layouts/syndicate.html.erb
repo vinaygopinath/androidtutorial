@@ -11,8 +11,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
+	<!--Google Analytics Tracking Code begin-->
+		<script type="text/javascript">
+
+  		  var _gaq = _gaq || [];
+  		  _gaq.push(['_setAccount', 'UA-32939456-1']);
+ 		  _gaq.push(['_setDomainName', 'codelearn.org']);
+		  _gaq.push(['_trackPageview']);
+
+  			(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ 		 	})();
+		</script><!--Google Analytics Tracking Code End-->
+
 </head>
 <body style="padding:0">
+
+
 
 		<!-- Header
 	================================================== -->
@@ -109,6 +126,9 @@
 
 		<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
 		<script src="http://getbootstrap.com/docs-assets/js/application.js"></script>
+
+		
+
 		<script>
 	$("blockquote").each(function(){
 		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
