@@ -6,7 +6,7 @@ To get started on this, we will register a **ClickListener** with the login butt
 
 A `ClickListener` is a callback facility provided by the Android framework to allow you to write in the logic to handle click event on a UI element (login button in this case). Almost every view element in an app screen can have a callback ClickListener associated with it. The general approach is to implement an [Anonymous Inner Class](http://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html) implementation for the ClickListener and pass it to the callback method.
 
-To read more about Listeners, head over to the <%= link_to "Android Event Listener Concept Lesson", android_concept_lesson_path("android-widget-view-elements") %>
+To read more about Listeners, head over to the <%= link_to "Android Event Listener Concept Lesson", android_concept_lesson_path("android-widgets-view-elements") + "#Button-Click-Listener" %>
 
 Follow the steps below to implement the ClickListener for the login button
 
