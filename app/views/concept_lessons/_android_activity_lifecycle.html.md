@@ -1,6 +1,6 @@
 #Activity and It’s LifeCycle
 
-In [the chapter detailing Android basics](/android-tutorial/android-introduction), we saw that the Activity is the basic building block of an Android App. The Activity always has a User Interface. Android apps consist of one or many Activities. We also saw that to tell Android, which activity to open when the application is launched, we defined Main Activity in Manifest.xml. 
+In <%= link_to "the chapter detailing Android Basics", android_concept_lesson_path("android-introduction")  %>, we saw that the Activity is the basic building block of an Android App. The Activity always has a User Interface. Android apps consist of one or many Activities. We also saw that to tell Android, which activity to open when the application is launched, we defined Main Activity in Manifest.xml. 
 
 An Activity has a Lifecycle during which it performs a few things. The first question when reading about Lifecycle of Activity Lifecycle is - Why is it required ? Let's understand it with an example. 
 

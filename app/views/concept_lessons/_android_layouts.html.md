@@ -155,7 +155,7 @@ Run the project & you will see screenshot as below.
 
 In the above example, we have put many views. An image, left to that are two textviews and also a date text view. Let us examine how this view can be put together using RelativeLayout. Consider below layout -  ( Replace the existing code in activity_relative_layout.xml )
 
-In [activity_relative_layout.xml](http://github/project/link), look out for `ImageView` code. There is only one image in the layout.
+In activity_relative_layout.xml, look out for `ImageView` code. There is only one image in the layout.
 
     <ImageView
            android:id="@+id/pic"

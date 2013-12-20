@@ -81,7 +81,7 @@ Whenever you have a list of single items which is backed by an array, you can us
 By default, ArrayAdapter expects a Layout with single TextView. If you want to use more complex views, please avoid ArrayAdapter and use custom adapter(we will see this in the next section).
 
 ###Code
-Download our Example App from https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample
+Download our Example App from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample)
 
 Open ListViewWithSimpleAdapter Class
 
