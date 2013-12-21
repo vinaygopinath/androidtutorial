@@ -24,6 +24,8 @@ Now,we are going to modify the same **activity_main.xml** file . The final scree
 
 For this, we need to make two changes. First, lets make the text 'Hello World' span the complete screen width by changing layout_width to 'fill_parent'. Second, we update 'Hello World' to 'Hello Twitter' in strings.xml by creating a new entry.
 
+In our tutorials, we follow the convention of showing code blocks in the section as shown below. The striked text is to be replaced with the text written next to it. In our case, we replace "wrap_content" with "fill_parent".
+
 `res/layout/activity_main.xml`
 
 <pre>
@@ -38,6 +40,8 @@ For this, we need to make two changes. First, lets make the text 'Hello World' s
   .
 &lt;/RelativeLayout&gt;
 </pre>
+
+Any new piece of code to be added is highlighted as shown below :
 
 `res/values/strings.xml`
 
