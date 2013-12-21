@@ -8,7 +8,7 @@ In this tutorial, we will go through various steps of creating an android app. O
 
 This tutorial will help you understand our process and various options in the wizard. 
 
-> If you haven’t installed the ADT or eclipse plugin, please go to tutorial 2 and complete your setup. 
+> If you haven’t installed the ADT or eclipse plugin, please <%= link_to "go to tutorial 2", android_concept_lesson_path("android-setup")  %> and complete your setup. 
 
 Alright , Let's Start then !
 

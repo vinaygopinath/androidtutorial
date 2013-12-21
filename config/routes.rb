@@ -4,7 +4,7 @@ NewCodelearn::Application.routes.draw do
     root "concept_lessons#index", as: "android_tutorial"
   get "/:app_name" => "app_lessons#lesson_without_token", as: "app_tutorial_lesson_without_token", :constraints => {:app_name => /twitter/}
   get "/:app_name/:token(/:done)" => "app_lessons#lesson_with_token", as: "app_tutorial_lesson_with_token", :constraints => {:app_name => /twitter/}
-  get "/:template" => "concept_lessons#view", as: "android_tutorial_lesson"
+  get "/:template" => "concept_lessons#view", as: "android_concept_lesson"
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -17,8 +17,8 @@ The Minimum requirement is Java (JDK 6)
 
 ##Download Links
 
-* For Java - [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-* For ADT (Android Developer Tool) [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html). Click on 'Download the SDK' button
+* For Java - [refer here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+* For ADT (Android Developer Tool) [please check here](http://developer.android.com/sdk/index.html). Click on 'Download the SDK' button
 
 > Watchout: Android requires complete Java Development kit(JDK) and will not work with Java Runtime Environment(JRE) alone.
 
@@ -38,7 +38,7 @@ Lets learn to setup step by step by following the video.
 
 > You can check if you have JDK already installed on your computer. Go to Command line and type 'javac -version'. If you get a version which is 1.6 or above, then you can skip this JDK Setup step.
 
-Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). Select appropriate Java SE Development Kit based on your Operating System and its version - 32 bit (X86) or 64 bit (X64).
+Go to [this JDK download link](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). Select appropriate Java SE Development Kit based on your Operating System and its version - 32 bit (X86) or 64 bit (X64).
 
 Once the file is downloaded, double click on it to start the installation. Let the default options be selected, and follow the wizard to complete the installation process.
 
@@ -50,7 +50,7 @@ The ADT package which you downloaded from developer.android.com is compressed, y
 
 If you do not have an unzip software and are using windows, follow these steps :
 
-* Go to [http://www.7-zip.org/download.html](http://www.7-zip.org/download.html) and download .msi file for your windows machine.
+* Go to [7 zip download link](http://www.7-zip.org/download.html) and download .msi file for your windows machine.
 * Double click on the msi file and install the 7zip software.
 * When asked for associating known extensions, let the default option be selected and finish the installation. 
 

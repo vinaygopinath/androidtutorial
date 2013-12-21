@@ -26,9 +26,9 @@ class AppLessonsController < ApplicationController
   end
 
   def lesson_without_token
-	  progress = Progress.where(user_id: current_user.id).order("lesson_number desc")
-	  @current_lesson = progress.empty? ? AppLesson.first : AppLesson.find_by_number(progress[0].lesson_number + 1)
-	  redirect_to app_tutorial_lesson_with_token_path(params[:app_name],@current_lesson.token)
+	  #progress = Progress.where(user_id: current_user.id).order("lesson_number desc")
+	  #@current_lesson = progress.empty? ? AppLesson.first : AppLesson.find_by_number(progress[0].lesson_number + 1)
+	  #redirect_to app_tutorial_lesson_with_token_path(params[:app_name],@current_lesson.token)
   end
 
 

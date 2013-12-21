@@ -1,17 +1,5 @@
 # Welcome to our first Android Tutorial
 
-As part of the tutorial, you will build a Twitter client. The development process followed is how developers actually develop an app from scratch. 
-
-To make it newbie friendly, we have tweaked the process a bit to keep the easier concepts (User Interface elements) earlier in the roadmap & deferred advanced concepts (models, network calls etc) later. We have refrained ourselves from using difficult words (also jargons). So it may happen that you would already know an Android concept, but you would not know the technical name of the concept. 
-As a mobile app developer, it should not matter to you. But if discover this fact later, please do not blame us. 
-
-## Target Audience
-
-If you belong to one of these categories, you are the kind of audience we looking for.
-
-* Hacker kind of people. Those who are impatient & do not care 
-* People who have prior java knowledge
-* People having no/little knowledge of Android (including the guys who have never made an Android app earlier)
 
 ## Getting Started
 
@@ -25,7 +13,7 @@ Follow the steps below to get started
 
 <%= image_tag "twitter-client/dropins-location.png", alt: "Dropins with all the jars copied", title: "Dropins with all the jars copied" %>
 
-* Open your Eclipse by double clicking the Eclipse executable in your Android SDK. You might encounter a prompt for the installation of Java runtime. In that case, please refer to [Java SDK installation](http://androidconceptlessons.herokuapp.com/android-tutorial/android-setup#JDK-Setup). If you had Eclipse running already, you need to restart it. There is a workspace selection popup first. Specify a workspace directory (if it is your first time with Eclipse). Hit ok. You should see a welcome popup. Great, you are all set now.
+* Open your Eclipse by double clicking the Eclipse executable in your Android SDK. You might encounter a prompt for the installation of Java runtime. In that case, please refer to <%= link_to "Java SDK Installation", android_concept_lesson_path("android-setup") + "#Setup-Guide-JDK-Setup" %> . If you had Eclipse running already, you need to restart it. There is a workspace selection popup first. Specify a workspace directory (if it is your first time with Eclipse). Hit ok. You should see a welcome popup. Great, you are all set now.
 
 <%= image_tag "twitter-client/plugin-installation-workspace.png", alt: "Workspace selection popup", title: "Workspace selection popup" %>
 
