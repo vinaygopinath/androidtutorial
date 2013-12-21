@@ -1,7 +1,7 @@
 class AppLessonsController < ApplicationController
   layout "syndicate"
 
-  before_filter :authenticate_user!, except: :incoming
+  before_filter :authenticate_user!, except: [:incoming, :lesson_without_token]
 
   def lesson_with_token
 	 @app_name = params[:app_name]
