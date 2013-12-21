@@ -21,4 +21,5 @@ A good way to start is by building the app skeleton (just the user interface).
 <%= image_tag "twitter-client/twitter-details-screenshot.png", alt: "Twitter Detail Screenshot", title: "Twitter Detail Screenshot" %>
 <p class="ac">Twitter Detail Screenshot</p>
 <br/>
+> Run your Codelearn Twitter App in Eclipse to move to the next lesson.
 
