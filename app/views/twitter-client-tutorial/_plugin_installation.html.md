@@ -5,7 +5,7 @@
 
 To assist you better during the development cycle, we have created an Eclipse plugin that tests your app at every step to ensure you are doing it right. Our intent is to be able to show you very relevant error messages (& possible solution). But this is a pretty tricky problem to address & we are hoping that we will be getting better with time. 
 
-First and foremost, let us download all the setup files needed.
+First and foremost, let us download all the files needed to proceed.
 
 * Install Android SDK (ignore if you already have it installed) from [Official Android page](http://developer.android.com/sdk/index.html#download). Depending on your OS version, you should see only one option to download the file. In case you see multiple options, please download ADT bundle for your respective OS version.
 * Download the [plugin zip](). This is a custom Eclipse plugin which we created for you. The file size is around 62 MB. When done, Unzip it. You will see a bunch of jar files, twit.zip file & a config.properties file. 
@@ -21,7 +21,11 @@ Our app will consists of 3 screens as shown above. After the login screen, we ha
 
 After downloading mentioned files, you can proceed as follows :
 
-* Copy all the extracted files from the plugin.zip to the dropins directory under **[Unzipped Android SDK Directory] -> [Eclipse Home Folder] -> dropins** directory. The dropins directory exists for you to manually 'drop' an Eclipse plugin there. In the example below, the SDK Directory is 'adt-bundle-mac-x86_64-20131030', inside it there is 'eclipse' directory with 'Eclipse' executable & 'dropins' directory. All the extracted files are already copied inside the dropins directory.
+* Copy all the extracted files from the plugin.zip to the dropins directory under **[Unzipped Android SDK Directory] -> [Eclipse Home Folder] -> dropins**. The dropins directory exists for you to manually 'drop' an Eclipse plugin there. 
+
+> Ensure to put the extracted content directly under dropins directory. Please do not paste the content inside a new folder/directory under dropins, else the plugin will fail to work for you.
+
+In the example below, the SDK Directory is 'adt-bundle-mac-x86_64-20131030', inside it there is 'eclipse' directory with 'Eclipse' executable & 'dropins' directory. All the extracted files are already copied inside the dropins directory.
 
 <%= image_tag "twitter-client/dropins-location.png", alt: "Dropins with all the jars copied", title: "Dropins with all the jars copied" %>
 
