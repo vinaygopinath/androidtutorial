@@ -29,6 +29,12 @@ When you open an activity from another activity in the same Android app, you use
 
 If you notice here, you are passing the SecondActivity class name as an identifier for this intent. 
 
+Let's see an example 
+
+<br/>
+<%= image_tag "android_intents/explicit_intent.png", alt: "Explicit Intenet", title: "Explicit Intenet" %>
+
+
 ##Implicit Intents
 
 Implicit Intents are intents where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
@@ -40,8 +46,10 @@ Let us see an example:
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
 
-This is a simple example of a share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. 
+This is a simple example of a share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. See the image below, this is a implicit intent for sending email
 
+<br/>
+<%= image_tag "android_intents/implicit_intent.png", alt: "Implicit Intenet", title: "Implicit Intenet" %>
 
 Let us now observe a couple of examples to see how Intent works, how you pass data and how you use Implicit Intents to delegate responsibilities to other apps. 
 
@@ -118,6 +126,8 @@ Once you get hold of this Intent object, you can call different methods to get t
 
 > Watchout : If you get class cast exception, it means that you are trying to fetch a different variable type than expected. Like trying to fetch Int using getStringExtra method.
 
+<br/>
+<%= image_tag "android_intents/intents.png", alt: "Intenets", title: "Implicit Intenets" %>
 
 ###Opening Other App
 
