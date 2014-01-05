@@ -21,9 +21,14 @@ Let us see what are its sub components
 
 ###Palette
 Palette section has all your basic UI elements categorized into different sections, like Form Widgets, TextFields, Layouts etc. You can just choose any Element by Dragging and Dropping it to the working area on the right of the Screen. 
+<br/>
+<%= image_tag "android_widgets/layout_palette.png", alt: "Layout Palette", title: "Layout Palette" %>
+
 
 ###Control Bar 
 The top bar which you see with options like Nexus one, App Theme etc. is called control bar. It has different options to test the UI against different conditions. You can control the size of the screen, orientation,theme etc. from this bar. You can also change Zoom level, check lint warnings etc. from this bar. 
+<br/>
+<%= image_tag "android_widgets/layout_control.png", alt: "Layout Control", title: "Layout Control" %>
 
 ###Design Area
 The remaining area to the right side of the palette is the Design Area. Here, you can drag and drop elements to add in the UI, rearrange already added elements, reorder them, change their properties, etc. 
@@ -143,6 +148,8 @@ You might wonder why all properties start with android:`. If you notice the firs
 Notice the attribute android here, which is referring to Android Schema. This Schema has all references to values like id, text other attributes. You can read more about XML Schema from [this link](http://en.wikipedia.org/wiki/XML_schema)
 
 ##TextView
+<br/>
+<%= image_tag "android_widgets/textview.png", alt: "Text View", title: "Text View" %>
 
 Textview is most simple UI element. It is used to display static text, which cannot be changed by the user. 
 
@@ -190,6 +197,8 @@ Now, to change the text just call setText method on the txtView object as :
 With these 2 simple lines of code, you can change the text of textview dynamically
 
 ##EditText
+<br/>
+<%= image_tag "android_widgets/edittext.png", alt: "Edit Text", title: "Edit Text" %>
 
 EditText is another most used UI element in Android. Whenever you want to take some input from the user, you can use EditText. 
 
@@ -241,6 +250,8 @@ Similar to TextView, to set the text of EditText, you can call
         edtText.setText("Set your value")
 
 ##Button
+<br/>
+<%= image_tag "android_widgets/button.png", alt: "Button", title: "Button" %>
 
 ###What
 Button is the most used UI element in Android. For every action you want to do, you want the user to click on a button. 
@@ -293,6 +304,8 @@ This is how a button will look in XML code
 Similar to editText and textView you can call **setText** method on the button object to change the text on the button dynamically.
 
 ##ImageView
+<br/>
+<%= image_tag "android_widgets/imageview.png", alt: "Image View", title: "Image View" %>
 
 ###What
 Any android app is incomplete without use of an image. Image View is the UI control which you can use to display image in your android app. 
@@ -331,6 +344,8 @@ Once we have the image view object, we can call setImageResource method to chang
 
 
 ##RadioButton
+<br/>
+<%= image_tag "android_widgets/radiobutton.png", alt: "Radio Button", title: "Radio Button" %>
 
 ###What
 If you want your users to pick one from a set of options, use Radio button. 
@@ -430,6 +445,8 @@ Here is how the complete Radio button declaration will look inside the XML
 
 
 ##CheckBox
+<br/>
+<%= image_tag "android_widgets/checkbox.png", alt: "Check Box", title: "Check Box" %>
 
 ###What
 If you want to select one or more options from a set, use Check Box. 

@@ -4,20 +4,19 @@
 		<div class="hero-unit faq">
 			<div>
 				<h1 class="ac">Android Development Tutorial</h1>
-				<h3 class="ac text-error">{ "do it on your PC", "track progress in browser" }</h3>
+				<h3 class="ac text-error">{ 'work on your PC', 'track in your browser' }</h3>
 				<hr/>
 				<div class="row-fluid">
 					<div class="span6">
-						<img src="http://placehold.it/500x400"/>
+						<iframe width="500" height="400" src="//www.youtube.com/embed/FiuWvFyyuak" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="span1"></div>
 					<div class="span5" style="margin-top:50px;">
 						<p>We combine the best of interactive & offline learning. Build on your PC, in the real environment. Our <span class="text-error">Virtual Assistant</span> (Eclipse plugin) makes it easier to get started & assist you like a real mentor.</p>
 						<%= link_to app_tutorial_landing_page_path("twitter"), :class => "btn btn-large btn-success btn-block" do %>
-							<h4>Learn Android by building a twitter client<br/>
-								<small style="color:inherit; font-size:85%;">First 2 hours of content free</small></h4>
-						<% end %>
-						<div class="ac">or <a href="#">check out the concept lessons</a></div>
+							<h4>App Tutorial : Learn Android by building a twitter client</h4>
+														<% end %>
+						<div class="ac">or <a href="#conceptlessonsec">check out the concept lessons</a></div>
 					</div>
 				</div>
 			</div>
@@ -100,7 +99,7 @@
 		<div class="span7">
 			<%= image_tag "twitter-client/empty_list_view.png", alt: "Empty List View Error", title: "Empty List View Error" %>
 		</div>
-		<div class="span5" style="margin-top:150px">
+		<div class="span5" style="margin-top:150px" id="virtualasssec">
 			<h3>Virtual Assistant</h3>
 			<p><ul><li>Like your personal mentor, we continually track your progress.</li><li> Our user-friendly <strong>Virtual Assistant</strong> is fun to learn with ! </li><li>Virtual Assistant points you to the errors the way a real mentor does.</li></ul></p>
 		</div>
@@ -125,7 +124,7 @@
 
 
 <div class="container">
-	<div class="hero-unit ac">
+	<div class="hero-unit ac" id="conceptlessonsec">
 		<h2>Android Concept Lessons</h2>
 		<p>For the first timers, this section is the right place to get started. Each lesson is exhaustive & cover the topic in great depth with an example app. Once done, move over to the App Tutorials to see the concepts in action.</p>
 	</div>
