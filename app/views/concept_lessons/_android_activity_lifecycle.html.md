@@ -57,7 +57,7 @@ So what is the difference between onPause and OnStop ? If an Activity comes into
 Typically whenever you see a dialog box which requires your attention like battery low, network connection your current activity becomes partially visible and popup box comes on the top. This is the point where only onPause will be called. 
 
 ###onRestart:
-It is similar to onCreate, but onRestart gets called only after onStop. This is the method which you can use to know if your application is starting afresh or getting restarted. 
+It is similar to onCreate, but `onRestart` gets called only after onStop. This is the method which you can use to know if your application is starting afresh or getting restarted. 
 
 In onRestart, you will get your application to save the state and reinitialize all the variables. onStart gets called after this.
 
@@ -67,7 +67,7 @@ This is the method which will be called when your Activity is getting killed. Th
 
 When the user press back button on any Activity the foreground activity gets destroyed and control will return to the previous Activity. 
 
-But remember the fact, there is no guaranty that onDestroy will be called. Only when the system is low on resources or user press the back button or if you use `finish()` explicitly in your code, onDestroy gets called. 
+But remember the fact, there is no guaranty that `onDestroy` will be called. Only when the system is low on resources or user press the back button or if you use `finish()` explicitly in your code, onDestroy gets called. 
 
 Even though you should always use onPause and onStop to clean up resources, release connections etc; onDestory is there to let your app have the final chance to clean things up before the Activity cease to exist. 
 
@@ -79,12 +79,19 @@ The Android OS uses a priority queue to assist in managing activities running on
 
 ###Active or Running 
 Activities are considered active or running if they are in the foreground. This state denotes the top of the Activity stack. The Activity gets assigned the highest priority and will only be killed by Android in extreme situations, such as if the Activity tries to use more memory more than what is available on the device. It can cause the Activity to become unresponsive.
+<br/>
+<%= image_tag "activity_lifecycle/activity_running.png", alt: "Activity State Activity Running", title: "Activity State Activity Running" %>
 
 ###Paused
 An Activity is in the Paused state if the device goes to sleep or if it is covered with another Activity partially or completely. Paused activities are very much alive, that is, they maintain all the states and member information. They remain attached to the window manager too. This is considered to be the second highest priority in the Activity stack. Paused Activites will only get killed by Android to keep the Active/Running Activity stable and responsive.
+<br/>
+<%= image_tag "activity_lifecycle/activity_paused.png", alt: "Activity State Activity Paused", title: "Activity State Activity Paused" %>
 
 ###Stopped
 Activities that are completely obscured by another activity are considered stopped or in the background. Stopped activities still try to retain their state and member information for as long as possible, but stopped activities are considered to be the lowest priority of the three states.
+<br/>
+<%= image_tag "activity_lifecycle/activity_stop.png", alt: "Activity State Activity Stopped", title: "Activity State Activity Stopped" %>
+
 
 ##Example App
 
