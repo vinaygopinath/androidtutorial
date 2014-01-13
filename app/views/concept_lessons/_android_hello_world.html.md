@@ -98,22 +98,56 @@ Once you click Finish ADT will create your new project and will open Java code a
 
 ## Running your Application
 
-Right click on your project name in ADT and choose Run As => Android Application
-*    In new ADT you get an emulator image by default, in such case you will see that android emulator gets launched.
-*    In case you don't see an emulator screen, follow the AVD creation process below to create a new Emulator, and repeat this process again.
+### 1. Run as Android App 
 
-> Watchout: emulator is slow to start, once you have your emulator running, don’t close till your work is over.
-
-Here is how it will look 
-
+Right click on your project in **Package Explorer** window on the left and choose **Run As => Android Application** as shown below.
 <br/>
-<%= image_tag "hello-android/emulator.png", alt: "Emulator", title: "Emulator" %>
+<%= image_tag "hello-android/deploy-app.png", alt: "Deploy Android App", title: "Deploy Android App" %>
+<br/>
 
-> Watchout: Most of the developers, once they are a little comfortable with developing apps, directly use their phone to test the application. In Linux/Mac you can directly plug in your phone with the USB Debugging option enabled to start running apps. In Windows, you need to install the drivers and once done you can test your apps on your phone. 
+You can also choose to deploy the app by clicking on the **green play button** on the top bar
+<br/>
+<%= image_tag "hello-android/green-play-button.png", alt: "Green Play Button", title: "Green Play Button" %>
+<br/>
 
-If you see this screen when you right click and run the application, this means that you don't have an AVD installed. Click yes and follow the steps from the next section to create a new AVD and repeat the above process again. 
+
+### 2. Watch deployment preparation
+
+Once you deploy your app, **check bottom-right of Eclipse** for deployment progress. It should say something like `Launching HelloCodelearn: (xx%)`
+<br/>
+<%= image_tag "hello-android/deployment-in-progress.png", alt: "Deployment In Progress", title: "Deployment In Progress" %>
+
+Depending on your PC configuration & how recently you have deployed an app, this step will take somewhere around 1 to 10 sec. 
+
+### 3. Get/Create an Android Device
+
+If you have an Android phone, you can directly deploy the app on it. Otherwise you need an **Android Virtual Device** referred as **AVD** to be able to run your Android application. 
+
+AVD has advantages like if your Android phone is old & you do not have the required Android API version to test for, you can create an AVD of the Android API version of your choice. 
+
+The prominent con of using AVD is - it will take sometime to launch. Also, things are a little slow on AVD (like response to button click etc). So take your pick.
+
+Once Eclipse has done preparing for the deployment, you will see a popup as shown below. 
+
 <br/>
 <%= image_tag "hello-android/noavd.png", alt: "No_AVD", title: "No_AVD" %>
+<br/>
+
+You can either choose to create AVD ([covered in a separate section below](#Creating-Android-Virtual-Device-AVD-)) or simply jack-in your Android phone to your PC through a USB cable. 
+
+> If you have connected your phone or already have an AVD created, select 'No' in <b>Android AVD Error</b> popup. 
+
+Once you click on 'No' in Android AVD Error popup, you will see another popup **Android Device Chooser**. The device (AVD or the phone) will show up in this popup as highlighted below. 
+<br/>
+<%= image_tag "hello-android/android-device-chooser.png", alt: "Android Device Chooser", title: "Android Device Chooser" %>
+<br/>
+
+Select the device & click 'Ok'. Your app will now be deployed on your device. It will look as below if deployed in an AVD. 
+<br/>
+<%= image_tag "hello-android/emulator.png", alt: "Hello World Emulator", title: "Hello World Emulator" %>
+<br/>
+
+Congratulations. You have successfully deployed your first Android App. 
 
 ## Creating Android Virtual Device(AVD)
 
