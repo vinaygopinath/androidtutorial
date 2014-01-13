@@ -13,7 +13,7 @@
 					<div class="span1"></div>
 					<div class="span5" style="margin-top:50px;">
 						<p>We combine the best of interactive & offline learning. Build on your PC, in the real environment. Our <span class="text-error">Virtual Assistant</span> (Eclipse plugin) makes it easier to get started & assist you like a real mentor.</p>
-						<%= link_to app_tutorial_landing_page_path("twitter"), :class => "btn btn-large btn-success btn-block" do %>
+						<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.find_by_number(1).token), :class => "btn btn-large btn-success btn-block" do %>
 							<h4>App Tutorial : Learn Android by building a twitter client</h4>
 														<% end %>
 						<div class="ac">or <a href="#conceptlessonsec">check out the concept lessons</a></div>

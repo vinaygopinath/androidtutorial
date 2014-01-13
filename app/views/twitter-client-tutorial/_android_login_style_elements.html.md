@@ -39,7 +39,7 @@ The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are 
 &lt;LinearLayout android:id="@+id/uname_block"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        <span class="highlight">android:layout_centerHorizontal="true"</span>
         android:layout_below="@id/header"
         <span class="highlight">android:layout_marginTop="25dp"</span>
         android:orientation="horizontal"&gt;
@@ -50,8 +50,8 @@ The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/uname_block"
-        android:layout_centerHorizontal="true"
-        <span class="highlight">android:layout_marginTop="25dp"</span>
+        <span class="highlight">android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"</span>
         android:orientation="horizontal"&gt;
 	    .
 		.
