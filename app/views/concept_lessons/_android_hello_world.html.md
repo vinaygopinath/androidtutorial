@@ -137,12 +137,14 @@ You can either choose to create AVD ([covered in a separate section below](#Crea
 
 > If you have connected your phone or already have an AVD created, select 'No' in <b>Android AVD Error</b> popup. 
 
-Once you click on 'No' in Android AVD Error popup, you will see another popup **Android Device Chooser**. The device (AVD or the phone) will show up in this popup as highlighted below. 
+Once you click on 'No' in Android AVD Error popup, you will see another popup **Android Device Chooser**. The device (AVD or the phone) will show up in this popup as highlighted below.
+
 <br/>
 <%= image_tag "hello-android/android-device-chooser.png", alt: "Android Device Chooser", title: "Android Device Chooser" %>
 <br/>
 
 Select the device & click 'Ok'. Your app will now be deployed on your device. It will look as below if deployed in an AVD. 
+
 <br/>
 <%= image_tag "hello-android/emulator.png", alt: "Hello World Emulator", title: "Hello World Emulator" %>
 <br/>
