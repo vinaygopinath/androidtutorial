@@ -101,11 +101,14 @@ Once you click Finish ADT will create your new project and will open Java code a
 ### 1. Run as Android App 
 
 Right click on your project in **Package Explorer** window on the left and choose **Run As => Android Application** as shown below.
+
 <br/>
 <%= image_tag "hello-android/deploy-app.png", alt: "Deploy Android App", title: "Deploy Android App" %>
 <br/>
+<br/>
 
 You can also choose to deploy the app by clicking on the **green play button** on the top bar
+
 <br/>
 <%= image_tag "hello-android/green-play-button.png", alt: "Green Play Button", title: "Green Play Button" %>
 <br/>
@@ -114,8 +117,11 @@ You can also choose to deploy the app by clicking on the **green play button** o
 ### 2. Watch deployment preparation
 
 Once you deploy your app, **check bottom-right of Eclipse** for deployment progress. It should say something like `Launching HelloCodelearn: (xx%)`
+
 <br/>
 <%= image_tag "hello-android/deployment-in-progress.png", alt: "Deployment In Progress", title: "Deployment In Progress" %>
+<br/>
+<br/>
 
 Depending on your PC configuration & how recently you have deployed an app, this step will take somewhere around 1 to 10 sec. 
 
@@ -132,6 +138,7 @@ Once Eclipse has done preparing for the deployment, you will see a popup as show
 <br/>
 <%= image_tag "hello-android/noavd.png", alt: "No_AVD", title: "No_AVD" %>
 <br/>
+<br/>
 
 You can either choose to create AVD ([covered in a separate section below](#Creating-Android-Virtual-Device-AVD-)) or simply jack-in your Android phone to your PC through a USB cable. In Linux/Mac, you can directly plug in your phone with the **USB Debugging option enabled** to start running apps. In Windows, you need to install the drivers and once done you can test your apps on your phone. 
 
@@ -140,11 +147,13 @@ If you have connected your phone or already have an AVD created, select 'No' in 
 <br/>
 <%= image_tag "hello-android/android-device-chooser.png", alt: "Android Device Chooser", title: "Android Device Chooser" %>
 <br/>
+<br/>
 
 Select the device & click 'Ok'. Your app will now be deployed on your device. It will look as below if deployed in an AVD. 
 
 <br/>
 <%= image_tag "hello-android/emulator.png", alt: "Hello World Emulator", title: "Hello World Emulator" %>
+<br/>
 <br/>
 
 Congratulations. You have successfully deployed your first Android App. 
