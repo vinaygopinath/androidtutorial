@@ -11,13 +11,17 @@
 	</div>
 
 	<ol class="sidebar-nav">
-		<% @lessons.each do |t| %>
+		<%  last_lesson_hit = false
+			@lessons.each do |t| %>
 			<li>
-			<% if t.progresses.where(user_id: current_user.id).length == 1 %>
+			<% if last_lesson_hit == false %>
 				<%= link_to t.title, app_tutorial_lesson_with_token_path(@app_name,t.token) %>
 			<% else %>
-				<%= t.title %>
+				<span><%= t.title %></span>
 			<% end %>
+			<% if t.progresses.where(authenticated_user_id: current_user.id).length == 0 
+				last_lesson_hit = true
+			end %>
 			</li>
 		<% end %>
 	</ol>
@@ -95,6 +99,7 @@
 	}
 
 	.sidebar-nav {
+		color: #999999;
 		width: 250px;
 		padding: 0;
 	}
@@ -104,8 +109,12 @@
 		text-indent: 20px;
 	}
 
+	.sidebar-nav li span {
+		color: #666666;
+	}
+
 	.sidebar-nav li a {
-		color: #999999;
+		color: inherit;
 		display: block;
 		text-decoration: none;
 	}
