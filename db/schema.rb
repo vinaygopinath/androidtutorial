@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131128093914) do
+ActiveRecord::Schema.define(version: 20140106112857) do
 
   create_table "app_lessons", force: true do |t|
     t.integer  "number"
@@ -22,16 +22,58 @@ ActiveRecord::Schema.define(version: 20131128093914) do
     t.datetime "updated_at"
   end
 
+  create_table "authenticated_users", force: true do |t|
+    t.integer  "uid",        limit: 255
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "current_user_lessons", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "authenticated_user_id"
     t.integer  "lesson_number"
     t.boolean  "completed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "error"
+  end
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "invites", force: true do |t|
+    t.string   "email"
+    t.string   "token"
+    t.boolean  "access_allowed", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "plugin_test_logs", force: true do |t|
+    t.integer  "authenticated_user_id"
+    t.integer  "lesson_number"
+    t.string   "error"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "progresses", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "authenticated_user_id"
     t.integer  "lesson_number"
     t.datetime "created_at"
     t.datetime "updated_at"

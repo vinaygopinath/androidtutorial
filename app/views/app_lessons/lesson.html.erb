@@ -54,7 +54,7 @@
 						<% @lessons.to_enum.with_index(1).each do |t,i| %>
 							<tr>
 								<td><%= i %></td>
-								<% if t.progresses.where(user_id: current_user.id).length == 1 %>
+								<% if t.progresses.where(authenticated_user_id: current_user.id).length == 1 %>
 									<%= link_to app_tutorial_lesson_with_token_path(@app_name,t.token) do %>
 										<td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Completed" style="margin-top:5px; color: #5EB95E" class="icon-ok icon-large pull-right"></i></td>
 									<% end %>	
