@@ -109,7 +109,7 @@ Input fields have a special attribute **inputType**. The values are self explana
          android:id="@+id/fld_pwd"
          android:layout_width="<strike>wrap_content</strike><span class="highlighted">200dp</span>"
          android:layout_height="wrap_content"
-         android:hint="@string/lbl_enter_username"
+         android:hint="@string/lbl_enter_pwd"
          <span class="highlight">android:layout_marginLeft="8dp"
          android:inputType="textPassword"
          android:paddingLeft="5dp"
