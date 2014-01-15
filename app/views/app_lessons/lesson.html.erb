@@ -19,7 +19,7 @@
 			<% else %>
 				<span><%= t.title %></span>
 			<% end %>
-			<% if t.progresses.where(authenticated_user_id: current_user.id).length == 0 
+			<% if t.progresses.where(user_id: current_user.id).length == 0 
 				last_lesson_hit = true
 			end %>
 			</li>
