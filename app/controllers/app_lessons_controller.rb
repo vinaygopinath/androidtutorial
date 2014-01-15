@@ -8,19 +8,19 @@ class AppLessonsController < ApplicationController
 	 @lessons = AppLesson.includes(:progresses)
 	 @current_lesson = AppLesson.find_by_token(params[:token])
 	 @next_lesson = AppLesson.find_by_number(@current_lesson.number + 1)
-	 current_user_lesson_entry = CurrentUserLesson.find_by_user_id_and_lesson_number(current_user.id,@current_lesson.number) 
+	 current_user_lesson_entry = CurrentUserLesson.find_by_authenticated_user_id_and_lesson_number(current_user.id,@current_lesson.number) 
 
 	 if params[:done] and !current_user_lesson_entry.nil? and current_user_lesson_entry.completed == true
 		 @done = true
 	 else
-		 user_lesson = CurrentUserLesson.find_or_create_by_user_id(current_user.id)
+		 user_lesson = CurrentUserLesson.find_or_create_by_authenticated_user_id(current_user.id)
 		 user_lesson.lesson_number = @current_lesson.number
 		 user_lesson.completed = false
 		 user_lesson.save
 		 @done = false
 	 end
 
-	 @progress_percent = Progress.where( user_id: current_user.id).length * 100 / AppLesson.all.length
+	 @progress_percent = Progress.where( authenticated_user_id: current_user.id).length * 100 / AppLesson.all.length
 		
 	 render :lesson and return
   end
