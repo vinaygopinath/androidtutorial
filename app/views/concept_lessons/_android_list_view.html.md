@@ -1,13 +1,21 @@
 #Android ListView
 
-<%= image_tag "list_view/twitter_home.png", alt: "Twitter Home", title: "Twitter Home" %>
-
-
-
 ListView is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the list view is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any list item by clicking on it. 
 
 ListView is widely used in Android Applications. A simple example of ListView is your contact book, where you have a list of your contacts displayed in a ListView. 
 
+<br/>
+<div class="row-fluid">
+	<div class="span4">
+		<%= image_tag "list_view/twitter_home.png", alt: "ListView Example Twitter", title: "ListView Example Twitter" %>
+	</div>
+	<div class="span4">
+		<%= image_tag "list_view/example-weather.png", alt: "ListView Example Weather App ", title: "ListView Example Weather App" %>
+	</div>
+	<div class="span4">
+		<%= image_tag "list_view/example-popup.png", alt: "ListView Example popup", title: "ListView Example popup" %>
+	</div>
+</div>
 
 Let's take an example: 
 
