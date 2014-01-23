@@ -10,10 +10,10 @@ ListView is widely used in Android Applications. A simple example of ListView is
 		<%= image_tag "list_view/twitter_home.png", alt: "ListView Example Twitter", title: "ListView Example Twitter" %>
 	</div>
 	<div class="span4">
-		<%= image_tag "list_view/example-weather.png", alt: "ListView Example Weather App ", title: "ListView Example Weather App" %>
+		<%= image_tag "list_view/list-view-example-1.jpg", alt: "ListView Example Example ", title: "ListView Example" %>
 	</div>
 	<div class="span4">
-		<%= image_tag "list_view/example-popup.png", alt: "ListView Example popup", title: "ListView Example popup" %>
+		<%= image_tag "list_view/list-view-popup.png", alt: "ListView Example popup", title: "ListView Example popup" %>
 	</div>
 </div>
 
