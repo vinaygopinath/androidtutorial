@@ -78,19 +78,27 @@ So we have seen the complete Activity Lifecycle functions. Lets see what are the
 The Android OS uses a priority queue to assist in managing activities running on the device. Based on the state in which an Android Activity is, it will be assigned a priority within the OS. This system helps Android identify Activities that are no longer in use, allowing Android to reclaim memory and resources. Following are the states an Activity can go through during its lifetime:
 
 ###Active or Running 
-Activities are considered active or running if they are in the foreground. This state denotes the top of the Activity stack. The Activity gets assigned the highest priority and will only be killed by Android in extreme situations, such as if the Activity tries to use more memory more than what is available on the device. It can cause the Activity to become unresponsive.
-<br/>
-<%= image_tag "activity_lifecycle/activity_running.png", alt: "Activity State Activity Running", title: "Activity State Activity Running" %>
+<div class="row-fluid">
+	<div class="span8">
+		<p>Activities are considered active or running if they are in the foreground. This state denotes the top of the Activity stack. The Activity gets assigned the highest priority and will only be killed by Android in extreme situations, such as if the Activity tries to use more memory more than what is available on the device. It can cause the Activity to become unresponsive.</p>
+	</div>
+	<div class="span4">
+		<%= image_tag "activity_lifecycle/activity_running.png", alt: "Activity State Activity Running", title: "Activity State Activity Running" %>
+	</div>
+</div>
 
 ###Paused
-An Activity is in the Paused state if the device goes to sleep or if it is covered with another Activity partially or completely. Paused activities are very much alive, that is, they maintain all the states and member information. They remain attached to the window manager too. This is considered to be the second highest priority in the Activity stack. Paused Activites will only get killed by Android to keep the Active/Running Activity stable and responsive.
-<br/>
-<%= image_tag "activity_lifecycle/activity_paused.png", alt: "Activity State Activity Paused", title: "Activity State Activity Paused" %>
+<div class="row-fluid">
+	<div class="span8">
+		<p>An Activity is in the Paused state if the device goes to sleep or if it is covered with another Activity partially or completely. Paused activities are very much alive, that is, they maintain all the states and member information. They remain attached to the window manager too. This is considered to be the second highest priority in the Activity stack. Paused Activites will only get killed by Android to keep the Active/Running Activity stable and responsive.</p>
+	</div>
+		<div class="span4">
+		<%= image_tag "activity_lifecycle/activity_paused.png", alt: "Activity State Activity Paused", title: "Activity State Activity Paused" %>
+	</div>
+</div>
 
 ###Stopped
 Activities that are completely obscured by another activity are considered stopped or in the background. Stopped activities still try to retain their state and member information for as long as possible, but stopped activities are considered to be the lowest priority of the three states.
-<br/>
-<%= image_tag "activity_lifecycle/activity_stop.png", alt: "Activity State Activity Stopped", title: "Activity State Activity Stopped" %>
 
 
 ##Example App
