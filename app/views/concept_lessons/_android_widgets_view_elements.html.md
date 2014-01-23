@@ -113,7 +113,7 @@ For Individual Sides
 You might wonder what is the difference between margin and padding. Let's see an Image to Understand better. 
 
 <br/>
-<%= image_tag "android_widgets/padding_Margin.jpg", alt: "Padding and Margin", title: "Padding and Margin" %>
+<%= image_tag "android_widgets/margin_padding.jpg", alt: "Padding and Margin", title: "Padding and Margin" %>
 
 In the image, margin is the gray area outside the entire object. The border is the point where your view ends. 
 
