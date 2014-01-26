@@ -5,7 +5,7 @@ To assist you better during the development cycle, we have created an Eclipse pl
 Please follow our step by step process to get started. 
 
 <h2> 1. Download & Unzip Android SDK <small><a href="http://developer.android.com/sdk/index.html#download", target="_blank", style="color:#57A3E8">download link</a></small></h2>
-Download Android SDK (ignore if you already have it installed) from [Official Android page](http://developer.android.com/sdk/index.html#download). **You just need to download & unzip the SDK. No installation required.**
+Download Android SDK (ignore if you already have it installed) from [official Android SDK download page](http://developer.android.com/sdk/index.html#download). **You just need to download & unzip the SDK. No installation required.**
 
 > You need to have the latest Android SDK installed on your computer. Ignore this step if you already have the latest SDK.
 
