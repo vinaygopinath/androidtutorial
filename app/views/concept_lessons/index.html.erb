@@ -1,31 +1,33 @@
 <!--<div class="dummy-container" style="margin-top: 1px solid #BABAB; width:100%; background: url('/assets/android-app-banner-1.png') top left no-repeat; background-position: fixed; background-size: 100%"> -->
 
+
 	<div class="container">
-		<h1 class="ac" style="margin-top:40px;">Android Development Tutorial <sup class="text-error" style="top:-1.5em; font-size:0.5em">Private Beta</sup></h1>
-		<h3 class="ac muted">{ 'work on your PC', 'track in your browser' } <sup class="text-error" style="top:-1.5em; font-size:0.5em; visibility:hidden">Private Beta</sup></h3>
+		<h1 class="ac" style="margin-top:40px;">World's first <span class="text-success">interactive Android tutorial</span> <sup class="text-error" style="top:-1.5em; font-size:0.5em">Private Beta</sup></h1>
+		<h3 class="ac muted">build a <strong>real app</strong> | work in <strong>real environment</strong>| get assisted in the browser <sup class="text-error" style="top:-1.5em; font-size:0.5em; visibility:hidden">Private Beta</sup></h3>
 		<hr/>
 		<div class="hero-unit faq">
 			<div>
 				<div class="row-fluid">
 					<div class="span6">
-						<iframe width="500" height="400" src="//www.youtube.com/embed/FiuWvFyyuak" frameborder="0" allowfullscreen></iframe>
+						<iframe width="500" height="400"  style="max-width:100%" class="img-polaroid" src="//www.youtube.com/embed/FiuWvFyyuak" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="span1"></div>
 					<div class="span5" style="margin-top:50px;">
-						<p>We combine the best of interactive & offline learning. Build on your PC, in the real environment. Our <span class="text-error">Virtual Assistant</span> (Eclipse plugin) makes it easier to get started & assist you like a real mentor.</p>
-						<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.find_by_number(1).token), :class => "btn btn-large btn-success btn-block" do %>
-							<h4>App Tutorial : Learn Android by building a twitter client</h4>
-														<% end %>
-						<div class="ac">or <a href="#conceptlessonsec">check out the concept lessons</a></div>
+						<p>We combine the best of online & offline learning. Let our <span class="text-error"> Virtual Assistant</span> mentor you, while you work peacefully on your computer.</p>
+						<br/>	
+						<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-success btn-block" do %>
+							<h4>Learn by building a Twitter App<br/><small style="font-size:small; color:inherit">(It's FREE for now)</small></h4>
+						<% end %>
+						<div class="ac">or <a href="#conceptlessonsec">check our concept lessons</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 	</div><!-- container -->
-<!--</div> -->
+	<!--</div> -->
 <script>
-	$("body").css({ "background": "url('/assets/android-app-banner-1.png') top left no-repeat fixed", "background-size": "100%", "background-color": "white"})
+	$("body").css({ "background": "url(\'<%= image_path('android-app-banner-1.png') %>\') top left no-repeat fixed", "background-size": "100%", "background-color": "white"})
 </script>
 <hr/>
 <div class="container">
@@ -34,14 +36,14 @@
 			<h2 class="ac">What is this !</h2>
 			<ul>
 				<li>There are two set of tutorials - <span class="text-error">Concept Lessons</span> & <span class="text-error">App Tutorial</span></li>
-				<li>Concept Lessons exhaustively cover one Android concept at a time. Each lesson has a sample app.</li>
-				<li>App Tutorial teaches how to implement the Android concepts in a real app. Requires downloading & installing Codelearn Eclipse plugin.</li>
+				<li><a href="#conceptlessonsec">Concept Lessons</a> exhaustively cover one Android concept at a time. Each lesson has a sample app.</li>
+				<li><a href="#tutsection">App Tutorial</a> teaches how to implement the Android concepts in a real app. Requires downloading & installing Codelearn Eclipse plugin.</li>
 			</ul>
 		</div>
 		<div class="span4">
 			<h2 class="ac">Getting Started</h2>
 			<ul>
-				<li>First time with Android ? Start with Concept Lessons. Move to App Tutorial whenever comfortable.</li>
+				<li>First time with Android ? Start with <a href="#conceptlessonsec">Concept Lessons</a>. Move to <a href="#tutsection">App Tutorial</a> whenever comfortable.</li>
 				<li>Hop to concept lesson of your choice. App Tutorial lessons can only be completed sequentially. Refer appropriate concept lesson for more information during App Tutorial.</li>
 				<li>Android SDK & our Eclipse plugin installation mandatory for App Tutorial. Steps included in first lesson.</li>
 			</ul>
@@ -57,7 +59,6 @@
 		</div>
 	</div>
 </div>
-
 <hr/>
 
 <div class="container">
@@ -126,7 +127,7 @@
 <div class="container">
 	<div class="hero-unit ac" id="conceptlessonsec">
 		<h2>Android Concept Lessons</h2>
-		<p>For the first timers, this section is the right place to get started. Each lesson is exhaustive & cover the topic in great depth with an example app. Once done, move over to the App Tutorials to see the concepts in action.</p>
+		<p>For the first timers, this section is the right place to get started. Each lesson is exhaustive & cover the topic in great depth with an example app. Once done, move over to the <a href="#tutsection">App Tutorials</a> to see the concepts in action.</p>
 	</div>
 	<ol class="thumbnails" style="margin-left: 50px;">
 		<li class="span3">
@@ -193,3 +194,8 @@
 		}
 	</style>
 </div>
+
+
+
+
+
