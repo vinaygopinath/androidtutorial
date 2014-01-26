@@ -15,7 +15,7 @@
 					<div class="span5" style="margin-top:50px;">
 						<p>We combine the best of online & offline learning. Let our <span class="text-error"> Virtual Assistant</span> mentor you, while you work peacefully on your computer.</p>
 						<br/>	
-						<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-success btn-block" do %>
+						<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-danger btn-block" do %>
 							<h4>Learn by building a Twitter App<br/><small style="font-size:small; color:inherit">(It's FREE for now)</small></h4>
 						<% end %>
 						<div class="ac">or <a href="#conceptlessonsec">check our concept lessons</a></div>
@@ -41,14 +41,6 @@
 			</ul>
 		</div>
 		<div class="span4">
-			<h2 class="ac">Getting Started</h2>
-			<ul>
-				<li>First time with Android ? Start with <a href="#conceptlessonsec">Concept Lessons</a>. Move to <a href="#tutsection">App Tutorial</a> whenever comfortable.</li>
-				<li>Hop to concept lesson of your choice. App Tutorial lessons can only be completed sequentially. Refer appropriate concept lesson for more information during App Tutorial.</li>
-				<li>Android SDK & our Eclipse plugin installation mandatory for App Tutorial. Steps included in first lesson.</li>
-			</ul>
-		</div>
-		<div class="span4">
 			<h2 class="ac">Target Audience</h2>
 			<p>If you belong to one of the category below, you are the right audience.</p>
 			<ul>
@@ -57,70 +49,49 @@
 				<li><strong>Android Newbies</strong> : People having no/little knowledge of Android</li>
 			</ul>
 		</div>
+		<div class="span4">
+			<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-danger btn-block vertical-align-me" do %>
+				<h4>Get Started with App Tutorial<br/><small style="font-size:small; color:inherit">(It's FREE. No login required)</small></h4>
+			<% end %>
+		</div>
 	</div>
 </div>
 <hr/>
 
 <div class="container">
-	<h2 class="ac">Quick glimpse of App Tutorial features</h2>
+	<h2 class="ac">What people are saying about it.</h2>
 	<hr/>
 	<div class="row-fluid">
-		<div class="span7">
-			<%= image_tag "twitter-client/collage.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
-		</div>
-
-		<div class="span5" style="margin-top:100px">
-			<h3>Practical Approach</h3>
-			<p><ul><li>Together we learn by building an awesome Twitter Application.</li><li>Once we are done with the tutorial, you can flaunt your app to your friends or even use it as your own Twitter client.</li></ul></p>
-		</div>
-	</div>
-
-	<hr/>
-
-	<div class="row-fluid">
-		<div class="span5" style="margin-top:100px">
-			<h3>Real Development Environment</h3>
-			<p>Most of the professional Android developers build Apps on their own PC. We want to give you a 'Real' approach to Android development. </p>
-			<div class="alert">
-				<ul>
-					<li> You will have to work with <strong>the Eclipse IDE</strong>, the standard platform to develop Android apps.</li>
-					<li> You also need to download our custom Android Plugin. The plugin makes it easier to get started. It helps us track your progress.  </li>
-				</ul>
+		<h4 class="ac"><a href="http://zuberot.info" target="_blank">Zuberot</a>, an experienced Android developer from Macedonia</h4>
+		<br/>
+		<div class="row-fluid">
+			<div class="span6">
+				<%= image_tag "testimonials/zuberot-profile.png" %>
+			</div>
+			<div class="span6">
+				<%= image_tag "testimonials/zuberot-tweet.png" %>
 			</div>
 		</div>
-
-		<div class="span7">
-			<%= image_tag "twitter-client/eclipse_ide.png", alt: "Eclipse IDE", title: "Eclipse IDE" %>
+		<div class="row-fluid">
+			<div class="span12">
+				<%= image_tag "testimonials/tweet-translation.png" %>
+			</div>
 		</div>
 	</div>
-
 	<hr/>
-
 	<div class="row-fluid">
-		<div class="span7">
-			<%= image_tag "twitter-client/empty_list_view.png", alt: "Empty List View Error", title: "Empty List View Error" %>
-		</div>
-		<div class="span5" style="margin-top:150px" id="virtualasssec">
-			<h3>Virtual Assistant</h3>
-			<p><ul><li>Like your personal mentor, we continually track your progress.</li><li> Our user-friendly <strong>Virtual Assistant</strong> is fun to learn with ! </li><li>Virtual Assistant points you to the errors the way a real mentor does.</li></ul></p>
-		</div>
+		<h4 class="ac"><a href="http://www.reddit.com/r/Android/comments/1uv512/a_strange_yet_interesting_way_to_learn_android/" target="_blank">/r/Android sub-reddit</a></h4>
+		<br/>
+		<%= image_tag "testimonials/reddit.png" %>
 	</div>
-
+	<hr/>
+	<div class="ac">
+		<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-danger" do %>
+			<h4>Get Started with App Tutorial<br/><small style="font-size:small; color:inherit">(It's FREE. No login required)</small></h4>
+		<% end %>
+	</div>
 	<hr/>
 
-	<div class="row-fluid">
-
-		<div class="span4" style="margin-top:50px">
-			<h3>Best Practices</h3>
-			<p><ul><li>Our methodology intrinsically takes care of following and recommending best practices used in the industry.</li><li>We even candidly refer you to other good stuff on the internet, just for your reference and curiosity.</li></ul></p>
-		</div>
-
-		<div class="span8">
-			<%= image_tag "twitter-client/good_practice.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
-		</div>
-	</div>
-
-	<hr/>
 </div>
 
 
@@ -193,9 +164,12 @@
 			text-align:center
 		}
 	</style>
+	<hr/>
+	<div class="ac">
+		<%= link_to app_tutorial_lesson_with_token_path("twitter",AppLesson.first.token), :class => "btn btn-large btn-danger" do %>
+			<h4>Get Started with App Tutorial<br/><small style="font-size:small; color:inherit">(It's FREE. No login required)</small></h4>
+		<% end %>
+	</div>
+	<hr/>
 </div>
-
-
-
-
 

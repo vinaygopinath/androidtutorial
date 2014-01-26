@@ -152,6 +152,11 @@
 					$(this).parent().addClass("ac")
 				})
 
+				$(".vertical-align-me").each(function() {
+					var margin_top = ($(this).parent().parent().height() - $(this).height() )/2
+					$(this).css("margin-top", margin_top)
+				})
+
 			</script>
 
 		</body>
