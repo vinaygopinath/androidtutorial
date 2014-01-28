@@ -47,160 +47,228 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h3 id="myModalLabel" class="ac">Congrats, this lesson is done &nbsp; &nbsp;<%= link_to ">> Next Lesson", app_tutorial_lesson_with_token_path(@app_name, @next_lesson.token), :class => "btn btn-success" %></h3>
-				</div>
-				<div class="modal-body">
-					<h4>Lessons List</h4>
-					<table class="table table-striped">
-						<% @lessons.to_enum.with_index(1).each do |t,i| %>
-							<tr>
-								<td><%= i %></td>
-								<% if t.progresses.where(user_id: current_user.id).length == 1 %>
-									<%= link_to app_tutorial_lesson_with_token_path(@app_name,t.token) do %>
-										<td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Completed" style="margin-top:5px; color: #5EB95E" class="icon-ok icon-large pull-right"></i></td>
-									<% end %>	
-								<% else %>
-									<td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Pending" style="margin-top:5px; color: #FAA732" class="icon-minus-sign icon-large pull-right"></i></td>
-								<% end %>
-							</tr>
-						<% end %>
-					</table>
-				</div>
-				<div class="modal-footer">
-					<h4 class="ac">Your Progress</h4><br/>
-					<div class="progress">
-						<div class="bar bar-success" style="width: <%= @progress_percent < 5 ? 5 : @progress_percent %>%;"><%= @progress_percent %> %</div>
-					</div>
-				</div>
-			</div>
-			<% if @done %>
-				<script>
-					$("#myModal").modal()
-				</script>
-			<% end %>
-		</div>
-	</div>
-</div>
+					<br/>
+					<div class="alert">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="progress" style="margin-bottom:0">
+									<div class="bar bar-success" style="width: <%= @progress_percent < 5 ? 5 : @progress_percent %>%;"><%= @progress_percent %> %</div>
+								</div>
+							</div>
+						</div>
 
-<style>
-	#sidebar-wrapper {
-		margin-left: -250px;
-		left: 0;
-		width: 250px;
-		background: rgb(0,0,0);
-		position: fixed;
-		height: 100%;
-		overflow-y: auto;
-		z-index: 1000;
-		transition: all 0.5s ease-in 0s;
-		-webkit-transition: all 0.5s ease-in 0s;
-		-moz-transition: all 0.5s ease-in 0s;
-		-ms-transition: all 0.5s ease-in 0s;
-		-o-transition: all 0.5s ease-in 0s;
-	}
-
-	.sidebar-nav {
-		color: #999999;
-		width: 250px;
-		padding: 0;
-	}
-
-	.sidebar-nav li {
-		padding: 5px 20px;
-		text-indent: 20px;
-	}
-
-	.sidebar-nav li span {
-		color: #666666;
-	}
-
-	.sidebar-nav li a {
-		color: inherit;
-		display: block;
-		text-decoration: none;
-	}
-
-	.sidebar-nav li a:hover {
-		color: #fff;
-		background: rgba(255,255,255,0.2);
-		text-decoration: none;
-	}
-
-	.sidebar-nav li a:active, .sidebar-nav li a:focus {
-		text-decoration: none;
-	}
-
-	.sidebar-brand {
-		height: 55px;
-		line-height: 55px;
-		font-size: 18px;
-		color: #999999;
-		color: #fff;
-		background: none;
-	}
-
-
-	#menu-toggle {
-		top: 0;
-		left: 0;
-		position: fixed;
-		z-index: 1;
-	}
-
-	#sidebar-wrapper.active {
-		left: 250px;
-		width: 250px;
-		transition: all 0.5s ease-out 0s;
-		-webkit-transition: all 0.5s ease-out 0s;
-		-moz-transition: all 0.5s ease-out 0s;
-		-ms-transition: all 0.5s ease-out 0s;
-		-o-transition: all 0.5s ease-out 0s;
-	}
-
-	.toggle {
-		margin: 5px 5px 0 0;
-	}
-</style>
-
-<script>
-	$("#menu-close").click(function(e) {
-		e.preventDefault();
-		$("#sidebar-wrapper").toggleClass("active");
-	});
-	$("#menu-toggle").click(function(e) {
-		e.preventDefault();
-		$("#sidebar-wrapper").toggleClass("active");
-	});
-
-	$("h1").each(function(){
-		create_proper_header(this,"h1")
-	})
-	$("h2").each(function() {
-		console.log($(this).html())
-		add_item_in_nav("ul.nav.bs-sidenav", this)
-		$(this).nextUntil("h2","h3").each(function(){
-			console.log($(this).html())
-			add_item_in_nav("ul.nav.bs-sidenav li:last ul", this)
-			create_proper_header(this,"h3")
-		})
-		create_proper_header(this, "h2")
-	})
-
-	function create_proper_header(element,header_type) {
-		id = $(element).html().replace(/\W+/g,"-")
-		if (header_type == "h2" || header_type == "h1") 
-		$(element).replaceWith('<div class="page-header"><' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '></div>')
-		else
-		$(element).replaceWith('<' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '>')
-
-	}
-
-	function add_item_in_nav(_parent,element) {
-		id = $(element).html().replace(/\W+/g,"-")
-		$(_parent).append('<li><a href="#' + id + '">' + $(element).html() + '</a><ul class="nav"></ul></li>')
-	}
-
-	$("blockquote").each(function(){
-		$(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
-	})
-
+						<div class="row-fluid" style="margin-bottom:0">
+							<div class="span6" style="text-align:right">
+								<strong class="text-error" >Share your progress</strong>
+							</div>
+							<div class="span6">
+								<div class="social">
+									<span class="twitter">
+										<iframe id="twitter-widget-120" scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/tweet_button.1389999802.html#_=1390902648126&amp;count=none&amp;hashtags=AndroidDev&amp;id=twitter-widget-120&amp;lang=en&amp;original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons%23tweet&amp;size=m&amp;text=Just%20finished%20a%20lesson%20while%20building%20Android%20twitter%20client&amp;url=http%3A%2F%2Fwww.codelearn.org%2Fandroid-tutorial&amp;via=codelearn" class="twitter-share-button twitter-tweet-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 56px; height: 20px;"></iframe>
+									</span>
+									<span class="Facebook">
+										<div id="fb-root"></div>
+										<script>(function(d, s, id) {
+											var js, fjs = d.getElementsByTagName(s)[0];
+											if (d.getElementById(id)) return;
+											js = d.createElement(s); js.id = id;
+											js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=648148068532784";
+											fjs.parentNode.insertBefore(js, fjs);
+											}(document, 'script', 'facebook-jssdk'));</script>
+										<div class="fb-share-button" data-href="http://www.codelearn.org/android-tutorial" data-type="button" data-width="60"></div>
+									</span>
+									<span class="google">
+										<!-- Place this tag where you want the +1 button to render. -->
+										<div class="g-plusone" data-annotation="none" data-href="http://www.codelearn.org/android-tutorial"></div>
+										<!-- Place this tag after the last +1 button tag. -->
+										<script type="text/javascript">
+											(function() {
+											 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+											 po.src = 'https://apis.google.com/js/platform.js';
+											 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+											 })();
 </script>
+									 </span>
+									 <style>
+										 /* This gets Google to fall into place */
+										 .social {
+											 font-size: 1px;
+										 }
+
+										 /* This gets Facebook to fall into place */
+										 .social iframe {
+											 vertical-align: middle;
+										 }
+
+										 /* Set an optional width for your button wrappers */
+										 .social span {
+											 display: inline-block;
+											 max-width: 60px;
+											 margin-right: 10px;
+											 overflow-hidden;
+											 vertical-align:middle !important;
+										 }
+
+										 /* Adjust the widths individually if you like */
+										 .social .google {
+											 width: 75px;
+										 }
+									 </style>
+								 </div>
+							 </div>
+						 </div>
+
+					 </div>
+					 <h4>Lessons List</h4>
+				 </div>
+
+
+				 <div class="modal-body">
+					 <table class="table table-striped">
+						 <% @lessons.to_enum.with_index(1).each do |t,i| %>
+							 <tr>
+								 <td><%= i %></td>
+								 <% if t.progresses.where(user_id: current_user.id).length == 1 %>
+									 <%= link_to app_tutorial_lesson_with_token_path(@app_name,t.token) do %>
+										 <td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Completed" style="margin-top:5px; color: #5EB95E" class="icon-ok icon-large pull-right"></i></td>
+									 <% end %>	
+								 <% else %>
+									 <td><%= t.title %></td><td><i data-toggle="tooltip" title="Lesson Pending" style="margin-top:5px; color: #FAA732" class="icon-minus-sign icon-large pull-right"></i></td>
+								 <% end %>
+							 </tr>
+						 <% end %>
+					 </table>
+				 </div>
+			 </div>
+			 <% if @done %>
+				 <script>
+					 $("#myModal").modal()
+				 </script>
+			 <% end %>
+		 </div>
+	 </div>
+ </div>
+
+ <style>
+	 #sidebar-wrapper {
+		 margin-left: -250px;
+		 left: 0;
+		 width: 250px;
+		 background: rgb(0,0,0);
+		 position: fixed;
+		 height: 100%;
+		 overflow-y: auto;
+		 z-index: 1000;
+		 transition: all 0.5s ease-in 0s;
+		 -webkit-transition: all 0.5s ease-in 0s;
+		 -moz-transition: all 0.5s ease-in 0s;
+		 -ms-transition: all 0.5s ease-in 0s;
+		 -o-transition: all 0.5s ease-in 0s;
+	 }
+
+	 .sidebar-nav {
+		 color: #999999;
+		 width: 250px;
+		 padding: 0;
+	 }
+
+	 .sidebar-nav li {
+		 padding: 5px 20px;
+		 text-indent: 20px;
+	 }
+
+	 .sidebar-nav li span {
+		 color: #666666;
+	 }
+
+	 .sidebar-nav li a {
+		 color: inherit;
+		 display: block;
+		 text-decoration: none;
+	 }
+
+	 .sidebar-nav li a:hover {
+		 color: #fff;
+		 background: rgba(255,255,255,0.2);
+		 text-decoration: none;
+	 }
+
+	 .sidebar-nav li a:active, .sidebar-nav li a:focus {
+		 text-decoration: none;
+	 }
+
+	 .sidebar-brand {
+		 height: 55px;
+		 line-height: 55px;
+		 font-size: 18px;
+		 color: #999999;
+		 color: #fff;
+		 background: none;
+	 }
+
+
+	 #menu-toggle {
+		 top: 0;
+		 left: 0;
+		 position: fixed;
+		 z-index: 1;
+	 }
+
+	 #sidebar-wrapper.active {
+		 left: 250px;
+		 width: 250px;
+		 transition: all 0.5s ease-out 0s;
+		 -webkit-transition: all 0.5s ease-out 0s;
+		 -moz-transition: all 0.5s ease-out 0s;
+		 -ms-transition: all 0.5s ease-out 0s;
+		 -o-transition: all 0.5s ease-out 0s;
+	 }
+
+	 .toggle {
+		 margin: 5px 5px 0 0;
+	 }
+ </style>
+
+ <script>
+	 $("#menu-close").click(function(e) {
+		 e.preventDefault();
+		 $("#sidebar-wrapper").toggleClass("active");
+	 });
+	 $("#menu-toggle").click(function(e) {
+		 e.preventDefault();
+		 $("#sidebar-wrapper").toggleClass("active");
+	 });
+
+	 $("h1").each(function(){
+		 create_proper_header(this,"h1")
+	 })
+	 $("h2").each(function() {
+		 console.log($(this).html())
+		 add_item_in_nav("ul.nav.bs-sidenav", this)
+		 $(this).nextUntil("h2","h3").each(function(){
+			 console.log($(this).html())
+			 add_item_in_nav("ul.nav.bs-sidenav li:last ul", this)
+			 create_proper_header(this,"h3")
+		 })
+		 create_proper_header(this, "h2")
+	 })
+
+	 function create_proper_header(element,header_type) {
+		 id = $(element).html().replace(/\W+/g,"-")
+		 if (header_type == "h2" || header_type == "h1") 
+		 $(element).replaceWith('<div class="page-header"><' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '></div>')
+		 else
+		 $(element).replaceWith('<' + header_type + ' id="' + id + '">' + $(element).html() + '</' + header_type + '>')
+
+	 }
+
+	 function add_item_in_nav(_parent,element) {
+		 id = $(element).html().replace(/\W+/g,"-")
+		 $(_parent).append('<li><a href="#' + id + '">' + $(element).html() + '</a><ul class="nav"></ul></li>')
+	 }
+
+	 $("blockquote").each(function(){
+		 $(this).replaceWith('<div class="alert alert-warning">' + $(this).text() + "</div>")
+	 })
+
+ </script>
