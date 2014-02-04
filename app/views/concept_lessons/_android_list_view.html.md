@@ -1,6 +1,6 @@
 #Android ListView
 
-ListView is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the list view is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any list item by clicking on it. 
+ListView in Android is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the listview is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any listitem by clicking on it. 
 
 ListView is widely used in Android Applications. A simple example of ListView is your contact book, where you have a list of your contacts displayed in a ListView. 
 
@@ -24,9 +24,9 @@ Have a look at the screenshot of the twitter app described above.
 
 All the rows are similar, and the only thing which changes is the tweet content. Such situation drives us to use ListView.
 
-##Using List In Android
+##Using ListView In Android
 
-Android provides ListView or ExpandableListView. ExpandableListView contains list items which can be expanded. To use a list view in Android you can drag and drop the listview control from the palette to your UI. 
+Android provides ListView or ExpandableListView. ExpandableListView contains list items which can be expanded. To use a listview in Android you can drag and drop the listview control from the palette to your UI. 
 
 Here is how listview code looks: 
 
@@ -46,26 +46,26 @@ List items are just layouts in a separate layout file. Let us understand the fol
 
 <%= image_tag "list_view/twitter_tweet.png", alt: "Twitter tweet", title: "Twitter tweet" %>
 
-Here we can see a listitem for the twitter application. This list Item is arranged in a Relative layout with images and multiple text views aligned to each other. This is how a list view is designed.
+Here we can see a listitem for the twitter application. This list Item is arranged in a Relative layout with images and multiple text views aligned to each other. This is how a listview is designed.
 
-Once we have the listitem, we bind the listview to the Adapter and then use listitems to display the data in listview. 
+Once we have the listitem, we bind the listview to the Adapter and then use list items to display the data in listview. 
 
-In the coming sections, we will learn more about how we create complex list items and how to attach them to the Adapter.
+In the coming sections, we will learn more about how we create custom list items and how to attach them to the Adapter.
 
 ##Adapter
 
-Adapter is a bridge between the View (e.g. ListView) and the underlying data for that view. An adapter manages the data and adapts the data to the individual rows (listItems) of the view.
+Android Adapter is a bridge between the View (e.g. ListView) and the underlying data for that view. An adapter manages the data and adapts the data to the individual rows (listItems) of the view.
 
-We bind the adapter with list view via *setAdapter* method. 
+We bind the adapter with listview via *setAdapter* method. 
 Now, Let us see how adapter works with the help of the following image.
 
 <%= image_tag "list_view/Adapter.png", alt: "Adapters", title: "Adapters" %> 
 
-As stated earlier, Adapters act as a bridge to the views. To interact with the view, adapters call the getView() method which returns a view for each item within the adapter view. This is a list item which we have seen earlier. The layout format and the corresponding data for an item within the adapter view are set in the getView() method.  
+As stated earlier, Adapters act as a bridge to the views. To interact with the view, adapters call the getView() method which returns a view for each item within the adapter view. This is a listitem which we have seen earlier. The layout format and the corresponding data for an item within the adapter view are set in the getView() method.  
 
 Once we have a reference to the view, we can get the data from the data source either in an Array list or a cursor. We can then bind the data to the view items. All this is done in getView Method. In coming sections, we will look as to how we can achieve this in our code.
 
->Watchout: Typically as you scroll the list view to improve the performance and save time in creating a new view , Android recycles the views that go out of focus. 
+>Watchout: Typically as you scroll the listview to improve the performance and save time in creating a new view , Android recycles the views that go out of focus. 
 
 
 Typically you do not have to deal directly with the Adapter class. Android provides you commonly used Adapters like :
@@ -74,42 +74,42 @@ Typically you do not have to deal directly with the Adapter class. Android provi
 *Cursor Adapter
 *Simple Cursor Adapter
 
-Most of the time we tend to write our own Adapter by extending *Base Adapter*
+Most of the time we tend to write our own Adapter by extending *BaseAdapter*
 
 >Watchout: Always remember that any adapter will always expect a Layout to be bound    to(i.e listitem).
 
 Enough of wait, Let's see Adapters in Action now.
 
-##Basic List view with Array Adapter
+##Basic ListView with ArrayAdapter
 
-###Array Adapter
+###ArrayAdapter
 
-Whenever you have a list of single items which is backed by an array, you can use Array Adapter. For instance, list of countries or names.
+Whenever you have a list of single items which is backed by an array, you can use ArrayAdapter. For instance, list of countries or names.
 
 By default, ArrayAdapter expects a Layout with single TextView. If you want to use more complex views, please avoid ArrayAdapter and use custom adapter(we will see this in the next section).
 
-###Code
+###Android ListView Example (ArrayAdapter)
 Download our Example App from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample)
 
 Open ListViewWithSimpleAdapter Class
 
-For Array Adapter to work you need to have an array of data, let's create an Array of Code Learn Tutorial Chapter: 
+For ArrayAdapter to work you need to have an array of data, let's create an Array of Code Learn Tutorial Chapter: 
 
         String[] codeLearnChapters = new String[] { "Android Introduction","Android Setup/Installation","Android Hello World","Android Layouts/Viewgroups","Android Activity & Lifecycle","Intents in Android"};
 
-Since we have the data now, let's create a new Object of Array Adapter. 
+Since we have the data now, let's create a new Object of ArrayAdapter. 
 
         ArrayAdapter<String> codeLearnArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, codeLearnChapters);
 
-Observe the parameters for creating Array Adapter: 
+Observe the parameters for creating ArrayAdapter: 
 
 1. First Parameter is context
-2. Second Parameter is the Layout, which this Array Adapter will use to bind the data from codeLearnChapters Array. Android comes pre bundled with some common layout which you can refer with android.R.layout. Here we are using - simple_list_item_1, which is just a simple text view. 
+2. Second Parameter is the Layout, which this ArrayAdapter will use to bind the data from codeLearnChapters Array. Android comes pre bundled with some common layout which you can refer with android.R.layout. Here we are using - simple_list_item_1, which is just a simple text view. 
 3. Third parameter is the data, in this case the String Array. 
 
-Now that we have ArrayAdapter created, let's bind the Adapter with the list view.
+Now that we have ArrayAdapter created, let's bind the Adapter with the listview.
 
-Let's get the reference of list view 
+Let's get the reference of listview 
 
         ListView codeLearnLessons = (ListView)findViewById(R.id.listView1);
 
@@ -119,43 +119,43 @@ Once you have a reference of listview, you can just call *setAdapter* method by 
 
 With these simple 4 lines of code, you created your first listview. If you run the application downloaded from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample) and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
 
-<%= image_tag "list_view/Array_adapter.png", alt: "Array Adapters", title: "Array Adapters" %>
+<%= image_tag "list_view/Array_adapter.png", alt: "ArrayAdapters", title: "ArrayAdapters" %>
 
-We have seen a simple Array Adapter, but most of the times you need more than 1 data in the list item. Let's look how we can leverage base adapter class to achieve what we want. 
+We have seen a simple ArrayAdapter, but most of the times you need more than 1 data in the listitem. Let's look how we can leverage base adapter class to achieve what we want. 
 
 If you notice in the above example, we have used Android.R.Layout item. This is an inbuilt layout resource provided by Android to make your development fast. Here are some more examples of Listview items which Android provides:
 
 * simple_list_item_1 : A list Item with single TextView
 * simple_list_item_2 : A List Item  with 2 texviews in 2 different lines
-* simple_expandable_list_item_1 : A List Item with Expandable View. List Items in list view can be of 2 types. First, which just displays all content(simple list view item).Second, an expandable list item which contains some hidden data. This hidden data can be viewed if a user clicks on expand/collapse button. 
+* simple_expandable_list_item_1 : A List Item with Expandable View. List Items in listview can be of 2 types. First, which just displays all content(simple listview item).Second, an expandable listitem which contains some hidden data. This hidden data can be viewed if a user clicks on expand/collapse button. 
 * simple_list_item_single_choice : A List Item with a radio button after textView. You can use this when you want to get a choice from the user.
 * simple_list_item_multiple_choice: A List Item with a Check Box after textview. You can use this when you want to get multiple choices from the user. 
 
 
-##Complex List View with Base Adapter
+##Custom ListView with BaseAdapter
 
 We have seen above what we can do with ArrayAdapter. But for most use cases you will have a complex layout for list items as below : 
 <br/>
 <%= image_tag "list_view/list_item.png", alt: "List Item", title: "List Item" %>
 
-This kind of complex list items can be bound with Base Adapter. With base Adapter you can practically build any layout which you want in your list view. 
+This kind of complex list items can be bound with BaseAdapter. With base Adapter you can practically build any layout which you want in your listview. 
 
 ###BaseAdapter
-Base Adapter is a common base class of a general implementation for an Adapter that can be used in ListView. BaseAdapter can be extended to create a custom Adapter to suit your need of building a complex list item list.
+BaseAdapter is a common base class of a general implementation for an Adapter that can be used in ListView. BaseAdapter can be extended to create a custom Adapter to suit your need of building a custom listitem.
 
-Array Adapter is also an implementation of Base Adapter
+ArrayAdapter is also an implementation of BaseAdapter
 
 
-###Creating Custom Adapter
+###Android ListView Example (Custom Adapter)
 
-Now since we understand the concepts of base adapter, Let's Create our own Custom Adapter. 
+Now since we understand the concepts of BaseAdapter, Let's Create our own Custom Adapter. 
 
 To create a custom adapter all you need to do is create a new class then extends BaseAdapter, for example 
 
          public class CodeLearnAdapter extends BaseAdapter
 
 
-With this simple line of code, you can create your own adapter. Once you extend the Base Adapter, it will automatically ask you to implement the required method.  Just use Eclipse, add required methods to be implemented and it will automatically create the code for you. 
+With this simple line of code, you can create your own adapter. Once you extend the BaseAdapter, it will automatically ask you to implement the required method.  Just use Eclipse, add required methods to be implemented and it will automatically create the code for you. 
 
 This is how your Custom Adapter will look like 
 
@@ -191,22 +191,22 @@ This is how your Custom Adapter will look like
 
 Let's go step by step to understand each method of the custom adapter. 
 
-* getCount() : This method tells the list view the number of rows it will require. This count can come from your data source. It can be the size of your Data Source. If you have your datasource as a list of objects, this value will be the size of the list. 
+* getCount() : This method tells the listview the number of rows it will require. This count can come from your data source. It can be the size of your Data Source. If you have your datasource as a list of objects, this value will be the size of the list. 
 * Object getItem(int arg0): We have 2 method implementation of getItem. This method returns an object. This method helps ListView to get data for each row. The parameter passed is the row number starting from 0. In our List of Objects, this method will return the object at the passed index.
 * long getItemId(int arg0) : You can ignore this method. It just returns the same value as passed. This in general helps ListView to map its rows to the data set elements. 
-* getView : This is the most important method. This method will be called to get the View for each row. This is the method where we can use our complex list item and bind it with the data. The fist argument passed to getView is the list view item position ie row number. The second parameter is recycled view reference(as we know list view recycles a view, you can confirm through this parameter). Third parameter is the parent to which this view will get attached to.
+* getView : This is the most important method. This method will be called to get the View for each row. This is the method where we can use our custom listitem and bind it with the data. The fist argument passed to getView is the listview item position ie row number. The second parameter is recycled view reference(as we know listview recycles a view, you can confirm through this parameter). Third parameter is the parent to which this view will get attached to.
 
-Now we understand all the methods of custom adapter. Let's create our own Complex List View 
+Now we understand all the methods of custom adapter. Let's create our own Custom ListView 
 
-###Complex List Item
+###Custom ListItem
 
-First Step to have a complex ListView is to have a complex list item. Let's create a complex list item like this 
+First Step to have a custom ListView is to have a custom listitem. Let's create a custom listitem like this 
 <br/>
 <%= image_tag "list_view/list_item.png", alt: "List Item", title: "List Item" %>
 
 This is similar to the one used in the twitter app.
 
-This is the code for list item. Look into *listitem.xml* in the sample project. 
+This is the code for listitem. Look into *listitem.xml* in the sample project. 
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -243,7 +243,7 @@ This is the code for list item. Look into *listitem.xml* in the sample project.
         </RelativeLayout> 
 
 ###Data Source
-Now since we have the complex list item, we only need data. For this example project, we will just use a List of codeLearnChapter Objects which will have a chapter name and chapter description. Here is how the data structure of codeLearnChapter object looks like 
+Now since we have the custom listitem, we only need data. For this example project, we will just use a List of codeLearnChapter Objects which will have a chapter name and chapter description. Here is how the data structure of codeLearnChapter object looks like 
 
         public class codeLearnChapter {
                 String chapterName;
@@ -269,10 +269,10 @@ In the sample code, we have created a simple method getDataForListView which ret
             
         }
 
-### Custom Adapter
-We now have a list item, and also the data. Let's Create our own adapter. We have already created a custom adapter in the previous section, let's make some changes and put code in the methods.
+### Populating Custom Adapter
+We now have a listitem, and also the data. Let's Create our own adapter. We have already created a custom adapter in the previous section, let's make some changes and put code in the methods.
 
-*Getting the Data* 
+*Getting the Data*
 Let's get the data into our custom Adapter by calling getDataForListView method. We will create a new variable inside our custom adapter. 
 
         List<codeLearnChapter> codeLearnChapterList = getDataForListView();
@@ -282,7 +282,7 @@ Now we have the data, let's add code in getCount method. As discussed earlier, t
         
         return codeLearnChapterList.size();
 
-*Object getItem* 
+*Object getItem*
 This method returns the object of the datasource at specified position. In our case, the object is of type codeLearnChapter. Let's modify the return type, and add a return statement. 
 
         @Override
@@ -298,7 +298,7 @@ Leave this method as it is, just make sure it is returning the same value that i
 
 *getView*
 
-Now this is our main method where we will bind the list item to the ListView. Since we want to use our own list item, let's get the reference of our complex list item. To add any new layout to an existing layout, you need to inflate the other layout. To inflate a layout you need to get the reference of LayoutInflater. 
+Now this is our main method where we will bind the listitem to the ListView. Since we want to use our own listitem, let's get the reference of our custom listitem. To add any new layout to an existing layout, you need to inflate the other layout. To inflate a layout you need to get the reference of LayoutInflater. 
 
         LayoutInflater inflater = (LayoutInflater) ListViewWithBaseAdapter.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -310,7 +310,7 @@ Once you have the layout inflater object,  you just need to call inflate method 
 
 This inflates method takes 3 parameters, the layout which you want to add, the parent where the layout is being added , and third a boolean to attach the root to it's parent.  
 
-Now we have a reference of list item layout, but we know that list view recycles the views. Lets check the second parameter of getView to see if we already have te reference of list item.
+Now we have a reference of listitem layout, but we know that listview recycles the views. Lets check the second parameter of getView to see if we already have te reference of listitem.
 
         if(arg1==null)
         {
@@ -318,11 +318,11 @@ Now we have a reference of list item layout, but we know that list view recycles
             arg1 = inflater.inflate(R.layout.listitem, arg2,false);
         }
 
-With this simple check, we can save the overhead of inflating a new view for each row. This will make our list view faster. 
+With this simple check, we can save the overhead of inflating a new view for each row. This will make our listview faster. 
 
-Now we have the list item, let's bind the data with the listview item.
+Now we have the listitem, let's bind the data with the listview item.
 
-*First let's get the reference of list item elements*, in this case we want the reference of both the text views
+*First let's get the reference of listitem elements*, in this case we want the reference of both the text views
 
         TextView chapterName = (TextView)arg1.findViewById(R.id.textView1);
         TextView chapterDesc = (TextView)arg1.findViewById(R.id.textView2);
@@ -341,7 +341,7 @@ Now that we have done everything, time to just return the view
 
         return arg1;
 
-With this we have our custom Adapter ready to get binded to the list view. 
+With this we have our custom Adapter ready to get binded to the listview. 
 
 This is how the complete custom adapter looks : 
 
@@ -388,13 +388,13 @@ This is how the complete custom adapter looks :
 
         }
 
-###Binding Adapter with List View
+###Binding Adapter with ListView
 
 First Let us create the object of our custom adapter. 
 
         CodeLearnAdapter chapterListAdapter = new CodeLearnAdapter();
 
-Now let us take the reference of the list view 
+Now let us take the reference of the listview 
 
         ListView codeLearnLessons = (ListView)findViewById(R.id.listView1);
 
@@ -407,7 +407,7 @@ This is how the ListView will look when you run it:
 <%= image_tag "list_view/Custom_Base_adapter.png", alt: "Custom Adapter", title: "Custom Adapter" %>
 
 
-##List View Click Listener
+##ListView Click Listener
 
 One important topic before we finish the ListView chapter is handling of the click event. Whenever a ListView item is clicked, listview's onItemClicked method is called. Let's see how this method looks like : 
 
@@ -415,7 +415,7 @@ One important topic before we finish the ListView chapter is handling of the cli
 
 This method takes 4 parameters; First parameter is the AdapterView where the click happened. Second is the view within the adapter that was clicked. Third is the position of the view , and the last parameter is the row id of the item that is clicked. 
 
-In this method, you can get the Object from the codeLeanChapterList. Let's Add one more method in our Base Adapter which gives us this data. 
+In this method, you can get the Object from the codeLeanChapterList. Let's Add one more method in our BaseAdapter which gives us this data. 
 
         public codeLeanChapter getCodeLearnChapter(int position)
         {
@@ -445,19 +445,19 @@ Now you get a fair understanding of how ListView works in Android. Let's See Som
 
 ##ListActivity 
 
-In both of our examples, we have extended the Activity class and bound the list view. Though this is a simple way to do most of your work in android, android also comes with specialized Activities which can help you reduce the overall length of the code you write. These activities give you shortcut methods to make your development easier and faster. 
+In both of our examples, we have extended the Activity class and bound the listview. Though this is a simple way to do most of your work in android, android also comes with specialized Activities which can help you reduce the overall length of the code you write. These activities give you shortcut methods to make your development easier and faster. 
 
 ListActivity is one such example of specialized activity which android offers. ListActivity is a subclass of Activity which makes creating, binding and using ListView simple. Before going deep into ListActivity, here are some of the advantages of using ListActivity. 
 
-* List Activity Binds with a list view by default, no need to explicitly get the ListView object
-* ListActvity holds a List View object which can be bound by calling setAdapter anywhere in the code. 
-* Since it holds the reference of the list view, you can directly add the click listener. 
+* List Activity Binds with a listview by default, no need to explicitly get the ListView object
+* ListActvity holds a ListView object which can be bound by calling setAdapter anywhere in the code. 
+* Since it holds the reference of the listview, you can directly add the click listener. 
 
 Let's See how we can use ListActivity in our CustomAdapter Example. To do this, we will create a new Activity which will extend  ListActivity. 
 
 **XML**
 
-The first thing that will be changed while we use the ListActivity is the list view id in layout. ListActivity always expects the layout which you bind it with to have a list view with id *@android:id/list*. 
+The first thing that will be changed while we use the ListActivity is the listview id in layout. ListActivity always expects the layout which you bind it with to have a listview with id *@android:id/list*. 
 
 Why is this required ? If you recall, earlier we stated that ListActivity automatically holds the reference of a ListView. This is achieved via a common naming convention of the ListView whose object is instantiated in list activity automatically.
 
@@ -472,7 +472,7 @@ To use ListActiviy just extend it in your class instead of an Activity. This wil
 
 In Case of ListActivity, you have the advantage of binding the adapter directly by calling *setListAdapter* method. 
 
-Here is how you bind data in usual case, where you get the list view object and then call setAdapter on it.  
+Here is how you bind data in usual case, where you get the listview object and then call setAdapter on it.  
 
         ListView codeLearnLessons = (ListView)findViewById(R.id.listView1);
         codeLearnLessons.setAdapter(chapterListAdapter);
@@ -484,10 +484,10 @@ In case of ListActivity, you just need to call setListAdapter by passing the ada
 
 **Click Listener**
 
-ListActivity provides you with a default method onListItemClick. This will be invoked every time someone clicks on a list view row. With this method, you don't need to set an explicit listener on your ListView. 
+ListActivity provides you with a default method onListItemClick. This will be invoked every time someone clicks on a listview row. With this method, you don't need to set an explicit listener on your ListView. 
 
 You can view the ListActivity example in the sample project that you downloaded. Refer to ListViewWithListActivity.java
 
->Watchout: ListActivity works well if you have only single ListView. In case you have more than one list view, you need to put extra code for the other ListView to work. 
+>Watchout: ListActivity works well if you have only single ListView. In case you have more than one listview, you need to put extra code for the other ListView to work. 
 
 You can download the sample app from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample)
