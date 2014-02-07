@@ -9,26 +9,26 @@ In Android, all layouts are XML based. Even though you get a nice graphical edit
 ##Graphical Layout
 If you open any Layout in ADT, you will see 2 tabs like the one in this image 
 <br/>
-<%= image_tag "android_widgets/tabs.png", alt: "Layout Tabs", title: "Layout Tabs" %>
+<%= image_tag "android_widgets/tabs.png", alt: "Layout Tabs", title: "Layout Tabs in Android" %>
 
 To open Graphical Layout for dragging and dropping UI elements, just click on the Graphical Layout tab.
 
 This is how the Graphical Layout Editor looks like :
 <br/>
-<%= image_tag "android_widgets/layout_editor.png", alt: "Layout Editor", title: "Layout Editor" %>
+<%= image_tag "android_widgets/layout_editor.png", alt: "Layout Editor", title: "Layout Editor in Android" %>
 
 Let us see what are its sub components
 
 ###Palette
 Palette section has all your basic UI elements categorized into different sections, like Form Widgets, TextFields, Layouts etc. You can just choose any Element by Dragging and Dropping it to the working area on the right of the Screen. 
 <br/>
-<%= image_tag "android_widgets/layout_palette.png", alt: "Layout Palette", title: "Layout Palette" %>
+<%= image_tag "android_widgets/layout_palette.png", alt: "Layout Palette", title: "Layout Palette in Android" %>
 
 
 ###Control Bar 
 The top bar which you see with options like Nexus one, App Theme etc. is called control bar. It has different options to test the UI against different conditions. You can control the size of the screen, orientation,theme etc. from this bar. You can also change Zoom level, check lint warnings etc. from this bar. 
 <br/>
-<%= image_tag "android_widgets/layout_control.png", alt: "Layout Control", title: "Layout Control" %>
+<%= image_tag "android_widgets/layout_control.png", alt: "Layout Control", title: "Layout Control in Android" %>
 
 ###Design Area
 The remaining area to the right side of the palette is the Design Area. Here, you can drag and drop elements to add in the UI, rearrange already added elements, reorder them, change their properties, etc. 
@@ -113,7 +113,7 @@ For Individual Sides
 You might wonder what is the difference between margin and padding. Let's see an Image to Understand better. 
 
 <br/>
-<%= image_tag "android_widgets/margin_padding.jpg", alt: "Padding and Margin", title: "Padding and Margin" %>
+<%= image_tag "android_widgets/margin_padding.jpg", alt: "Padding and Margin", title: "Android Padding and Margin" %>
 
 In the image, margin is the gray area outside the entire object. The border is the point where your view ends. 
 
@@ -149,7 +149,7 @@ Notice the attribute android here, which is referring to Android Schema. This Sc
 
 ##TextView
 <br/>
-<%= image_tag "android_widgets/textview.png", alt: "Text View", title: "Text View" %>
+<%= image_tag "android_widgets/textview.png", alt: "Text View", title: "TextView in Android" %>
 
 Textview is most simple UI element. It is used to display static text, which cannot be changed by the user. 
 
@@ -198,7 +198,7 @@ With these 2 simple lines of code, you can change the text of textview dynamical
 
 ##EditText
 <br/>
-<%= image_tag "android_widgets/edittext.png", alt: "Edit Text", title: "Edit Text" %>
+<%= image_tag "android_widgets/edittext.png", alt: "Edit Text", title: "EditText in Android" %>
 
 EditText is another most used UI element in Android. Whenever you want to take some input from the user, you can use EditText. 
 
@@ -251,7 +251,7 @@ Similar to TextView, to set the text of EditText, you can call
 
 ##Button
 <br/>
-<%= image_tag "android_widgets/button.png", alt: "Button", title: "Button" %>
+<%= image_tag "android_widgets/button.png", alt: "Button", title: "Buttons in Android" %>
 
 ###What
 Button is the most used UI element in Android. For every action you want to do, you want the user to click on a button. 
@@ -303,9 +303,9 @@ This is how a button will look in XML code
 
 Similar to editText and textView you can call **setText** method on the button object to change the text on the button dynamically.
 
-##ImageView
+## ImageView
 <br/>
-<%= image_tag "android_widgets/imageview.png", alt: "Image View", title: "Image View" %>
+<%= image_tag "android_widgets/imageview.png", alt: "ImageView", title: "ImageView in Android" %>
 
 ###What
 Any android app is incomplete without use of an image. Image View is the UI control which you can use to display image in your android app. 
@@ -323,7 +323,7 @@ Here "@drawable" refers to your drawable folder which is present inside res fold
 
 **android:contentDescription** : This is not a required property, but it is recommended to set this property. ContentDescription is a text description of the image which you have set. This property helps with accessibility. If this property is set, users facing difficulty in viewing the image can use a Screen Reader, which will read out the text from content description. 
 
-###Code
+###ImageView Example
 This is how an ImageView will look in XML code
 
         <ImageView
@@ -345,7 +345,7 @@ Once we have the image view object, we can call setImageResource method to chang
 
 ##RadioButton
 <br/>
-<%= image_tag "android_widgets/radiobutton.png", alt: "Radio Button", title: "Radio Button" %>
+<%= image_tag "android_widgets/radiobutton.png", alt: "Radio Button", title: "RadioButton in Android" %>
 
 ###What
 If you want your users to pick one from a set of options, use Radio button. 
@@ -375,7 +375,7 @@ The orientation of radio group helps you in aligning radio button in vertical or
 ###Click listener
 Radio buttons are created to be clicked. In a radio group, all the radio buttons will have a click listener. This click listener will be invoked when the user will click on any of the radio button. There are multiple way to add a click listener, but simple way is to do in code using android:onClick property of a radio button. 
 
-Lets see an example 
+Lets see an example of an Android RadioButton : 
 
          <RadioButton
                     android:id="@+id/radio_code"
@@ -418,7 +418,7 @@ You can create a method in your code, in which you define onClick action of a ra
 
 With a simple code, you can know which radio button selection was made.
 
-### Code
+### RadioButton Example
 Here is how the complete Radio button declaration will look inside the XML
 
          <RadioGroup
@@ -446,7 +446,7 @@ Here is how the complete Radio button declaration will look inside the XML
 
 ##CheckBox
 <br/>
-<%= image_tag "android_widgets/checkbox.png", alt: "Check Box", title: "Check Box" %>
+<%= image_tag "android_widgets/checkbox.png", alt: "CheckBox", title: "CheckBox in Android" %>
 
 ###What
 If you want to select one or more options from a set, use Check Box. 
