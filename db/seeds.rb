@@ -22,8 +22,12 @@ AppLesson.create( number: 13, title: "Tweet List - Hooking Custom Layout", token
 AppLesson.create( number: 14, title: "Tweet List - Tweet Click Listener", token: "tw_app11", file: "android_tweet_item_click.html.md")
 AppLesson.create( number: 15, title: "Tweet Detail Activity", token: "tw_app12", file: "android_tweet_detail_activity.html.md")
 AppLesson.create( number: 16, title: "Module 2 - handling data", token: "tw_app13", file: "twitter_data_handling.html.md")
-AppLesson.create( number: 17, title: "Module 2 - handling data", token: "tw_app13", file: "twitter_data_handling.html.md")
-AppLesson.create( number: 18, title: "dummy", token: "dummy", file: "twitter_data_handling.html.md")
+AppLesson.create( number: 17, title: "Storing login data to SharedPreference", token: "tw_app14", file: "twitter_login_data_shared_pref.html.md")
+AppLesson.create( number: 18, title: "Dynamic data for Tweet List", token: "tw_app15", file: "tweet_list_dynamic_data.html.md")
+AppLesson.create( number: 19, title: "Reading tweets from file", token: "tw_app16", file: "read_tweets_from_file.html.md")
+AppLesson.create( number: 20, title: "Read & Write with AsyncTask", token: "tw_app17", file: "tweets_with_asynctask.html.md")
+AppLesson.create( number: 21, title: "Tweet Detail Data with Intent", token: "tw_app18", file: "tweets_with_asynctask.html.md")
+AppLesson.create( number: 21, title: "dummy", token: "dummy", file: "twitter_data_handling.html.md")
 
 CurrentUserLesson.delete_all
 CurrentUserLesson.create( user_id: 1, lesson_number: 1, completed: true)
