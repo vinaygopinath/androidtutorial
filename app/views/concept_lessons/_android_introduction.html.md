@@ -1,4 +1,4 @@
-# Introduction to Android
+# What is Android ?
 
 Android has come a long since its inception in 2009, from Donut to KitKat there are a lot of things, which have changed. We have not only seen Great Android Phones but a mature operation system and beautiful App experience.
 
@@ -84,7 +84,7 @@ Service doesn’t have any UI. To show any information to the user from Service,
 There are two ways in which you can create a Service. One way is to tie the Service with an Activity. In this case, the Service will end once Activity stops. The other way is to run a Service independent of any Application. This way, the Service keeps running in the background even after the application is stopped.   
 
 
-## Database/Sqlite 
+## Sqlite (Database) in Android 
 
 Android ships with Sqlite database support. Android apps can store data locally in the Sqlite database. Every Android application gets its own private Sqlite database which it can use to store data for offline reference.
 

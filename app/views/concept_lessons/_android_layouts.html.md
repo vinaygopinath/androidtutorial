@@ -1,6 +1,6 @@
-# Android Layouts
+# Layouts in Android
 
-Layout is the View element container in Android. It is also known as **Viewgroup**. All view elements like textbox, label, buttons etc need to be contained inside the layout. 
+Android Layout is a View element container in Android. It is also known as **Viewgroup**. All view elements like textbox, label, buttons etc need to be contained inside the layout. 
 
 The Layout is in-turn contained in a layout file location inside **res/layout** directory of the Android app. An Android Activity uses the Layout & shows output on the screen. 
 
@@ -13,7 +13,7 @@ The three most important kind of Layout elements are
 
 ## LinearLayout
 
-It is one of the fundamental layout which is available for developers to implement their UI’s. So, as the name itself indicates this layout is “linear” in the sense that is puts its children in a linear fashion.LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally.
+It is one of the fundamental layout in Android which is available for developers to implement their UI’s. So, as the name itself indicates this layout is “linear” in the sense that is puts its children in a linear fashion.LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally.
 
 So, the available orientation for LinearLayout are :
 
@@ -104,7 +104,7 @@ Save the file & deploy your Android app. You will see the screenshot as shown be
 
 ## Relative Layout
 
-Relative layout is also one of the basic layout available to design UI. It arranges its views with reference to the view siblings or with parent. That is, using Relative layout you can mention a view to be **onLeft, onRight, onBottom or toTop** of its siblings. You can also mention/position a view with respect to its parent.
+Relative layout is also one of the basic layout in Android available to design UI. It arranges its views with reference to the view siblings or with parent. That is, using Relative layout you can mention a view to be **onLeft, onRight, onBottom or toTop** of its siblings. You can also mention/position a view with respect to its parent.
 
 
 
@@ -210,7 +210,7 @@ general, it is usually much more verbose to do it. In some cases, if the layout 
 
 ## Grid Layout
 
-A layout that places its children in a rectangular grid.GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
+An Android layout that places its children in a rectangular grid.GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
 
 
 [Download the sample project](https://github.com/pocha/android-grid-layout-example), import it in Eclipse & navigate to [grid_layout.xml](https://github.com/pocha/android-grid-layout-example/blob/master/res/layout/grid_layout.xml) file inside layout directory as shown in the image

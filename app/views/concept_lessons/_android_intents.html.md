@@ -1,4 +1,4 @@
-#Intents 
+#Android Intents
 
 Now that we have seen how Activities work in Android and Activity Lifecycle, let us see another component which is very useful while creating Android apps.
 
@@ -21,7 +21,7 @@ Intents are broadly classified into 2 categories. There are no keywords for this
 
 ##Explicit Intents
 
-Explicit Intents are the Intents in which you explicitly define the component that needs to be called by Android System. 
+Android Explicit Intents are the Intents in which you explicitly define the component that needs to be called by Android System. 
 
 When you open an activity from another activity in the same Android app, you use Explicit Intents. Let us understand through an example :
 
@@ -37,7 +37,7 @@ Let's see an example
 
 ##Implicit Intents
 
-Implicit Intents are intents where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
+Android Implicit Intents are intents where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
 
 Whenever you delegate responsibility to another application from your application, you use Implicit Intents. 
 
@@ -46,7 +46,7 @@ Let us see an example:
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
 
-This is a simple example of a share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. See the image below, this is a implicit intent for sending email
+This is a simple example of an Android share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. See the image below, this is a implicit intent for sending email
 
 <br/>
 <%= image_tag "android_intents/implicit_intent.png", alt: "Implicit Intenet", title: "Implicit Intenet" %>
@@ -54,7 +54,7 @@ This is a simple example of a share Intent. This is typically used when you want
 Let us now observe a couple of examples to see how Intent works, how you pass data and how you use Implicit Intents to delegate responsibilities to other apps. 
 
 
-##Intent Example
+##Android Intent Example
 
 You should import [**CodelearnHelloIntents**](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnHelloIntents) project from [Codelearn Example apps on github](https://github.com/pranayairan/Code-Learn-Android-Example). If you are new to github, [download the zip](https://github.com/pranayairan/Code-Learn-Android-Example/archive/master.zip), unzip & import CodelearnHelloIntents project in Eclipse.
 

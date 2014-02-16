@@ -1,4 +1,4 @@
-#Activity and It’s LifeCycle
+#Android Activity LifeCycle
 
 In <%= link_to "the chapter detailing Android Basics", android_concept_lesson_path("android-introduction")  %>, we saw that the Activity is the basic building block of an Android App. The Activity always has a User Interface. Android apps consist of one or many Activities. We also saw that to tell Android, which activity to open when the application is launched, we defined Main Activity in Manifest.xml. 
 
@@ -101,7 +101,7 @@ The Android OS uses a priority queue to assist in managing activities running on
 Activities that are completely obscured by another activity are considered stopped or in the background. Stopped activities still try to retain their state and member information for as long as possible, but stopped activities are considered to be the lowest priority of the three states.
 
 
-##Example App
+##Android Example App
 
 We have seen various states of Activity and seen all the Lifecycle methods. Let's walk through a code example and see these Lifecycle methods in action.
 

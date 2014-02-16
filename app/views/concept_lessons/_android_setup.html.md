@@ -1,4 +1,4 @@
-#Android Setup and Installation
+#Android Development Setup
 
 In the first chapter, we have seen fundamentals of an android app, from activities to services and broadcast receivers. This is an important building block and essential to learn if you want to make good android apps.
 
@@ -22,7 +22,7 @@ The Minimum requirement is Java (JDK 6)
 
 > Watchout: Android requires complete Java Development kit(JDK) and will not work with Java Runtime Environment(JRE) alone.
 
-##Setup Guide
+##Android Development Setup Kit
 
 The following video will guide you through the download and installation process of JDK and ADT . Even though this video is for windows 7, the steps are mostly same for all other platforms. 
 
