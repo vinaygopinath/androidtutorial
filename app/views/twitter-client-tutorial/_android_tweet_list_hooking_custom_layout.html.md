@@ -13,16 +13,26 @@ In our java code, we provided ArrayAdapter with the build-in Android Layout - an
 `TweetAdapter.java`
 <pre>
 
-<span class="highlight">public class TweetAdapter extends ArrayAdapter<String>{
-				
-		public TweetAdapter(Activity activity, String[] items){
-		}
-		
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent){
-		}
+<span class="highlight">		
+package org.codelearn.twitter;
 
-   }</span>
+import org.codelearn.twitter.R;
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+
+public class TweetAdapter extends ArrayAdapter<String>{
+
+	public TweetAdapter(Activity activity, String[] items){
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent){
+	}
+
+}</span>
 </pre>
 
 * We also need to use our custom TweetAdapter instead of the earlier used ArrayAdapter.
