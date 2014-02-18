@@ -1,6 +1,7 @@
 #Android ListView
-
+<!--
 ListView in Android is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the listview is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any listitem by clicking on it. 
+-->
 
 ListView is widely used in Android Applications. A simple example of ListView is your contact book, where you have a list of your contacts displayed in a ListView. 
 
