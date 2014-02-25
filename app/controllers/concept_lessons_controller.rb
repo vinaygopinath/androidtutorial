@@ -8,8 +8,6 @@ class ConceptLessonsController < ApplicationController
 	  @template = "concept_lessons/#{params[:template].gsub('-','_')}"
 
 
-
-
 	  case params[:template]
 	  when "android-introduction"
 		  @description = "Wondering what is Android development ? Check this lesson to know about Activity, View, Intent, Service, Broadcast Receivers, Notification and sqlite database in Android."
@@ -32,8 +30,8 @@ class ConceptLessonsController < ApplicationController
 		  @description = "This lesson covers Android activity and it's lifecycle. Learn Android activity concept through an example Android App."
 		  @title = "Android Activity Lifecycle with Example"
 		  @disqus_identifier = "concept-lesson-5"
-	  when "android-intents"
-		  @description = "An Android Intent lets you navigate from one android activity to another. With an example, this tutorial talks about various types of intents."
+	  when "android-intent"
+		  @description = "Android Intent lets you navigate from one android activity to another. With examples, this tutorial also talks about various types of Android intents."
 		  @title = "Android Intent Tutorial with Example"
 		  @disqus_identifier = "concept-lesson-6"
 	  when "android-views"

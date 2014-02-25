@@ -1,27 +1,26 @@
-#Android Intents
+#Android Intent
 
-Now that we have seen how Activities work in Android and Activity Lifecycle, let us see another component which is very useful while creating Android apps.
+Android Intent lets you navigate from one android activity to another. With examples, this tutorial also talks about various types of Android intents.
 
 In our previous tutorial, we saw that every application is made up of multiple activities and that we define our main activity in manifest XML. Now you might wonder as to how communication and data transfer happens between different activities. 
 
-Thankfully, we have Intents to solve this problem !
+Thankfully, we have Android Intent to solve this problem !
 
-
-Intents can be defined as simple message objects which are used to communicate from 1 activity to another. 
+Android Intent can be defined as a simple message objects which is used to communicate from 1 activity to another. 
 
 Intents define intention of an Application . They are also used to transfer data between activities.
 
-Intents can be used to perform following 3 tasks : 
+An Android Intent can be used to perform following 3 tasks : 
 
 1.    Open another Activity or Service from the current Activity
 2.    Pass data between Activities and Services
 3.    Delegate responsibility to another application. For example, you can use Intents to open the browser application to display a URL.
 
-Intents are broadly classified into 2 categories. There are no keywords for this category and just a broad classification of how intents are used. 
+Intent can be broadly classified into 2 categories. There are no keywords for this category and just a broad classification of how android intents are used. 
 
-##Explicit Intents
+##Explicit Android Intent
 
-Android Explicit Intents are the Intents in which you explicitly define the component that needs to be called by Android System. 
+Explicit Android Intent is the Intent in which you explicitly define the component that needs to be called by Android System. 
 
 When you open an activity from another activity in the same Android app, you use Explicit Intents. Let us understand through an example :
 
@@ -35,9 +34,9 @@ Let's see an example
 <%= image_tag "android_intents/explicit_intent.png", alt: "Explicit Intenet", title: "Explicit Intenet" %>
 
 
-##Implicit Intents
+##Implicit Android Intent
 
-Android Implicit Intents are intents where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
+Implicit Android Intents is the intent where instead of defining the exact components, you define the action you want to perform. The decision to handle this action is left to the operating system. The OS decides which component is best to run for implicit intents. 
 
 Whenever you delegate responsibility to another application from your application, you use Implicit Intents. 
 
@@ -46,7 +45,7 @@ Let us see an example:
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
 
-This is a simple example of an Android share Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. See the image below, this is a implicit intent for sending email
+This is a simple example of an share Android Intent. This is typically used when you want to share the data from 1 application to another. Sharing data over email, sms, social network etc. is a classic example of this category. See the image below, this is a implicit intent for sending email
 
 <br/>
 <%= image_tag "android_intents/implicit_intent.png", alt: "Implicit Intenet", title: "Implicit Intenet" %>
@@ -153,6 +152,6 @@ Similar to opening webpage we have shareData method in which you can see how we 
 
 
 
-In this chapter, we have seen how we can use intents to communicate between different activities or to pass data. Also, we now know how to use Intents for opening other applications from our app.
+In this chapter, we have seen how we can use android intent to communicate between different activities or to pass data. Also, we now know how to use Intents for opening other applications from our app.
 
 <br/>
