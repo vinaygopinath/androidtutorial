@@ -114,37 +114,37 @@
 		<p>Done with installing the Android SDK but clueless on how to get started ? This lesson tells you how to get started with a Hello World Android app. Creating your app for the first time can be daunting to newbies. Here, we explain  what various input fields stand for during the app creation process. We have also explained the folder structure and different tools like Console, Logcat & DDMS which you will be needing during Android app development. </p>
 		</li>
 		<li class="span4">
-		<h3><%= link_to "4. Android Layouts/Viewgroups", android_concept_lesson_path("android-layouts") %></h3>
-		<p>One of the important components of Android apps are View elements which are contained in a Viewgroup, also known as Layout. The Layout files are XML files. The User Interface design of your app starts with the Layout file & arranging View elements inside it. Follow this lesson to know how to get started with Layouts & what are the most popular Layout types available in Android.</p>
+		<h3><%= link_to "4. Android Layout", android_concept_lesson_path("android-layout") %></h3>
+		<p>One of the important components of Android apps are View elements which are contained in a Viewgroup, also known as Layout. The Layout files are XML files. The User Interface design of your app starts with the Layout file & arranging View elements inside it. Follow this Android tutorial to know how to get started with Layouts & what are the most popular Layout types available in Android.</p>
 		<p>Each Layout type has a separate project that you can download, import in Eclipse & see the Layout in action.</p>
 		</li>
 		<li class="span6">
-		<h3><%= link_to "5. Android Activity Lifecycle", android_concept_lesson_path("android-activity-lifecycle") %></h3>
-		<p>While creating Hello World app, you would have noticed that 'New Project' wizard asks you for an Activity name. Activity is the component of Android that you should be aware of. An Android app consists of multiple Activities. At a time,since, you are looking at only one Activity of an application, all other Activites (of the current app & the other apps) go to background. This is an Activity state. An Activity has many states & lifecycle, which you need to handle as an Android developer. Follow the lesson to dig deeper into an Activity, its state & lifecycle.</p>				
+		<h3><%= link_to "5. Android Activity", android_concept_lesson_path("android-activity") %></h3>
+		<p>While creating Hello World app, you would have noticed that 'New Project' wizard asks you for an Activity name. Activity is the component of Android that you should be aware of. An Android app consists of multiple Activities. At a time,since, you are looking at only one Activity of an application, all other Activites (of the current app & the other apps) go to background. This is an Activity state. An Activity has many states & lifecycle, which you need to handle as an Android developer. Follow this Android Tutorial to dig deeper into an Activity, its state & lifecycle.</p>				
 		<p>We have bundled an Android project <a href="https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnActivityLifeCycle">CodelearnActivityLifeCycle</a> that will show you various Activity Lifecycle methods that gets triggered. Instructions on how to get the Activity to enter a particular lifecycle method is included in the lesson.</p>
 		</li>
 		
 		<li class="span4">
-		<h3><%= link_to "6. Intents in Android", android_concept_lesson_path("android-intents") %></h3>
+		<h3><%= link_to "6. Android Intent", android_concept_lesson_path("android-intent") %></h3>
 		<p>Done creating Activity & corresponding User Interface through Layout XML files ? It is time to learn how to navigate from one Activity to another. Intents in Android does exactly that. But there is more to it. You can pass data from one Activity to another. You can launch non-Activity components like Services, Notifications & even other Android apps.</p>
 		<p>Checkout the bundled sample app <a href="https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnHelloIntents">CodelearnHelloIntents</a> which shows all the above examples in action.</p>
 		</li>
 		<li class="span6">
-		<h3><%= link_to "7. Android Widgets/Views with Listeners", android_concept_lesson_path("android-widgets-view-elements") %></h3>
-		<p>Earlier in Lesson 4, we introduced Android Layouts which contained various Android View elements. This lesson introduces some of the standard View elements like Button, TextView, EditText, Radiobutton & Checkbox. It also talks about the View specific attributes that you can either set in the XML view file or set it through your Activity java code. Some views have Listeners to which you can attach your java code that gets activated on events. Example - a Button View getting clicked. The Listeners vary from element to element & have been covered in the specific elements.</p>
+		<h3><%= link_to "7. Android Views", android_concept_lesson_path("android-views") %></h3>
+		<p>Earlier in Lesson 4, we introduced Android Layouts which contained various Android View elements. This Android tutorial introduces some of the standard View elements like Button, TextView, EditText, Radiobutton & Checkbox. It also talks about the View specific attributes that you can either set in the XML view file or set it through your Activity java code. Some views have Listeners to which you can attach your java code that gets activated on events. Example - a Button View getting clicked. The Listeners vary from element to element & have been covered in the specific elements.</p> 
 		<p>After the standard/simple Views, some complex View elements like ImageView, ListView (just an introduction), GridView & ScrollView are also introduced with their specific attributes.</p>
 		<p>We have included relevant code snippets but unfortunately did not get enough time to create sample projects for the same. If you are interested to contribute, do write to us.</p>
 		</li>
 		
 		<li class="span4">
-		<h3><%= link_to "8. Android ListView & Adapters", android_concept_lesson_path("android-list-view") %></h3>
+		<h3><%= link_to "8. Android ListView", android_concept_lesson_path("android-listview") %></h3>
 		<p>Android ListView is one of the most ubiquitious but also one of the most difficult concept to understand. For the beginners, any list that you have seen on your Android phone (example list of phone numbers when you launch your contact) is implemented using Android ListView. Here we have tried making it as easier as possible for you by explaining the easiest way of implementing a basic Listview & then explaining what each line of code represent. We then follow the similar process with more complex ListView implementations.</p>
 		<p>You would probably not want to miss the <a href="https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample">CodeLearnListExample</a> app that we have bundled with the lesson. The app will let you see various ListView implementations in action with instructions.</p>
 		</li>
 		
 		<li class="span3">
-		<h3><%= link_to "9. Logging in Android", android_concept_lesson_path("android-logging") %></h3>
-		<p>Your favorite Java dump command 'System.out.println()' does not work in Android. Know how to use to use the Log class. An extensive tutorial on how to use LogCat to view & filter the log messages.</p>
+		<h3><%= link_to "9. Android Log", android_concept_lesson_path("android-log") %></h3>
+		<p>Your favorite Java dump command 'System.out.println()' does not work in Android. Know how to use to use the Log class. An extensive Android tutorial on how to use LogCat to view & filter the log messages.</p>
 		</li>
 		<li class="span4">
 		<h3><a href="#">10. Android Dialogs / Popups / Toasts</a></h3>

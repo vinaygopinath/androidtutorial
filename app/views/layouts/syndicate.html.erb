@@ -56,16 +56,15 @@
 									Android Concept Lessons <span class="caret" style="display:inline-block"></span>
 								<% end %>
 								<ul class="dropdown-menu">
-									<% Dir.entries("#{Rails.root}/app/views/concept_lessons/").sort.each do |file|
-										if file.index("_") == 0
-											file.slice!(0)
-											file.gsub!(".html.md","")
-											param = file.gsub("_","-")
-											#file.gsub!("android_","")
-											name = file.gsub("_"," ") %>
-										<li><%= link_to name.split.map(&:capitalize).join(' '), android_concept_lesson_path(param.html_safe) %></li>
-										<% end 
-									end %>
+									<li><%= link_to "1. Android Introduction", android_concept_lesson_path("android-introduction") %></li> 	
+									<li><%= link_to "2. Android Setup", android_concept_lesson_path("android-setup") %></li> 	
+									<li><%= link_to "3. Android Hello World", android_concept_lesson_path("android-hello-world") %></li> 	
+									<li><%= link_to "4. Android Layouts", android_concept_lesson_path("android-layout") %></li> 	
+									<li><%= link_to "5. Android Activity", android_concept_lesson_path("android-activity") %></li> 	
+									<li><%= link_to "6. Intents in Android", android_concept_lesson_path("android-intent") %></li> 	
+									<li><%= link_to "7. Android Views", android_concept_lesson_path("android-views") %></li> 	
+									<li><%= link_to "8. Android ListView", android_concept_lesson_path("android-listview") %></li> 	
+									<li><%= link_to "9. Logging in Android", android_concept_lesson_path("android-log") %></li> 	
 								</ul>
 								</li>
 

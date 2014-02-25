@@ -15,7 +15,7 @@ In this lesson, we will start with designing the Login screen layout. A good way
     </RelativeLayout>
 
 
-The RelativeLayout element is the container for the UI element, where as TextView is a UI element. The TextView elements are placed relative to the parent or sibling element in Relative Layout. To read about Layouts in detail, head over to <%= link_to "this lesson", android_concept_lesson_path("android-layouts") %>.
+The RelativeLayout element is the container for the UI element, where as TextView is a UI element. The TextView elements are placed relative to the parent or sibling element in Relative Layout. To read about Layouts in detail, head over to <%= link_to "this lesson", android_concept_lesson_path("android-layout") %>.
 
 Now,we are going to modify the same **activity_main.xml** file . The final screenshot & the pictorial representation of the Graphical Layout is shown below.
 

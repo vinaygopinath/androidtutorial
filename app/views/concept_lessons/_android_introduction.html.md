@@ -28,7 +28,7 @@ Activity will always have a User Interface (abbreviated as UI). It is not possib
 * Any Android app has one or more Activities. Out of these, one Activity will act as the entry point. The Activity will show up when the app starts.
 This is usually referred to as MainActivity too. 
 
-* Every Activity has its own lifecycle. More on this you can find in the <%= link_to "Activity Concept Lesson", android_concept_lesson_path("android-activity-lifecycle")  %> . 
+* Every Activity has its own lifecycle. More on this you can find in the <%= link_to "Activity Concept Lesson", android_concept_lesson_path("android-activity")  %> . 
 
 * Every Android app has a Manifest.xml where all Activites are defined and one Activity marked as Main Activity. One of the most common error developers commit when they start with Android development is forgetting to add a new Activity in Mainfest.xml file.
 
@@ -61,7 +61,7 @@ UI is defined as XML (provide link). The top XML element is a Layout element . I
             android:text="Button 3" />
      </LinearLayout>
 
-You may read more about Layouts & Views in our <%= link_to "Layout Concept Lesson", android_concept_lesson_path("android-layouts")  %> & <%= link_to "View Concept Lesson", android_concept_lesson_path("android-widgets-view-elements")  %>.
+You may read more about Layouts & Views in our <%= link_to "Layout Concept Lesson", android_concept_lesson_path("android-layout")  %> & <%= link_to "View Concept Lesson", android_concept_lesson_path("android-views")  %>.
 
 ## Intents
 
