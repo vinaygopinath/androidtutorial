@@ -1,10 +1,10 @@
-# Getting Started with Android App
+# Android Hello World
 
-In this tutorial, we will go through various steps of creating an android app. Once our application is ready, we will launch the application and see it working in the emulator. We will then go through the folder structure and see various tools available with us in ADT.
+In this tutorial, we will go through various steps of creating a sample android hello world app. Once our application is ready, we will launch the application and see it working in the emulator. We will then go through the folder structure and see various tools available with us in ADT.
 
 ## Creating Project From Wizard 
 
- Unlike other languages where you need to write code to run a basic hello world program, the Android Developer Tool (ADT) or Eclipse provides us a great way to create android applications using wizard. In Android, you just need to follow some simple steps and with a few clicks we get our first hello world project up and running. 
+ Unlike other languages where you need to write code to run a basic hello world program, the Android Developer Tool (ADT) or Eclipse provides us a great way to create android applications using wizard. In Android, you just need to follow some simple steps and with a few clicks we get our first Android hello world project up and running. 
 
 This tutorial will help you understand our process and various options in the wizard. 
 
@@ -19,7 +19,7 @@ If ADT is not running, double click on ADT  to start the development environment
 ### Screen 1
 
 <br/>
-<%= image_tag "hello-android/screen1.png", alt: "New Application", title: "New Application" %>
+<%= image_tag "hello-android/screen1.png", alt: "Android Hello World new application", title: "Android Hello World New Application" %>
 
 This is the first Screen for creating a new android project. Let's cover each field shown above individually and try to understand their importance. 
 
@@ -39,7 +39,7 @@ Now, Click on Next:
 ### Screen 2
 
 <br/>
-<%= image_tag "hello-android/screen2.png", alt: "New Application project config", title: "New Application project config" %>
+<%= image_tag "hello-android/screen2.png", alt: "Android Hello World New Application project config", title: "Android Hello World New Application project config" %>
 
 This screen is use to configure various project settings, lets go 1 by 1 to see all these options 
 
@@ -54,7 +54,7 @@ Click Next
 ### Screen 3
 
 <br/>
-<%= image_tag "hello-android/screen3.png", alt: "New Application Launcher icon", title: "New Application Launcher icon" %>
+<%= image_tag "hello-android/screen3.png", alt: "Android Hello World New Application Launcher icon", title: "Android Hello World New Application Launcher icon" %>
 
 If you have checked the create custom launcher check box, screen 3 will be for the creation of launcher icon.
 
@@ -69,7 +69,7 @@ Click on Next
 ### Screen 4
 
 <br/>
-<%= image_tag "hello-android/screen4.png", alt: "New Application Activity Template", title: "New Application Activity Template" %>
+<%= image_tag "hello-android/screen4.png", alt: "Android Hello World New Application Activity Template", title: "Android Hello World New Application Activity Template" %>
 
 Screen 4 is an activity template screen. ADT comes pre bundled with some activity templates for you. These templates have predefined structures and they automatically generate required code for you.
 
@@ -82,7 +82,7 @@ Select Blank activity and Click Next
 ### Screen 5
 
 <br/>
-<%= image_tag "hello-android/screen5.png", alt: "New Application Activity Config", title: "New Application Activity Config" %>
+<%= image_tag "hello-android/screen5.png", alt: "Android Hello World New Application Activity Config", title: "Android Hello World New Application Activity Config" %>
 
 This screen is an Activity configuration screen. Since you asked ADT to create an activity for you, this screen helps you in configuring relevant options.
 
@@ -94,7 +94,7 @@ Click Finish
 Once you click Finish ADT will create your new project and will open Java code and Layout code for you. 
 
 <br/>
-<%= image_tag "hello-android/screen_new_project.png", alt: "New Project", title: "New Project" %>
+<%= image_tag "hello-android/screen_new_project.png", alt: "Android Hello World  New Project", title: "Android Hello World New Project" %>
 
 ## Running your Application
 
@@ -103,14 +103,14 @@ Once you click Finish ADT will create your new project and will open Java code a
 Right click on your project in **Package Explorer** window on the left and choose **Run As => Android Application** as shown below.
 
 <br/>
-<%= image_tag "hello-android/deploy-app.png", alt: "Deploy Android App", title: "Deploy Android App" %>
+<%= image_tag "hello-android/deploy-app.png", alt: "Android Hello World Deploy", title: "Android Hello World Deploy" %>
 <br/>
 <br/>
 
 You can also choose to deploy the app by clicking on the **green play button** on the top bar
 
 <br/>
-<%= image_tag "hello-android/green-play-button.png", alt: "Green Play Button", title: "Green Play Button" %>
+<%= image_tag "hello-android/green-play-button.png", alt: "Android Hello World Green Play Button", title: "Green Play Button" %>
 <br/>
 
 
@@ -119,7 +119,7 @@ You can also choose to deploy the app by clicking on the **green play button** o
 Once you deploy your app, **check bottom-right of Eclipse** for deployment progress. It should say something like `Launching HelloCodelearn: (xx%)`
 
 <br/>
-<%= image_tag "hello-android/deployment-in-progress.png", alt: "Deployment In Progress", title: "Deployment In Progress" %>
+<%= image_tag "hello-android/deployment-in-progress.png", alt: "Android Hello World Deployment In Progress", title: "Android Hello World Deployment In Progress" %>
 <br/>
 <br/>
 
@@ -136,7 +136,7 @@ The prominent con of using AVD is - it will take sometime to launch. Also, thing
 Once Eclipse has done preparing for the deployment, you will see a popup as shown below. 
 
 <br/>
-<%= image_tag "hello-android/noavd.png", alt: "No_AVD", title: "No_AVD" %>
+<%= image_tag "hello-android/noavd.png", alt: "Android Hello World No_AVD", title: "Android Hello World No_AVD" %>
 <br/>
 <br/>
 
@@ -145,14 +145,14 @@ You can either choose to create AVD ([covered in a separate section below](#Crea
 If you have connected your phone or already have an AVD created, select 'No' in <b>Android AVD Error</b> popup. Once you click on 'No' in Android AVD Error popup, you will see another popup **Android Device Chooser**. The device (AVD or the phone) will show up in this popup as highlighted below.
 
 <br/>
-<%= image_tag "hello-android/android-device-chooser.png", alt: "Android Device Chooser", title: "Android Device Chooser" %>
+<%= image_tag "hello-android/android-device-chooser.png", alt: "Android Hello World Android Device Chooser", title: "Android Hello World Android Device Chooser" %>
 <br/>
 <br/>
 
 Select the device & click 'Ok'. Your app will now be deployed on your device. It will look as below if deployed in an AVD. 
 
 <br/>
-<%= image_tag "hello-android/emulator.png", alt: "Hello World Emulator", title: "Hello World Emulator" %>
+<%= image_tag "hello-android/emulator.png", alt: "Android Hello World Emulator", title: "Android Hello World Emulator" %>
 <br/>
 <br/>
 
@@ -169,12 +169,12 @@ Let's see how we can create an emulator.
 AVD manager dialog will open, in recent versions of ADT you get 1 avd pre bundled. But in case of old ADT, you might not have any AVD. 
 
 <br/>
-<%= image_tag "hello-android/avd_manager.png", alt: "AVD Manager", title: "AVD Manager" %>
+<%= image_tag "hello-android/avd_manager.png", alt: "Android Hello World AVD Manager", title: "Android Hello World AVD Manager" %>
 
 Lets create a new AVD of our own. Click on New in AVD Manager to see AVD Creation dialog. 
 
 <br/>
-<%= image_tag "hello-android/create_avd.png", alt: "Create AVD", title: "Create AVD" %>
+<%= image_tag "hello-android/create_avd.png", alt: "Android Hello World Create AVD", title: "Android Hello World Create AVD" %>
 
 Let’s go through the elements of this dialog 
 
@@ -194,7 +194,7 @@ Once the AVD is created, you will see your newly created AVD in the AVD manager.
 
 Till now we have seen how to create a hello world application and test it in new emulator. Now, lets see how android folder structure looks like. Before getting deep into the folder structure, just click on the down arrow present at the left of your project to expand it to see all your folders in the project. 
 <br/>
-<%= image_tag "hello-android/folder_structure.png", alt: "Android App Folder Structure", title: "Android App Folder Structure" %>
+<%= image_tag "hello-android/folder_structure.png", alt: "Android Hello World App Folder Structure", title: "Android Hello World App Folder Structure" %>
 
 Lets go via each folder and see what each one is use for 
 
@@ -226,13 +226,13 @@ The console gives you all the information about events happening in ADT. Whether
 To open the console if it is not visible you can open it from Windows-> Show View -> Others -> General -> Console
 
 <br/>
-<%= image_tag "hello-android/console.png", alt: "Console", title: "Console" %>
+<%= image_tag "hello-android/console.png", alt: "Android Hello World Console", title: "Android Hello World Console" %>
 
 Console helps in knowing what is happening in your development environment 
 
 ### LogCAT
 <br/>
-<%= image_tag "hello-android/logcat.png", alt: "LogCat", title: "LogCat" %>
+<%= image_tag "hello-android/logcat.png", alt: "Android Hello World LogCat", title: "LogCat" %>
 
 An excellent tool which comes with ADT is logcat. It gives you all information about what is happening in your Android Emulator or Phone if you are using a android phone for testing your applications
 
@@ -244,7 +244,7 @@ To open the LogCat if it is not visible you can open it from Windows-> Show View
 
 ### DDMS
 <br/>
-<%= image_tag "hello-android/ddms.png", alt: "DDMS", title: "DDMS" %>
+<%= image_tag "hello-android/ddms.png", alt: "Android Hello World DDMS", title: "DDMS" %>
 
 DDMS is a very powerful perspective which comes with ADT, it lets you control and access different information from a device or emulator. To open DDMS, go to Windows -> Open Prespective -> DDMS
 
