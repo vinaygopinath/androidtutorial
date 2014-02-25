@@ -1,20 +1,22 @@
 #Android ListView
-<!--
-ListView in Android is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the listview is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any listitem by clicking on it. 
--->
+
+
+This Android ListView tutorial covers listview concepts in details with sample app examples. Once you have some confidence with Android Listview, you can then proceed to attempt App Tutorial by clicking "Learn to build a Twitter App" button on the right.
+	
+Android ListView is a view group that displays a list of scrollable items. If you have a date which is repeated in the form of a collection or list, the listview is the best User Interface element to use. ListView helps you in displaying repeating data in the form of a scrollable list. Users can then select any listitem by clicking on it. 
 
 ListView is widely used in Android Applications. A simple example of ListView is your contact book, where you have a list of your contacts displayed in a ListView. 
 
 <br/>
 <div class="row-fluid">
 	<div class="span4">
-		<%= image_tag "list_view/twitter_home.png", alt: "ListView Example Twitter", title: "ListView Example Twitter" %>
+		<%= image_tag "list_view/twitter_home.png", alt: "Android ListView Example Twitter", title: "Android ListView Example Twitter" %>
 	</div>
 	<div class="span4">
-		<%= image_tag "list_view/list-view-example-1.jpg", alt: "ListView Example Example ", title: "ListView Example" %>
+		<%= image_tag "list_view/list-view-example-1.jpg", alt: "Android ListView Example ", title: "Android ListView Example" %>
 	</div>
 	<div class="span4">
-		<%= image_tag "list_view/list-view-popup.png", alt: "ListView Example popup", title: "ListView Example popup" %>
+		<%= image_tag "list_view/list-view-popup.png", alt: "Android ListView Example popup", title: "Android ListView Example popup" %>
 	</div>
 </div>
 
@@ -23,13 +25,13 @@ Let's take an example:
 Have a look at the screenshot of the twitter app described above.
 
 
-All the rows are similar, and the only thing which changes is the tweet content. Such situation drives us to use ListView.
+All the rows are similar, and the only thing which changes is the tweet content. Such situation drives us to use Android ListView.
 
-##Using ListView In Android
+##Using Android ListView
 
 Android provides ListView or ExpandableListView. ExpandableListView contains list items which can be expanded. To use a listview in Android you can drag and drop the listview control from the palette to your UI. 
 
-Here is how listview code looks: 
+Here is how your Android listview code looks: 
 
         <ListView
             android:id="@+id/listView1"
@@ -40,14 +42,14 @@ Here is how listview code looks:
 
 ##ListItem
 
-A listview is made from a group of list items. List items are individual rows in listview where the data will be displayed. Any data in listview is displayed only through listItem. Consider Listview as scrollable group of list items. 
+An Android listview is made from a group of list items. List items are individual rows in listview where the data will be displayed. Any data in listview is displayed only through listItem. Consider Listview as scrollable group of list items. 
 
 List items are just layouts in a separate layout file. Let us understand the following example. 
  
 
-<%= image_tag "list_view/twitter_tweet.png", alt: "Twitter tweet", title: "Twitter tweet" %>
+<%= image_tag "list_view/twitter_tweet.png", alt: "Android Listview Twitter tweet example", title: "Android Listview Twitter tweet example" %>
 
-Here we can see a listitem for the twitter application. This list Item is arranged in a Relative layout with images and multiple text views aligned to each other. This is how a listview is designed.
+Here we can see a listitem for the twitter application. This list Item is arranged in a Relative layout with images and multiple text views aligned to each other. This is how an Android listview is designed.
 
 Once we have the listitem, we bind the listview to the Adapter and then use list items to display the data in listview. 
 
@@ -57,10 +59,10 @@ In the coming sections, we will learn more about how we create custom list items
 
 Android Adapter is a bridge between the View (e.g. ListView) and the underlying data for that view. An adapter manages the data and adapts the data to the individual rows (listItems) of the view.
 
-We bind the adapter with listview via *setAdapter* method. 
+We bind the adapter with Android listview via *setAdapter* method. 
 Now, Let us see how adapter works with the help of the following image.
 
-<%= image_tag "list_view/Adapter.png", alt: "Adapters", title: "Adapters" %> 
+<%= image_tag "list_view/Adapter.png", alt: "Android Listview Adapters", title: "Adapters" %> 
 
 As stated earlier, Adapters act as a bridge to the views. To interact with the view, adapters call the getView() method which returns a view for each item within the adapter view. This is a listitem which we have seen earlier. The layout format and the corresponding data for an item within the adapter view are set in the getView() method.  
 
@@ -118,9 +120,9 @@ Once you have a reference of listview, you can just call *setAdapter* method by 
 
         codeLearnLessons.setAdapter(codeLearnArrayAdapter);
 
-With these simple 4 lines of code, you created your first listview. If you run the application downloaded from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample) and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
+With these simple 4 lines of code, you created your first Android listview. If you run the application downloaded from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample) and click on simpleAdapter button, you will see the array adapter in action. This is how it will look: 
 
-<%= image_tag "list_view/Array_adapter.png", alt: "ArrayAdapters", title: "ArrayAdapters" %>
+<%= image_tag "list_view/Array_adapter.png", alt: "Android ListView ArrayAdapters", title: "ArrayAdapters" %>
 
 We have seen a simple ArrayAdapter, but most of the times you need more than 1 data in the listitem. Let's look how we can leverage base adapter class to achieve what we want. 
 
@@ -128,7 +130,7 @@ If you notice in the above example, we have used Android.R.Layout item. This is 
 
 * simple_list_item_1 : A list Item with single TextView
 * simple_list_item_2 : A List Item  with 2 texviews in 2 different lines
-* simple_expandable_list_item_1 : A List Item with Expandable View. List Items in listview can be of 2 types. First, which just displays all content(simple listview item).Second, an expandable listitem which contains some hidden data. This hidden data can be viewed if a user clicks on expand/collapse button. 
+* simple_expandable_list_item_1 : A List Item with Expandable View. List Items in Android listview can be of 2 types. First, which just displays all content(simple listview item).Second, an expandable listitem which contains some hidden data. This hidden data can be viewed if a user clicks on expand/collapse button. 
 * simple_list_item_single_choice : A List Item with a radio button after textView. You can use this when you want to get a choice from the user.
 * simple_list_item_multiple_choice: A List Item with a Check Box after textview. You can use this when you want to get multiple choices from the user. 
 
@@ -137,9 +139,9 @@ If you notice in the above example, we have used Android.R.Layout item. This is 
 
 We have seen above what we can do with ArrayAdapter. But for most use cases you will have a complex layout for list items as below : 
 <br/>
-<%= image_tag "list_view/list_item.png", alt: "List Item", title: "List Item" %>
+<%= image_tag "list_view/list_item.png", alt: "Android Listview List Item", title: "List Item" %>
 
-This kind of complex list items can be bound with BaseAdapter. With base Adapter you can practically build any layout which you want in your listview. 
+This kind of complex list items can be bound with BaseAdapter. With base Adapter you can practically build any layout which you want in your Android listview. 
 
 ###BaseAdapter
 BaseAdapter is a common base class of a general implementation for an Adapter that can be used in ListView. BaseAdapter can be extended to create a custom Adapter to suit your need of building a custom listitem.
@@ -203,7 +205,7 @@ Now we understand all the methods of custom adapter. Let's create our own Custom
 
 First Step to have a custom ListView is to have a custom listitem. Let's create a custom listitem like this 
 <br/>
-<%= image_tag "list_view/list_item.png", alt: "List Item", title: "List Item" %>
+<%= image_tag "list_view/list_item.png", alt: "Android Listview List Item", title: "List Item" %>
 
 This is similar to the one used in the twitter app.
 
@@ -405,7 +407,7 @@ Now Let us bind the Adapter with ListView by calling setAdapter Method.
 
 This is how the ListView will look when you run it: 
 
-<%= image_tag "list_view/Custom_Base_adapter.png", alt: "Custom Adapter", title: "Custom Adapter" %>
+<%= image_tag "list_view/Custom_Base_adapter.png", alt: "Android Listview Custom Adapter", title: "Custom Adapter" %>
 
 
 ##ListView Click Listener
@@ -489,6 +491,22 @@ ListActivity provides you with a default method onListItemClick. This will be in
 
 You can view the ListActivity example in the sample project that you downloaded. Refer to ListViewWithListActivity.java
 
->Watchout: ListActivity works well if you have only single ListView. In case you have more than one listview, you need to put extra code for the other ListView to work. 
+>Watchout: ListActivity works well if you have only single ListView. In case you have more than one Android listview, you need to put extra code for the other ListView to work. 
 
 You can download the sample app from [here](https://github.com/pranayairan/Code-Learn-Android-Example/tree/master/CodeLearnListExample)
+<div>
+Great ! Now that you know about ListView, It's time to see it in Action by trying our App Tutorial
+</div>
+<br/>
+<div>
+<%= link_to app_tutorial_get_started_path("twitter"), :id => "listviewbtn", :class => "btn btn-small btn-danger" do %>
+<h6>Learn to build a Twitter app<br/><small style="font-size:small; color:inherit"></small></h6>
+<% end %>
+</div>
+
+
+
+<script type="text/javascript">
+mixpanel.track_links("#listviewbtn", "listviewconceptlsn");
+mixpanel.track("listViewConceptLesson");
+</script>
