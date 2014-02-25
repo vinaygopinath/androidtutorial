@@ -1,12 +1,12 @@
-#Logging in Android 
+#Android Log
 
 ## Beginner 
 
 ### Introduction 
 
-To generate log statements for debugging is a common feature in different programming languages including Android. In java, you can do `System.out.println()` to dump a message where you want to, but it does not work in Android. 
+To generate Android log statements we follow a different approach than other languages . In java, you can do `System.out.println()` to dump a message where you want to, but it does not work in Android. 
 
-There is Log class from Android that lets you create logging messages with one line of code
+There is an Android Log class that lets you create log messages with one line of code
 
     Log.d("Tag Name", "Log Message")
 
@@ -17,7 +17,7 @@ You need to `import android.utils.Log` in appropriate Activity file where you ar
 You can view the messages in `LogCat` window in Eclipse. It is located at the bottom of Eclipse.
 
 <br/>
-<%= image_tag "android-logging/logcat-screenshot.png", title: "Logcat Screenshot", alt: "Logcat Screenshot" %>
+<%= image_tag "android-logging/logcat-screenshot.png", title: "Android Logcat Screenshot", alt: "Android Log Screenshot" %>
 
 ### Opening LogCat in Eclipse
 
@@ -28,13 +28,13 @@ LogCat window is by default available in the bottom window of Eclipse. Other win
 		<h3>Step 1</h3>
 		<p>Window → Show View → Other...</p>
 		<br/>
-		<%= image_tag "android-logging/logcat-open-step1.png", title: "Open Logcat step 1", alt: "Open Logcat Step 1" %>
+		<%= image_tag "android-logging/logcat-open-step1.png", title: "Android log Open Logcat step 1", alt: "Android log Open 1" %>
 	</div>
 	<div class="span6">
 		<h3>Step 2</h3>
 		<p>Open Android Dropdown → Logcat</p>
 		<br/>
-		<%= image_tag "android-logging/logcat-open-step2.png", title: "Open Logcat step 2", alt: "Open Logcat Step 2" %>
+		<%= image_tag "android-logging/logcat-open-step2.png", title: "Android log Open Logcat step 2", alt: "Android log Open 2" %>
 	</div>
 </div>
 
@@ -49,7 +49,7 @@ For eg:
 has `MyTag` as the tag attached to the log message. You can search for the message by putting **tag:MyTag** in the search field of LogCat
 
 <br/>
-<%= image_tag "android-logging/logcat-message-filtering.png", title: "Logcat Message Filtering", alt: "Logcat Message Filtering" %>
+<%= image_tag "android-logging/logcat-message-filtering.png", title: "Android Logcat Message Filtering", alt: "Android Log Message Filtering" %>
 
 ## Intermediate
 
@@ -76,7 +76,7 @@ LogCat is populated by log messages from various different apps, Android system 
 Change the message filter level (verbose, debug, info etc) in the dropdown next to input field in LogCat as highlighted in the screenshot below.
 
 <br/>
-<%= image_tag "android-logging/logcat-message-level-filtering.png", title: "Logcat Message Level Filtering", alt: "Logcat Message Level Filtering" %>
+<%= image_tag "android-logging/logcat-message-level-filtering.png", title: "Android Logcat Message Level Filtering", alt: "Android Log Message Level Filtering" %>
 
 #### By Tag 
 
@@ -96,26 +96,26 @@ Through the filter input, you can apply only one filter at one time (like filter
 
 Click on the green '+' button next to 'Saved Filters' as shown below to create a new filter.  
 <br/>
-<%= image_tag "android-logging/logcat-create-new-filter.png", title: "Create New Filter", alt: "Create New Filter" %>
+<%= image_tag "android-logging/logcat-create-new-filter.png", title: "Android log Create New Filter", alt: "Android log Create New Filter" %>
 
 Add all your parameter in the popup window that shows.
 
 > Do not add prefix 'tag:', 'app:' or 'pid:' in the input fields
 
 <br/>
-<%= image_tag "android-logging/logcat-new-filter.png", title: "New Filter", alt: "New Filter" %>
+<%= image_tag "android-logging/logcat-new-filter.png", title: "Android log New Filter", alt: "Android log New Filter" %>
 
 Once you save filter & a new entry gets created below **All messages (no filters)** . In the screenshot, it is named MyTagFilter. Clicking on the filter name will apply filter to log messages.
 
 <br/>
-<%= image_tag "android-logging/logcat-filter-created.png", title: "Filter Created", alt: "Filter Created" %>
+<%= image_tag "android-logging/logcat-filter-created.png", title: "Android log Filter Created", alt: "Android log Filter Created" %>
 
 ###Saving & Clearing logs 
 
 The save button next to the log level selection button lets you save the logs in a text file. The button with red cross next to it clears the log. Hover on the buttons to see their actions. 
 
 <br/>
-<%= image_tag "android-logging/logcat-save-clear-buttons.png", title: "Logcat Save Clear Buttons", alt: "Logcat Save Clear Buttons" %>
+<%= image_tag "android-logging/logcat-save-clear-buttons.png", title: "Android Logcat Save Clear Buttons", alt: "Android Log Save Clear Buttons" %>
 
 ##Advanced
 

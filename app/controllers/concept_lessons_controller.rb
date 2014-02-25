@@ -43,6 +43,11 @@ class ConceptLessonsController < ApplicationController
 		  @title = "Android ListView | Everything you need to know about Android listview"
 		  @disqus_identifier = "concept-lesson-8"
 		  @keyword = "android listview,listview android,listview,android horizontal listview,android listview example,listview android example,android listview adapter,android custom listview,custom listview android,android listview header,listview in android,list view,android adapter,ArrayAdapter,BaseAdapter"
+	  when "android-log"
+		  @description = "Android log is a very important tool to for android development. Split across Beginner, Intermediate and Advanced sections, this lesson covers details with code examples."
+		  @title = "Android Intent Tutorial with Example"
+		  @disqus_identifier = "concept-lesson-6"
+
 	  end
 
   end
