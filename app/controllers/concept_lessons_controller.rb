@@ -35,7 +35,7 @@ class ConceptLessonsController < ApplicationController
 		  @title = "Android Intent Tutorial with Example"
 		  @disqus_identifier = "concept-lesson-6"
 	  when "android-views"
-		  @description = "This Android tutorial describes standard View elements such as gridview, imageview, scrollview, and textView in Android with example. Other widgets such as radio button, EditText and Checkbox are also covered in detail with sample examples for each android view element."
+		  @description = "This Android Views tutorial explains elements such as gridview, imageview, scrollview, and textView in Android with example. Other widgets such as radio button, EditText and Checkbox are also covered in detail with sample examples for each android views element."
 		  @title = "Android View Elements - Gridview, Scrollview, Imageview, Textview, Checkbox"
 		  @disqus_identifier = "concept-lesson-7"
 	  when "android-listview"

@@ -1,4 +1,6 @@
-#Android Widgets / View Elements
+#Android Views
+
+Android Views and it's standard elements such as textview, imageview, edittext, scrollview etc are introduced in this lesson along with details on each.
 
 Any Android app is made up of a lot of Activities, and all the Activities have User interface. Android provides us a lot of prebuilt user interface elements to create a nice looking UI for our app.
 
@@ -9,26 +11,26 @@ In Android, all layouts are XML based. Even though you get a nice graphical edit
 ##Graphical Layout
 If you open any Layout in ADT, you will see 2 tabs like the one in this image 
 <br/>
-<%= image_tag "android_widgets/tabs.png", alt: "Layout Tabs", title: "Layout Tabs in Android" %>
+<%= image_tag "android_widgets/tabs.png", alt: "Android views Layout Tabs", title: "Android views Layout Tabs" %>
 
 To open Graphical Layout for dragging and dropping UI elements, just click on the Graphical Layout tab.
 
 This is how the Graphical Layout Editor looks like :
 <br/>
-<%= image_tag "android_widgets/layout_editor.png", alt: "Layout Editor", title: "Layout Editor in Android" %>
+<%= image_tag "android_widgets/layout_editor.png", alt: "Android views Layout Editor", title: "Android views Layout Editor" %>
 
 Let us see what are its sub components
 
 ###Palette
 Palette section has all your basic UI elements categorized into different sections, like Form Widgets, TextFields, Layouts etc. You can just choose any Element by Dragging and Dropping it to the working area on the right of the Screen. 
 <br/>
-<%= image_tag "android_widgets/layout_palette.png", alt: "Layout Palette", title: "Layout Palette in Android" %>
+<%= image_tag "android_widgets/layout_palette.png", alt: "Android views Layout Palette", title: "Android views Layout Palette" %>
 
 
 ###Control Bar 
 The top bar which you see with options like Nexus one, App Theme etc. is called control bar. It has different options to test the UI against different conditions. You can control the size of the screen, orientation,theme etc. from this bar. You can also change Zoom level, check lint warnings etc. from this bar. 
 <br/>
-<%= image_tag "android_widgets/layout_control.png", alt: "Layout Control", title: "Layout Control in Android" %>
+<%= image_tag "android_widgets/layout_control.png", alt: "Android views Layout Control", title: "Android views Layout Control" %>
 
 ###Design Area
 The remaining area to the right side of the palette is the Design Area. Here, you can drag and drop elements to add in the UI, rearrange already added elements, reorder them, change their properties, etc. 
@@ -36,19 +38,19 @@ The remaining area to the right side of the palette is the Design Area. Here, yo
 
 ##Common Attributes and Properties
 
-All UI elements are of type View and have some common properties which are useful to understand their behavior. Whenever you drag and drop a UI element from Designer view, it also automatically generate at least these 3 properties of the view.
+All UI elements are of type View and have some common properties which are useful to understand their behavior. Whenever you drag and drop a UI element from Designer view, it also automatically generate at least these 3 properties of the android view.
 
 ###android:id 
-It is used to identify a particular View in Java Code. When you assign an ID to a View, it makes that view uniquely identifiable through this ID in that Layout. In later chapters, we will see the use of ID in details. 
+It is used to identify a particular View in Java Code. When you assign an ID to a View, it makes that android view uniquely identifiable through this ID in that Layout. In later chapters, we will see the use of ID in details. 
 
 Here is how it will look like in code
         android:id="@+id/textView1"
 
 ###android:layout_width 
-layout_width property of view defines the width of that view. You should define width in px or dp.
+layout_width property of android views defines the width of that view. You should define width in px or dp.
 
 ###android:layout_height
-layout_height property of view defines the height of that view. You should define height in px or dp.
+layout_height property of android views defines the height of that view. You should define height in px or dp.
 
 
 Here is how Height and Width will look into code
@@ -56,7 +58,7 @@ Here is how Height and Width will look into code
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-Since all UI elements are inherited from view, all have an onClick property. We will explore onClick for some of the UI elements. 
+Since all UI elements are inherited from android views, all have an onClick property. We will explore onClick for some of the UI elements. 
 
 Here are some common attributes or terminology which will be good to understand before watching UI elements in action
 
@@ -92,7 +94,7 @@ For Individual Sides
         android:paddingBottom="8dp
 
 ###Margin
-Margins are the spaces outside the border, between the border and the other elements next to this view, IE margin is the outside view, it is a space between 2 views, whenever you want to give space between 2 views you can use Margin. 
+Margins are the spaces outside the border, between the border and the other elements next to this view, IE margin is the outside view, it is a space between 2 Android views, whenever you want to give space between 2 views you can use Margin. 
 
 For Example: If you set margin in EditText, the EditText will move by that value from it's parent view.
 
@@ -113,7 +115,7 @@ For Individual Sides
 You might wonder what is the difference between margin and padding. Let's see an Image to Understand better. 
 
 <br/>
-<%= image_tag "android_widgets/margin_padding.jpg", alt: "Padding and Margin", title: "Android Padding and Margin" %>
+<%= image_tag "android_widgets/margin_padding.jpg", alt: "Android views Padding and Margin", title: "Android views Android Padding and Margin" %>
 
 In the image, margin is the gray area outside the entire object. The border is the point where your view ends. 
 
@@ -149,7 +151,7 @@ Notice the attribute android here, which is referring to Android Schema. This Sc
 
 ##TextView
 <br/>
-<%= image_tag "android_widgets/textview.png", alt: "Text View", title: "TextView in Android" %>
+<%= image_tag "android_widgets/textview.png", alt: "Android views TextView", title: "Android views TextView" %>
 
 Textview is most simple UI element. It is used to display static text, which cannot be changed by the user. 
 
@@ -198,7 +200,7 @@ With these 2 simple lines of code, you can change the text of textview dynamical
 
 ##EditText
 <br/>
-<%= image_tag "android_widgets/edittext.png", alt: "Edit Text", title: "EditText in Android" %>
+<%= image_tag "android_widgets/edittext.png", alt: "Android views Edit Text", title: "Android views EditText" %>
 
 EditText is another most used UI element in Android. Whenever you want to take some input from the user, you can use EditText. 
 
@@ -251,7 +253,7 @@ Similar to TextView, to set the text of EditText, you can call
 
 ##Button
 <br/>
-<%= image_tag "android_widgets/button.png", alt: "Button", title: "Buttons in Android" %>
+<%= image_tag "android_widgets/button.png", alt: "Android views Button", title: "Android views Buttons" %>
 
 ###What
 Button is the most used UI element in Android. For every action you want to do, you want the user to click on a button. 
@@ -305,7 +307,7 @@ Similar to editText and textView you can call **setText** method on the button o
 
 ## ImageView
 <br/>
-<%= image_tag "android_widgets/imageview.png", alt: "ImageView", title: "ImageView in Android" %>
+<%= image_tag "android_widgets/imageview.png", alt: "Android views ImageView", title: "Android views ImageView" %>
 
 ###What
 Any android app is incomplete without use of an image. Image View is the UI control which you can use to display image in your android app. 
@@ -345,7 +347,7 @@ Once we have the image view object, we can call setImageResource method to chang
 
 ##RadioButton
 <br/>
-<%= image_tag "android_widgets/radiobutton.png", alt: "Radio Button", title: "RadioButton in Android" %>
+<%= image_tag "android_widgets/radiobutton.png", alt: "Android views Radio Button", title: "Android views RadioButton" %>
 
 ###What
 If you want your users to pick one from a set of options, use Radio button. 
@@ -446,7 +448,7 @@ Here is how the complete Radio button declaration will look inside the XML
 
 ##CheckBox
 <br/>
-<%= image_tag "android_widgets/checkbox.png", alt: "CheckBox", title: "CheckBox in Android" %>
+<%= image_tag "android_widgets/checkbox.png", alt: "Android views CheckBox", title: "Android views CheckBox" %>
 
 ###What
 If you want to select one or more options from a set, use Check Box. 
