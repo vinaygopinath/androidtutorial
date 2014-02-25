@@ -1,17 +1,15 @@
-# Layouts in Android
+# Android Layout
 
-Android Layout is a View element container in Android. It is also known as **Viewgroup**. All view elements like textbox, label, buttons etc need to be contained inside the layout. 
+Android Layout is the most interesting View element container in Android. To design UI for an App, you need to know about Android Layout. It is also known as **Viewgroup**. All view elements like textbox, label, buttons etc need to be contained inside the layout. This Layout is in-turn contained in a layout file location inside **res/layout** directory of the Android app. An Android Activity uses the Android Layout & shows output on the screen. 
 
-The Layout is in-turn contained in a layout file location inside **res/layout** directory of the Android app. An Android Activity uses the Layout & shows output on the screen. 
-
-The three most important kind of Layout elements are
+The three most important kind of Android Layout elements are
 
 * LinearLayout
 * RelativeLayout
 * GridLayout
 
 
-## LinearLayout
+## Android Linear Layout
 
 It is one of the fundamental layout in Android which is available for developers to implement their UI’s. So, as the name itself indicates this layout is “linear” in the sense that is puts its children in a linear fashion.LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally.
 
@@ -25,7 +23,7 @@ So, the available orientation for LinearLayout are :
 
 [Download this sample project](https://github.com/codelearn-org/android-linear-layout-example) , import in Eclipse & navigate to activity_main.xml file as shown in the screenshot below.
 <br/>
-<%= image_tag "android-layouts/linear-layout-file-location.png", alt: "Linear Layout XML file", title: "Linear Layout XML file" %>
+<%= image_tag "android-layouts/linear-layout-file-location.png", alt: "Android Linear Layout XML file", title: "Android Linear Layout XML file" %>
 <p class="ac"><b>Linear Layout XML file</b></p>
 <br/>
 
@@ -72,7 +70,7 @@ LinearLayout can be used in vertical or horizontal fashion. We can set the orien
     </LinearLayout>
 
 <br/>
-<%= image_tag "android-layouts/linear-layout-horizontal-screenshot.png", alt: "Linear Layout horizontal alignment Screenshot", title: "Linear Layout horizontal alignment Screenshot" %>
+<%= image_tag "android-layouts/linear-layout-horizontal-screenshot.png", alt: "Android Linear Layout horizontal alignment", title: "Android Linear Layout horizontal alignment" %>
 <p class="ac"><b>Linear Layout horizontal alignment screenshot</b></p>
 <br/>
 
@@ -97,14 +95,14 @@ In the vertical “orientation” all the children are put one below the other. 
 Save the file & deploy your Android app. You will see the screenshot as shown below. 
 
 <br/>
-<%= image_tag "android-layouts/linear-layout-vertical-screenshot.png", alt: "Linear Layout vertical alignment Screenshot", title: "Linear Layout vertical alignment Screenshot" %>
+<%= image_tag "android-layouts/linear-layout-vertical-screenshot.png", alt: "Android Linear Layout vertical alignment Screenshot", title: "Android Linear Layout vertical alignment Screenshot" %>
 <p class="ac"><b>Linear Layout vertical alignment screenshot</b></p>
 <br/>
 
 
-## Relative Layout
+## Android Relative Layout
 
-Relative layout is also one of the basic layout in Android available to design UI. It arranges its views with reference to the view siblings or with parent. That is, using Relative layout you can mention a view to be **onLeft, onRight, onBottom or toTop** of its siblings. You can also mention/position a view with respect to its parent.
+Android Relative layout is also one of the basic layout in Android available to design UI. It arranges its views with reference to the view siblings or with parent. That is, using Relative layout you can mention a view to be **onLeft, onRight, onBottom or toTop** of its siblings. You can also mention/position a view with respect to its parent.
 
 
 
@@ -113,8 +111,8 @@ In this layout, you can specify the child layouts w.r.t its sibling or parent. T
 ### Position relative to container/parent 
 
 <br/>
-<%= image_tag "android-layouts/relative-layout-position-options.png", alt: "Relative Layout position options", title: "Relative Layout position options" %>
-<%= image_tag "android-layouts/relative-layout-position-options-2.png", alt: "Relative Layout position options", title: "Relative Layout position options" %>
+<%= image_tag "android-layouts/relative-layout-position-options.png", alt: "Android Relative Layout position options", title: "Android Relative Layout position options" %>
+<%= image_tag "android-layouts/relative-layout-position-options-2.png", alt: "Android Relative Layout position options", title: "Android Relative Layout position options" %>
 <p class="ac"><b>Relative Layout position options</b></p>
 <br/>
 
@@ -136,19 +134,19 @@ Most common attribute are the kind of **layout_toXXXOf**. XXX can take Left, Rig
 
 Apart from it, there is **layout_above & layout_below**. The names are self explainatory. 
 
-### Relative Layout Example 
+### Android Relative Layout Example 
 
 [Download this sample project](https://github.com/codelearn-org/android-relative-layout-example) , import in Eclipse & navigate to [activity_relative_layout.xml](https://github.com/codelearn-org/android-relative-layout-example/tree/master/res/layout) file as shown in the screenshot below.
 
 <br/>
-<%= image_tag "android-layouts/relative-layout-file-location.png", alt: "Relative Layout XML file", title: "Relative Layout XML file" %>
+<%= image_tag "android-layouts/relative-layout-file-location.png", alt: "Android Relative Layout XML file", title: "Android Relative Layout XML file" %>
 <p class="ac"><b>Relative Layout XML file</b></p>
 <br/>
 
 Run the project & you will see screenshot as below.
 
 <br/>
-<%= image_tag "android-layouts/relative-layout-screenshot.png", alt: "Relative Layout Screenshot", title: "Relative Layout Screenshot" %>
+<%= image_tag "android-layouts/relative-layout-screenshot.png", alt: "Android Relative Layout Screenshot", title: "Android Relative Layout Screenshot" %>
 <p class="ac"><b>Relative Layout Screenshot</b></p>
 <br/>
 
@@ -202,7 +200,7 @@ A **RelativeLayout** on the other hand, allows for a more random arrangement of 
 
 The following figure should give you an understanding when to choose between either of them &nbsp;
 
-<%= image_tag "android-layouts/linear-vs-relative.png", alt: "Relative and Linear Layout Difference", title: "Relative and Linear Layout Difference" %>
+<%= image_tag "android-layouts/linear-vs-relative.png", alt: "Android Relative and Linear Layout Difference", title: "Android Relative and Linear Layout Difference" %>
 
 One important point to note is that in almost every circumstance, `RelativeLayout` and `LinearLayout` can be used to replace the other. However, in
 general, it is usually much more verbose to do it. In some cases, if the layout is fairly simple, it really doesn't matter which one you choose.
@@ -210,13 +208,13 @@ general, it is usually much more verbose to do it. In some cases, if the layout 
 
 ## Grid Layout
 
-An Android layout that places its children in a rectangular grid.GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
+Grid Layout is an Android layout that places its children in a rectangular grid. GridLayout uses a grid of infinitely-thin lines to separate its drawing area into: rows, columns, and cells. It supports both row and column spanning, which together allow a widget to occupy a rectangular range of cells that are next to each other. 
 
 
 [Download the sample project](https://github.com/pocha/android-grid-layout-example), import it in Eclipse & navigate to [grid_layout.xml](https://github.com/pocha/android-grid-layout-example/blob/master/res/layout/grid_layout.xml) file inside layout directory as shown in the image
 
 <br/>
-<%= image_tag "android-layouts/grid-layout-file-location.png", alt: "Grid Layout XML file", title: "Grid Layout XML file" %>
+<%= image_tag "android-layouts/grid-layout-file-location.png", alt: "Android Grid Layout XML file", title: "Android Grid Layout XML file" %>
 <p class="ac"><b>Grid Layout XML file</b></p>
 <br/>
 
@@ -270,7 +268,7 @@ Above is example of 4x4 grid layout with horizontal orientation. The orientation
 In the above layout, we have put Textviews in the form of a grid. As the orientation is horizontal, it starts filling the 4X4 grid horizontally and populates all the views. If we change the orientation to vertical, the layout will be traced in a vertical fashion. Below are the screenshots for both orientations.
 
 <br/>
-<%= image_tag "android-layouts/grid-layout-screenshot.png", alt: "Grid Layout Screenshot", title: "Grid Layout Screenshot" %>
+<%= image_tag "android-layouts/grid-layout-screenshot.png", alt: "Android Grid Layout Screenshot", title: "Android Grid Layout Screenshot" %>
 <p class="ac"><b>Grid Layout Screenshot</b></p>
 <br/>
 
@@ -310,7 +308,7 @@ This behavior is similar to how HTML table behaves.
     </GridLayout>
 
 <br/>
-<%= image_tag "android-layouts/grid-layout-table-like-behavior.png", alt: "Grid Layout Table Like Behavior", title: "Grid Layout Table Like Behavior" %>
+<%= image_tag "android-layouts/grid-layout-table-like-behavior.png", alt: "Android Grid Layout Table Like Behavior", title: "Android Grid Layout Table Like Behavior" %>
 <p class="ac"><b>Grid Layout Table Like Behavior</b></p>
 <br/>
 
