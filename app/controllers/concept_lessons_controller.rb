@@ -29,7 +29,7 @@ class ConceptLessonsController < ApplicationController
 		  @title = "Layouts in Android Tutorial"
 		  @disqus_identifier = "concept-lesson-4"
 	  when "android-activity"
-		  @description = "This chapter describes Android activity lifecycle in an Android App with a simple example."
+		  @description = "This lesson covers Android activity and it's lifecycle. Learn Android activity concept through an example Android App."
 		  @title = "Android Activity Lifecycle with Example"
 		  @disqus_identifier = "concept-lesson-5"
 	  when "android-intents"

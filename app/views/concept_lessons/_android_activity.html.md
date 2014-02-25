@@ -1,8 +1,8 @@
-#Android Activity LifeCycle
+#Android Activity
 
-In <%= link_to "the chapter detailing Android Basics", android_concept_lesson_path("android-introduction")  %>, we saw that the Activity is the basic building block of an Android App. The Activity always has a User Interface. Android apps consist of one or many Activities. We also saw that to tell Android, which activity to open when the application is launched, we defined Main Activity in Manifest.xml. 
+Android Activity is the basic building block of an Android App. We have already seen this in <%= link_to "the chapter detailing Android Basics", android_concept_lesson_path("android-introduction")  %>. Android Activity always has a User Interface. Android apps consist of one or many Activities. We also saw that to tell Android, which activity to open when the application is launched, we defined Main Activity in Manifest.xml. 
 
-An Activity has a Lifecycle during which it performs a few things. The first question when reading about Lifecycle of Activity Lifecycle is - Why is it required ? Let's understand it with an example. 
+An Android Activity has a Lifecycle during which it performs a few things. The first question when reading about Lifecycle of Activity Lifecycle is - Why is it required ? Let's understand it with an example. 
 
 Assume you are playing a game on your phone, you are at level 2 and suddenly some one calls you. When you get a call, your games stop and you see the Caller Id Screen. When you resume your game after the call ends, it gets resumed from the same point where you left it. 
 
@@ -11,7 +11,7 @@ Now assume you are a game developer. For you, there should be a way to save the 
 ##Activity Lifecycle
 
 <br/>
-<%= image_tag "activity_lifecycle/activity_lifecycle.png", alt: "Activity Lifecycle", title: "Activity Lifecycle" %>
+<%= image_tag "activity_lifecycle/activity_lifecycle.png", alt: "android activity lifecycle", title: "Android Activity Lifecycle" %>
 
 The above image shows various functions like 'onCreate()', 'onStart()' which gets called at various points of an Activity Lifecycle. Let's look at each of the methods/functions in detail.
 
@@ -42,7 +42,7 @@ Why is this necessary, imagine you have a form and user has already filled some 
 onResume is a good place to refresh your UI with any new changes which might have occurred during the period in which the Activity was not visible. For example, if you are polling a Service in the background (like checking for new tweets), onResume is a good place to update your screen with new results. 
 
 ###onPause:
-`onPause` is called when another activity comes on top of your Activity. Typically anything that steals your user away from your Activity will result in onPause.
+`onPause` is called when another android activity comes on top of your Activity. Typically anything that steals your user away from your Activity will result in onPause.
 
 In OnPause, we either release the resources, or save the application data, or stop background threads etc. 
 
@@ -50,11 +50,11 @@ It is always guaranteed that whenever your Activity is becoming invisible or par
 
 ###onStop: 
 
-`onStop` is called when your Activity is no longer visible to the user, it is similar to onPause but here you will not see your activity entirely.  You can use this method as well to store the state of your application and shut down time intensive or CPU intensive operations. This method is guaranteed to be called as of API level 11.
+`onStop` is called when your Activity is no longer visible to the user, it is similar to onPause but here you will not see your android activity entirely.  You can use this method as well to store the state of your application and shut down time intensive or CPU intensive operations. This method is guaranteed to be called as of API level 11.
 
-So what is the difference between onPause and OnStop ? If an Activity comes into the foreground and fills the screen such that your current activity is not at all visible, your current activity will be called with both onPause and onStop . If, however, an Activity that comes to foreground does not fill the screen and your current Activity is partially visible, your current Activity will be called with only onPause. 
+So what is the difference between onPause and OnStop ? If an Activity comes into the foreground and fills the screen such that your current activity is not at all visible, your current android activity will be called with both onPause and onStop . If, however, an Activity that comes to foreground does not fill the screen and your current Activity is partially visible, your current Activity will be called with only onPause. 
 
-Typically whenever you see a dialog box which requires your attention like battery low, network connection your current activity becomes partially visible and popup box comes on the top. This is the point where only onPause will be called. 
+Typically whenever you see a dialog box which requires your attention like battery low, network connection your current android activity becomes partially visible and popup box comes on the top. This is the point where only onPause will be called. 
 
 ###onRestart:
 It is similar to onCreate, but `onRestart` gets called only after onStop. This is the method which you can use to know if your application is starting afresh or getting restarted. 
@@ -83,27 +83,27 @@ The Android OS uses a priority queue to assist in managing activities running on
 		<p>Activities are considered active or running if they are in the foreground. This state denotes the top of the Activity stack. The Activity gets assigned the highest priority and will only be killed by Android in extreme situations, such as if the Activity tries to use more memory more than what is available on the device. It can cause the Activity to become unresponsive.</p>
 	</div>
 	<div class="span4">
-		<%= image_tag "activity_lifecycle/activity_running.png", alt: "Activity State Activity Running", title: "Activity State Activity Running" %>
+		<%= image_tag "activity_lifecycle/activity_running.png", alt: "Android Activity lifecycle State", title: "Android Activity lifecycle State Running" %>
 	</div>
 </div>
 
 ###Paused
 <div class="row-fluid">
 	<div class="span8">
-		<p>An Activity is in the Paused state if the device goes to sleep or if it is covered with another Activity partially or completely. Paused activities are very much alive, that is, they maintain all the states and member information. They remain attached to the window manager too. This is considered to be the second highest priority in the Activity stack. Paused Activites will only get killed by Android to keep the Active/Running Activity stable and responsive.</p>
+		<p>An Android Activity is in the Paused state if the device goes to sleep or if it is covered with another Activity partially or completely. Paused activities are very much alive, that is, they maintain all the states and member information. They remain attached to the window manager too. This is considered to be the second highest priority in the Android Activity stack. Paused Activites will only get killed by Android to keep the Active/Running Activity stable and responsive.</p>
 	</div>
 		<div class="span4">
-		<%= image_tag "activity_lifecycle/activity_paused.png", alt: "Activity State Activity Paused", title: "Activity State Activity Paused" %>
+		<%= image_tag "activity_lifecycle/activity_paused.png", alt: "Android Activity lifecycle State Paused", title: "Android Activity lifecycle State Paused" %>
 	</div>
 </div>
 
 ###Stopped
-Activities that are completely obscured by another activity are considered stopped or in the background. Stopped activities still try to retain their state and member information for as long as possible, but stopped activities are considered to be the lowest priority of the three states.
+Android Activities that are completely obscured by another activity are considered stopped or in the background. Stopped activities still try to retain their state and member information for as long as possible, but stopped activities are considered to be the lowest priority of the three states.
 
 
-##Android Example App
+##Android Activity Lifecycle Example App
 
-We have seen various states of Activity and seen all the Lifecycle methods. Let's walk through a code example and see these Lifecycle methods in action.
+We have seen various states of Android Activity and seen all the Lifecycle methods. Let's walk through a code example and see these Lifecycle methods in action.
 
 Before proceeding, you should import **CodelearnActivityLifeCycle** project from [Codelearn Example apps on github](https://github.com/pranayairan/Code-Learn-Android-Example). If you are new to github, [download the zip](https://github.com/pranayairan/Code-Learn-Android-Example/archive/master.zip), unzip & import CodelearnActivityLifeCycle project in Eclipse. 
 
@@ -127,4 +127,4 @@ Now open the application again by clicking on the application icon. Notice that 
 
 Now once you saw onRestart, just press the back button, this will exit your application but notice that onDestory is called when you exit. And before onDestory, onPause and onStop is called. 
 
-Summarizing the chapter, you understood why an Activity Lifecycle exists, what is its importance and what are the different Lifecycle states which an activity goes through.
+Summarizing the chapter, you understood why an Android Activity Lifecycle exists, what is its importance and what are the different Lifecycle states which an activity goes through.
