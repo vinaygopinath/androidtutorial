@@ -51,7 +51,7 @@ TweetListActivity test=null;
 	public AsynchWriteTweets(<span class="highlight">TweetListActivity act</span>){
 	 <span class="highlight">test=act;</span>
 	}
-	//use test object to write teets in "tweets_cache.ser"
+	//use test object to write tweets into "tweets_cache.ser"
 </pre>
 
 Remove the app on the phone & deploy again. **This time, the tweet list will show up in 5 seconds straight.**
