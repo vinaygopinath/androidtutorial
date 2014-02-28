@@ -28,7 +28,7 @@ Also, just to be sure that Java doesn't run into trouble serializing and de-seri
 The sample code now looks like as below.
 
 <pre>
-	FileOutputStream fos = new openFileOutput(FILENAME, MODE_PRIVATE);
+	FileOutputStream fos = openFileOutput(FILENAME, MODE_PRIVATE);
 	<span class="highlight">ObjectOutputStream oos = new ObjectOutputStream(fos);
 	oos.writeObject(tweets);
 	oos.close();</span>

@@ -32,22 +32,31 @@ Remove the app from your phone & re-deploy. **You will see 10 seconds delay in t
 	  //dummy tweet creation
 	  <span class="highlight"><strike>//5 sec sleep
 	  //writing tweets to file</strike>
-	  new AsyncWriteTweets().execute(tweets);</span>
+	  new AsyncWriteTweets(TweetListActivity object).execute(tweets);</span>
 	  // call to renderTweets()
 	}
 </pre>
 
-`AsyncWriteTweets.java`
+<!--`AsyncWriteTweets.java`
 <pre>
    protected void doInBackground(..) {
       <span class="highlight">//5 sec sleep
 	  //writing tweets to file</span>
    }
+</pre>-->
+
+`AsynchWriteTweets.java`
+<pre>
+TweetListActivity test=null;
+	public AsynchWriteTweets(<span class="highlight">TweetListActivity act</span>){
+	 <span class="highlight">test=act;</span>
+	}
+	//use test object to write teets in "tweets_cache.ser"
 </pre>
 
 Remove the app on the phone & deploy again. **This time, the tweet list will show up in 5 seconds straight.**
 
-**Make sure you keep the name of the class as AsyncWriteTweets** else our tests will fail & we won't know if you have got the assignment solution correct. 
+**Make sure you keep the name of the class as AsyncWriteTweets and the constructor as shown in above code snippet** else our tests will fail & we won't know if you have got the assignment solution correct. 
 
 * Once done, **you should remove the additional 5 sec delay from AsyncWriteTweets**.
 

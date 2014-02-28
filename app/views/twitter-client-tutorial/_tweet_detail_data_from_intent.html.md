@@ -22,7 +22,12 @@ While *key* can be any string, value can either be string, integer or even objec
 
 To retrieve the data in the next Activity that gets loaded after **startActivity(...)**, the code below is needed
 
-<pre><i>Data_Type</i> value = (<i>Data_Type</i>) getIntent().getSerializableExtra("<i>key</i>")</pre>
+<pre>
+//to retrieve string
+<i>String</i> value = getIntent().getStringExtra("<i>key</i>")
+//to retrieve object
+<i>Data_Type</i> value = (<i>Data_Type</i>) getIntent().getSerializableExtra("<i>key</i>")
+</pre>
 
 ### Assignment - show data on Tweet Detail screen from appropriate tweet object
 
