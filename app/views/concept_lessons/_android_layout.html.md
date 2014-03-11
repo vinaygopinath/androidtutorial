@@ -265,7 +265,7 @@ Above is example of 4x4 grid layout with horizontal orientation. The orientation
     
     </GridLayout>
 
-In the above layout, we have put Textviews in the form of a grid. As the orientation is horizontal, it starts filling the 4X4 grid horizontally and populates all the views. If we change the orientation to vertical, the layout will be traced in a vertical fashion. Below are the screenshots for both orientations.
+In the above layout, we have put Textviews in the form of a grid. As the orientation is horizontal, it starts filling the 4X4 grid horizontally and populates all the views. If we change the orientation to vertical, the layout will be traced in a vertical fashion. Below is the screenshot for horizontal orientation.
 
 <br/>
 <%= image_tag "android-layouts/grid-layout-screenshot.png", alt: "Android Grid Layout Screenshot", title: "Android Grid Layout Screenshot" %>
