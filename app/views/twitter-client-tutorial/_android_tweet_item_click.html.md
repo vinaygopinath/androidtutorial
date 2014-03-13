@@ -36,7 +36,7 @@ public TweetListActivity extends <strike>Activity</strike><span class="highlight
 
 `TweetListActivity.java`
 <pre>
-public class TweetActivity extends Activity {
+public class TweetListActivity extends Activity {
     <strike>private ListView tweetListView;</strike>
     private ArrayAdapter tweetItemArrayAdapter;
 

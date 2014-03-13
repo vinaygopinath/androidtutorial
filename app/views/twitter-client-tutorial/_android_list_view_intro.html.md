@@ -65,7 +65,7 @@ That was a quick overview. Lets implement the above steps to get the basic ListV
 <pre>
 .
 .
-public class TweetActivity extends Activity {
+public class TweetListActivity extends Activity {
 	<span class="highlight">private ListView tweetListView;
 	private String[] stringArray ;
 	private ArrayAdapter tweetItemArrayAdapter;</span>
@@ -87,7 +87,7 @@ public class TweetActivity extends Activity {
 .
 </pre>
 
-* Eclipse will show you errors in front of tweetListView & tweetItemArrayAdapter variable declaration. It is because ListView & ArrayAdapter classes are not included in the project. You can include it automatically by clicking on the red cross mark in Eclipse which will auto suggest the class names & add it to the java file. Or you can manually add them in the list of import statements on top of the TweetActivity.java file
+* Eclipse will show you errors in front of tweetListView & tweetItemArrayAdapter variable declaration. It is because ListView & ArrayAdapter classes are not included in the project. You can include it automatically by clicking on the red cross mark in Eclipse which will auto suggest the class names & add it to the java file. Or you can manually add them in the list of import statements on top of the TweetListActivity.java file
 
 `TweetListActivity.java`
 
