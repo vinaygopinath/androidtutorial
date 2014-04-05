@@ -18,7 +18,7 @@ We created a login button listener which simply updated the button label to 'I a
 
 ## Hooking new Activity to Login
 
-Now that we are done creating new Activity, we need to show the activity on the click of Login button. We need to use **Intent** for this. Intent is a way of navigating app flow from one Activity to another. Read more about Intents <%= link_to "here", android_concept_lesson_path("android-intent") %>
+Now that we are done creating a new Activity, we need to show the activity when the Login button is clicked. We need to use **Intent** for this. Intent is a way of navigating app flow from one Activity to another. Read more about Intents <%= link_to "here", android_concept_lesson_path("android-intent") %>
 
 * We need to hook up the TweetListActivity to show up after MainActivity once the Login button is clicked. We do so using Intent. We need to change a bit of code here.
 
@@ -28,7 +28,7 @@ loginBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
 	  	<strike>_loginBtn.setText("I am Clicked");</strike>
-		<span class="highlight">//Add following lines
+		<span class="highlight">//Add the following lines
 		Intent intent = new Intent(MainActivity.this, TweetListActivity.class);
 		startActivity(intent);</span>
       }
@@ -37,6 +37,8 @@ loginBtn.setOnClickListener(new View.OnClickListener() {
 
 Please import the package **android.content.Intent** for using Intent class in your java code.
 
-Great. You are all set now. Run the app. You should see the Login screen. Hit on the Login button & you should see 'No Tweet Found' screen that you built before. 
+<div class="alert alert-info"><strong>Tip</strong>: In Eclipse, you can press <strong>Ctrl+Shift+O</strong> to automatically organize package imports</div>
+
+Great. You are all set now. Run the app. You should see the Login screen. Click the Login button & you should see 'No Tweet Found' screen that you built before. 
 
 You just learnt to use Intents in Android. Take a break & celebrate. 

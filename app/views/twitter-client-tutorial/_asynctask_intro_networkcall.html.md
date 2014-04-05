@@ -6,7 +6,7 @@ Doing time taking things in the main Activity thread will lead to a *hung app* e
 
 ## Using AsyncTask 
 
-The right way to use AsyncTask is by extending it with your own class & overriding the function `doInBackground()`.
+The right way to use AsyncTask is by extending it with your own class & overriding the method `doInBackground()`.
 
 <pre>
 public class MyAsyncClass extends AsyncTask&lt;<i>Params</i>,<i>Progress</i>,<i>Result</i>&gt; {
@@ -26,9 +26,9 @@ from the main Activity thread.
 
 *Params* is the class for parameters passed to `doInBackground(..)`. 
 
-*Progress* is the class for parameters passed to `onProgressUpdate(..)`. The function is over-ridden to pass progress data to main UI thread while the background task runs. It is called from **doInBackground()** with *Progress* class parameters through `publishProgress(progress_data)`.
+*Progress* is the class for parameters passed to `onProgressUpdate(..)`. The method is over-ridden to pass progress data to main UI thread while the background task runs. It is called from **doInBackground()** with *Progress* class parameters through `publishProgress(progress_data)`.
 
-*Result* is the class for parameters passed to `onPostExecute(..)`. If over-ridden, the function automatically gets called at the end of the background task. It can be used by the main Activity to either refresh the UI with new data, to hide the loading sign or showing a poup that background process is done.
+*Result* is the class for parameters passed to `onPostExecute(..)`. If over-ridden, the method automatically gets called at the end of the background task. It can be used by the main Activity to either refresh the UI with new data, to hide the loading sign or showing a poup that background process is done.
 
 <pre>
 public class MyAsyncClass extends AsyncTask&lt;<i>Params</i>,<i>Progress</i>,<i>Result</i>&gt; {
@@ -57,9 +57,9 @@ public class MyAsyncClass extends AsyncTask&lt;<i>Params</i>,<i>Progress</i>,<i>
 </pre>
 
 
-For a very simple case where you are not passing any paramters to **doInBackground** & not over-riding any of the other functions, simply replace all the parameter classes with **Void** . 
+For a very simple case where you are not passing any paramters to **doInBackground** & not over-riding any of the other methods, simply replace all the parameter classes with **Void** . 
 
-Also note, any UI update should happen in the Activity/main thread. **Updating UI elements from doInBackground() will result in an error. Use onProgressUpdate() & onPostExecute() functions for that as they are executed by the main Activity thread**.
+Also note, any UI update should happen in the Activity/main thread. **Updating UI elements from doInBackground() will result in an error. Use onProgressUpdate() & onPostExecute() methods for that as they are executed by the main Activity thread**.
 
 
 ### Assignment - handle simulated network call through AsyncTask

@@ -6,7 +6,7 @@ We first obtain handle to the Shared Preference through the code snippet below
 
     SharedPreferences prefs = getSharedPreferences("codelearn_twitter", MODE_PRIVATE)
 
-`getSharedPreferences()` function takes two argument. The first string denotes preference name. It should be different for different apps. The second string `MODE_PRIVATE` specifies that the preferences are private & other apps can not access these values.
+`getSharedPreferences()` method takes two arguments. The first string denotes preference name. It should be different for different apps. The second string `MODE_PRIVATE` specifies that the preferences are private & other apps can not access these values.
 
 To write or read from Shared Preferences, you first need to get handle to the Shared Preference Editor. 
  

@@ -2,9 +2,9 @@
 
 In previous lesson, we are able to get the kind of layout we designed for the list of tweet screen. Clicking on a tweet item should show the tweet detail in a new Activity. In this lesson, we will put the click listener on each tweet item. 
 
-So far, our TweetListActivity class is extending the normal Activity class. There is a special `ListActivity` class which provides `onListItemClick(..)` function that the Android developer need to over-ride to handle the click event on each List item. 
+So far, our TweetListActivity class is extending the normal Activity class. There is a special `ListActivity` class which provides `onListItemClick(..)` method that the Android developer needs to override to handle the click event on each List item. 
 
-Lets get to work now.
+Let's get to work now.
 
 * Change the parent class to ListActivty from Activity
 
@@ -17,7 +17,7 @@ public class TweetListActivity extends <strike>Activity</strike><span class="hig
 .
 </pre>
 
-* Append onListItemClick function anywhere inside TweetListActivity class definition
+* Append onListItemClick method anywhere inside TweetListActivity class definition
 
 `TweetListActivity.java`
 <pre>

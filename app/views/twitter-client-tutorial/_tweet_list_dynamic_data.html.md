@@ -6,7 +6,7 @@ In this lesson, each tweet item will have different data. We will have a Tweet m
 
 ##Recap from module 1
 
-In module 1, each tweet item has dummy data from row_tweet.xml. We had public class TweetListAdapter with a getView() function which simply inflated the resource xml
+In module 1, each tweet item has dummy data from row_tweet.xml. We had public class TweetListAdapter with a getView() method which simply inflated the resource xml
 
 `TweetAdapter.java`
 
@@ -105,7 +105,7 @@ The file needs to be in src -> org -> codelearn -> twitter -> models directory. 
 		}
     }
 
-Like a regular PoJo , the class has functions to get/set different instance variables of the object of Tweet class. 
+Like a regular PoJo , the class has methods to get/set different instance variables of the object of Tweet class. 
 
 ## Step 2 - Using Tweet model in TweetListActivity class
 
@@ -117,7 +117,7 @@ While `List` is a generic array class in java (also called interface), `ArrayLis
 
 When the user comes to Tweet List Screen, right now, we are putting random data inside getView(). We are suppose to iterate through Tweet model array, get each element value like header, date, body etc & set the appropriate field in the inflated View. 
 
-But we have a problem. `tweets` is essentially empty now. Lets write some code to populate tweets with some random data.
+But we have a problem. `tweets` is essentially empty now. Let's write some code to populate tweets with some random data.
 
     for ( int i = 0; i < 20; i++ ) {
 		Tweet tweet = new Tweet();
@@ -151,7 +151,7 @@ A quick recap. Data is passed to the ListView through an Adapter. We had the bel
 
 <pre>tweetItemArrayAdapter = new TweetAdapter(this, new String[10]);</pre>
 
-We were not actually passing any data to the Adapter. Just the size of the String array is used by the Adapter to create 10 tweet entries. Now we will be passing `tweets` array to TweetAdapter which will be in-turn used in getView() function to set the title, body & date in inflated View.
+We were not actually passing any data to the Adapter. Just the size of the String array is used by the Adapter to create 10 tweet entries. Now we will be passing `tweets` array to TweetAdapter which will be in-turn used in getView() method to set the title, body & date in inflated View.
 
 `TweetListActivity.java`
 
@@ -170,7 +170,7 @@ Also TweetAdapter.java need to be modified appropriately to accept array of Twee
 	  }
 </pre>
 
-We also need to modify getView() function to use the tweets array. The function `getView()` returns an object of type View. Before returning the View, the content of the inflated View can be modified by accessing elements of the View using `findViewById()` function and setting the text using `setText(..)`. 
+We also need to modify getView() method to use the tweets array. The method `getView()` returns an object of type View. Before returning the View, the content of the inflated View can be modified by accessing elements of the View using `findViewById()` method and setting the text using `setText(..)`. 
 
 Example, the code below will inflate row_tweet.xml, look for a TextView with id title_id, sets its text with 'this is different title' before returning the inflated View.
 
@@ -193,6 +193,6 @@ Follow the three steps. Create Tweet.java, create a tweets array in TweetListAct
 
 ** Hint: Store `tweets` passed to `public TweetAdapter(..)` in a TweetAdapter member variable ** 
 
-You will be needing tweets array in getView(..) but it is passed in the constructor function. See how **inflater** variable is initialized in the constructor & used in getView(..) & derive inspiration from it.
+You will be needing tweets array in getView(..) but it is passed in the constructor method. See how **inflater** variable is initialized in the constructor & used in getView(..) & derive inspiration from it.
 
 

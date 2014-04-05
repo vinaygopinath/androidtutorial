@@ -2,7 +2,7 @@
 
 A real twitter app does not show login screen again once you are already logged in. It directly takes you to the tweet list screen as soon as you open the app.
 
-The check to skip a screen completely should happen inside `onCreate()` function of the Activity.
+The check to skip a screen completely should happen inside `onCreate()` method of the Activity.
 
 <pre>
 public class MainActivity extends Activity {

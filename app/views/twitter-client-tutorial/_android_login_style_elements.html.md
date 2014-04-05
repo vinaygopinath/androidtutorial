@@ -1,17 +1,17 @@
 # Styling Login Screen Elements
 
-So far we just worried about positioning the elements but ignored the width & height of the elements. We will address those issues in this lesson.
+So far we have focussed on positioning the elements but ignored the width & height of the elements. We will address those issues in this lesson.
 
 ## Styling the header
 
 We are going to add a few attributes to the various UI elements in Layout XML to style the content. 
 
-Since it is header (TextView with id "@+id/header"), we need a bigger font-size which we will set using **textSize**. **textColor** sets the font color. We need bold font which is set using **textStyle**. Just for fun, lets give a black background color (wait, dont judge our color taste). It can be done through **background**. To make sure the text does not *stick* to the sides, we put a **padding** attribute.
+Since the TextView with id "@+id/header" serves as the header, we need a bigger font-size which we will set using the **textSize** attribute. **textColor** sets the font color. **textStyle** can be used to make text bold, italicized and/or underlined. For the heading, we will set the **textStyle** as bold. Just for fun, let's give a black background color (wait, don't judge our color taste). It can be done through **background**. To make sure the text does not *stick* to the sides, we put a **padding** attribute. Padding adds additional space around the content on all directions. 
 
 `activity_main.xml`
 <pre>
 &lt;TextView <span class="highlight">android:id="@+id/header"</span>
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
 		android:text="@string/hello_world" 
         <span class="highlight">android:padding="10dp"
@@ -22,7 +22,7 @@ Since it is header (TextView with id "@+id/header"), we need a bigger font-size 
      /&gt;
 </pre>
 
-**dp** stands for 'density pixel' & represent **absolute** size. **sp** stands for 'scale (independent) pixel'. It takes into account user's font settings. It is usually good idea to use 'sp' for setting textSize of an Android UI element. For non-font related properties, using 'dp' is fine. 
+**dp** stands for 'density-independent pixel' & represent **absolute** size. **sp** stands for 'scale (independent) pixel'. It takes into account user's font settings. It is usually good idea to use 'sp' for setting textSize of an Android UI element. For non-font related properties, using 'dp' is fine. 
 
 Once done, save the file & deploy your app. It should look as below. 
 
@@ -59,7 +59,7 @@ The two container LinearLayout elements with id 'uname_block' & 'pwd_block' are 
 
 ## Styling the label TextViews
 
-We will set textSize, textColor & center the label vertically using **layout_gravity**. layout_gravity positions the element relative to the parent element. We do not need to do anything to center the content as layout_centerHorizontal is set for the parent LinearLayout element.
+We will set textSize, textColor & center the label vertically using **layout_gravity**. layout_gravity positions the element relative to the parent element. We do not need to do anything to center the content as **layout_centerHorizontal** is set for the parent LinearLayout element.
 
 <pre>
 .
@@ -88,9 +88,9 @@ We will set textSize, textColor & center the label vertically using **layout_gra
 
 ## Styling the input fields
 
-The input fields are empty by default. So layout_width should be set for them . To make them not stick to their label, **layout_marginLeft** should be set. Setting **layout_paddingLeft** field ensures that the text we entering in the input box does not stick to the left edge. Rest of the fields we would add are already explained earlier in this chapter.
+The input fields are empty by default. So layout_width should be set for them . To make them not stick to their label, **layout_marginLeft** should be set. Setting **layout_paddingLeft** field ensures that the text entered in the input box does not stick to the left edge. The other attributes added have already been explained earlier in this chapter.
 
-Input fields have a special attribute **inputType**. The values are self explanatory. 
+Input fields have a special attribute **inputType**. The values are self explanatory. Specifying the input type allows Android to provide relevant keyboard options (In case of inputType `number`, the keyboard for entering digits is displayed). 
 
 <pre>
 &lt;EditText
@@ -121,9 +121,9 @@ Input fields have a special attribute **inputType**. The values are self explana
 
 ## Styling the Login Button
 
-Lastly, we will style the login button. Since there is no LinearLayout container element for the button,unlike the username & password fields, hence to center it we need to use **layout_centerHorizontal** attribute. 
+Lastly, we will style the login button. Unlike the username and password fields, the button does not have a LinearLayout container. Therefore, to center it, we need to use **layout_centerHorizontal** attribute. 
 
-To center the text 'Login' inside the button, we use **gravity**. Unlike **layout_gravity** which positions an element relative to its parent, gravity applies to the children of the element. Other elements are already explained.
+To center the text 'Login' inside the button, we use **gravity**. Unlike **layout_gravity** which positions an element relative to its parent, gravity determines the positioning of its children within itself. 
 
 <pre>
 &lt;Button
@@ -139,6 +139,6 @@ To center the text 'Login' inside the button, we use **gravity**. Unlike **layou
         android:textStyle="bold"</span> /&gt;
 </pre>
 
-Ok, that was quite a few styling changes but fret not, your effort will definitely 'show up good'. Save the file & run the app. The shiny new Activity with nicely styled element should show as below.
+Ok, that was quite a few styling changes but fret not, your effort will definitely 'show up good'. Save the file & run the app. The shiny new Activity with nicely styled elements should show as below.
 
 <%= image_tag "twitter-client/Twitter-front-font.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

@@ -17,7 +17,7 @@ A login button listener gets called when login button is clicked. We had earlier
 
 ## Reading the login data
 
-The username & password are stored inside appropriate **EditText** View elements. Each element has its own `android:id` attribute. The data can be read using `findViewById` function as
+The username & password are stored inside appropriate **EditText** View elements. Each element has its own `android:id` attribute. The data can be read using `findViewById` method as
 
 <pre>EditText username = ( EditText ) findViewById(R.id.<i>id_of_the_username_field</i>)</pre>
 
@@ -25,11 +25,11 @@ The username & password are stored inside appropriate **EditText** View elements
 
 <pre>String usernameValue = username.getText().toString();</pre>
 
-`toString()` function converts the text value to string. 
+`toString()` method converts the text value to string. 
 
 ### Assignment - read username & password in java code
 
-You should now write code inside `onClick()` function to get username & password in the java code. You can log the values & check them in LogCat by doing
+You should now write code inside `onClick()` method to get username & password in the java code. You can log the values & check them in LogCat by doing
 
      Log.d("Codelearn", "username caught - " + username)
 

@@ -1,6 +1,6 @@
 # Add Password & Login button
 
-In the previous lesson, we added Username label & input field. To add password, we will simply replicate the parent LinearLayout for the Password label & input field. 
+In the previous lesson, we added Username label & input field. For the password, we will simply replicate the LinearLayout for the Password label & input field. 
 
 `res/layout/activity_main.xml`
 
@@ -74,7 +74,7 @@ Note that since **id** needs to be unique, the second LinearLayout, TextView & E
 
 <%= image_tag "twitter-client/twitter-password.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
-Lets add the Login button as well
+Let's add the Login button as well
 
 `res/layout/activity_main.xml`
 

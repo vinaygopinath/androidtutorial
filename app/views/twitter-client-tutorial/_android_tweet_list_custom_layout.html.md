@@ -1,13 +1,13 @@
 # Custom Layout for individual tweet
 
-In last lesson, we learnt how to show up a basic ListView with one line data. We need the tweet list to look like as below 
+In the last lesson, we learnt how to show a basic ListView with one line data. We need the tweet list to look like the image below 
 
 <%= image_tag "twitter-client/row-tweet-screenshot.png", alt: "Tweet List Mockup", title: "Tweet List Mockup" %>
 <%= image_tag "twitter-client/row-tweet-layout-breakdown.png", alt: "Tweet List Layout Breakdown", title: "Tweet List Layout Breakdown" %>
 
 We used the Android in-built layout `android.R.layout.simple_list_item_1` to get the individual tweet row in the last lesson. This time, we will build our own layout for each tweet. In next lesson, we will hook it up with ListView to get the final output.
 
-* Right click on `CodelearnTwitterApp` project in Eclipse package Explorer. Select New -> Other. In the popup window, select 'Android XML Layout File'. In the next window, you need to specify the name. Lets give it the name 'row_tweet.xml'. By default, 'LinearLayout' will be picked which is fine as the Outer layout is LinearLayout as per our plan. But this layout is Vertically oriented by default. We need to change the layout to be Horizontally aligned. Hit 'Finish'. Go to res -> layout -> row_tweet.xml. Make the changes as below.
+* Right click on `CodelearnTwitterApp` project in Eclipse package Explorer. Select New -> Other. In the popup window, select 'Android XML Layout File'. In the next window, you need to specify the name. Let's give it the name 'row_tweet.xml'. By default, 'LinearLayout' will be picked which is fine as the Outer layout is LinearLayout as per our plan. But this layout is Vertically oriented by default. We need to change the layout to be Horizontally aligned. Hit 'Finish'. Go to res -> layout -> row_tweet.xml. Make the changes as below.
 
 `row_tweet.xml`
 <pre>
@@ -20,7 +20,7 @@ We used the Android in-built layout `android.R.layout.simple_list_item_1` to get
 &lt;/LinearLayout&gt;
 </pre>
 
-* The LinearLayout element is what is 'Outer LinearLayout' in our planned view. It has its children aligned horizontally. Lets update the value. Also, it has two children - ImageView and LinearLayout. LinearLayout in-turn has three TextView as children.
+* The LinearLayout element is what is 'Outer LinearLayout' in our planned view. It has its children aligned horizontally. Let's update the value. Also, it has two children - ImageView and LinearLayout. LinearLayout in-turn has three TextView as children.
 
 We are adding ImageView first time here. We are going to use Graphical Layout this time. Get  <%= link_to "user_profile.png", image_path("user_profile.png") %> image, right click & save it inside res -> drawable-mdpi folder. We need to provide the path to image when we add the ImageView.
 
@@ -66,7 +66,7 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 
         &lt;TextView
             android:id="@+id/textView1"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Large Text"</strike><span class="highlight">"Header Text"</span>
             <strike>android:textAppearance="?android:attr/textAppearanceLarge"</strike>
@@ -77,7 +77,7 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 
         &lt;TextView
             android:id="@+id/textView2"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Medium Text"</strike><span class="highlight">"Tweet body text here"</span>
             <strike>android:textAppearance="?android:attr/textAppearanceMedium"</strike>
@@ -90,7 +90,7 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 
         &lt;TextView
             android:id="@+id/textView3"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Small Text"</strike><span class="highlight">"20 Nov 2013"</span>
             <strike>android:textAppearance="?android:attr/textAppearanceSmall"</strike>
@@ -105,7 +105,11 @@ If you are not able to get it structure it properly, dont worry ! Just go to the
 &lt;/LinearLayout&gt;
 </pre>
 
-What we have done is to style the elements to look nice. We have provided the values but you can always fiddle with them to see how it looks. Going back to 'Graphical Layout' tab will show you the final view for the Layout. 
+We have styled the elements with additional attributes like **textAppearance** and **textColor**. You can always fiddle with the values to achieve different visual results. 
+
+<div class="alert alert-info"><p>It's worth repeating! <strong>Tip</strong>: In Eclipse, <strong>Ctrl+Space</strong> will bring up autocomplete suggestions. For example, typing <strong>textS</strong> and pressing Ctrl+Space would have <strong>textStyle</strong> and <strong>textSize</strong> as the possible autocomplete suggestions.</p><p> You can also use autocomplete for values. For example, <strong>android:textStyle</strong>="{Ctrl+Space+here}" would list out all possible values, namely bold, italic and underline</p></div>
+
+Going back to 'Graphical Layout' tab will show you the final view for the Layout. 
 
 
 <%= image_tag "twitter-client/twitter_tweet.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

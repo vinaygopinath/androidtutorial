@@ -1,6 +1,6 @@
 # Moving writing of tweets to new AsyncTask
 
-We already have 5 second delay in AsyncFetchTweets **doInBackground()** function to simulate network call . As it is mentioned earlier, reading & writing from files are a little more involved process & should be done in a separate thread unless it affects the main Activity flow. 
+We already have 5 second delay in AsyncFetchTweets **doInBackground()** method to simulate network call . As it is mentioned earlier, reading & writing from files are a little more involved process & should be done in a separate thread unless it affects the main Activity flow. 
 
 In this case, the primary purpose of AsyncFetchTweets is to fetch tweets & show to the users. It is a good idea to move the code, to writes the tweets to the cache file, to a separate AsyncTask outside AsyncFetchTweets.
 

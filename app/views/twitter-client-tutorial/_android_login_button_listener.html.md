@@ -30,13 +30,13 @@ Follow the steps below to implement the ClickListener for the login button
 	}
    }	
 </pre>
-* Remember the login button has `android:id="@id+/btn_login"` in the activity_main.xml file. The `findViewById` method is like a lookup function that looks into your layout file, and retrieves the View instance associated with the ID you pass.
+* Remember the login button has `android:id="@+id/btn_login"` in the activity_main.xml file. The `findViewById` method is like a lookup function that looks into your layout file, and retrieves the View instance associated with the ID you pass.
 
 * The `Button` class is provided by the framework &ndash; **android.widget.Button** &ndash; and you can use it to invoke a bunch of methods that can modify the behaviour or state of the button. 
 
 * The `R.id.btn_login` is an auto-generated encapsulation that the Android framework provides for all view IDs at a code level. Basically, whenever you compile your Android application, it generates a file called R.java located inside gen -> org.codelearn. This file contains all the IDs that you have defined in all your Layout files, and associates a Hex value with them. At runtime, these Hex values are used to provide a binding between the Java code and the XML elements.
 
-* The code snippet that does the job is below. It needs to be called inside onCreate() of MainActivity.java as this function gets executed first when the app launches. 
+* The code snippet that does the job is below. It needs to be called inside onCreate() of MainActivity.java as this method is executed first when the activity launches. 
 
 `MainActivity.java`
 <pre>
@@ -47,7 +47,7 @@ protected void onCreate(Bundle savedInstanceState) {
      <span class="highlight"> _loginBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-  		//This is a comment which does no good to your code. Feel free to remove it after you copy pasted.
+  		//This is a comment which does no good to your code. Feel free to remove it after you copy paste.
 		//When the button is clicked, the control will come to this method.
 		//To demonstrate this, let us try changing the label of the Button from 'Login' to 'I am clicked'
 		
@@ -61,6 +61,6 @@ protected void onCreate(Bundle savedInstanceState) {
 
 A View object represents a rectangular area on the screen and is responsible for drawing and event handling. **setOnClickListener** registers a callback to be invoked when this view is clicked.
 
-Once done, clicking on the Login button should update the text inside the button to 'I am Clicked' as shown below. In steady state, clicking on the button would have authenticated the user & either showed error message or took him to the next screen. Assuming that the user is authenticated, we are suppose to take him to the next screen. But before we take him to the next screen, we need to build it first. Next lesson deals with it.
+Once done, clicking on the Login button should update the text inside the button to 'I am Clicked' as shown below. In its fully functional form, clicking on the button will authenticate the user and either show an error message or take the user to the next screen. For now, we will assume that the user is authenticated, and move on to the next screen. The next lesson deals with building the screen shown after a successful login.
 
 <%= image_tag "twitter-client/click-change.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

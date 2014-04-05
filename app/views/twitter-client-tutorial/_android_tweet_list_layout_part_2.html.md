@@ -25,7 +25,7 @@ In last lesson we added just the ImageView in the row_tweet.xml . We need to add
 
         &lt;TextView
             android:id="@+id/<strike>textView1</strike><span class="highlight">tweet_title</span>"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Large Text"</strike><span class="highlight">Header Text</span>
 			<span class="highlight">android:textSize="19sp"
@@ -35,7 +35,7 @@ In last lesson we added just the ImageView in the row_tweet.xml . We need to add
 
         &lt;TextView
             android:id="@+id/<strike>textView2</strike><span class="highlight">tweet_body</span>"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Medium Text"</strike><span class="highlight">Tweet body text here</span>
 			<span class="highlight"> android:layout_marginTop="5dp"
@@ -47,7 +47,7 @@ In last lesson we added just the ImageView in the row_tweet.xml . We need to add
 
         &lt;TextView
             android:id="@+id/<strike>textView3</strike><span class="highlight">tweet_date</span>"
-            android:layout_width="<strike>wrap_content</strike><span class='highlight'>fill_parent</span>"
+            android:layout_width="<strike>wrap_content</strike><span class='highlight'>match_parent</span>"
             android:layout_height="wrap_content"
             android:text=<strike>"Small Text"</strike><span class="highlight">20 Nov 2013</span>
 			<span class="highlight">android:layout_marginTop="5dp"

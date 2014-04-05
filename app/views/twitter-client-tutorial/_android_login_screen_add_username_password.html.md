@@ -1,10 +1,10 @@
 # Adding Username label & input field
 
-In previous lesson, we got the header in place. This lesson we will put the input fields namely username & password. 
+In the previous lesson, we got the header in place. In this lesson, we will add the input fields namely username & password. 
 
 As per plan, we will be using horizontally aligned LinearLayout to hold the label 'Username' & the input field together & next to each other. Label is **TextView** element while input field is **EditText** in Android. 
 
-Lets get to work. 
+Let's get to work. 
 
 ## Add the LinearLayout after 'Hello Twitter' 
 
@@ -17,7 +17,7 @@ Lets get to work.
 
   &lt;TextView <span class="highlight">
 	android:id="@+id/header" </span>
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_twitter" /&gt;
 
@@ -67,7 +67,7 @@ Add the 'id' attribute to the existing 'Hello Twitter' TextView and set its valu
 &lt;/RelativeLayout&gt;
 </pre>
 
-The Username has id 'username' & the text is rendered from the string 'lbl_username'. The input field has id 'fld_username' & the hint is rendered from string 'lbl_enter_username'. We need to add the strings entry too. 
+The Username has id 'username' & the text is rendered from the string 'lbl_username'. The input field has id 'fld_username' & the hint is rendered from string 'lbl_enter_username'. Hint is Android's equivalent of placeholder text, shown only when the input field is empty. We need to add the string entries too. 
 
 
 `res/values/strings.xml`
@@ -85,4 +85,4 @@ Once done, run the app. It should look like below.
 
 <%= image_tag "twitter-client/twitter-username.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
-Ideally, we like the 'Username' label & input field to be *positioned/styled* better but let us first complete the basic structure first & then we will worry about positioning it to look nice.
+It would be good to position and style the 'Username' label & input field better, but let us first complete the basic structure & then we can improve the styling of the UI elements.

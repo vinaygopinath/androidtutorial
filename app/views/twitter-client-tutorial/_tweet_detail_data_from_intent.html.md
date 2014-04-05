@@ -41,9 +41,9 @@ Earlier, we had put an onClickListener for each tweets which started the Tweet D
 	    startActivity(intent);
 	}
 
-** 1. Modify onListItemClick() function to pass the tweet object to TweetDetailActivity **
+** 1. Modify onListItemClick() method to pass the tweet object to TweetDetailActivity **
 
-Hint: You should extract the tweet object from the Adapter at `position`. There is `getListAdapter()` function available for ListActivity class. Use it. 
+Hint: You should extract the tweet object from the Adapter at `position`. There is `getListAdapter()` method available for ListActivity class. Use it. 
 
 ** 2. Use the tweet object to set title, body & date in TweetDetailActivity **
 

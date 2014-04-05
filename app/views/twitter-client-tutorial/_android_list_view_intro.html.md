@@ -1,18 +1,20 @@
 # Designing List of Tweet Screen
 
-We successfully hooked 'No Tweet Found' screen after the login screen in the previous lesson. In this lesson, we will remove the 'No Tweet Found' message & populate the screen with a dummy tweet list. As usual, we will use some place-holder data to just show up some dummy list content.  
+We successfully hooked 'No Tweet Found' screen after the login screen in the previous lesson. In this lesson, we will remove the 'No Tweet Found' message & populate the screen with a dummy tweet list. As usual, we will use some placeholder data to show some dummy list content.
 
 Before we get on with the task of creating our list of Tweets, it would be a good idea to provide a brief introduction to the way a list view is created in Android. We are going to use `ListView` view element in xml file to show up the list of tweets.
+
+<div class="alert alert-info">For more on ListViews, check out the <%= link_to "List View concept lesson", android_concept_lesson_path("android-listview"), target: "_blank" %></div>
 
 `Layout XML`
 
     <ListView
         android:id="@+id/listViewId"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
     </ListView> 
 
-The ListView need to have rows that are populated using an `Adapter`. It is like a data set. We will use the simplest of the Adapters called `ArrayAdapter`. 
+ListView displays rows using an `Adapter`. It is like a data set. We will use the simplest of the Adapters called `ArrayAdapter`. 
 
 `Java Activity Code`
 
@@ -35,7 +37,7 @@ The gist of the above content is illustrated in the following graphic.
 
 <%= image_tag "twitter-client/list-view-flow.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
-That was a quick overview. Lets implement the above steps to get the basic ListView working for us. We will then go ahead & refine the View to look like the actual tweet list.
+That was a quick overview. Let's implement the above steps to get the basic ListView working for us. We will then go ahead & refine the View to look like the actual tweet list.
 
 ## Follow the steps to build the basic Tweet List
 
@@ -52,13 +54,13 @@ That was a quick overview. Lets implement the above steps to get the basic ListV
         android:text="@string/no_tweet_found" /&gt;</strike>
   <span class="highlight">&ltListView
         android:id="@+id/tweetList"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
   &lt;/ListView&gt;</span>
   .
 </pre>
 
-* Add the highlighted code in TweetListActivity.java. The variables are declared in the class but outside onCreate function. Inside onCreate, the ListView is populated. Remember that findViewById(R.Id.tweetList) should be called after setContentView(R.layout.activity_tweet) is called else the ListView will not be found. 
+* Add the highlighted code in TweetListActivity.java. The variables are declared in the class but outside onCreate method. Inside onCreate, the ListView is populated. Remember that findViewById(R.Id.tweetList) should be called after setContentView(R.layout.activity_tweet) is called else the ListView will not be found. 
 
 `TweetListActivity.java`
 
@@ -88,6 +90,8 @@ public class TweetListActivity extends Activity {
 </pre>
 
 * Eclipse will show you errors in front of tweetListView & tweetItemArrayAdapter variable declaration. It is because ListView & ArrayAdapter classes are not included in the project. You can include it automatically by clicking on the red cross mark in Eclipse which will auto suggest the class names & add it to the java file. Or you can manually add them in the list of import statements on top of the TweetListActivity.java file
+
+<div class="alert alert-info"><strong>Tip</strong>: Pressing <strong>Ctrl+1</strong> in Eclipse in any line with errors will provide suggestions and possible solutions</div>
 
 `TweetListActivity.java`
 

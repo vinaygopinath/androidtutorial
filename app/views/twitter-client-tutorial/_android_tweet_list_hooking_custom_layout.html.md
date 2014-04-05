@@ -1,19 +1,19 @@
 # Hooking Custom Layout to Tweet List View
 
-In last lesson we got the custom Layout done but our Tweet List still show up as the basic List with one entries per line.
+In the last lesson, we created a custom layout for a Tweet but our Tweet List will still show up as a basic list with one entry per line.
 
-In our java code, we provided ArrayAdapter with the build-in Android Layout - android.R.layout_simple_list_item_1 . You would be compelled to replace the layout value with layout.R.row_tweet & thought it would be done. But things are not that straight forward. 
+In our java code, we provided ArrayAdapter with the build-in Android Layout - android.R.layout_simple_list_item_1 . You might think that replacing the layout value with layout.R.row_tweet would do the trick. But things are not that straight forward. 
 
 > If you are not convinced, go ahead & try the above change. Deploy your app & see it crash on your phone. 
 
-## Steps to hook up Custom Layout
+## Steps to use a custom layout
 
-* To hook a Custom Layout, we need to extend ArrayAdapter class. The extended class need to have a `getView()` function which is responsible to populate the ListView rows with our custom layout. Lets create a new Java class for this purpose. Right click on **org.codelearn.twitter** and then navigate to **New** -> **Class**. Specify the name as **TweetAdapter** and click on Finish.
+* To use a custom layout, we need to extend the ArrayAdapter class. The extended class needs to override the `getView()` method which is responsible to populate the ListView rows with our custom layout. Let's create a new Java class for this purpose. Right click on **org.codelearn.twitter** and then navigate to **New** -> **Class**. Specify the name as **TweetAdapter** and click on Finish.
 
 `TweetAdapter.java`
 <pre>
 
-<span class="highlight">		
+<span class="highlight">
 package org.codelearn.twitter;
 
 import org.codelearn.twitter.R;
@@ -54,7 +54,7 @@ public TweetListActivity extends Activity {
   .
   . 
 </pre>
-* Earlier we just defined the skeleton of our custom TweetAdapter class. Let us fill it with some logic. The function getView() gets called everytime a row is added to the ListView element. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() function to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`.
+* So far we have just defined the skeleton of our custom TweetAdapter class. Let's fill it with some logic. The getView() method is called every time a row is to be added in the ListView. There are three parameters that get passed to getView() - row item position count (position), custom layout view object (convertView) & parent ListView object (parent). For getView() method to be able to *inflate* our custom layout & create a View class out of it, we need an instance of `LayoutInflater` class. We will call it `inflater`.
 
 `TweetAdapter.java`
 <pre>
@@ -75,7 +75,7 @@ public TweetListActivity extends Activity {
    }
 </pre>
 
-* We instantiated inflater in the class & initializing it inside `public TweetAdapter(...)` function (This function is called Constructor in Java). The function gets called when we are creating new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate() method of TweetListActivity.java. The `super(..)` function simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.  
+* We have defined a `inflater` field variable & it is initialized inside `public TweetAdapter(...)` method (This method is called Constructor in Java). The constructor is called when we are creating a new object of TweetAdapter class by doing `tweetItemArrayAdapter = new TweetAdapter(..)` inside onCreate() method of TweetListActivity.java. The `super(..)` method simply initializes the base class (ArrayAdapter). We have also initialized inflater at the same place.
 
 * `inflater.inflate(..)` is responsible for inflating our layout R.layout.row_tweet, creating a View class & returning it to be appended to the parent ListView. 
 
@@ -102,6 +102,6 @@ public TweetListActivity extends Activity {
 
 </pre>
 
-* Done with above steps ? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
+Done with the above steps? Deploy your app, navigate from the login screen to Tweet List screen to see our shiny new interface live :).
 
 <%= image_tag "twitter-client/final_tweet_list.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

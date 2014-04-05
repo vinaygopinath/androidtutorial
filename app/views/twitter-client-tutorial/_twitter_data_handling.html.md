@@ -1,6 +1,6 @@
 # Twitter Data Handling & Local Storage
 
-We have built a Twitter app with three screens so far. It is just the User Interface. As we mentioned earlier, the first step of App development is to design the interface. We could add more screens, but lets just stick to the three screens - Login, Tweet List & Tweet Detail - that we have built & focus on handling data, storing it locally & updating it as & when needed. 
+We have built a Twitter app with three screens so far. It is just the User Interface. As we mentioned earlier, the first step of App development is to design the interface. We could add more screens, but let's just stick to the three screens - Login, Tweet List & Tweet Detail - that we have built & focus on handling data, storing it locally & updating it as & when needed. 
 
 <div class="well pull-right" style="margin:5px; width:40%; font-size:small">
 	<h3>Module Summary</h3>
@@ -9,7 +9,7 @@ We have built a Twitter app with three screens so far. It is just the User Inter
 		<li>Store tweets locally & show them up as soon as Tweet List screen comes up.</li>
 		<li>Modify Tweet List Activity & XML code to show data from locally stored tweets.</li>
 		<li>Modify Intent & Tweet Detail Activity to show data of the individual tweet which is clicked.</li>
-		<li>Hook up some functions which will simulate network calls & update locally stored tweets.</li>
+		<li>Hook up some methods which will simulate network calls & update locally stored tweets.</li>
 	</ol>
 	<div class="ac">
 		<%= link_to app_tutorial_lesson_with_token_path("twitter",@next_lesson.token), class: "btn btn-large btn-success" do %>
