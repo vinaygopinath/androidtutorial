@@ -4,7 +4,7 @@ We successfully hooked 'No Tweet Found' screen after the login screen in the pre
 
 Before we get on with the task of creating our list of Tweets, it would be a good idea to provide a brief introduction to the way a list view is created in Android. We are going to use `ListView` view element in xml file to show up the list of tweets.
 
-<div class="alert alert-info">For more on ListViews, check out the <%= link_to "List View concept lesson", android_concept_lesson_path("android-listview"), target: "_blank" %></div>
+<div class="alert alert-info">For more on ListViews, check out the <b><%= link_to "List View concept lesson", android_concept_lesson_path("android-listview"), target: "_blank" %></b></div>
 
 `Layout XML`
 

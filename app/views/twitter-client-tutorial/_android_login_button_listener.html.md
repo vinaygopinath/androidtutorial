@@ -6,7 +6,7 @@ To get started on this, we will register a **ClickListener** with the login butt
 
 A `ClickListener` is a callback facility provided by the Android framework to allow you to write in the logic to handle click event on a UI element (login button in this case). Almost every view element in an app screen can have a callback ClickListener associated with it. The general approach is to implement an [Anonymous Inner Class](http://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html) implementation for the ClickListener and pass it to the callback method.
 
-To read more about Listeners, head over to the <%= link_to "Android Event Listener Concept Lesson", android_concept_lesson_path("android-views") + "#Button-Click-Listener" %>
+<div class="alert alert-info">In case you missed it, check out the <b><%= link_to "Android Views concept lesson", android_concept_lesson_path("android-views") + "#Button-Click-Listener",target: "_blank" %></b> for a brief introduction to event listeners</div>
 
 Follow the steps below to implement the ClickListener for the login button
 
@@ -37,6 +37,8 @@ Follow the steps below to implement the ClickListener for the login button
 * The `R.id.btn_login` is an auto-generated encapsulation that the Android framework provides for all view IDs at a code level. Basically, whenever you compile your Android application, it generates a file called R.java located inside gen -> org.codelearn. This file contains all the IDs that you have defined in all your Layout files, and associates a Hex value with them. At runtime, these Hex values are used to provide a binding between the Java code and the XML elements.
 
 * The code snippet that does the job is below. It needs to be called inside onCreate() of MainActivity.java as this method is executed first when the activity launches. 
+
+<div class="alert alert-info">The <b><%= link_to "Android Activity concept lesson", android_concept_lesson_path("android-activity"),target: "_blank" %></b> has an explanation of onCreate() and the other Activity lifecycle methods</div>
 
 `MainActivity.java`
 <pre>

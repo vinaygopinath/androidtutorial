@@ -41,6 +41,7 @@ Download Android SDK from [official Android SDK download page](http://developer.
     <p><%= image_tag "twitter-client/green-navigation-bar.png" %></p>
 </ol>
 
+<div class="alert alert-info">More elaborate setup instructions are available in the <b><%= link_to "Android Setup page", android_concept_lesson_path("android-setup") %></b></div>
 
 ## Troubleshoot
 

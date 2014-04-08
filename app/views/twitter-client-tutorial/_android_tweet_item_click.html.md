@@ -96,6 +96,8 @@ public class TweetListActivity extends ListActivity {
 
 The method onListItemClick gets parent ListView (l), child View which is clicked (v), position of the child View in the parent View (position) & id (the id of the row object - you'll hardly, if ever, use this). The new method introduced is `setText(..)`. This method sets the text of a TextView class object.
 
+<div class="alert alert-info">If your project has no errors but the app does not seem to run as expected, refer the <b><%= link_to "Android Log concept lesson", android_concept_lesson_path("android-log"), target: "_blank" %></b> which introduces an effective way of debugging issues</div>
+
 * Run your app. Navigate past the login screen to view the Tweet List screen. Tapping on a tweet item will update the tweet header to 'Tweet Clicked'. 
 
 <%= image_tag "twitter-client/tweet_clicked.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>

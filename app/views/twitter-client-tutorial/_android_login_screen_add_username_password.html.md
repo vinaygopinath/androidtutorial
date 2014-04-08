@@ -4,6 +4,8 @@ In the previous lesson, we got the header in place. In this lesson, we will add 
 
 As per plan, we will be using horizontally aligned LinearLayout to hold the label 'Username' & the input field together & next to each other. Label is **TextView** element while input field is **EditText** in Android. 
 
+<div class="alert alert-info">For commonly used View elements, refer the <b><%= link_to "Android Views concept lesson", android_concept_lesson_path("android-views"), target: "_blank"%></b></div>
+
 Let's get to work. 
 
 ## Add the LinearLayout after 'Hello Twitter' 
