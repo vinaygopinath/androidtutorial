@@ -1,6 +1,6 @@
 # Show tweets after AsyncTask
 
-The AsyncTask we created in previous lesson is simply replicating network call to fetch new tweets. We should also be updating the tweet list screen as soon as the new tweets are fetched.
+The AsyncTask we created in previous lesson is simply simulating a network call to fetch new tweets. In case of an actual network call, new tweets will be fetched and we should update the tweet list screen to show them.
 
 At first, the obvious thing to do is to call parent (TweetListActivity) methods at the end of **doInBackground()** method. But it will result in an error as you can not update View elements from a background thread. We are going to use `onPostExecute(..)` method to do the job. 
 
@@ -25,7 +25,7 @@ Once the background task is over, it can pass data to a member method `onPostExe
 
 ## Assignment - update tweets on UI screen from AsyncTask
 
-We are going to call the tweet list update steps twice - one from inside of onCreate() in TweetListActivity & another from AsyncFetchTweets. To keep our code DRY (do not repeat yourself), we should NOT be writing the code, to show the tweets, twice. Rather, we should simply put it in a method & call the same method at the two places.
+We are going to call the tweet list update steps twice - once from inside onCreate() in TweetListActivity & again from AsyncFetchTweets. To keep our code DRY (don't repeat yourself), we should NOT be writing the code to show the tweets twice. Rather, we should simply put it in a method & call the same method from two places.
 
 `TweetListActivity.java`
 <pre>
@@ -42,8 +42,8 @@ We are going to call the tweet list update steps twice - one from inside of onCr
 
 You need to invoke renderTweets(..) from inside of AsyncFetchTweets as well. You should invoke it from inside onPostExecute() method.
 
-Hint: You had reference to TweetListActivity passed as `parent` to the AsyncFetchTweets constructor. You can invoke renderTweets() as `parent.renderTweets()`.
+<div class="alert alert-info"><b>Hint</b>: You already have a reference to TweetListActivity, passed as <b>parent</b> to the AsyncFetchTweets constructor. You can invoke renderTweets() as <b>parent.renderTweets()</b></div>
 
-To test if you get your code right, you should now have list of tweets showing up even on the very first load of your app after 5 sec delay.
+To test that your code works, uninstall and reinstall the app - A list of tweets should show up even on the first load of your app after a 5 second delay.
 
-**P.S. - Make sure to delete the app if you using your phone or restart AVD ** before you go ahead & deploy the new app else the cached file will be present.
+<div class="alert alert-warning">Uninstalling the app (or clearing the cache under app settings) is necessary before you go ahead & deploy the new app. Otherwise, the cached file from a previous load will be present</div>

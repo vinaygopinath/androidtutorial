@@ -2,7 +2,7 @@
 
 ** Writing to a local file **
 
-We can create any local file that we want in Android. You can give it any name as you please. Writing to a file is pretty straightforward process with `openFileOutput` class returned by `openFileOutput()`. 
+Android lets you create local files - You can give it any name as you please. Writing to a file is a pretty straightforward process with the `FileOutputStream` object returned by `openFileOutput()`. 
 
 	String FILENAME = "hello_file";
 	String string = "hello world!";
@@ -15,7 +15,7 @@ We can create any local file that we want in Android. You can give it any name a
 
 ** Writing OBJECTS to local file **
 
-In out case, we are going to dump the array of object. We need `ObjectOutputStream` class for that. It automatically takes care of serializing the data before writing to the file. But before that, we need to ensure that Tweet class is serializable. The class declaration need to implement Serializable
+In our case, we are going to dump an array of objects. We need `ObjectOutputStream` class for that. It automatically takes care of serializing the data before writing to the file. But before that, we need to ensure that Tweet class is serializable. The class declaration needs to implement Serializable
 
 <pre>public class Tweet <span class="highlight">implements Serializable</span></pre>
 
@@ -45,9 +45,9 @@ As a good practice, you should put the name of the file in a private static fina
 
 Since it is serialized tweets, we hae put a **.ser** extension. You are free to put any extension that you like to. In your code, you should use TWEETS_CACHE_FILE variable to reference the tweets cached file. 
 
-<p class="text-error">Make sure that you keep the name of the file as <b>tweet_cache.ser</b> else our tests will not be able to check if you are actually writing tweets to a file.</p>
+<div class="alert alert-danger">Make sure that you keep the name of the file as <b>tweet_cache.ser</b>. Otherwise, our tests will not be able to check if you are actually writing tweets to a file.</div>
 
-Also note, to use `openFileOutput()` & `ObjectOutputStream()` you need to handle multiple kind of exceptions. You need to put a try catch exception around it. Also to check if you have successfully written to the file, you should put Log .
+Also note, to use `openFileOutput()` & `ObjectOutputStream()` you need to handle multiple exceptions. You need to put a try-catch block around your statements. Also, to check if you have successfully written to the file, you should use Log .
 
       try {
 	  	//code to write into file
@@ -58,8 +58,8 @@ Also note, to use `openFileOutput()` & `ObjectOutputStream()` you need to handle
 	  }
 		
 
-after `writeObject()` call & check LogCat output for "Successfully wrote tweets to the file." as shown in the below screenshot.
+After you write the objects into the file, check the LogCat output for "Successfully wrote tweets to the file." as shown in the below screenshot.
 
 <%= image_tag "twitter-client/logcat-successfully-written-file.png" %>
 
-There is no change in the app behavior. You will still see the same list of tweets. Just that, now that you are writing the tweets to a file, there will be a marginal delay in the output to appear depending on your phone's processing power. In future lessons, we are going to move this bit to a asynchronous process to remove the delay.
+Don't expect any change in the app behavior - You will still see the same list of tweets. However, depending on your phone's processing power, there may be a marginal delay in the appearance of the screen while the tweets are written to the file. In future lessons, we are going to move this bit to a asynchronous process to remove the delay.

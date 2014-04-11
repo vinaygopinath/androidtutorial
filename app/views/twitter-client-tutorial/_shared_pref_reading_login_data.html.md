@@ -4,7 +4,7 @@
 
 Quick recap from module 1. The login screen is served by MainActivity.java . The login fields - username, password & login button - are defined in activity_main.xml . 
 
-A login button listener gets called when login button is clicked. We had earlier put the intent code inside the listener to navigate to the tweet list screen on login button click 
+A login button listener is called when login button is clicked. We had earlier put the intent code inside the listener to navigate to the tweet list screen on login button click 
 
 	_loginBtn.setOnClickListener(new View.OnClickListener() {
 			  @Override
@@ -29,10 +29,17 @@ The username & password are stored inside appropriate **EditText** View elements
 
 ### Assignment - read username & password in java code
 
-You should now write code inside `onClick()` method to get username & password in the java code. You can log the values & check them in LogCat by doing
+Your task is to write code inside the `onClick()` method to get the username and password String values and log them. You can log the values & check them in LogCat by doing
 
-     Log.d("Codelearn", "username caught - " + username)
+     Log.d("Codelearn", "username caught - " + usernameValue)
+     
+     /* When "user123" is entered in the username EditText field
+      * and the button is clicked, you'll see the LogCat message
+      * "username caught - user123"
+      */
 
-To know more as to how to dump data & check it in LogCat, head over to [LogCat Concept Lesson]()
+<div class="alert alert-info">To know more on dumping data in the console & checking it in LogCat, head over to the <b><%= link_to "LogCat concept lesson", android_concept_lesson_path("android-log"), target: "_blank" %></b></div>
 
-Hint: Make sure you read username & password before the Activity from intent is started else findViewById(..) will not be able to find the elements you are expecting.
+**Hint**: Make sure to insert the new lines of code to log the username and password **before** the lines that define and start an intent to the next Activity. Otherwise, `findViewById(..)` will not be able to find the expected EditText elements.
+
+

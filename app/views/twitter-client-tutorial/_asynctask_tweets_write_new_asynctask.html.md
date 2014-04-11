@@ -1,40 +1,46 @@
 # Moving writing of tweets to new AsyncTask
 
-We already have 5 second delay in AsyncFetchTweets **doInBackground()** method to simulate network call . As it is mentioned earlier, reading & writing from files are a little more involved process & should be done in a separate thread unless it affects the main Activity flow. 
+As mentioned earlier, reading & writing from files are slightly elaborate tasks & should be done in a separate thread to avoid affecting the main Activity flow. 
 
-In this case, the primary purpose of AsyncFetchTweets is to fetch tweets & show to the users. It is a good idea to move the code, to writes the tweets to the cache file, to a separate AsyncTask outside AsyncFetchTweets.
+In this case, the primary purpose of AsyncFetchTweets is to fetch tweets & show them to the user. It is a good idea to move the code to write the tweets to the cache file into a separate AsyncTask outside AsyncFetchTweets.
 
 ## Assignment - write tweets to cached file in new AsyncTask
 
-Just to see the AsyncTask in action, we are going to make a little change for the assignment which we will undo later. 
+Since writing tweets to the cache file could potentially take quite some time, let's simulate it by adding a 5 second delay. We will undo this change later. 
 
-* Introduce a 5 sec delay in AsyncFetchTweets **before renderTweets()**
+* Introduce a 5 sec delay in AsyncFetchTweets in **doInBackground()** 
 
 `AsyncFetchTweets.java`
 <pre>
     protected void doInBackground(..) {
-	  //5 sec sleep
+	  //5 sec sleep to simulate delay in fetching tweets
 	  //dummy tweet creation
-	  <span class="highlight">//5 sec sleep</span>
+	  <span class="highlight">//5 sec sleep to simulate delay in writing to file</span>
 	  //writing tweets to file
-	  // call to renderTweets()
 	}
+
+    protected void onPostExecute(..) {
+	//call to renderTweets()
+    } 
 </pre>
 
-Remove the app from your phone & re-deploy. **You will see 10 seconds delay in tweets to show-up.**
+Remove the app from your phone & re-deploy. **You will see 10 seconds delay before the tweets show up.**
 
-* Create a new class **AsyncWriteTweets** extending AsyncTask . Move the code to write to file & 5 sec sleep to the class.
+* Create a new class **AsyncWriteTweets** extending AsyncTask . Move the code to write to file & 5 sec sleep into the class.
 
 `AsyncFetchTweets.java`
 <pre>
     protected void doInBackground(..) {
-	  //5 sec sleep
+	  //5 sec sleep to simulate delay in fetching tweets
 	  //dummy tweet creation
-	  <span class="highlight"><strike>//5 sec sleep
+	  <span class="highlight"><strike>//5 sec sleep to simulate delay in writing to file
 	  //writing tweets to file</strike>
 	  new AsyncWriteTweets(TweetListActivity object).execute(tweets);</span>
-	  // call to renderTweets()
 	}
+
+    protected void onPostExecute(..) {
+	//call to renderTweets()
+    }
 </pre>
 
 <!--`AsyncWriteTweets.java`
@@ -53,10 +59,7 @@ TweetListActivity test=null;
 	}
 	//use test object to write tweets into "tweets_cache.ser"
 </pre>
+Remove the app on the phone & deploy again. This time, the tweet list will show up in **5 seconds** straight
+<div class="alert alert-warning">Make sure you keep the name of the class as <b>AsyncWriteTweets</b> and the constructor as shown in above code snippet. Otherwise, our tests will fail & we won't know if you have completed the assignment correctly</div>. 
 
-Remove the app on the phone & deploy again. **This time, the tweet list will show up in 5 seconds straight.**
-
-**Make sure you keep the name of the class as AsyncWriteTweets and the constructor as shown in above code snippet** else our tests will fail & we won't know if you have got the assignment solution correct. 
-
-* Once done, **you should remove the additional 5 sec delay from AsyncWriteTweets**.
-
+* Once done, you should **remove the additional 5 sec delay from AsyncWriteTweets**.
