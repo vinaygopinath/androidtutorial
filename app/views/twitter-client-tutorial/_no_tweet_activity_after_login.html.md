@@ -14,6 +14,16 @@ We created a login button listener which simply updated the button label to 'I a
 
 * Now the new string field need to be added in the activity_tweet_list.xml . Go to res -> layout -> activity_tweet_list.xml . It is by default showing 'Hello World' through `@string/hello_world`. Change it to @string/no_tweet_found . Save file & click on 'Graphical Layout' tab. You should see 'No Tweet Found' in the output preview.
 
+<div class="alert alert-warning">
+<p>With recent version of the Eclipse ADT plugin, creating a new Activity leads to the creation of an Activity that extends <b>ActionBarActivity</b> with a fragment_[name].xml and a activity_[name].xml. Although this is a good practice, it's good to start with a simple Activity while learning. If you're facing this situation, read on for instructions to resolve it.</p>
+
+<ul>
+<li>Move the contents of fragment_tweet_list.xml into activity_tweet_list.xml and delete the fragment XML file.</li>
+<li>Change the TweetListActivity to extend Activity instead of ActionBarActivity</li>
+<li>Remove all methods except <b>onCreate()</b> in TweetListActivity and delete the code in onCreate() after <b>setContentView(..)</b></li>
+<li>Organise imports by pressing <b>Ctrl+Shift+O</b></li>
+</ul></div>
+
 <%= image_tag "twitter-client/no_tweet_found.png", alt: "Login screen Layout overview", title: "Login screen Layout overview" %>
 
 ## Hooking new Activity to Login
