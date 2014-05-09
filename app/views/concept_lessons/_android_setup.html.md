@@ -71,13 +71,11 @@ When ADT is installed you will notice that the installation is self contained. T
 
 Depending on your computer, the emulator images of the Android platforms provided by Google can be quite slow. If you're interested in using a faster (albeit more experimental) emulator, check out Genymotion.
 
-* Head over to [genymotion.com](http://genymotion.com/), sign up for a free account and download and install Genymotion (You may need to install VirtualBox if you're not using Windows - Refer the [Genymotion user guide](https://cloud.genymotion.com/page/doc/)).
-* Launch Genymotion and download a virtual device. We recommend **Motorola Moto X - 4.4.2 API 19**
-* Install the Genymotion Eclipse plugin in Eclipse by opening Help → Install new software → Add and enter <pre>http://plugins.genymotion.com/eclipse</pre> and follow the next steps
-
-After a restart, Eclipse should now show a new icon of Genymotion. You can launch a Genymotion emulator by clicking on it and choosing the virtual device you previously installed.
-
-You can run an Android application project on the Genymotion virtual device by clicking the "Run" icon or right-clicking the project → "Run as" → Android App Codelearn
+ * Head over to [genymotion.com](http://genymotion.com/), sign up for a free account and download and install Genymotion ( You may need to install VirtualBox if you're not using Windows - Refer the [Genymotion user guide](https://cloud.genymotion.com/page/doc/) ).
+ * <p>Launch Genymotion and download a virtual device. We recommend **Motorola Moto X - 4.4.2 API 19**</p><p><%= image_tag "android_setup/virtual_device.png", alt: "Genymotion virtual device", title: "Genymotion Virtual Device" %></p>
+ * <p>Install the Genymotion Eclipse plugin in Eclipse by opening Help → Install new software → Add and enter <pre>http://plugins.genymotion.com/eclipse</pre> and follow the next steps.</p><p><%= image_tag "android_setup/genymotion_eclipse_plugin.png", alt: "Genymotion Eclipse plugin installation", title: "Genymotion Eclipse plugin installation" %></p>
+ * <p>After a restart, Eclipse should now show a new icon of Genymotion.</p><p><%= image_tag "android_setup/genymotion_icon.png", alt: "Genymotion Virtual Devices Manager icon in Eclipse", title: "Genymotion Virtual Devices Manager icon in Eclipse" %></p><p>You can launch a Genymotion emulator by clicking on it and choosing the virtual device you previously installed</p><p><%= image_tag "android_setup/genymotion_avd_manager.png", alt: "Genymotion Virtual Devices Manager", title: "Genymotion Virtual Devices Manager" %></p>
+ * <p>You can run an Android application project on the Genymotion virtual device by clicking the "Run" icon or right-clicking the project → "Run as" → Android App Codelearn</p><p><%= image_tag "android_setup/genymotion_emulator.png", alt: "Genymotion Virtual Device", title: "Genymotion Virtual Device" %></p>
 
 For more information, check out the [Genymotion user guide](https://cloud.genymotion.com/page/doc/)
 
