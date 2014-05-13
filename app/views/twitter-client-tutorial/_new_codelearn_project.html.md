@@ -45,7 +45,9 @@ Follow the steps below to create a new Codelearn Twitter App.
 <%= image_tag "twitter-client/plugin-newproject-run-menu.png", alt: "Codelearn Run Configuration", title: "Codelearn Run Configuration" %>
 </p>
 
-* If you have an Android phone, you should keep it jacked in through USB with your computer. Else you need to create an AVD device. Details <%= link_to "here", android_concept_lesson_path("android-hello-world") + "#Running-your-Application-3-Get-Create-an-Android-Device", target: "_blank" %> 
+* If you have an Android phone, you should keep it jacked in through USB with your computer. Make sure you've enabled <%= link_to "USB debugging", android_concept_lesson_path("android-hello-world") + "#USB-Debugging", target: "_blank" %> . If you don't have a real device, you need to use the <%= link_to "Genymotion emulator", android_concept_lesson_path("android-hello-world") + "#Genymotion", target: "_blank" %> or an <%= link_to "Android virtual device", android_concept_lesson_path("android-hello-world") + "#Running-your-Application-3-Get-Create-an-Android-Device", target: "_blank" %>
+
+<div class="alert alert-info">If you have an Android device running a suitable Android platform, we <b>strongly recommend</b> that you use it to test your app. If you choose to run your app on an emulator, consider setting up <b>Genymotion</b> rather than using the default Android emulator because it is much faster</div>
 
 * This is how the App Output on your phone or AVD should look like 
 

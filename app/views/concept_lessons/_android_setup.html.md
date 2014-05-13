@@ -42,13 +42,13 @@ Go to [this JDK download link](http://www.oracle.com/technetwork/java/javase/dow
 
 Once the file is downloaded, double click on it to start the installation. Let the default options be selected, and follow the wizard to complete the installation process.
 
-> Watchout: A lot of times Oracle JDK installation wizard is bundled with ASK toolbar. Make sure you notice the wizard and uncheck the installation of ASK toolbar to save yourself from Boltwares. 
+> Watchout: A lot of times Oracle JDK installation wizard is bundled with ASK toolbar. Make sure you notice the wizard and uncheck the installation of ASK toolbar to save yourself from bloatware. 
 
 ### ZIP utility
 
 The ADT package which you downloaded from developer.android.com is compressed, you need to extract the package in order to access the setup files. Linux or MAC users can skip this section. For windows users, if you have used zip utilities such as WinZIP, WINRAR etc. , you can skip this section too.
 
-If you do not have an unzip software and are using windows, follow these steps :
+If you do not have an unzip software and are using Windows, follow these steps :
 
 * Go to [7 zip download link](http://www.7-zip.org/download.html) and download .msi file for your windows machine.
 * Double click on the msi file and install the 7zip software.
@@ -67,28 +67,7 @@ Now that we have the JDK and Unzip utility installed, let's go and install the A
 
 When ADT is installed you will notice that the installation is self contained. This means you just need to have the ADT folder to run the development environment.
 
-###Genymotion
-
-Depending on your computer, the emulator images of the Android platforms provided by Google can be quite slow. If you're interested in using a faster (albeit more experimental) emulator, check out Genymotion.
-
- * Head over to [genymotion.com](http://genymotion.com/), sign up for a free account and download and install Genymotion ( You may need to install VirtualBox if you're not using Windows - Refer the [Genymotion user guide](https://cloud.genymotion.com/page/doc/) ).
- * <p>Launch Genymotion and download a virtual device. We recommend **Motorola Moto X - 4.4.2 API 19**</p><p><%= image_tag "android_setup/virtual_device.png", alt: "Genymotion virtual device", title: "Genymotion Virtual Device" %></p>
- * <p>Install the Genymotion Eclipse plugin in Eclipse by opening Help → Install new software → Add and enter <pre>http://plugins.genymotion.com/eclipse</pre> and follow the next steps.</p><p><%= image_tag "android_setup/genymotion_eclipse_plugin.png", alt: "Genymotion Eclipse plugin installation", title: "Genymotion Eclipse plugin installation" %></p>
- * <p>After a restart, Eclipse should now show a new icon of Genymotion.</p><p><%= image_tag "android_setup/genymotion_icon.png", alt: "Genymotion Virtual Devices Manager icon in Eclipse", title: "Genymotion Virtual Devices Manager icon in Eclipse" %></p><p>You can launch a Genymotion emulator by clicking on it and choosing the virtual device you previously installed</p><p><%= image_tag "android_setup/genymotion_avd_manager.png", alt: "Genymotion Virtual Devices Manager", title: "Genymotion Virtual Devices Manager" %></p>
- * <p>You can run an Android application project on the Genymotion virtual device by clicking the "Run" icon or right-clicking the project → "Run as" → Android App Codelearn</p><p><%= image_tag "android_setup/genymotion_emulator.png", alt: "Genymotion Virtual Device", title: "Genymotion Virtual Device" %></p>
-
-For more information, check out the [Genymotion user guide](https://cloud.genymotion.com/page/doc/)
-
-###USB Debugging
-
->If you are planning to deploy the Android app to your phone, it is essential to turn on USB Debugging in your Android phone. But if you are working on AVD, you can ignore this section.
-
-* On most devices running Android 3.2 or older, you can find the option under **Settings > Applications > Development**.
-* On Android 4.0 and newer, it's in **Settings > Developer options**.
-
-> Watchout: On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to "Settings > About phone" and tap Build number seven times. Return to the previous screen to find Developer options.
-
-##Understading ADT Folders
+##Understanding ADT Folders
 
 Now that we have unzipped the ADT installation, lets go inside the ADT folder to see its contents.
 

@@ -23,15 +23,15 @@ If ADT is not running, double click on ADT  to start the development environment
 
 This is the first Screen for creating a new android project. Let's cover each field shown above individually and try to understand their importance. 
 
-*    **Application Name:** application name is nothing but the name of your app. This name is visible on the screen when the app is installed. The application name is also shown in Google Playstore when you upload your application.
+*    **Application Name:** application name is nothing but the name of your app. This name is visible on the screen when the app is installed. The application name is also shown in Google Play Store when you upload your application.
 *    **Project Name:** Project name is the name of your project that gets created in eclipse. You can give any name to your project. 
-*    **Package Name:**  This is very important. Package name is used to uniquely identify your application on Playstore. You should follow the java package convention for the package name . The package name is not shown to the user but should not change ever. A good approach to choose package name is to use the reverse of your company domain name. For example in codelearn, the url is codelearn.org so the ideal package name would be org.codelearn.android
-*    **Min Require SDK:**  As you might know, Android started with version 1.5 and its current version is 4.4. These numbers represents different flavors of Android, like 2.3 is termed Gingerbread, 4.1 as Ice Cream Sandwich etc. These names are used for marketing the OS, while version numbers are of interest to developers. Min Required SDK field gives you the flexibility to decide which version of android at minimum you want to support. For example, if you create an application for android 2.3 it will work on android 4.4. In general, it is advisable to have minimum support of 2.3.3 API Version 9. 
+*    **Package Name:**  This is very important. Package name is used to uniquely identify your application on Play Store. You should follow the java package convention for the package name . The package name is not shown to the user but should not change ever. A good approach to choose package name is to use the reverse of your company domain name. For example in codelearn, the url is codelearn.org so the ideal package name would be org.codelearn.android
+*    **Min Required SDK:**  As you might know, Android started with version 1.5 and its current version is 4.4. These numbers represents different flavors of Android, like 2.3 is termed Gingerbread, 4.1 as Ice Cream Sandwich etc. These names are used for marketing the OS, while version numbers are of interest to developers. Min Required SDK field gives you the flexibility to decide which version of android at minimum you want to support. For example, if you create an application for android 2.3 it will work on android 4.4. In general, it is advisable to have minimum support of 2.3.3 API Version 9. 
 *    **Target SDK:** This setting tells android that even though your app will be able to run on its previous android version, but it is explicitly tested with version specified here in this field.
 *    **Compile With:**  This option gives lets you choose the version of SDK you want to compile with. Typically,the highest version which is available in your ADT should be chosen here. This will compile your app with the latest code and optimizations. 
 *    **Theme:**  If you are creating apps for version 4.X and above you can have an application wide theme. These themes are nothing but some pre defined color schemes, which you can use to improve your application's User Interface.
 
-> Watchout: Once you upload an application in play store with a package name, you will not able to change it ever. So choose your package name wisely 
+<div class="alert alert-info">Once you upload an application to the Play Store, you cannot change its package name. So choose your package name wisely</div>
 
 Now, Click on Next: 
 
@@ -45,7 +45,7 @@ This screen is use to configure various project settings, lets go 1 by 1 to see 
 
 *    **Create Custom Launcher Icon:** Do you remember how you launch an android app ? Well, we do so by clicking on the application icon. This icon is nothing but the launcher icon. If this option is checked ADT will provide you a wizard to create a launcher icon. Keep this option selected. 
 *    **Create Activity:** With this option selected, ADT will create 1st activity for you, this will be your main activity and will have a reference in mainifest. In later chapters, you will get to learn what main activity is, but just to brief you - most of the android applications are built with multiple activities, but whenever you open any application it always starts with the same activity which is termed as your main activity. Through this activity,you tell the Android OS that out of all these activities from my app, open this particular activity whenever the app gets started. 
-*    **Mark This project as Library:** Any android project can be of 2 types, library project or a non library project. A library project is a reusable project which is used by other non library projects. Library project cannot be installed. 
+*    **Mark This project as Library:** Any android project can be of 2 types, library project or a non library project. A library project is a reusable project which is used by other non library projects. Library project cannot be installed. They're different from JAR files in that library projects can contain resources and assets.
 *    **Create Project in Workspace:** When you open Eclipse/ADT for the first time, it asks you to choose a workspace. Workspace is nothing but a location on your hard disk where all your projects will be saved. With this checkbox selected, you are telling ADT to save this project in the current location. If you want to store your android project at some other location you can uncheck this option and select your own path to save the app
 *    **Add Project to working sets:** When you start working in different projects, your eclipse/ADT workspace will have a lot of projects. So it is difficult to work on a new or existing project, as you have to scroll down on a big list of projects, which you are not even working with. To solve this issue Eclipse has an excellent concept of working set. Working Set  can be used to Group Similar projects together. When your number of projects in ADT starts increasing, you can group them together into working sets to avoid seeing all projects while working. You can easily switch between different working sets without restarting eclipse. 
 
@@ -158,9 +158,9 @@ Select the device & click 'Ok'. Your app will now be deployed on your device. It
 
 Congratulations. You have successfully deployed your first Android App. 
 
-## Creating Android Virtual Device(AVD)
+## Creating Android Virtual Device (AVD)
 
-Android gives an option to test your application against any version of android,  without depending on the phone.  This is done via AVD. AVD is nothing but an emulator which emulates the actual device on your machine. 
+Android gives an option to test your application against any version of android,  without depending on a real device. This is possible through Android Virtual Device (AVD), which is an emulator or a test device that runs on your machine. 
 
 Let's see how we can create an emulator. 
 
@@ -186,9 +186,32 @@ Let’s go through the elements of this dialog
 
 Click on OK to create the AVD
 
-> Watchout: Make sure your RAM size in AVD does not go beyond a limit, else you will see an error in the empty box which is above the OK and Cancel buttons. The size of ram can be ¼th of your system's RAM but should not increase beyond a set limit. 
+<div class="alert alert-danger">Make sure your RAM size in AVD is not too high corresponding to the RAM available on your system. A good thumb rule is to allocate no more than a quarter of your system RAM. On the lower end, 200 MB is a fair amount of RAM for the AVD</div>
 
 Once the AVD is created, you will see your newly created AVD in the AVD manager. Now you can go and launch your application to run in your new AVD
+
+## Genymotion
+
+Depending on your computer, the emulator images of the Android platforms provided by Google can be quite slow. If you're interested in using a faster (albeit more experimental) emulator, check out Genymotion.
+
+ * Head over to [genymotion.com](http://genymotion.com/), sign up for a free account and download and install Genymotion ( You may need to install VirtualBox if you're not using Windows - Refer the [Genymotion user guide](https://cloud.genymotion.com/page/doc/) ).
+ * <p>Launch Genymotion and download a virtual device. We recommend **Motorola Moto X - 4.4.2 API 19**</p><p><%= image_tag "android_setup/virtual_device.png", alt: "Genymotion virtual device", title: "Genymotion Virtual Device" %></p>
+ * <p>Install the Genymotion Eclipse plugin in Eclipse by opening Help → Install new software → Add and enter <pre>http://plugins.genymotion.com/eclipse</pre> and follow the next steps.</p><p><%= image_tag "android_setup/genymotion_eclipse_plugin.png", alt: "Genymotion Eclipse plugin installation", title: "Genymotion Eclipse plugin installation" %></p>
+ * <p>After a restart, Eclipse should now show a new icon of Genymotion.</p><p><%= image_tag "android_setup/genymotion_icon.png", alt: "Genymotion Virtual Devices Manager icon in Eclipse", title: "Genymotion Virtual Devices Manager icon in Eclipse" %></p><p>You can launch a Genymotion emulator by clicking on it and choosing the virtual device you previously installed</p><p><%= image_tag "android_setup/genymotion_avd_manager.png", alt: "Genymotion Virtual Devices Manager", title: "Genymotion Virtual Devices Manager" %></p>
+ * <p>You can run an Android application project on the Genymotion virtual device by clicking the "Run" icon or right-clicking the project → "Run as" → Android App Codelearn</p><p><%= image_tag "android_setup/genymotion_emulator.png", alt: "Genymotion Virtual Device", title: "Genymotion Virtual Device" %></p>
+ 
+For more information, check out the [Genymotion user guide](https://cloud.genymotion.com/page/doc/)
+
+<div class="alert alert-info">When you run an Android app, don't expect the Android emulator or the Genymotion emulator to be brought to the foreground. Refer to the output console and open the emulator to see your app in action</div>
+
+## USB Debugging
+
+>If you are planning to deploy the Android app to your phone, it is essential to turn on USB Debugging in your Android phone. But if you are working on AVD or Genymotion emulator, you can ignore this section.
+
+* On most devices running Android 3.2 or older, you can find the option under **Settings > Applications > Development**.
+* On Android 4.0 and newer, it's in **Settings > Developer options**.
+
+> Watchout: On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to "Settings > About phone" and tap Build number seven times. Return to the previous screen to find Developer options.
 
 ## Android Folder Structure
 
