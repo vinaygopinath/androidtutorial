@@ -98,7 +98,7 @@ We saw a glimpse of AsyncTask execution in the input parameters section.
 
 To execute an AsyncTask, create an instance of the AsyncTask
 <pre>
-   ImageDownloaderTask task = new ImageDownloaderTask();
+   ImageProcessorTask task = new ImageProcessorTask();
 </pre>
 Call the `execute()` method, optionally with arguments
 <pre>
@@ -116,10 +116,10 @@ It is important to note that an AsyncTask instance can be run **only once**. Any
 
 ## Cancelling an AsyncTask
 
-To try a currently running AsyncTask, use the `cancel()` method.
+To try to cancel a currently running AsyncTask, use the `cancel()` method.
 
 <pre>
-   ImageDownloaderTask task = new ImageDownloaderTask();
+   ImageProcessorTask task = new ImageProcessorTask();
    task.execute("http://imgur.com/picture.png");
    ...
    task.cancel(true);
@@ -134,7 +134,7 @@ Note that the cancel() method does not guarantee that the task will stop running
 To check the status of an AsyncTask instance, use the `getStatus()` method.
 
 <pre>
-ImageDownloaderTask task = new ImageDownloaderTask();
+ImageProcessorTask task = new ImageProcessorTask();
 Status asyncStatus = task.getStatus();
 </pre>
 
